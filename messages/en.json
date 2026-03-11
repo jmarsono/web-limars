@@ -182,14 +182,12 @@
     "teamTitle": "Our Leadership",
     "teamSubtitle": "Meet the experienced professionals behind Limars Teknik.",
     "team": {
-      "founderRole": "Founder & CEO",
-      "founderDesc": "Over 20 years of experience in mechanical engineering and commercial kitchen design.",
-      "mfgRole": "Head of Manufacturing",
-      "mfgDesc": "Expert in stainless steel fabrication with 15 years in the industry.",
-      "designRole": "Head of Design",
-      "designDesc": "Specializes in commercial kitchen layout and ergonomic workspace design.",
-      "installRole": "Head of Installation",
-      "installDesc": "Leads our field operations team with expertise in kitchen systems integration."
+      "founderRole": "Founder",
+      "founderDesc": "The vision and leadership behind the growth of Limars Teknik since its inception.",
+      "marketingRole": "Head of Marketing and Administration",
+      "marketingDesc": "Managing marketing strategies and administrative operational efficiency.",
+      "technologyRole": "Head of Technology",
+      "technologyDesc": "Leading technical innovation and development of modern kitchen equipment solutions."
     }
   },
   "Contact": {

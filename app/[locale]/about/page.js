@@ -25,10 +25,9 @@ export default function AboutPage() {
   ];
 
   const team = [
-    { name: 'Ir. Hendra Wijaya', role: t('team.founderRole'), description: t('team.founderDesc'), initials: 'HW' },
-    { name: 'Agus Purnomo', role: t('team.mfgRole'), description: t('team.mfgDesc'), initials: 'AP' },
-    { name: 'Lisa Permata', role: t('team.designRole'), description: t('team.designDesc'), initials: 'LP' },
-    { name: 'Rudi Hartono', role: t('team.installRole'), description: t('team.installDesc'), initials: 'RH' },
+    { name: 'Makmin Sohar', role: t('team.founderRole'), description: t('team.founderDesc'), initials: 'MS' },
+    { name: 'Leo Marsony', role: t('team.marketingRole'), description: t('team.marketingDesc'), initials: 'LM' },
+    { name: 'Julian Marsono', role: t('team.technologyRole'), description: t('team.technologyDesc'), initials: 'JM' },
   ];
 
   return (

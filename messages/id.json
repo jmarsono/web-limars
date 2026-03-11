@@ -182,14 +182,12 @@
     "teamTitle": "Kepemimpinan Kami",
     "teamSubtitle": "Temui para profesional berpengalaman di balik Limars Teknik.",
     "team": {
-      "founderRole": "Pendiri & CEO",
-      "founderDesc": "Lebih dari 20 tahun pengalaman di bidang teknik mesin dan desain dapur komersial.",
-      "mfgRole": "Kepala Manufaktur",
-      "mfgDesc": "Ahli fabrikasi baja tahan karat dengan 15 tahun di industri ini.",
-      "designRole": "Kepala Desain",
-      "designDesc": "Mengkhususkan diri dalam tata letak dapur komersial dan desain ruang kerja ergonomis.",
-      "installRole": "Kepala Instalasi",
-      "installDesc": "Memimpin tim operasi lapangan kami dengan keahlian dalam integrasi sistem dapur."
+      "founderRole": "Pendiri",
+      "founderDesc": "Visi dan kepemimpinan di balik pertumbuhan Limars Teknik sejak awal.",
+      "marketingRole": "Kepala Pemasaran dan Administrasi",
+      "marketingDesc": "Mengelola strategi pemasaran dan efisiensi operasional administrasi.",
+      "technologyRole": "Kepala Teknologi",
+      "technologyDesc": "Memimpin inovasi teknis dan pengembangan solusi peralatan dapur modern."
     }
   },
   "Contact": {
