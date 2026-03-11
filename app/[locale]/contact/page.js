@@ -54,7 +54,7 @@ export default function ContactPage() {
                 <div className={styles.infoItem}>
                   <div className={styles.infoIcon}>📍</div>
                   <div>
-                    <h4>{t('info.office.label')}</h4>
+                    <h3>{t('info.office.label')}</h3>
                     <p>{t('info.office.line1')}<br />{t('info.office.line2')}</p>
                   </div>
                 </div>
@@ -62,7 +62,7 @@ export default function ContactPage() {
                 <div className={styles.infoItem}>
                   <div className={styles.infoIcon}>📞</div>
                   <div>
-                    <h4>{t('info.phone.label')}</h4>
+                    <h3>{t('info.phone.label')}</h3>
                     <p>+62 812 1267 1289</p>
                   </div>
                 </div>
@@ -70,7 +70,7 @@ export default function ContactPage() {
                 <div className={styles.infoItem}>
                   <div className={styles.infoIcon}>📱</div>
                   <div>
-                    <h4>{t('info.whatsapp.label')}</h4>
+                    <h3>{t('info.whatsapp.label')}</h3>
                     <p>+62 812 1267 1289</p>
                   </div>
                 </div>
@@ -78,7 +78,7 @@ export default function ContactPage() {
                 <div className={styles.infoItem}>
                   <div className={styles.infoIcon}>✉️</div>
                   <div>
-                    <h4>{t('info.email.label')}</h4>
+                    <h3>{t('info.email.label')}</h3>
                     <p>info@limarsteknik.com<br />sales@limarsteknik.com</p>
                   </div>
                 </div>
@@ -86,7 +86,7 @@ export default function ContactPage() {
                 <div className={styles.infoItem}>
                   <div className={styles.infoIcon}>🕒</div>
                   <div>
-                    <h4>{t('info.hours.label')}</h4>
+                    <h3>{t('info.hours.label')}</h3>
                     <p>{t('info.hours.line1')}<br />{t('info.hours.line2')}</p>
                   </div>
                 </div>

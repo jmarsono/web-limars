@@ -37,6 +37,7 @@ function ProductsContent() {
       {/* Products */}
       <section className={`section ${styles.productsSection}`}>
         <div className="container">
+          <h2 className="sr-only">{t('heroTitle')}</h2>
           {/* Filter */}
           <div className={styles.filterBar}>
             {productCategories.map((catKey) => {

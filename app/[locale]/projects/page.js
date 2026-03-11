@@ -33,6 +33,7 @@ export default function ProjectsPage() {
       {/* Projects */}
       <section className={`section ${styles.projectsSection}`}>
         <div className="container">
+          <h2 className="sr-only">{t('heroTitle')}</h2>
           <div className={styles.filterBar}>
             {projectCategories.map((catKey) => {
               const catDisplay = catKey === 'All' ? t('all') : t(`categories.${catKey.replace(/\s+/g, '')}`);
@@ -99,7 +100,7 @@ export default function ProjectsPage() {
               <p className={styles.modalLocation}>📍 {selectedProject.location[locale]}</p>
               <p className={styles.modalDesc}>{selectedProject.description[locale]}</p>
               <div className={styles.modalScope}>
-                <h4>{t('scopeOfWork')}</h4>
+                <h3>{t('scopeOfWork')}</h3>
                 <ul>
                   {selectedProject.scope.map((s, i) => (
                     <li key={i}>✓ {s[locale]}</li>

@@ -54,7 +54,7 @@ export default function FAQPage() {
           <div className={styles.faqWrapper}>
             {/* Sidebar Navigation */}
             <div className={styles.faqNav}>
-              <h3>{t('categories')}</h3>
+              <h2>{t('categories')}</h2>
               <ul>
                 {faqData.map((category, idx) => (
                   <li key={idx}>
@@ -97,7 +97,7 @@ export default function FAQPage() {
 
               {/* Still need help CTA */}
               <div className={styles.helpBox}>
-                <h3>{t('ctaTitle')}</h3>
+                <h2>{t('ctaTitle')}</h2>
                 <p>{t('ctaSubtitle')}</p>
                 <a href="https://wa.me/6281212671289" className="btn btn-outline" target="_blank" rel="noopener noreferrer">
                   {t('ctaBtn')}

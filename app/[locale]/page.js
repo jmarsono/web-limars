@@ -220,7 +220,7 @@ export default function Home() {
             {whyChooseUs.map((item, idx) => (
               <div key={idx} className={styles.whyCard}>
                 <span className={styles.whyIcon}>{item.icon}</span>
-                <h4>{t(`why.items.${item.key}_title`)}</h4>
+                <h3>{t(`why.items.${item.key}_title`)}</h3>
                 <p>{t(`why.items.${item.key}_desc`)}</p>
               </div>
             ))}

@@ -7,8 +7,8 @@
   --dark-blue-rgb: 27, 58, 92;
   --light-blue: #5BA4D9;
   --light-blue-rgb: 91, 164, 217;
-  --gray: #6B7B8D;
-  --gray-rgb: 107, 123, 141;
+  --gray: #546371;
+  --gray-rgb: 84, 99, 113;
   --light-gray: #F0F3F6;
   --dark-gray: #2D3436;
   --white: #FFFFFF;
@@ -146,6 +146,19 @@ p { margin-bottom: 1rem; }
   font-size: 1.1rem;
   max-width: 600px;
   margin: 24px auto 0;
+}
+
+/* Accessibility Utility */
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border-width: 0;
 }
 
 /* ===== BUTTONS ===== */

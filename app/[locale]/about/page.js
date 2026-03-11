@@ -49,12 +49,12 @@ export default function AboutPage() {
           <div className={styles.vmGrid}>
             <div className={styles.vmCard}>
               <div className={styles.vmIcon}>🔭</div>
-              <h3>{t('visionTitle')}</h3>
+              <h2>{t('visionTitle')}</h2>
               <p>{t('visionDesc')}</p>
             </div>
             <div className={styles.vmCard}>
               <div className={styles.vmIcon}>🎯</div>
-              <h3>{t('missionTitle')}</h3>
+              <h2>{t('missionTitle')}</h2>
               <ul>
                 <li>{t('missionList.1')}</li>
                 <li>{t('missionList.2')}</li>
@@ -79,7 +79,7 @@ export default function AboutPage() {
                 <div className={styles.timelineDot}></div>
                 <div className={styles.timelineCard}>
                   <span className={styles.timelineYear}>{item.year}</span>
-                  <h4>{item.title}</h4>
+                  <h3>{item.title}</h3>
                   <p>{item.description}</p>
                 </div>
               </div>
@@ -99,7 +99,7 @@ export default function AboutPage() {
             {values.map((value, idx) => (
               <div key={idx} className={styles.valueCard}>
                 <span className={styles.valueIcon}>{value.icon}</span>
-                <h4>{value.title}</h4>
+                <h3>{value.title}</h3>
                 <p>{value.description}</p>
               </div>
             ))}
@@ -118,7 +118,7 @@ export default function AboutPage() {
             {team.map((member, idx) => (
               <div key={idx} className={styles.teamCard}>
                 <div className={styles.teamAvatar}>{member.initials}</div>
-                <h4>{member.name}</h4>
+                <h3>{member.name}</h3>
                 <span className={styles.teamRole}>{member.role}</span>
                 <p>{member.description}</p>
               </div>
