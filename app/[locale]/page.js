@@ -4,7 +4,19 @@ import { products } from '../../data/products';
 import { services } from '../../data/services';
 import { projects } from '../../data/projects';
 import { useLocale, useTranslations } from 'next-intl';
+import { getMessages } from 'next-intl/server';
 import Image from 'next/image';
+
+export async function generateMetadata({ params }) {
+  const { locale } = await params;
+  const messages = await getMessages({ locale });
+  const t = messages.SEO;
+
+  return {
+    title: t.homeTitle,
+    description: t.homeDescription,
+  };
+}
 
 const stats = [
   { number: '10+', label: 'Years Experience' },
@@ -50,19 +62,27 @@ export default function Home() {
     url: 'https://www.limarsteknik.com',
     logo: 'https://www.limarsteknik.com/logo.png',
     description: "Indonesia's Leading Kitchen Equipment Manufacturer and Engineering Solutions Provider.",
+    priceRange: '$$',
+    openingHours: 'Mo-Fr 08:00-17:00, Sa 08:00-14:00',
     address: {
       '@type': 'PostalAddress',
       streetAddress: 'Jl. Raden Saleh II/6 No. 70C',
       addressLocality: 'Jakarta',
       addressRegion: 'DKI Jakarta',
-      postalCode: '',
+      postalCode: '10430',
       addressCountry: 'ID'
+    },
+    geo: {
+      '@type': 'GeoCoordinates',
+      latitude: '-6.1848',
+      longitude: '106.8451'
     },
     contactPoint: {
       '@type': 'ContactPoint',
       telephone: '+6281212671289',
       contactType: 'customer service',
-      email: 'info@limarsteknik.com'
+      email: 'info@limarsteknik.com',
+      availableLanguage: ['Indonesian', 'English']
     },
     sameAs: [
       'https://www.facebook.com/cv.limarsteknik/',

@@ -3,10 +3,18 @@ import { services } from '../../../data/services';
 import { useLocale, useTranslations } from 'next-intl';
 import styles from './Services.module.css';
 
-export const metadata = {
-  title: 'Our Services | PT. Limars Teknik Indonesia',
-  description: 'Comprehensive services: restaurant kitchen sets, ducting systems, gas installation, well drilling, and electrical services.',
-};
+import { getMessages } from 'next-intl/server';
+
+export async function generateMetadata({ params }) {
+  const { locale } = await params;
+  const messages = await getMessages({ locale });
+  const t = messages.Navigation; // Using Navigation or a specific SEO entry
+
+  return {
+    title: t('services'),
+    description: 'Comprehensive services: restaurant kitchen sets, ducting systems, gas installation, well drilling, and electrical services.',
+  };
+}
 
 export default function ServicesPage() {
   const locale = useLocale();

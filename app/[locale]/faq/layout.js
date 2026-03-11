@@ -1,8 +1,16 @@
-export const metadata = {
-  title: 'Frequently Asked Questions | PT. Limars Teknik Indonesia',
-  description: 'Find answers to common questions about our kitchen equipment products, installation services, warranties, and the ordering process.',
-};
+import { getMessages } from 'next-intl/server';
+
+export async function generateMetadata({ params }) {
+  const { locale } = await params;
+  const messages = await getMessages({ locale });
+  const t = messages.Navigation;
+
+  return {
+    title: t.faq || 'FAQ',
+    description: messages.FAQ.heroSubtitle,
+  };
+}
 
 export default function FAQLayout({ children }) {
-  return children;
+  return <>{children}</>;
 }

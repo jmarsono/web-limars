@@ -21,16 +21,67 @@ const poppins = Poppins({
   display: 'swap',
 });
 
-export const metadata = {
-  title: 'PT. Limars Teknik Indonesia | Kitchen Equipment Manufacturer',
-  description: 'PT. Limars Teknik Indonesia — Your trusted partner in kitchen equipment manufacturing, restaurant kitchen sets, ducting systems, gas installation, well drilling, and electrical services.',
-  keywords: 'kitchen equipment, commercial oven, restaurant kitchen set, ducting system, gas installation, well drilling, electrical services, Indonesia, manufacturer',
-  openGraph: {
-    title: 'PT. Limars Teknik Indonesia | Kitchen Equipment Manufacturer',
-    description: 'Your trusted partner in kitchen equipment manufacturing and engineering solutions.',
-    type: 'website',
-  },
-};
+export async function generateMetadata({ params }) {
+  const { locale } = await params;
+  const messages = await getMessages({ locale });
+  const t = messages.SEO;
+
+  const baseUrl = 'https://limarsteknik.com';
+
+  return {
+    metadataBase: new URL(baseUrl),
+    title: {
+      default: t.title,
+      template: `%s | PT. Limars Teknik Indonesia`
+    },
+    description: t.description,
+    keywords: t.keywords,
+    alternates: {
+      canonical: '/',
+      languages: {
+        'id-ID': '/id',
+        'en-US': '/en',
+      },
+    },
+    openGraph: {
+      title: t.title,
+      description: t.description,
+      url: './',
+      siteName: 'PT. Limars Teknik Indonesia',
+      images: [
+        {
+          url: '/logo.png',
+          width: 800,
+          height: 600,
+          alt: 'Limars Teknik Logo',
+        },
+      ],
+      locale: locale === 'id' ? 'id_ID' : 'en_US',
+      type: 'website',
+    },
+    twitter: {
+      card: 'summary_large_image',
+      title: t.title,
+      description: t.description,
+      images: ['/logo.png'],
+      creator: '@limarstek',
+    },
+    robots: {
+      index: true,
+      follow: true,
+      googleBot: {
+        index: true,
+        follow: true,
+        'max-video-preview': -1,
+        'max-image-preview': 'large',
+        'max-snippet': -1,
+      },
+    },
+    verification: {
+      google: 'verify-google-id', // User should replace this with actual ID if they have one
+    },
+  };
+}
 
 export function generateStaticParams() {
   return routing.locales.map((locale) => ({ locale }));

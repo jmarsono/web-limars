@@ -1,8 +1,16 @@
-export const metadata = {
-  title: 'Kitchen Equipment Products | PT. Limars Teknik Indonesia',
-  description: 'Browse our comprehensive range of commercial kitchen equipment, from traditional wok ranges and tandoor ovens to modern combi ovens and convection ovens.',
-};
+import { getMessages } from 'next-intl/server';
+
+export async function generateMetadata({ params }) {
+  const { locale } = await params;
+  const messages = await getMessages({ locale });
+  const t = messages.Navigation;
+
+  return {
+    title: t.products,
+    description: messages.Products.heroSubtitle,
+  };
+}
 
 export default function ProductsLayout({ children }) {
-  return children;
+  return <>{children}</>;
 }

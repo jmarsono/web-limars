@@ -6,11 +6,11 @@ export async function generateMetadata({ params }) {
   const t = messages.Navigation;
 
   return {
-    title: t.contact,
-    description: messages.Contact.heroSubtitle,
+    title: t.about,
+    description: messages.About.heroSubtitle,
   };
 }
 
-export default function ContactLayout({ children }) {
+export default function AboutLayout({ children }) {
   return <>{children}</>;
 }
