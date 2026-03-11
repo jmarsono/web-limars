@@ -1,10 +1,13 @@
 'use client';
 
 import { useState } from 'react';
-import { faqData } from '../../data/faq';
+import { useLocale, useTranslations } from 'next-intl';
+import { faqData } from '../../../data/faq';
 import styles from './FAQ.module.css';
 
 export default function FAQPage() {
+  const locale = useLocale();
+  const t = useTranslations('FAQ');
   const [activeCategory, setActiveCategory] = useState(0);
   const [openItems, setOpenItems] = useState({});
 
@@ -22,10 +25,10 @@ export default function FAQPage() {
     mainEntity: faqData.flatMap(category => 
       category.items.map(item => ({
         '@type': 'Question',
-        name: item.question,
+        name: item.question[locale],
         acceptedAnswer: {
           '@type': 'Answer',
-          text: item.answer
+          text: item.answer[locale]
         }
       }))
     )
@@ -40,9 +43,9 @@ export default function FAQPage() {
       <section className={styles.hero}>
         <div className={styles.heroOverlay}></div>
         <div className={`container ${styles.heroContent}`}>
-          <span className={styles.heroBadge}>FAQ</span>
-          <h1>Frequently Asked Questions</h1>
-          <p>Find answers to common questions about our products, services, and operations.</p>
+          <span className={styles.heroBadge}>{t('heroBadge')}</span>
+          <h1>{t('heroTitle')}</h1>
+          <p>{t('heroSubtitle')}</p>
         </div>
       </section>
 
@@ -51,7 +54,7 @@ export default function FAQPage() {
           <div className={styles.faqWrapper}>
             {/* Sidebar Navigation */}
             <div className={styles.faqNav}>
-              <h3>Categories</h3>
+              <h3>{t('categories')}</h3>
               <ul>
                 {faqData.map((category, idx) => (
                   <li key={idx}>
@@ -59,7 +62,7 @@ export default function FAQPage() {
                       className={`${styles.navBtn} ${activeCategory === idx ? styles.navActive : ''}`}
                       onClick={() => setActiveCategory(idx)}
                     >
-                      {category.category}
+                      {category.category[locale]}
                     </button>
                   </li>
                 ))}
@@ -68,7 +71,7 @@ export default function FAQPage() {
 
             {/* Accordion List */}
             <div className={styles.faqContent}>
-              <h2 className={styles.categoryTitle}>{faqData[activeCategory].category}</h2>
+              <h2 className={styles.categoryTitle}>{faqData[activeCategory].category[locale]}</h2>
               <div className={styles.accordionList}>
                 {faqData[activeCategory].items.map((item, idx) => {
                   const isOpen = openItems[`${activeCategory}-${idx}`];
@@ -79,12 +82,12 @@ export default function FAQPage() {
                         onClick={() => toggleItem(activeCategory, idx)}
                         aria-expanded={isOpen}
                       >
-                        <span className={styles.question}>{item.question}</span>
+                        <span className={styles.question}>{item.question[locale]}</span>
                         <span className={styles.icon}>{isOpen ? '−' : '+'}</span>
                       </button>
                       <div className={styles.accordionBody}>
                         <div className={styles.answer}>
-                          <p>{item.answer}</p>
+                          <p>{item.answer[locale]}</p>
                         </div>
                       </div>
                     </div>
@@ -94,10 +97,10 @@ export default function FAQPage() {
 
               {/* Still need help CTA */}
               <div className={styles.helpBox}>
-                <h3>Still have questions?</h3>
-                <p>Can't find the answer you're looking for? Please chat with our friendly team.</p>
+                <h3>{t('ctaTitle')}</h3>
+                <p>{t('ctaSubtitle')}</p>
                 <a href="https://wa.me/6281234567890" className="btn btn-outline" target="_blank" rel="noopener noreferrer">
-                  Contact Support
+                  {t('ctaBtn')}
                 </a>
               </div>
             </div>

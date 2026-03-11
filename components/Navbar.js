@@ -1,39 +1,43 @@
 'use client';
 
 import { useState, useEffect } from 'react';
-import Link from 'next/link';
+import { Link } from '../i18n/routing';
 import Image from 'next/image';
 import styles from './Navbar.module.css';
-
-const navLinks = [
-  { href: '/', label: 'Home' },
-  { href: '/about', label: 'About Us' },
-  {
-    href: '/products',
-    label: 'Products',
-    dropdown: [
-      { href: '/products?cat=Traditional+Stoves', label: 'Traditional Stoves' },
-      { href: '/products?cat=Regional+Ovens', label: 'Regional Ovens' },
-      { href: '/products?cat=Modern+Ovens', label: 'Modern Ovens' },
-      { href: '/products?cat=Kitchen+Equipment', label: 'Kitchen Equipment' },
-    ],
-  },
-  {
-    href: '/services',
-    label: 'Services',
-    dropdown: [
-      { href: '/services/kitchen-sets', label: 'Kitchen Sets' },
-      { href: '/services/ducting', label: 'Ducting Systems' },
-      { href: '/services/gas-installation', label: 'Gas Installation' },
-      { href: '/services/well-drilling', label: 'Well Drilling' },
-      { href: '/services/electrical', label: 'Electrical Services' },
-    ],
-  },
-  { href: '/projects', label: 'Projects' },
-  { href: '/contact', label: 'Contact' },
-];
+import { useTranslations } from 'next-intl';
+import LanguageSwitcher from './LanguageSwitcher';
 
 export default function Navbar() {
+  const t = useTranslations('Navigation');
+  
+  const navLinks = [
+    { href: '/', label: t('home') },
+    { href: '/about', label: t('about') },
+    {
+      href: '/products',
+      label: t('products'),
+      dropdown: [
+        { href: '/products?cat=Traditional+Stoves', label: t('products_traditional') },
+        { href: '/products?cat=Regional+Ovens', label: t('products_regional') },
+        { href: '/products?cat=Modern+Ovens', label: t('products_modern') },
+        { href: '/products?cat=Kitchen+Equipment', label: t('products_equipment') },
+      ],
+    },
+    {
+      href: '/services',
+      label: t('services'),
+      dropdown: [
+        { href: '/services/kitchen-sets', label: t('services_kitchen') },
+        { href: '/services/ducting', label: t('services_ducting') },
+        { href: '/services/gas-installation', label: t('services_gas') },
+        { href: '/services/well-drilling', label: t('services_well') },
+        { href: '/services/electrical', label: t('services_electrical') },
+      ],
+    },
+    { href: '/projects', label: t('projects') },
+    { href: '/contact', label: t('contact') },
+  ];
+
   const [scrolled, setScrolled] = useState(false);
   const [mobileOpen, setMobileOpen] = useState(false);
   const [activeDropdown, setActiveDropdown] = useState(null);
@@ -111,8 +115,9 @@ export default function Navbar() {
             </div>
           ))}
           <Link href="/contact" className={`btn btn-primary ${styles.navCta}`} onClick={() => setMobileOpen(false)}>
-            Get a Quote
+            {t('getQuote')}
           </Link>
+          <LanguageSwitcher />
         </div>
 
         <button

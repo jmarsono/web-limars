@@ -1,16 +1,21 @@
 'use client';
 
 import { useState } from 'react';
-import { projects, projectCategories } from '../../data/projects';
+import { projects, projectCategories } from '../../../data/projects';
 import styles from './Projects.module.css';
 
+import { useLocale, useTranslations } from 'next-intl';
+
 export default function ProjectsPage() {
+  const locale = useLocale();
+  const t = useTranslations('Projects');
+  
   const [activeCategory, setActiveCategory] = useState('All');
   const [selectedProject, setSelectedProject] = useState(null);
 
   const filteredProjects = activeCategory === 'All'
     ? projects
-    : projects.filter(p => p.category === activeCategory);
+    : projects.filter(p => p.category.en === activeCategory || p.category.id === activeCategory);
 
   return (
     <>
@@ -18,9 +23,9 @@ export default function ProjectsPage() {
       <section className={styles.hero}>
         <div className={styles.heroOverlay}></div>
         <div className={`container ${styles.heroContent}`}>
-          <span className={styles.heroBadge}>Our Portfolio</span>
-          <h1>Projects &amp; Completed Work</h1>
-          <p>Explore our portfolio of kitchen installations, equipment setups, and engineering projects across Indonesia.</p>
+          <span className={styles.heroBadge}>{t('heroBadge')}</span>
+          <h1>{t('heroTitle')}</h1>
+          <p>{t('heroSubtitle')}</p>
         </div>
       </section>
 
@@ -28,15 +33,18 @@ export default function ProjectsPage() {
       <section className={`section ${styles.projectsSection}`}>
         <div className="container">
           <div className={styles.filterBar}>
-            {projectCategories.map((cat) => (
-              <button
-                key={cat}
-                className={`${styles.filterBtn} ${activeCategory === cat ? styles.filterActive : ''}`}
-                onClick={() => setActiveCategory(cat)}
-              >
-                {cat}
-              </button>
-            ))}
+            {projectCategories.map((catKey) => {
+              const catDisplay = catKey === 'All' ? t('all') : t(`categories.${catKey.replace(/\s+/g, '')}`);
+              return (
+                <button
+                  key={catKey}
+                  className={`${styles.filterBtn} ${activeCategory === catKey ? styles.filterActive : ''}`}
+                  onClick={() => setActiveCategory(catKey)}
+                >
+                  {catDisplay}
+                </button>
+              );
+            })}
           </div>
 
           <div className={styles.projectGrid}>
@@ -45,12 +53,12 @@ export default function ProjectsPage() {
                 <div className={styles.projectImage}>
                   <div className={styles.projectImagePlaceholder}>
                     <span>📸</span>
-                    <p>{project.name}</p>
+                    <p>{project.name[locale]}</p>
                   </div>
                   <div className={styles.projectOverlay}>
-                    <span className={styles.projectCategory}>{project.category}</span>
-                    <h3>{project.name}</h3>
-                    <p className={styles.projectLocation}>📍 {project.location}</p>
+                    <span className={styles.projectCategory}>{project.category[locale]}</span>
+                    <h3>{project.name[locale]}</h3>
+                    <p className={styles.projectLocation}>📍 {project.location[locale]}</p>
                   </div>
                 </div>
               </div>
@@ -59,7 +67,7 @@ export default function ProjectsPage() {
 
           {filteredProjects.length === 0 && (
             <div className={styles.empty}>
-              <p>No projects found in this category.</p>
+              <p>{t('emptyState')}</p>
             </div>
           )}
         </div>
@@ -76,15 +84,15 @@ export default function ProjectsPage() {
               </div>
             </div>
             <div className={styles.modalBody}>
-              <span className={styles.modalCategory}>{selectedProject.category}</span>
-              <h2>{selectedProject.name}</h2>
-              <p className={styles.modalLocation}>📍 {selectedProject.location}</p>
-              <p className={styles.modalDesc}>{selectedProject.description}</p>
+              <span className={styles.modalCategory}>{selectedProject.category[locale]}</span>
+              <h2>{selectedProject.name[locale]}</h2>
+              <p className={styles.modalLocation}>📍 {selectedProject.location[locale]}</p>
+              <p className={styles.modalDesc}>{selectedProject.description[locale]}</p>
               <div className={styles.modalScope}>
-                <h4>Scope of Work</h4>
+                <h4>{t('scopeOfWork')}</h4>
                 <ul>
                   {selectedProject.scope.map((s, i) => (
-                    <li key={i}>✓ {s}</li>
+                    <li key={i}>✓ {s[locale]}</li>
                   ))}
                 </ul>
               </div>

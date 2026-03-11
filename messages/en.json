@@ -1,0 +1,243 @@
+{
+  "Navigation": {
+    "home": "Home",
+    "about": "About Us",
+    "products": "Products",
+    "products_traditional": "Traditional Stoves",
+    "products_regional": "Regional Ovens",
+    "products_modern": "Modern Ovens",
+    "products_equipment": "Kitchen Equipment",
+    "services": "Services",
+    "services_kitchen": "Kitchen Sets",
+    "services_ducting": "Ducting Systems",
+    "services_gas": "Gas Installation",
+    "services_well": "Well Drilling",
+    "services_electrical": "Electrical Services",
+    "projects": "Projects",
+    "contact": "Contact",
+    "getQuote": "Get a Quote"
+  },
+  "Home": {
+    "heroBadge": "🏆 Trusted Kitchen Equipment Manufacturer",
+    "heroSubtitle": "Your Trusted Partner in Kitchen Equipment Manufacturing & Engineering Solutions. From traditional stoves to modern commercial ovens — we build it all.",
+    "exploreProducts": "Explore Products",
+    "getQuote": "Get a Quote",
+    "stats": {
+      "years": "Years Experience",
+      "projects": "Projects Completed",
+      "clients": "Clients Served",
+      "team": "Team Members"
+    },
+    "companyBrief": {
+      "tag": "About Us",
+      "title": "Indonesia's Leading Kitchen Equipment Manufacturer",
+      "desc1": "PT. Limars Teknik Indonesia is a specialized manufacturer of commercial and residential kitchen heating equipment. With over a decade of experience, we deliver high-quality products and comprehensive engineering services across Indonesia.",
+      "desc2": "From traditional wok ranges and tandoor ovens to state-of-the-art combi ovens, we combine craftsmanship with modern engineering to create kitchen solutions that last.",
+      "cta": "Learn More About Us",
+      "imgCaption": "Our Manufacturing Facility"
+    },
+    "products": {
+      "title": "Our Products",
+      "subtitle": "Discover our wide range of commercial kitchen equipment, from traditional cooking solutions to modern technology.",
+      "viewDetails": "View Details →",
+      "viewAll": "View All Products"
+    },
+    "services": {
+      "title": "Our Services",
+      "subtitle": "Comprehensive engineering and installation services for restaurants, homes, and commercial buildings.",
+      "learnMore": "Learn More →"
+    },
+    "why": {
+      "title": "Why Choose Limars Teknik?",
+      "subtitle": "We bring together quality manufacturing, expert engineering, and dedicated service.",
+      "items": {
+        "mfg_title": "Own Manufacturing",
+        "mfg_desc": "In-house fabrication facility with modern equipment for precise, high-quality production.",
+        "team_title": "Expert Team",
+        "team_desc": "Experienced engineers, fabricators, and installers dedicated to every project.",
+        "custom_title": "Custom Solutions",
+        "custom_desc": "Tailored equipment and installations to meet your exact specifications and needs.",
+        "mat_title": "Quality Materials",
+        "mat_desc": "Premium stainless steel and certified components for lasting durability.",
+        "safe_title": "Safety Certified",
+        "safe_desc": "All installations comply with safety regulations and industry standards.",
+        "support_title": "After-Sales Support",
+        "support_desc": "Ongoing maintenance, repairs, and support long after installation."
+      }
+    },
+    "projects": {
+      "title": "Featured Projects",
+      "subtitle": "See some of our completed projects across Indonesia.",
+      "viewAll": "View All Projects"
+    },
+    "clients": {
+      "title": "Trusted by Leading Brands Across Indonesia"
+    },
+    "testimonials": {
+      "title": "What Our Clients Say",
+      "subtitle": "Hear from businesses who trust Limars Teknik for their kitchen solutions.",
+      "quotes": {
+        "1": "Limars Teknik delivered our complete kitchen setup on time and with exceptional quality. Their team was professional from design to installation.",
+        "2": "We chose Limars for their expertise in commercial kitchen equipment. The custom wok ranges and ducting system have been performing flawlessly.",
+        "3": "The combi ovens and deck ovens from Limars are built to last. Their after-sales service is responsive and reliable."
+      }
+    },
+    "cta": {
+      "title": "Ready to Build Your Dream Kitchen?",
+      "subtitle": "Get in touch with our team for a free consultation and quotation.",
+      "contactBtn": "Contact Us Today",
+      "whatsappBtn": "💬 Chat on WhatsApp"
+    }
+  },
+  "Products": {
+    "heroBadge": "Our Products",
+    "heroTitle": "Kitchen Equipment & Solutions",
+    "heroSubtitle": "Browse our comprehensive range of commercial kitchen equipment, from traditional stoves to modern ovens.",
+    "all": "All",
+    "categories": {
+      "TraditionalStoves": "Traditional Stoves",
+      "RegionalOvens": "Regional Ovens",
+      "ModernOvens": "Modern Ovens",
+      "KitchenEquipment": "Kitchen Equipment"
+    },
+    "viewDetails": "View Details →",
+    "emptyState": "No products found in this category.",
+    "breadcrumbHome": "Home",
+    "breadcrumbProducts": "Products",
+    "specifications": "Specifications",
+    "requestQuote": "Request Quote",
+    "askWhatsapp": "💬 Ask on WhatsApp",
+    "relatedProducts": "Related Products"
+  },
+  "Services": {
+    "heroBadge": "Our Services",
+    "heroTitle": "Comprehensive Engineering Solutions",
+    "heroSubtitle": "From kitchen set design to electrical installation — we handle every aspect of your project.",
+    "learnMore": "Learn More →",
+    "ctaTitle": "Need a Custom Solution?",
+    "ctaSubtitle": "Contact us to discuss your specific requirements. Our engineering team is ready to help.",
+    "contactBtn": "Contact Us",
+    "whatsappBtn": "💬 WhatsApp",
+    "backLink": "← All Services",
+    "aboutService": "About This Service",
+    "whatWeOffer": "What We Offer",
+    "ourProcess": "Our Process",
+    "processSubtitle": "We follow a structured approach to ensure quality and satisfaction.",
+    "interestedIn": "Interested in {title}?",
+    "interestedSubtitle": "Contact us for a free consultation and quotation.",
+    "requestQuote": "Request a Quote",
+    "chatWhatsapp": "💬 Chat on WhatsApp"
+  },
+  "Projects": {
+    "heroBadge": "Our Portfolio",
+    "heroTitle": "Projects & Completed Work",
+    "heroSubtitle": "Explore our portfolio of kitchen installations, equipment setups, and engineering projects across Indonesia.",
+    "all": "All",
+    "categories": {
+      "KitchenSet": "Kitchen Set",
+      "Ducting": "Ducting",
+      "OvenInstallation": "Oven Installation",
+      "GasInstallation": "Gas Installation",
+      "WellDrilling": "Well Drilling",
+      "Electrical": "Electrical"
+    },
+    "emptyState": "No projects found in this category.",
+    "scopeOfWork": "Scope of Work"
+  },
+  "About": {
+    "heroBadge": "About Us",
+    "heroTitle1": "Building Kitchen Excellence",
+    "heroTitle2": "Since 2014",
+    "heroSubtitle": "We are PT. Limars Teknik Indonesia — your trusted partner in kitchen equipment manufacturing and engineering solutions across Indonesia.",
+    "visionTitle": "Our Vision",
+    "visionDesc": "To be Indonesia's most trusted and innovative kitchen equipment manufacturer, setting the standard for quality, safety, and service excellence in the food service industry.",
+    "missionTitle": "Our Mission",
+    "missionList": {
+      "1": "Manufacture world-class kitchen equipment using premium materials",
+      "2": "Provide end-to-end engineering services for commercial and residential projects",
+      "3": "Continuously innovate to meet evolving industry demands",
+      "4": "Deliver exceptional service and build lasting client relationships"
+    },
+    "journeyTitle": "Our Journey",
+    "journeySubtitle": "A decade of growth, innovation, and excellence in kitchen engineering.",
+    "timeline": {
+      "2014": { "title": "Company Founded", "desc": "PT. Limars Teknik Indonesia established in Jakarta, starting with stainless steel kitchen fabrication." },
+      "2016": { "title": "Expanded Product Line", "desc": "Added traditional stoves, regional ovens, and modern commercial oven manufacturing." },
+      "2018": { "title": "Service Expansion", "desc": "Launched ducting, gas installation, well drilling, and electrical services divisions." },
+      "2020": { "title": "300+ Projects Milestone", "desc": "Completed over 300 projects across Indonesia, serving major hotel chains and restaurant groups." },
+      "2023": { "title": "Modern Facility", "desc": "Opened new manufacturing facility with advanced fabrication equipment and expanded capacity." },
+      "2026": { "title": "Leading Manufacturer", "desc": "Recognized as one of Indonesia's leading kitchen equipment manufacturers with nationwide coverage." }
+    },
+    "coreValuesTitle": "Our Core Values",
+    "coreValuesSubtitle": "The principles that guide everything we do.",
+    "values": {
+      "quality": { "title": "Quality", "desc": "We use only premium materials and maintain strict quality control throughout our manufacturing process." },
+      "reliability": { "title": "Reliability", "desc": "We deliver on our promises — on time, within budget, and to specification." },
+      "innovation": { "title": "Innovation", "desc": "We continuously improve our products and processes to meet evolving industry needs." },
+      "safety": { "title": "Safety", "desc": "Safety is non-negotiable. All our products and installations meet the highest safety standards." },
+      "customerFocus": { "title": "Customer Focus", "desc": "Every project starts with understanding our client's unique needs and delivering tailored solutions." },
+      "sustainability": { "title": "Sustainability", "desc": "We are committed to environmentally responsible manufacturing and energy-efficient solutions." }
+    },
+    "teamTitle": "Our Leadership",
+    "teamSubtitle": "Meet the experienced professionals behind Limars Teknik.",
+    "team": {
+      "founderRole": "Founder & CEO",
+      "founderDesc": "Over 20 years of experience in mechanical engineering and commercial kitchen design.",
+      "mfgRole": "Head of Manufacturing",
+      "mfgDesc": "Expert in stainless steel fabrication with 15 years in the industry.",
+      "designRole": "Head of Design",
+      "designDesc": "Specializes in commercial kitchen layout and ergonomic workspace design.",
+      "installRole": "Head of Installation",
+      "installDesc": "Leads our field operations team with expertise in kitchen systems integration."
+    }
+  },
+  "Contact": {
+    "heroBadge": "Get in Touch",
+    "heroTitle": "Contact Us",
+    "heroSubtitle": "Have a project in mind or need more information about our products? We'd love to hear from you.",
+    "info": {
+      "title": "Contact Information",
+      "subtitle": "Fill up the form and our team will get back to you within 24 hours.",
+      "office": { "label": "Head Office & Workshop", "line1": "Jl. Industri No. 123, Jakarta Barat", "line2": "DKI Jakarta, Indonesia 11510" },
+      "phone": { "label": "Phone" },
+      "whatsapp": { "label": "WhatsApp" },
+      "email": { "label": "Email" },
+      "hours": { "label": "Operating Hours", "line1": "Monday - Friday: 08:00 - 17:00", "line2": "Saturday: 08:00 - 14:00" }
+    },
+    "form": {
+      "title": "Send us a Message",
+      "fields": {
+        "name": { "label": "Full Name", "placeholder": "John Doe" },
+        "email": { "label": "Email Address", "placeholder": "john@example.com" },
+        "phone": { "label": "Phone Number", "placeholder": "+62 812..." },
+        "company": { "label": "Company Name", "placeholder": "Your Company" },
+        "service": {
+          "label": "Interested Service / Product",
+          "options": {
+            "select": "Select an option",
+            "equipment": "Kitchen Equipment / Products",
+            "kitchenSet": "Kitchen Set Design & Installation",
+            "ducting": "Ducting Systems",
+            "gas": "Gas Installation",
+            "well": "Well Drilling",
+            "electrical": "Electrical Services",
+            "other": "Other Inquiry"
+          }
+        },
+        "message": { "label": "Your Message", "placeholder": "Tell us about your project or inquiry..." }
+      },
+      "sending": "Sending...",
+      "success": "Thank you! Your message has been sent successfully. Our team will contact you shortly.",
+      "submitBtn": "Send Message"
+    }
+  },
+  "FAQ": {
+    "heroBadge": "FAQ",
+    "heroTitle": "Frequently Asked Questions",
+    "heroSubtitle": "Find answers to common questions about our products, services, and operations.",
+    "categories": "Categories",
+    "ctaTitle": "Still have questions?",
+    "ctaSubtitle": "Can't find the answer you're looking for? Please chat with our friendly team.",
+    "ctaBtn": "Contact Support"
+  }
+}

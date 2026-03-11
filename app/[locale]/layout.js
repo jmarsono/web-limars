@@ -1,8 +1,12 @@
 import { Inter, Poppins } from 'next/font/google';
-import './globals.css';
-import Navbar from '../components/Navbar';
-import Footer from '../components/Footer';
-import WhatsAppButton from '../components/WhatsAppButton';
+import '../globals.css';
+import Navbar from '../../components/Navbar';
+import Footer from '../../components/Footer';
+import WhatsAppButton from '../../components/WhatsAppButton';
+import { NextIntlClientProvider } from 'next-intl';
+import { getMessages, setRequestLocale } from 'next-intl/server';
+import { routing } from '../../i18n/routing';
+import { notFound } from 'next/navigation';
 
 const inter = Inter({
   subsets: ['latin'],
@@ -25,18 +29,34 @@ export const metadata = {
     title: 'PT. Limars Teknik Indonesia | Kitchen Equipment Manufacturer',
     description: 'Your trusted partner in kitchen equipment manufacturing and engineering solutions.',
     type: 'website',
-    locale: 'id_ID',
   },
 };
 
-export default function RootLayout({ children }) {
+export function generateStaticParams() {
+  return routing.locales.map((locale) => ({ locale }));
+}
+
+export default async function RootLayout({ children, params }) {
+  const { locale } = await params;
+
+  if (!routing.locales.includes(locale)) notFound();
+
+  // Enable static rendering
+  setRequestLocale(locale);
+
+  // Providing all messages to the client
+  // side is the easiest way to get started
+  const messages = await getMessages();
+
   return (
-    <html lang="id">
+    <html lang={locale}>
       <body className={`${inter.variable} ${poppins.variable}`}>
-        <Navbar />
-        <main>{children}</main>
-        <Footer />
-        <WhatsAppButton />
+        <NextIntlClientProvider messages={messages}>
+          <Navbar />
+          <main>{children}</main>
+          <Footer />
+          <WhatsAppButton />
+        </NextIntlClientProvider>
       </body>
     </html>
   );

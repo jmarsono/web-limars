@@ -1,20 +1,25 @@
 'use client';
 
 import { useState } from 'react';
-import Link from 'next/link';
+import { Link } from '../../../i18n/routing';
 import { useSearchParams } from 'next/navigation';
-import { products, productCategories } from '../../data/products';
+import { products, productCategories } from '../../../data/products';
 import styles from './Products.module.css';
 import { Suspense } from 'react';
 
+import { useLocale, useTranslations } from 'next-intl';
+
 function ProductsContent() {
   const searchParams = useSearchParams();
+  const locale = useLocale();
+  const t = useTranslations('Products');
+  
   const initialCat = searchParams.get('cat') || 'All';
   const [activeCategory, setActiveCategory] = useState(initialCat);
 
   const filteredProducts = activeCategory === 'All'
     ? products
-    : products.filter(p => p.category === activeCategory);
+    : products.filter(p => p.category.en === activeCategory || p.category.id === activeCategory);
 
   return (
     <>
@@ -22,9 +27,9 @@ function ProductsContent() {
       <section className={styles.hero}>
         <div className={styles.heroOverlay}></div>
         <div className={`container ${styles.heroContent}`}>
-          <span className={styles.heroBadge}>Our Products</span>
-          <h1>Kitchen Equipment &amp; Solutions</h1>
-          <p>Browse our comprehensive range of commercial kitchen equipment, from traditional stoves to modern ovens.</p>
+          <span className={styles.heroBadge}>{t('heroBadge')}</span>
+          <h1>{t('heroTitle')}</h1>
+          <p>{t('heroSubtitle')}</p>
         </div>
       </section>
 
@@ -33,15 +38,19 @@ function ProductsContent() {
         <div className="container">
           {/* Filter */}
           <div className={styles.filterBar}>
-            {productCategories.map((cat) => (
-              <button
-                key={cat}
-                className={`${styles.filterBtn} ${activeCategory === cat ? styles.filterActive : ''}`}
-                onClick={() => setActiveCategory(cat)}
-              >
-                {cat}
-              </button>
-            ))}
+            {productCategories.map((catKey) => {
+              // 'All' is a special key, the rest we look up in translations (or just map directly)
+              const catDisplay = catKey === 'All' ? t('all') : t(`categories.${catKey.replace(/\s+/g, '')}`);
+              return (
+                <button
+                  key={catKey}
+                  className={`${styles.filterBtn} ${activeCategory === catKey ? styles.filterActive : ''}`}
+                  onClick={() => setActiveCategory(catKey)}
+                >
+                  {catDisplay}
+                </button>
+              );
+            })}
           </div>
 
           {/* Grid */}
@@ -51,17 +60,17 @@ function ProductsContent() {
                 <div className={styles.productImage}>
                   <div className={styles.productImagePlaceholder}>
                     <span>
-                      {product.category === 'Traditional Stoves' ? '🔥' :
-                       product.category === 'Regional Ovens' ? '🍕' :
-                       product.category === 'Modern Ovens' ? '⚙️' : '🍳'}
+                      {product.category.en === 'Traditional Stoves' ? '🔥' :
+                       product.category.en === 'Regional Ovens' ? '🍕' :
+                       product.category.en === 'Modern Ovens' ? '⚙️' : '🍳'}
                     </span>
                   </div>
-                  <div className={styles.productBadge}>{product.category}</div>
+                  <div className={styles.productBadge}>{product.category[locale]}</div>
                 </div>
                 <div className={styles.productInfo}>
-                  <h3>{product.name}</h3>
-                  <p>{product.shortDescription}</p>
-                  <span className={styles.productLink}>View Details →</span>
+                  <h3>{product.name[locale]}</h3>
+                  <p>{product.shortDescription[locale]}</p>
+                  <span className={styles.productLink}>{t('viewDetails')}</span>
                 </div>
               </Link>
             ))}
@@ -69,7 +78,7 @@ function ProductsContent() {
 
           {filteredProducts.length === 0 && (
             <div className={styles.empty}>
-              <p>No products found in this category.</p>
+              <p>{t('emptyState')}</p>
             </div>
           )}
         </div>

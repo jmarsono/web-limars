@@ -1,5 +1,6 @@
-import Link from 'next/link';
-import { services } from '../../data/services';
+import { Link } from '../../../i18n/routing';
+import { services } from '../../../data/services';
+import { useLocale, useTranslations } from 'next-intl';
 import styles from './Services.module.css';
 
 export const metadata = {
@@ -8,15 +9,18 @@ export const metadata = {
 };
 
 export default function ServicesPage() {
+  const locale = useLocale();
+  const t = useTranslations('Services');
+
   return (
     <>
       {/* Hero */}
       <section className={styles.hero}>
         <div className={styles.heroOverlay}></div>
         <div className={`container ${styles.heroContent}`}>
-          <span className={styles.heroBadge}>Our Services</span>
-          <h1>Comprehensive Engineering Solutions</h1>
-          <p>From kitchen set design to electrical installation — we handle every aspect of your project.</p>
+          <span className={styles.heroBadge}>{t('heroBadge')}</span>
+          <h1>{t('heroTitle')}</h1>
+          <p>{t('heroSubtitle')}</p>
         </div>
       </section>
 
@@ -28,15 +32,15 @@ export default function ServicesPage() {
               <Link href={`/services/${service.slug}`} key={service.id} className={`${styles.serviceCard} ${idx === 0 ? styles.serviceCardLarge : ''}`}>
                 <div className={styles.serviceIcon}>{service.icon}</div>
                 <div className={styles.serviceContent}>
-                  <h3>{service.title}</h3>
-                  <span className={styles.serviceSubtitle}>{service.subtitle}</span>
-                  <p>{service.shortDescription}</p>
+                  <h3>{service.title[locale]}</h3>
+                  <span className={styles.serviceSubtitle}>{service.subtitle[locale]}</span>
+                  <p>{service.shortDescription[locale]}</p>
                   <ul className={styles.featureList}>
                     {service.features.slice(0, 3).map((f, i) => (
-                      <li key={i}>✓ {f}</li>
+                      <li key={i}>✓ {f[locale]}</li>
                     ))}
                   </ul>
-                  <span className={styles.serviceLink}>Learn More →</span>
+                  <span className={styles.serviceLink}>{t('learnMore')}</span>
                 </div>
               </Link>
             ))}
@@ -47,12 +51,12 @@ export default function ServicesPage() {
       {/* CTA */}
       <section className={styles.ctaBanner}>
         <div className={`container ${styles.ctaContent}`}>
-          <h2>Need a Custom Solution?</h2>
-          <p>Contact us to discuss your specific requirements. Our engineering team is ready to help.</p>
+          <h2>{t('ctaTitle')}</h2>
+          <p>{t('ctaSubtitle')}</p>
           <div className={styles.ctaButtons}>
-            <Link href="/contact" className="btn btn-primary">Contact Us</Link>
+            <Link href="/contact" className="btn btn-primary">{t('contactBtn')}</Link>
             <a href="https://wa.me/6281234567890" className="btn btn-secondary" target="_blank" rel="noopener noreferrer">
-              💬 WhatsApp
+              {t('whatsappBtn')}
             </a>
           </div>
         </div>

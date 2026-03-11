@@ -1,6 +1,6 @@
-import Link from 'next/link';
+import { Link } from '../../../../i18n/routing';
 import { notFound } from 'next/navigation';
-import { services } from '../../../data/services';
+import { services } from '../../../../data/services';
 import styles from './ServiceDetail.module.css';
 
 export async function generateStaticParams() {
@@ -8,41 +8,45 @@ export async function generateStaticParams() {
 }
 
 export async function generateMetadata({ params }) {
-  const { slug } = await params;
+  const { slug, locale } = await params;
   const service = services.find(s => s.slug === slug);
   if (!service) return { title: 'Service Not Found' };
   return {
-    title: `${service.title} | PT. Limars Teknik Indonesia`,
-    description: service.shortDescription,
+    title: `${service.title[locale]} | PT. Limars Teknik Indonesia`,
+    description: service.shortDescription[locale],
   };
 }
 
 export default async function ServiceDetailPage({ params }) {
-  const { slug } = await params;
+  const { slug, locale } = await params;
   const service = services.find(s => s.slug === slug);
   if (!service) notFound();
+
+  // Load translations for static UI elements
+  const getTranslations = (await import('next-intl/server')).getTranslations;
+  const t = await getTranslations({ locale, namespace: 'Services' });
 
   const jsonLd = {
     '@context': 'https://schema.org',
     '@type': 'Service',
-    serviceType: service.title,
+    serviceType: service.title.en, // Schema.org prefers default/en usually
     provider: {
       '@type': 'LocalBusiness',
       name: 'PT. Limars Teknik Indonesia'
     },
-    description: service.shortDescription,
+    description: service.shortDescription.en,
     areaServed: {
       '@type': 'Country',
       name: 'Indonesia'
     },
     hasOfferCatalog: {
       '@type': 'OfferCatalog',
-      name: service.title + ' Services',
-      itemListElement: service.features.map((feature, index) => ({
+      name: service.title.en + ' Services',
+      itemListElement: service.features.map((featureObj, index) => ({
         '@type': 'Offer',
         itemOffered: {
           '@type': 'Service',
-          name: feature
+          name: featureObj.en
         },
         position: index + 1
       }))
@@ -59,10 +63,10 @@ export default async function ServiceDetailPage({ params }) {
       <section className={styles.hero}>
         <div className={styles.heroOverlay}></div>
         <div className={`container ${styles.heroContent}`}>
-          <Link href="/services" className={styles.backLink}>← All Services</Link>
+          <Link href="/services" className={styles.backLink}>{t('backLink')}</Link>
           <span className={styles.heroIcon}>{service.icon}</span>
-          <h1>{service.title}</h1>
-          <p className={styles.heroSubtitle}>{service.subtitle}</p>
+          <h1>{service.title[locale]}</h1>
+          <p className={styles.heroSubtitle}>{service.subtitle[locale]}</p>
         </div>
       </section>
 
@@ -71,15 +75,15 @@ export default async function ServiceDetailPage({ params }) {
         <div className="container">
           <div className={styles.descGrid}>
             <div className={styles.descContent}>
-              <h2>About This Service</h2>
-              <p>{service.description}</p>
+              <h2>{t('aboutService')}</h2>
+              <p>{service.description[locale]}</p>
               <div className={styles.features}>
-                <h3>What We Offer</h3>
+                <h3>{t('whatWeOffer')}</h3>
                 <ul>
                   {service.features.map((feature, idx) => (
                     <li key={idx}>
                       <span className={styles.checkIcon}>✓</span>
-                      {feature}
+                      {feature[locale]}
                     </li>
                   ))}
                 </ul>
@@ -88,7 +92,7 @@ export default async function ServiceDetailPage({ params }) {
             <div className={styles.descImage}>
               <div className={styles.imagePlaceholder}>
                 <span>{service.icon}</span>
-                <p>{service.title}</p>
+                <p>{service.title[locale]}</p>
               </div>
             </div>
           </div>
@@ -99,15 +103,15 @@ export default async function ServiceDetailPage({ params }) {
       <section className={`section ${styles.processSection}`}>
         <div className="container">
           <div className="section-header">
-            <h2>Our Process</h2>
-            <p>We follow a structured approach to ensure quality and satisfaction.</p>
+            <h2>{t('ourProcess')}</h2>
+            <p>{t('processSubtitle')}</p>
           </div>
           <div className={styles.processGrid}>
             {service.process.map((step) => (
               <div key={step.step} className={styles.processCard}>
                 <div className={styles.processNumber}>{step.step}</div>
-                <h4>{step.title}</h4>
-                <p>{step.description}</p>
+                <h4>{step.title[locale]}</h4>
+                <p>{step.description[locale]}</p>
               </div>
             ))}
           </div>
@@ -117,12 +121,12 @@ export default async function ServiceDetailPage({ params }) {
       {/* CTA */}
       <section className={styles.ctaSection}>
         <div className={`container ${styles.ctaContent}`}>
-          <h2>Interested in {service.title}?</h2>
-          <p>Contact us for a free consultation and quotation.</p>
+          <h2>{t('interestedIn', { title: service.title[locale] })}</h2>
+          <p>{t('interestedSubtitle')}</p>
           <div className={styles.ctaButtons}>
-            <Link href="/contact" className="btn btn-primary">Request a Quote</Link>
+            <Link href="/contact" className="btn btn-primary">{t('requestQuote')}</Link>
             <a href="https://wa.me/6281234567890" className="btn btn-secondary" target="_blank" rel="noopener noreferrer">
-              💬 Chat on WhatsApp
+              {t('chatWhatsapp')}
             </a>
           </div>
         </div>

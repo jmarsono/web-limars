@@ -1,8 +1,9 @@
-import Link from 'next/link';
+import { Link } from '../../i18n/routing';
 import styles from './page.module.css';
-import { products } from '../data/products';
-import { services } from '../data/services';
-import { projects } from '../data/projects';
+import { products } from '../../data/products';
+import { services } from '../../data/services';
+import { projects } from '../../data/projects';
+import { useLocale, useTranslations } from 'next-intl';
 
 const stats = [
   { number: '10+', label: 'Years Experience' },
@@ -12,25 +13,34 @@ const stats = [
 ];
 
 const whyChooseUs = [
-  { icon: '🏭', title: 'Own Manufacturing', description: 'In-house fabrication facility with modern equipment for precise, high-quality production.' },
-  { icon: '👷', title: 'Expert Team', description: 'Experienced engineers, fabricators, and installers dedicated to every project.' },
-  { icon: '🔧', title: 'Custom Solutions', description: 'Tailored equipment and installations to meet your exact specifications and needs.' },
-  { icon: '✅', title: 'Quality Materials', description: 'Premium stainless steel and certified components for lasting durability.' },
-  { icon: '🛡️', title: 'Safety Certified', description: 'All installations comply with safety regulations and industry standards.' },
-  { icon: '🤝', title: 'After-Sales Support', description: 'Ongoing maintenance, repairs, and support long after installation.' },
+  { icon: '🏭', key: 'mfg' },
+  { icon: '👷', key: 'team' },
+  { icon: '🔧', key: 'custom' },
+  { icon: '✅', key: 'mat' },
+  { icon: '🛡️', key: 'safe' },
+  { icon: '🤝', key: 'support' },
 ];
 
 const testimonials = [
-  { name: 'Ahmad Rizal', company: 'Nusantara Restaurant Group', quote: 'Limars Teknik delivered our complete kitchen setup on time and with exceptional quality. Their team was professional from design to installation.', avatar: 'AR' },
-  { name: 'Sarah Chen', company: 'Grand Hyatt Jakarta', quote: 'We chose Limars for their expertise in commercial kitchen equipment. The custom wok ranges and ducting system have been performing flawlessly.', avatar: 'SC' },
-  { name: 'Budi Santoso', company: 'Bakery Central Indonesia', quote: 'The combi ovens and deck ovens from Limars are built to last. Their after-sales service is responsive and reliable.', avatar: 'BS' },
+  { name: 'Ahmad Rizal', company: 'Nusantara Restaurant Group', key: '1', avatar: 'AR' },
+  { name: 'Sarah Chen', company: 'Grand Hyatt Jakarta', key: '2', avatar: 'SC' },
+  { name: 'Budi Santoso', company: 'Bakery Central Indonesia', key: '3', avatar: 'BS' },
 ];
 
 const clientLogos = ['Hotel Santika', 'Grand Hyatt', 'Pizza Hut', 'Sushi Tei', 'Bakmi GM', 'HokBen', 'Solaria', 'J.CO Donuts'];
 
 export default function Home() {
+  const locale = useLocale();
+  const t = useTranslations('Home');
   const featuredProducts = products.filter(p => p.featured).slice(0, 4);
   const featuredProjects = projects.filter(p => p.featured).slice(0, 3);
+
+  const stats = [
+    { number: '10+', label: t('stats.years') },
+    { number: '500+', label: t('stats.projects') },
+    { number: '300+', label: t('stats.clients') },
+    { number: '50+', label: t('stats.team') },
+  ];
 
   const jsonLd = {
     '@context': 'https://schema.org',
@@ -70,18 +80,17 @@ export default function Home() {
         <div className={styles.heroOverlay}></div>
         <div className={styles.heroPattern}></div>
         <div className={`container ${styles.heroContent}`}>
-          <span className={styles.heroBadge}>🏆 Trusted Kitchen Equipment Manufacturer</span>
+          <span className={styles.heroBadge}>{t('heroBadge')}</span>
           <h1 className={styles.heroTitle}>
             PT. LIMARS TEKNIK<br />
             <span className={styles.heroHighlight}>INDONESIA</span>
           </h1>
           <p className={styles.heroSubtitle}>
-            Your Trusted Partner in Kitchen Equipment Manufacturing &amp; Engineering Solutions.
-            From traditional stoves to modern commercial ovens — we build it all.
+            {t('heroSubtitle')}
           </p>
           <div className={styles.heroButtons}>
-            <Link href="/products" className="btn btn-primary">Explore Products</Link>
-            <Link href="/contact" className="btn btn-secondary">Get a Quote</Link>
+            <Link href="/products" className="btn btn-primary">{t('exploreProducts')}</Link>
+            <Link href="/contact" className="btn btn-secondary">{t('getQuote')}</Link>
           </div>
           <div className={styles.heroStats}>
             {stats.map((stat, idx) => (
@@ -99,22 +108,20 @@ export default function Home() {
         <div className="container">
           <div className={styles.briefGrid}>
             <div className={styles.briefContent}>
-              <span className={styles.sectionTag}>About Us</span>
-              <h2>Indonesia&apos;s Leading Kitchen Equipment Manufacturer</h2>
+              <span className={styles.sectionTag}>{t('companyBrief.tag')}</span>
+              <h2>{t('companyBrief.title')}</h2>
               <p>
-                PT. Limars Teknik Indonesia is a specialized manufacturer of commercial and residential kitchen heating equipment.
-                With over a decade of experience, we deliver high-quality products and comprehensive engineering services across Indonesia.
+                {t('companyBrief.desc1')}
               </p>
               <p>
-                From traditional wok ranges and tandoor ovens to state-of-the-art combi ovens, we combine craftsmanship with modern
-                engineering to create kitchen solutions that last.
+                {t('companyBrief.desc2')}
               </p>
-              <Link href="/about" className="btn btn-outline">Learn More About Us</Link>
+              <Link href="/about" className="btn btn-outline">{t('companyBrief.cta')}</Link>
             </div>
             <div className={styles.briefImage}>
               <div className={styles.briefImagePlaceholder}>
                 <span>🏭</span>
-                <p>Our Manufacturing Facility</p>
+                <p>{t('companyBrief.imgCaption')}</p>
               </div>
             </div>
           </div>
@@ -125,28 +132,28 @@ export default function Home() {
       <section className={`section ${styles.productsSection}`}>
         <div className="container">
           <div className="section-header">
-            <h2>Our Products</h2>
-            <p>Discover our wide range of commercial kitchen equipment, from traditional cooking solutions to modern technology.</p>
+            <h2>{t('products.title')}</h2>
+            <p>{t('products.subtitle')}</p>
           </div>
           <div className={styles.productGrid}>
             {featuredProducts.map((product) => (
               <Link href={`/products/${product.slug}`} key={product.id} className={styles.productCard}>
                 <div className={styles.productImage}>
                   <div className={styles.productImagePlaceholder}>
-                    <span>{product.category === 'Traditional Stoves' ? '🔥' : product.category === 'Regional Ovens' ? '🍕' : product.category === 'Modern Ovens' ? '⚙️' : '🍳'}</span>
+                    <span>{product.category.en === 'Traditional Stoves' ? '🔥' : product.category.en === 'Regional Ovens' ? '🍕' : product.category.en === 'Modern Ovens' ? '⚙️' : '🍳'}</span>
                   </div>
-                  <div className={styles.productBadge}>{product.category}</div>
+                  <div className={styles.productBadge}>{product.category[locale]}</div>
                 </div>
                 <div className={styles.productInfo}>
-                  <h3>{product.name}</h3>
-                  <p>{product.shortDescription}</p>
-                  <span className={styles.productLink}>View Details →</span>
+                  <h3>{product.name[locale]}</h3>
+                  <p>{product.shortDescription[locale]}</p>
+                  <span className={styles.productLink}>{t('products.viewDetails')}</span>
                 </div>
               </Link>
             ))}
           </div>
           <div className={styles.sectionCta}>
-            <Link href="/products" className="btn btn-dark">View All Products</Link>
+            <Link href="/products" className="btn btn-dark">{t('products.viewAll')}</Link>
           </div>
         </div>
       </section>
@@ -155,16 +162,16 @@ export default function Home() {
       <section className={`section ${styles.servicesSection}`}>
         <div className="container">
           <div className="section-header">
-            <h2>Our Services</h2>
-            <p>Comprehensive engineering and installation services for restaurants, homes, and commercial buildings.</p>
+            <h2>{t('services.title')}</h2>
+            <p>{t('services.subtitle')}</p>
           </div>
           <div className={styles.serviceGrid}>
             {services.map((service) => (
               <Link href={`/services/${service.slug}`} key={service.id} className={styles.serviceCard}>
                 <span className={styles.serviceIcon}>{service.icon}</span>
-                <h3>{service.title}</h3>
-                <p>{service.shortDescription}</p>
-                <span className={styles.serviceLink}>Learn More →</span>
+                <h3>{service.title[locale]}</h3>
+                <p>{service.shortDescription[locale]}</p>
+                <span className={styles.serviceLink}>{t('services.learnMore')}</span>
               </Link>
             ))}
           </div>
@@ -175,15 +182,15 @@ export default function Home() {
       <section className={`section ${styles.whySection}`}>
         <div className="container">
           <div className="section-header">
-            <h2>Why Choose Limars Teknik?</h2>
-            <p>We bring together quality manufacturing, expert engineering, and dedicated service.</p>
+            <h2>{t('why.title')}</h2>
+            <p>{t('why.subtitle')}</p>
           </div>
           <div className={styles.whyGrid}>
             {whyChooseUs.map((item, idx) => (
               <div key={idx} className={styles.whyCard}>
                 <span className={styles.whyIcon}>{item.icon}</span>
-                <h4>{item.title}</h4>
-                <p>{item.description}</p>
+                <h4>{t(`why.items.${item.key}_title`)}</h4>
+                <p>{t(`why.items.${item.key}_desc`)}</p>
               </div>
             ))}
           </div>
@@ -194,8 +201,8 @@ export default function Home() {
       <section className={`section ${styles.projectsSection}`}>
         <div className="container">
           <div className="section-header">
-            <h2>Featured Projects</h2>
-            <p>See some of our completed projects across Indonesia.</p>
+            <h2>{t('projects.title')}</h2>
+            <p>{t('projects.subtitle')}</p>
           </div>
           <div className={styles.projectGrid}>
             {featuredProjects.map((project) => (
@@ -203,19 +210,19 @@ export default function Home() {
                 <div className={styles.projectImage}>
                   <div className={styles.projectImagePlaceholder}>
                     <span>📸</span>
-                    <p>{project.name}</p>
+                    <p>{project.name[locale]}</p>
                   </div>
                   <div className={styles.projectOverlay}>
-                    <span className={styles.projectCategory}>{project.category}</span>
-                    <h3>{project.name}</h3>
-                    <p>{project.location}</p>
+                    <span className={styles.projectCategory}>{project.category[locale]}</span>
+                    <h3>{project.name[locale]}</h3>
+                    <p>{project.location[locale]}</p>
                   </div>
                 </div>
               </div>
             ))}
           </div>
           <div className={styles.sectionCta}>
-            <Link href="/projects" className="btn btn-dark">View All Projects</Link>
+            <Link href="/projects" className="btn btn-dark">{t('projects.viewAll')}</Link>
           </div>
         </div>
       </section>
@@ -223,7 +230,7 @@ export default function Home() {
       {/* ===== CLIENT LOGOS ===== */}
       <section className={styles.clientSection}>
         <div className="container">
-          <p className={styles.clientTitle}>Trusted by Leading Brands Across Indonesia</p>
+          <p className={styles.clientTitle}>{t('clients.title')}</p>
           <div className={styles.marqueeWrapper}>
             <div className={styles.marquee}>
               {[...clientLogos, ...clientLogos].map((logo, idx) => (
@@ -240,19 +247,19 @@ export default function Home() {
       <section className={`section ${styles.testimonialSection}`}>
         <div className="container">
           <div className="section-header">
-            <h2>What Our Clients Say</h2>
-            <p>Hear from businesses who trust Limars Teknik for their kitchen solutions.</p>
+            <h2>{t('testimonials.title')}</h2>
+            <p>{t('testimonials.subtitle')}</p>
           </div>
           <div className={styles.testimonialGrid}>
-            {testimonials.map((t, idx) => (
+            {testimonials.map((tItem, idx) => (
               <div key={idx} className={styles.testimonialCard}>
                 <div className={styles.testimonialStars}>★★★★★</div>
-                <p className={styles.testimonialQuote}>&ldquo;{t.quote}&rdquo;</p>
+                <p className={styles.testimonialQuote}>&ldquo;{t(`testimonials.quotes.${tItem.key}`)}&rdquo;</p>
                 <div className={styles.testimonialAuthor}>
-                  <div className={styles.testimonialAvatar}>{t.avatar}</div>
+                  <div className={styles.testimonialAvatar}>{tItem.avatar}</div>
                   <div>
-                    <strong>{t.name}</strong>
-                    <span>{t.company}</span>
+                    <strong>{tItem.name}</strong>
+                    <span>{tItem.company}</span>
                   </div>
                 </div>
               </div>
@@ -265,12 +272,12 @@ export default function Home() {
       <section className={styles.ctaBanner}>
         <div className={styles.ctaOverlay}></div>
         <div className={`container ${styles.ctaContent}`}>
-          <h2>Ready to Build Your Dream Kitchen?</h2>
-          <p>Get in touch with our team for a free consultation and quotation.</p>
+          <h2>{t('cta.title')}</h2>
+          <p>{t('cta.subtitle')}</p>
           <div className={styles.ctaButtons}>
-            <Link href="/contact" className="btn btn-primary">Contact Us Today</Link>
+            <Link href="/contact" className="btn btn-primary">{t('cta.contactBtn')}</Link>
             <a href="https://wa.me/6281234567890" className="btn btn-secondary" target="_blank" rel="noopener noreferrer">
-              💬 Chat on WhatsApp
+              {t('cta.whatsappBtn')}
             </a>
           </div>
         </div>

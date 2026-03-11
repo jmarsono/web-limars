@@ -1,0 +1,243 @@
+{
+  "Navigation": {
+    "home": "Beranda",
+    "about": "Tentang Kami",
+    "products": "Produk",
+    "products_traditional": "Kompor Tradisional",
+    "products_regional": "Oven Regional",
+    "products_modern": "Oven Modern",
+    "products_equipment": "Perlengkapan Dapur",
+    "services": "Layanan",
+    "services_kitchen": "Kitchen Set",
+    "services_ducting": "Sistem Ducting",
+    "services_gas": "Instalasi Gas",
+    "services_well": "Pengeboran Sumur",
+    "services_electrical": "Layanan Listrik",
+    "projects": "Proyek",
+    "contact": "Kontak",
+    "getQuote": "Minta Penawaran"
+  },
+  "Home": {
+    "heroBadge": "🏆 Produsen Peralatan Dapur Terpercaya",
+    "heroSubtitle": "Mitra Terpercaya Anda dalam Pembuatan Peralatan Dapur & Solusi Teknik. Dari kompor tradisional hingga oven komersial modern — kami membangun semuanya.",
+    "exploreProducts": "Jelajahi Produk",
+    "getQuote": "Minta Penawaran",
+    "stats": {
+      "years": "Tahun Pengalaman",
+      "projects": "Proyek Selesai",
+      "clients": "Klien Dilayani",
+      "team": "Anggota Tim"
+    },
+    "companyBrief": {
+      "tag": "Tentang Kami",
+      "title": "Produsen Peralatan Dapur Terkemuka di Indonesia",
+      "desc1": "PT. Limars Teknik Indonesia adalah produsen khusus peralatan pemanas dapur komersial dan residensial. Dengan pengalaman lebih dari satu dekade, kami menghadirkan produk berkualitas tinggi dan layanan teknik komprehensif di seluruh Indonesia.",
+      "desc2": "Dari kompor wajan tradisional dan oven tandoor hingga oven combi canggih, kami memadukan pengerjaan tangan dengan teknik modern untuk menciptakan solusi dapur yang tahan lama.",
+      "cta": "Pelajari Lebih Lanjut Tentang Kami",
+      "imgCaption": "Fasilitas Produksi Kami"
+    },
+    "products": {
+      "title": "Produk Kami",
+      "subtitle": "Temukan berbagai peralatan dapur komersial kami, dari solusi memasak tradisional hingga teknologi modern.",
+      "viewDetails": "Lihat Detail →",
+      "viewAll": "Lihat Semua Produk"
+    },
+    "services": {
+      "title": "Layanan Kami",
+      "subtitle": "Layanan teknik dan instalasi komprehensif untuk restoran, rumah, dan bangunan komersial.",
+      "learnMore": "Pelajari Lebih Lanjut →"
+    },
+    "why": {
+      "title": "Mengapa Memilih Limars Teknik?",
+      "subtitle": "Kami menyatukan kualitas produksi, teknisi ahli, dan layanan yang berdedikasi.",
+      "items": {
+        "mfg_title": "Produksi Sendiri",
+        "mfg_desc": "Fasilitas fabrikasi in-house dengan peralatan modern untuk produksi yang presisi dan berkualitas tinggi.",
+        "team_title": "Tim Ahli",
+        "team_desc": "Insinyur, fabrikator, dan instalatur berpengalaman yang didedikasikan untuk setiap proyek.",
+        "custom_title": "Solusi Kustom",
+        "custom_desc": "Peralatan dan instalasi yang disesuaikan untuk memenuhi spesifikasi dan kebutuhan tepat Anda.",
+        "mat_title": "Material Berkualitas",
+        "mat_desc": "Baja tahan karat (stainless steel) premium dan komponen bersertifikat untuk daya tahan yang lama.",
+        "safe_title": "Bersertifikasi Aman",
+        "safe_desc": "Semua instalasi mematuhi peraturan keselamatan dan standar industri.",
+        "support_title": "Dukungan Purna Jual",
+        "support_desc": "Pemeliharaan, perbaikan, dan dukungan berkelanjutan jauh setelah instalasi."
+      }
+    },
+    "projects": {
+      "title": "Proyek Unggulan",
+      "subtitle": "Lihat beberapa proyek kami yang telah selesai di seluruh Indonesia.",
+      "viewAll": "Lihat Semua Proyek"
+    },
+    "clients": {
+      "title": "Dipercaya Oleh Merek Terkemuka di Seluruh Indonesia"
+    },
+    "testimonials": {
+      "title": "Apa Kata Klien Kami",
+      "subtitle": "Dengarkan dari bisnis yang mempercayai Limars Teknik untuk solusi dapur mereka.",
+      "quotes": {
+        "1": "Limars Teknik menyelesaikan seluruh setup dapur kami tepat waktu dan dengan kualitas yang luar biasa. Tim mereka sangat profesional mulai dari desain hingga instalasi.",
+        "2": "Kami memilih Limars karena keahlian mereka dalam peralatan dapur komersial. Kompor wajan khusus dan sistem ducting kami telah beroperasi dengan lancar.",
+        "3": "Oven combi dan oven deck dari Limars dibangun agar tahan lama. Layanan purna jual mereka responsif dan dapat diandalkan."
+      }
+    },
+    "cta": {
+      "title": "Siap Membangun Dapur Impian Anda?",
+      "subtitle": "Hubungi tim kami untuk konsultasi dan penawaran gratis.",
+      "contactBtn": "Hubungi Kami Hari Ini",
+      "whatsappBtn": "💬 Chat via WhatsApp"
+    }
+  },
+  "Products": {
+    "heroBadge": "Produk Kami",
+    "heroTitle": "Peralatan & Solusi Dapur",
+    "heroSubtitle": "Jelajahi rangkaian lengkap peralatan dapur komersial kami, mulai dari kompor tradisional hingga oven modern.",
+    "all": "Semua",
+    "categories": {
+      "TraditionalStoves": "Kompor Tradisional",
+      "RegionalOvens": "Oven Regional",
+      "ModernOvens": "Oven Modern",
+      "KitchenEquipment": "Perlengkapan Dapur"
+    },
+    "viewDetails": "Lihat Detail →",
+    "emptyState": "Tidak ada produk yang ditemukan dalam kategori ini.",
+    "breadcrumbHome": "Beranda",
+    "breadcrumbProducts": "Produk",
+    "specifications": "Spesifikasi",
+    "requestQuote": "Minta Penawaran",
+    "askWhatsapp": "💬 Tanya via WhatsApp",
+    "relatedProducts": "Produk Terkait"
+  },
+  "Services": {
+    "heroBadge": "Layanan Kami",
+    "heroTitle": "Solusi Teknik Komprehensif",
+    "heroSubtitle": "Dari desain kitchen set hingga instalasi listrik — kami menangani setiap aspek proyek Anda.",
+    "learnMore": "Pelajari Lebih Lanjut →",
+    "ctaTitle": "Butuh Solusi Khusus?",
+    "ctaSubtitle": "Hubungi kami untuk mendiskusikan kebutuhan spesifik Anda. Tim teknik kami siap membantu.",
+    "contactBtn": "Hubungi Kami",
+    "whatsappBtn": "💬 WhatsApp",
+    "backLink": "← Semua Layanan",
+    "aboutService": "Tentang Layanan Ini",
+    "whatWeOffer": "Apa yang Kami Tawarkan",
+    "ourProcess": "Proses Kami",
+    "processSubtitle": "Kami mengikuti pendekatan terstruktur untuk memastikan kualitas dan kepuasan.",
+    "interestedIn": "Tertarik dengan {title}?",
+    "interestedSubtitle": "Hubungi kami untuk konsultasi dan penawaran gratis.",
+    "requestQuote": "Minta Penawaran",
+    "chatWhatsapp": "💬 Chat via WhatsApp"
+  },
+  "Projects": {
+    "heroBadge": "Portofolio Kami",
+    "heroTitle": "Proyek & Pekerjaan Selesai",
+    "heroSubtitle": "Jelajahi portofolio instalasi dapur, pengaturan peralatan, dan proyek teknik kami di seluruh Indonesia.",
+    "all": "Semua",
+    "categories": {
+      "KitchenSet": "Kitchen Set",
+      "Ducting": "Ducting",
+      "OvenInstallation": "Instalasi Oven",
+      "GasInstallation": "Instalasi Gas",
+      "WellDrilling": "Pengeboran Sumur",
+      "Electrical": "Kelistrikan"
+    },
+    "emptyState": "Tidak ada proyek yang ditemukan dalam kategori ini.",
+    "scopeOfWork": "Lingkup Pekerjaan"
+  },
+  "About": {
+    "heroBadge": "Tentang Kami",
+    "heroTitle1": "Membangun Keunggulan Dapur",
+    "heroTitle2": "Sejak 2014",
+    "heroSubtitle": "Kami adalah PT. Limars Teknik Indonesia — mitra tepercaya Anda dalam pembuatan peralatan dapur dan solusi teknik di seluruh Indonesia.",
+    "visionTitle": "Visi Kami",
+    "visionDesc": "Menjadi produsen peralatan dapur paling tepercaya dan inovatif di Indonesia, menetapkan standar untuk kualitas, keamanan, dan keunggulan layanan dalam industri jasa makanan.",
+    "missionTitle": "Misi Kami",
+    "missionList": {
+      "1": "Memproduksi peralatan dapur kelas dunia menggunakan bahan premium",
+      "2": "Menyediakan layanan teknik end-to-end untuk proyek komersial dan residensial",
+      "3": "Terus berinovasi untuk memenuhi permintaan industri yang terus berkembang",
+      "4": "Memberikan layanan luar biasa dan membangun hubungan klien yang langgeng"
+    },
+    "journeyTitle": "Perjalanan Kami",
+    "journeySubtitle": "Satu dekade pertumbuhan, inovasi, dan keunggulan dalam teknik dapur.",
+    "timeline": {
+      "2014": { "title": "Perusahaan Didirikan", "desc": "PT. Limars Teknik Indonesia didirikan di Jakarta, dimulai dengan fabrikasi dapur baja tahan karat." },
+      "2016": { "title": "Perluasan Lini Produk", "desc": "Menambahkan pembuatan kompor tradisional, oven regional, dan oven komersial modern." },
+      "2018": { "title": "Ekspansi Layanan", "desc": "Meluncurkan divisi ducting, instalasi gas, pengeboran sumur, dan layanan kelistrikan." },
+      "2020": { "title": "Pencapaian 300+ Proyek", "desc": "Menyelesaikan lebih dari 300 proyek di seluruh Indonesia, melayani jaringan hotel besar dan grup restoran." },
+      "2023": { "title": "Fasilitas Modern", "desc": "Membuka fasilitas manufaktur baru dengan peralatan fabrikasi canggih dan kapasitas yang diperluas." },
+      "2026": { "title": "Produsen Terkemuka", "desc": "Diakui sebagai salah satu produsen peralatan dapur terkemuka di Indonesia dengan jangkauan nasional." }
+    },
+    "coreValuesTitle": "Nilai Inti Kami",
+    "coreValuesSubtitle": "Prinsip-prinsip yang memandu segala hal yang kami lakukan.",
+    "values": {
+      "quality": { "title": "Kualitas", "desc": "Kami hanya menggunakan bahan premium dan mempertahankan kontrol kualitas yang ketat di seluruh proses pembuatan kami." },
+      "reliability": { "title": "Keandalan", "desc": "Kami menepati janji kami — tepat waktu, sesuai anggaran, dan sesuai spesifikasi." },
+      "innovation": { "title": "Inovasi", "desc": "Kami terus meningkatkan produk dan proses kami untuk memenuhi kebutuhan industri yang terus berkembang." },
+      "safety": { "title": "Keamanan", "desc": "Keamanan tidak bisa dinegosiasikan. Semua produk dan instalasi kami memenuhi standar keamanan tertinggi." },
+      "customerFocus": { "title": "Fokus Pelanggan", "desc": "Setiap proyek dimulai dengan memahami kebutuhan unik klien kami dan memberikan solusi yang disesuaikan." },
+      "sustainability": { "title": "Keberlanjutan", "desc": "Kami berkomitmen pada manufaktur yang bertanggung jawab terhadap lingkungan dan solusi hemat energi." }
+    },
+    "teamTitle": "Kepemimpinan Kami",
+    "teamSubtitle": "Temui para profesional berpengalaman di balik Limars Teknik.",
+    "team": {
+      "founderRole": "Pendiri & CEO",
+      "founderDesc": "Lebih dari 20 tahun pengalaman di bidang teknik mesin dan desain dapur komersial.",
+      "mfgRole": "Kepala Manufaktur",
+      "mfgDesc": "Ahli fabrikasi baja tahan karat dengan 15 tahun di industri ini.",
+      "designRole": "Kepala Desain",
+      "designDesc": "Mengkhususkan diri dalam tata letak dapur komersial dan desain ruang kerja ergonomis.",
+      "installRole": "Kepala Instalasi",
+      "installDesc": "Memimpin tim operasi lapangan kami dengan keahlian dalam integrasi sistem dapur."
+    }
+  },
+  "Contact": {
+    "heroBadge": "Hubungi Kami",
+    "heroTitle": "Kontak Kami",
+    "heroSubtitle": "Punya proyek atau butuh info lebih lanjut mengenai produk kami? Kami siap mendengar dari Anda.",
+    "info": {
+      "title": "Informasi Kontak",
+      "subtitle": "Isi form dan tim kami akan menghubungi Anda dalam 24 jam.",
+      "office": { "label": "Kantor Pusat & Workshop", "line1": "Jl. Industri No. 123, Jakarta Barat", "line2": "DKI Jakarta, Indonesia 11510" },
+      "phone": { "label": "Telepon" },
+      "whatsapp": { "label": "WhatsApp" },
+      "email": { "label": "Email" },
+      "hours": { "label": "Jam Operasional", "line1": "Senin - Jumat: 08:00 - 17:00", "line2": "Sabtu: 08:00 - 14:00" }
+    },
+    "form": {
+      "title": "Kirimkan kami Pesan",
+      "fields": {
+        "name": { "label": "Nama Lengkap", "placeholder": "Budi Santoso" },
+        "email": { "label": "Alamat Email", "placeholder": "budi@contoh.com" },
+        "phone": { "label": "Nomor Telepon", "placeholder": "+62 812..." },
+        "company": { "label": "Nama Perusahaan", "placeholder": "Perusahaan Anda" },
+        "service": {
+          "label": "Layanan / Produk yang Diminati",
+          "options": {
+            "select": "Pilih satu opsi",
+            "equipment": "Peralatan Dapur / Produk",
+            "kitchenSet": "Desain & Instalasi Kitchen Set",
+            "ducting": "Sistem Ducting",
+            "gas": "Instalasi Gas",
+            "well": "Pengeboran Sumur",
+            "electrical": "Layanan Kelistrikan",
+            "other": "Pertanyaan Lainnya"
+          }
+        },
+        "message": { "label": "Pesan Anda", "placeholder": "Ceritakan tentang proyek atau pertanyaan Anda..." }
+      },
+      "sending": "Mengirim...",
+      "success": "Terima kasih! Pesan Anda telah berhasil dikirim. Tim kami akan segera menghubungi Anda.",
+      "submitBtn": "Kirim Pesan"
+    }
+  },
+  "FAQ": {
+    "heroBadge": "FAQ",
+    "heroTitle": "Pertanyaan yang Sering Diajukan",
+    "heroSubtitle": "Temukan jawaban atas pertanyaan umum tentang produk, layanan, dan operasi kami.",
+    "categories": "Kategori",
+    "ctaTitle": "Masih punya pertanyaan?",
+    "ctaSubtitle": "Tidak dapat menemukan jawaban yang Anda cari? Silakan mengobrol dengan tim kami yang ramah.",
+    "ctaBtn": "Hubungi Dukungan"
+  }
+}

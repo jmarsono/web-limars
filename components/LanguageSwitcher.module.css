@@ -1,0 +1,29 @@
+.switcher {
+  display: flex;
+  align-items: center;
+  gap: 0.25rem;
+  background: transparent;
+  border: 1px solid rgba(0,0,0,0.1);
+  border-radius: 20px;
+  padding: 0.5rem 0.75rem;
+  font-weight: 600;
+  font-size: 0.85rem;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  color: var(--text-light);
+  margin-left: 1rem;
+}
+
+.switcher:hover {
+  border-color: var(--primary-color);
+  color: var(--primary-color);
+}
+
+.active {
+  color: var(--primary-color);
+}
+
+.divider {
+  color: #ccc;
+  font-weight: 400;
+}
