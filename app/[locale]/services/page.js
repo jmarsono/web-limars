@@ -11,7 +11,7 @@ export async function generateMetadata({ params }) {
   const t = messages.Navigation; // Using Navigation or a specific SEO entry
 
   return {
-    title: t('services'),
+    title: t.services,
     description: 'Comprehensive services: restaurant kitchen sets, ducting systems, gas installation, well drilling, and electrical services.',
   };
 }
