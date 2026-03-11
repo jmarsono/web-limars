@@ -25,7 +25,7 @@ export const products = [
       fuelType: { en: 'LPG / Natural Gas', id: 'LPG / Gas Alam' },
       dimensions: '1200 x 800 x 850 mm',
     },
-    image: '/images/products/wok-range.jpg',
+    image: '/images/products/wok-range.png',
     featured: true,
   },
   {
@@ -54,7 +54,7 @@ export const products = [
       fuelType: { en: 'LPG / Natural Gas', id: 'LPG / Gas Alam' },
       dimensions: '900 x 800 x 850 mm',
     },
-    image: '/images/products/kwali-range.jpg',
+    image: '/images/products/kwali-range.png',
     featured: true,
   },
   {
@@ -83,7 +83,7 @@ export const products = [
       fuelType: { en: 'LPG / Natural Gas', id: 'LPG / Gas Alam' },
       dimensions: '1800 x 900 x 850 mm',
     },
-    image: '/images/products/chinese-cooking-range.jpg',
+    image: '/images/products/chinese-cooking-range.png',
   },
   {
     id: 4,
@@ -111,7 +111,7 @@ export const products = [
       fuelType: { en: 'Gas / Wood', id: 'Gas / Kayu Bakar' },
       dimensions: '1500 x 1200 x 1800 mm',
     },
-    image: '/images/products/pizza-oven.jpg',
+    image: '/images/products/pizza-oven.png',
     featured: true,
   },
   {
@@ -139,7 +139,7 @@ export const products = [
       fuelType: { en: 'Gas / Charcoal', id: 'Gas / Arang' },
       dimensions: '800 x 800 x 1100 mm',
     },
-    image: '/images/products/tandoor-oven.jpg',
+    image: '/images/products/tandoor-oven.png',
   },
   {
     id: 6,
@@ -166,7 +166,7 @@ export const products = [
       fuelType: { en: 'Wood / Gas', id: 'Kayu Bakar / Gas' },
       dimensions: { en: 'Custom', id: 'Sesuai Pesanan' },
     },
-    image: '/images/products/brick-oven.jpg',
+    image: '/images/products/brick-oven.png',
   },
   {
     id: 7,
@@ -194,7 +194,7 @@ export const products = [
       power: { en: 'Electric / Gas', id: 'Listrik / Gas' },
       dimensions: '800 x 700 x 1500 mm',
     },
-    image: '/images/products/convection-oven.jpg',
+    image: '/images/products/convection-oven.png',
     featured: true,
   },
   {
@@ -223,7 +223,7 @@ export const products = [
       power: { en: 'Electric / Gas', id: 'Listrik / Gas' },
       dimensions: '1200 x 900 x 1600 mm',
     },
-    image: '/images/products/deck-oven.jpg',
+    image: '/images/products/deck-oven.png',
   },
   {
     id: 9,
@@ -251,7 +251,7 @@ export const products = [
       power: { en: 'Electric / Gas', id: 'Listrik / Gas' },
       dimensions: '900 x 800 x 1800 mm',
     },
-    image: '/images/products/combi-oven.jpg',
+    image: '/images/products/combi-oven.png',
     featured: true,
   },
   {
@@ -278,7 +278,7 @@ export const products = [
       surfaceArea: '600 x 400 mm - 1200 x 600 mm',
       power: { en: 'Gas / Electric', id: 'Gas / Listrik' },
     },
-    image: '/images/products/griddle.jpg',
+    image: '/images/products/griddle.png',
   },
   {
     id: 11,
@@ -304,7 +304,7 @@ export const products = [
       capacity: { en: '8-25 Liters', id: '8-25 Liter' },
       power: { en: 'Gas / Electric', id: 'Gas / Listrik' },
     },
-    image: '/images/products/deep-fryer.jpg',
+    image: '/images/products/deep-fryer.png',
   },
   {
     id: 12,
@@ -330,7 +330,7 @@ export const products = [
       pans: { en: '3-6 GN Pans', id: '3-6 Nampan GN' },
       power: { en: 'Electric', id: 'Listrik' },
     },
-    image: '/images/products/bain-marie.jpg',
+    image: '/images/products/bain-marie.png',
   },
 ];
 

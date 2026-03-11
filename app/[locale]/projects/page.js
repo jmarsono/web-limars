@@ -2,6 +2,7 @@
 
 import { useState } from 'react';
 import { projects, projectCategories } from '../../../data/projects';
+import Image from 'next/image';
 import styles from './Projects.module.css';
 
 import { useLocale, useTranslations } from 'next-intl';
@@ -51,9 +52,13 @@ export default function ProjectsPage() {
             {filteredProjects.map((project) => (
               <div key={project.id} className={styles.projectCard} onClick={() => setSelectedProject(project)}>
                 <div className={styles.projectImage}>
-                  <div className={styles.projectImagePlaceholder}>
-                    <span>📸</span>
-                    <p>{project.name[locale]}</p>
+                  <div style={{ position: 'relative', width: '100%', aspectRatio: '4/3', backgroundColor: '#f0f0f0', overflow: 'hidden' }}>
+                    <Image 
+                      src={project.image} 
+                      alt={project.name[locale]} 
+                      fill
+                      style={{ objectFit: 'cover' }}
+                    />
                   </div>
                   <div className={styles.projectOverlay}>
                     <span className={styles.projectCategory}>{project.category[locale]}</span>
@@ -79,8 +84,13 @@ export default function ProjectsPage() {
           <div className={styles.modalContent} onClick={e => e.stopPropagation()}>
             <button className={styles.modalClose} onClick={() => setSelectedProject(null)}>✕</button>
             <div className={styles.modalImage}>
-              <div className={styles.modalImagePlaceholder}>
-                <span>📸</span>
+              <div style={{ position: 'relative', width: '100%', height: '300px', backgroundColor: '#f0f0f0', borderRadius: '15px 15px 0 0', overflow: 'hidden' }}>
+                <Image 
+                  src={selectedProject.image} 
+                  alt={selectedProject.name[locale]} 
+                  fill
+                  style={{ objectFit: 'cover' }}
+                />
               </div>
             </div>
             <div className={styles.modalBody}>

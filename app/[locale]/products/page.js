@@ -6,6 +6,7 @@ import { useSearchParams } from 'next/navigation';
 import { products, productCategories } from '../../../data/products';
 import styles from './Products.module.css';
 import { Suspense } from 'react';
+import Image from 'next/image';
 
 import { useLocale, useTranslations } from 'next-intl';
 
@@ -58,12 +59,13 @@ function ProductsContent() {
             {filteredProducts.map((product) => (
               <Link href={`/products/${product.slug}`} key={product.id} className={styles.productCard}>
                 <div className={styles.productImage}>
-                  <div className={styles.productImagePlaceholder}>
-                    <span>
-                      {product.category.en === 'Traditional Stoves' ? '🔥' :
-                       product.category.en === 'Regional Ovens' ? '🍕' :
-                       product.category.en === 'Modern Ovens' ? '⚙️' : '🍳'}
-                    </span>
+                  <div style={{ position: 'relative', width: '100%', aspectRatio: '4/3', overflow: 'hidden', backgroundColor: '#f0f0f0' }}>
+                    <Image 
+                      src={product.image} 
+                      alt={product.name[locale]} 
+                      fill
+                      style={{ objectFit: 'cover' }}
+                    />
                   </div>
                   <div className={styles.productBadge}>{product.category[locale]}</div>
                 </div>

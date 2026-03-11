@@ -2,6 +2,7 @@ export const services = [
   {
     id: 1,
     slug: 'kitchen-sets',
+    image: '/images/services/kitchen-set.png',
     title: {
       en: 'Restaurant Kitchen Set',
       id: 'Kitchen Set Restoran'
@@ -34,11 +35,11 @@ export const services = [
       { step: 4, title: { en: 'Installation', id: 'Instalasi' }, description: { en: 'Professional on-site installation by our experienced team.', id: 'Instalasi on-site profesional oleh tim kami yang berpengalaman.' } },
       { step: 5, title: { en: 'Handover', id: 'Serah Terima' }, description: { en: 'Final inspection, training, and project handover with warranty.', id: 'Inspeksi akhir, pelatihan, dan serah terima proyek dengan garansi.' } }
     ],
-    image: '/images/services/kitchen-set.jpg',
   },
   {
     id: 2,
     slug: 'ducting',
+    image: '/images/services/ducting.png',
     title: {
       en: 'Ducting Systems',
       id: 'Sistem Ducting'
@@ -71,11 +72,11 @@ export const services = [
       { step: 4, title: { en: 'Installation', id: 'Instalasi' }, description: { en: 'Professional installation with minimal disruption.', id: 'Instalasi profesional dengan gangguan minimal.' } },
       { step: 5, title: { en: 'Testing', id: 'Pengujian' }, description: { en: 'Air flow testing and system commissioning.', id: 'Pengujian aliran udara dan komisioning sistem.' } }
     ],
-    image: '/images/services/ducting.jpg',
   },
   {
     id: 3,
     slug: 'gas-installation',
+    image: '/images/services/gas-installation.png',
     title: {
       en: 'Gas Installation',
       id: 'Instalasi Gas'
@@ -108,11 +109,11 @@ export const services = [
       { step: 4, title: { en: 'Testing', id: 'Pengujian' }, description: { en: 'Comprehensive pressure testing and leak checks.', id: 'Pengujian tekanan komprehensif dan pemeriksaan kebocoran.' } },
       { step: 5, title: { en: 'Certification', id: 'Sertifikasi' }, description: { en: 'Provide official certification and documentation.', id: 'Memberikan sertifikasi dan dokumentasi resmi.' } }
     ],
-    image: '/images/services/gas-installation.jpg',
   },
   {
     id: 4,
     slug: 'well-drilling',
+    image: '/images/services/well-drilling.png',
     title: {
       en: 'Well Drilling',
       id: 'Pengeboran Sumur'
@@ -145,11 +146,11 @@ export const services = [
       { step: 4, title: { en: 'Pump Setup', id: 'Pengaturan Pompa' }, description: { en: 'Install and configure submersible pump system.', id: 'Instalasi dan konfigurasi sistem pompa celup.' } },
       { step: 5, title: { en: 'Testing', id: 'Pengujian' }, description: { en: 'Water quality and flow rate testing.', id: 'Pengujian kualitas air dan laju aliran.' } }
     ],
-    image: '/images/services/well-drilling.jpg',
   },
   {
     id: 5,
     slug: 'electrical',
+    image: '/images/services/electrical.png',
     title: {
       en: 'Electrical Services',
       id: 'Layanan Listrik'
@@ -182,6 +183,5 @@ export const services = [
       { step: 4, title: { en: 'Testing', id: 'Pengujian' }, description: { en: 'Comprehensive safety and load testing.', id: 'Pengujian keselamatan dan beban komprehensif.' } },
       { step: 5, title: { en: 'Handover', id: 'Serah Terima' }, description: { en: 'Documentation, certification, and client training.', id: 'Dokumentasi, sertifikasi, dan pelatihan klien.' } }
     ],
-    image: '/images/services/electrical.jpg',
   },
 ];

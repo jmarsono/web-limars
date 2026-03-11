@@ -1,6 +1,7 @@
 import { Link } from '../../../../i18n/routing';
 import { notFound } from 'next/navigation';
 import { services } from '../../../../data/services';
+import Image from 'next/image';
 import styles from './ServiceDetail.module.css';
 
 export async function generateStaticParams() {
@@ -90,9 +91,13 @@ export default async function ServiceDetailPage({ params }) {
               </div>
             </div>
             <div className={styles.descImage}>
-              <div className={styles.imagePlaceholder}>
-                <span>{service.icon}</span>
-                <p>{service.title[locale]}</p>
+              <div style={{ position: 'relative', width: '100%', height: '100%', minHeight: '350px', backgroundColor: '#f0f0f0', borderRadius: '15px', overflow: 'hidden' }}>
+                <Image 
+                  src={service.image} 
+                  alt={service.title[locale]} 
+                  fill
+                  style={{ objectFit: 'cover' }}
+                />
               </div>
             </div>
           </div>

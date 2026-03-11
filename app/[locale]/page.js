@@ -4,6 +4,7 @@ import { products } from '../../data/products';
 import { services } from '../../data/services';
 import { projects } from '../../data/projects';
 import { useLocale, useTranslations } from 'next-intl';
+import Image from 'next/image';
 
 const stats = [
   { number: '10+', label: 'Years Experience' },
@@ -119,9 +120,13 @@ export default function Home() {
               <Link href="/about" className="btn btn-outline">{t('companyBrief.cta')}</Link>
             </div>
             <div className={styles.briefImage}>
-              <div className={styles.briefImagePlaceholder}>
-                <span>🏭</span>
-                <p>{t('companyBrief.imgCaption')}</p>
+              <div style={{ position: 'relative', width: '100%', height: '100%', minHeight: '300px', borderRadius: '15px', overflow: 'hidden' }}>
+                <Image 
+                  src="/images/facility.png" 
+                  alt={t('companyBrief.imgCaption')}
+                  fill
+                  style={{ objectFit: 'cover' }}
+                />
               </div>
             </div>
           </div>
@@ -139,8 +144,13 @@ export default function Home() {
             {featuredProducts.map((product) => (
               <Link href={`/products/${product.slug}`} key={product.id} className={styles.productCard}>
                 <div className={styles.productImage}>
-                  <div className={styles.productImagePlaceholder}>
-                    <span>{product.category.en === 'Traditional Stoves' ? '🔥' : product.category.en === 'Regional Ovens' ? '🍕' : product.category.en === 'Modern Ovens' ? '⚙️' : '🍳'}</span>
+                  <div style={{ position: 'relative', width: '100%', aspectRatio: '4/3', overflow: 'hidden', backgroundColor: '#f0f0f0' }}>
+                    <Image 
+                      src={product.image} 
+                      alt={product.name[locale]} 
+                      fill
+                      style={{ objectFit: 'cover' }}
+                    />
                   </div>
                   <div className={styles.productBadge}>{product.category[locale]}</div>
                 </div>
@@ -208,9 +218,13 @@ export default function Home() {
             {featuredProjects.map((project) => (
               <div key={project.id} className={styles.projectCard}>
                 <div className={styles.projectImage}>
-                  <div className={styles.projectImagePlaceholder}>
-                    <span>📸</span>
-                    <p>{project.name[locale]}</p>
+                  <div style={{ position: 'relative', width: '100%', height: '100%', minHeight: '250px', overflow: 'hidden' }}>
+                    <Image 
+                      src={project.image} 
+                      alt={project.name[locale]} 
+                      fill
+                      style={{ objectFit: 'cover' }}
+                    />
                   </div>
                   <div className={styles.projectOverlay}>
                     <span className={styles.projectCategory}>{project.category[locale]}</span>

@@ -1,6 +1,7 @@
 export const projects = [
   {
     id: 1,
+    image: '/images/projects/project-1.png',
     name: {
       en: 'Grand Hyatt Kitchen Renovation',
       id: 'Renovasi Dapur Grand Hyatt'
@@ -21,11 +22,12 @@ export const projects = [
       { en: 'Ducting system', id: 'Sistem ducting' },
       { en: 'Gas installation', id: 'Instalasi gas' }
     ],
-    image: '/images/projects/project-1.jpg',
+    image: '/images/projects/project-1.png',
     featured: true,
   },
   {
     id: 2,
+    image: '/images/projects/project-2.png',
     name: {
       en: 'Nusantara Restaurant Chain',
       id: 'Jaringan Restoran Nusantara'
@@ -45,11 +47,12 @@ export const projects = [
       { en: 'Wok range supply', id: 'Penyediaan kompor wajan' },
       { en: 'Installation across 5 locations', id: 'Instalasi di 5 lokasi' }
     ],
-    image: '/images/projects/project-2.jpg',
+    image: '/images/projects/project-2.png',
     featured: true,
   },
   {
     id: 3,
+    image: '/images/projects/project-3.png',
     name: {
       en: 'Plaza Indonesia Food Court',
       id: 'Pusat Jajanan Plaza Indonesia'
@@ -70,11 +73,12 @@ export const projects = [
       { en: 'Fire damper installation', id: 'Instalasi peredam api' },
       { en: 'Grease trap system', id: 'Sistem perangkap lemak' }
     ],
-    image: '/images/projects/project-3.jpg',
+    image: '/images/projects/project-3.png',
     featured: true,
   },
   {
     id: 4,
+    image: '/images/projects/project-1.png',
     name: {
       en: 'Italian Restaurant Pizza Oven',
       id: 'Oven Pizza Restoran Italia'
@@ -94,10 +98,11 @@ export const projects = [
       { en: 'Gas piping installation', id: 'Instalasi pipa gas' },
       { en: 'Ventilation setup', id: 'Pengaturan ventilasi' }
     ],
-    image: '/images/projects/project-4.jpg',
+    image: '/images/projects/project-4.png',
   },
   {
     id: 5,
+    image: '/images/projects/project-2.png',
     name: {
       en: 'Hotel Santika Commercial Kitchen',
       id: 'Dapur Komersial Hotel Santika'
@@ -118,10 +123,11 @@ export const projects = [
       { en: 'Equipment installation', id: 'Instalasi peralatan' },
       { en: 'Electrical setup', id: 'Pengaturan kelistrikan' }
     ],
-    image: '/images/projects/project-5.jpg',
+    image: '/images/projects/project-5.png',
   },
   {
     id: 6,
+    image: '/images/projects/project-3.png',
     name: {
       en: 'Bakery Central Combi Oven Setup',
       id: 'Pengaturan Oven Combi Bakery Central'
@@ -142,7 +148,7 @@ export const projects = [
       { en: 'Electrical installation', id: 'Instalasi kelistrikan' },
       { en: 'Ventilation', id: 'Ventilasi' }
     ],
-    image: '/images/projects/project-6.jpg',
+    image: '/images/projects/project-6.png',
   },
   {
     id: 7,
@@ -166,7 +172,7 @@ export const projects = [
       { en: 'Pressure testing', id: 'Pengujian tekanan' },
       { en: 'Safety certification', id: 'Sertifikasi keselamatan' }
     ],
-    image: '/images/projects/project-7.jpg',
+    image: '/images/projects/project-7.png',
   },
   {
     id: 8,
@@ -190,7 +196,7 @@ export const projects = [
       { en: 'Pump installation', id: 'Instalasi pompa' },
       { en: 'Water treatment setup', id: 'Pengaturan pengolahan air' }
     ],
-    image: '/images/projects/project-8.jpg',
+    image: '/images/projects/project-8.png',
   },
 ];
 

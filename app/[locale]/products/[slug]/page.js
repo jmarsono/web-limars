@@ -2,6 +2,7 @@ import { Link } from '../../../../i18n/routing';
 import { notFound } from 'next/navigation';
 import { products } from '../../../../data/products';
 import { useTranslations } from 'next-intl';
+import Image from 'next/image';
 import styles from './ProductDetail.module.css';
 
 export async function generateStaticParams() {
@@ -42,7 +43,7 @@ export default async function ProductDetailPage({ params }) {
     '@type': 'Product',
     name: product.name['en'], // default
     description: product.description['en'],
-    image: `https://www.limarsteknik.co.id/images/products/${product.slug}.jpg`,
+    image: `https://www.limarsteknik.co.id/images/products/${product.slug}.png`,
     category: product.category['en'],
     brand: {
       '@type': 'Brand',
@@ -81,12 +82,13 @@ export default async function ProductDetailPage({ params }) {
         <div className="container">
           <div className={styles.detailGrid}>
             <div className={styles.imageSection}>
-              <div className={styles.mainImage}>
-                <span className={styles.imagePlaceholder}>
-                  {product.category.en === 'Traditional Stoves' ? '🔥' :
-                   product.category.en === 'Regional Ovens' ? '🍕' :
-                   product.category.en === 'Modern Ovens' ? '⚙️' : '🍳'}
-                </span>
+              <div style={{ position: 'relative', width: '100%', height: '400px', backgroundColor: '#f9f9f9', borderRadius: '15px', overflow: 'hidden' }}>
+                <Image 
+                  src={product.image} 
+                  alt={product.name[locale]} 
+                  fill
+                  style={{ objectFit: 'contain', padding: '1rem' }}
+                />
               </div>
             </div>
             <div className={styles.infoSection}>
@@ -132,11 +134,14 @@ export default async function ProductDetailPage({ params }) {
               {relatedProducts.map((p) => (
                 <Link href={`/products/${p.slug}`} key={p.id} className={styles.relatedCard}>
                   <div className={styles.relatedImage}>
-                    <span>
-                      {p.category.en === 'Traditional Stoves' ? '🔥' :
-                       p.category.en === 'Regional Ovens' ? '🍕' :
-                       p.category.en === 'Modern Ovens' ? '⚙️' : '🍳'}
-                    </span>
+                    <div style={{ position: 'relative', width: '100%', height: '150px', backgroundColor: '#f0f0f0', borderRadius: '10px 10px 0 0', overflow: 'hidden' }}>
+                      <Image 
+                        src={p.image} 
+                        alt={p.name[locale]} 
+                        fill
+                        style={{ objectFit: 'cover' }}
+                      />
+                    </div>
                   </div>
                   <h4>{p.name[locale]}</h4>
                   <span className={styles.relatedLink}>{t('viewDetails')}</span>
