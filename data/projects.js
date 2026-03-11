@@ -1,10 +1,10 @@
 export const projects = [
   {
     id: 1,
-    image: '/images/projects/project-1.png',
+    image: '/images/projects/project-1-new.png',
     name: {
-      en: 'Grand Hyatt Kitchen Renovation',
-      id: 'Renovasi Dapur Grand Hyatt'
+      en: 'Royal Al-Jazeerah Kitchen Renovation',
+      id: 'Renovasi Dapur Royal Al-Jazeerah'
     },
     slug: 'grand-hyatt-kitchen',
     category: {
@@ -13,124 +13,126 @@ export const projects = [
     },
     location: { en: 'Jakarta', id: 'Jakarta' },
     description: {
-      en: 'Complete kitchen renovation for Grand Hyatt Jakarta, including custom stainless steel kitchen sets, commercial cooking equipment, and integrated ducting system.',
-      id: 'Renovasi dapur lengkap untuk Grand Hyatt Jakarta, termasuk kitchen set baja tahan karat kustom, peralatan memasak komersial, dan sistem ducting terintegrasi.'
+      en: 'Complete kitchen renovation for Royal Al-Jazeerah, including custom stainless steel kitchen sets, commercial cooking equipment, and integrated ducting system.',
+      id: 'Renovasi dapur lengkap untuk Royal Al-Jazeerah, termasuk kitchen set baja tahan karat kustom, peralatan memasak komersial, dan sistem ducting terintegrasi.'
     },
     scope: [
-      { en: 'Kitchen set design & fabrication', id: 'Desain & fabrikasi kitchen set' },
-      { en: 'Equipment supply & installation', id: 'Penyediaan & instalasi peralatan' },
-      { en: 'Ducting system', id: 'Sistem ducting' },
-      { en: 'Gas installation', id: 'Instalasi gas' }
+      { en: 'Kitchen layout & 3D design', id: 'Desain layout & 3D dapur' },
+      { en: 'Custom stainless fabrication', id: 'Fabrikasi stainless kustom' },
+      { en: 'Hot kitchen & cold storage prep', id: 'Persiapan dapur panas & pendingin' },
+      { en: 'Commercial exhaust integration', id: 'Integrasi exhaust komersial' }
     ],
-    image: '/images/projects/project-1.png',
+    image: '/images/projects/project-1-new.png',
     featured: true,
   },
   {
     id: 2,
-    image: '/images/projects/project-2.png',
+    image: '/images/projects/project-2-new.png',
     name: {
-      en: 'Nusantara Restaurant Chain',
-      id: 'Jaringan Restoran Nusantara'
+      en: 'Central Al-Jazeerah Traditional Arab Bread Oven',
+      id: 'Pembuatan Oven Roti Arab Tradisional Central Al-Jazeerah'
     },
-    slug: 'nusantara-restaurant',
-    category: {
-      en: 'Kitchen Set',
-      id: 'Kitchen Set'
-    },
-    location: { en: 'Surabaya', id: 'Surabaya' },
-    description: {
-      en: 'Multi-location kitchen set installation for Nusantara Restaurant chain, featuring traditional wok ranges and modern cooking equipment.',
-      id: 'Instalasi kitchen set multi-lokasi untuk jaringan Restoran Nusantara, menampilkan kompor wajan tradisional dan peralatan memasak modern.'
-    },
-    scope: [
-      { en: 'Kitchen set design', id: 'Desain kitchen set' },
-      { en: 'Wok range supply', id: 'Penyediaan kompor wajan' },
-      { en: 'Installation across 5 locations', id: 'Instalasi di 5 lokasi' }
-    ],
-    image: '/images/projects/project-2.png',
-    featured: true,
-  },
-  {
-    id: 3,
-    image: '/images/projects/project-3.png',
-    name: {
-      en: 'Plaza Indonesia Food Court',
-      id: 'Pusat Jajanan Plaza Indonesia'
-    },
-    slug: 'plaza-indonesia-foodcourt',
-    category: {
-      en: 'Ducting',
-      id: 'Ducting'
-    },
-    location: { en: 'Jakarta', id: 'Jakarta' },
-    description: {
-      en: 'Large-scale ducting system installation for Plaza Indonesia food court, ensuring proper smoke exhaust and air circulation for 20+ food stalls.',
-      id: 'Instalasi sistem ducting skala besar untuk pusat jajanan Plaza Indonesia, memastikan pembuangan asap dan sirkulasi udara yang tepat untuk 20+ kedai makanan.'
-    },
-    scope: [
-      { en: 'Exhaust ducting design', id: 'Desain ducting pembuangan' },
-      { en: 'Fresh air system', id: 'Sistem udara segar' },
-      { en: 'Fire damper installation', id: 'Instalasi peredam api' },
-      { en: 'Grease trap system', id: 'Sistem perangkap lemak' }
-    ],
-    image: '/images/projects/project-3.png',
-    featured: true,
-  },
-  {
-    id: 4,
-    image: '/images/projects/project-1.png',
-    name: {
-      en: 'Italian Restaurant Pizza Oven',
-      id: 'Oven Pizza Restoran Italia'
-    },
-    slug: 'italian-restaurant-pizza-oven',
+    slug: 'central-al-jazeerah-arab-bread-oven',
     category: {
       en: 'Oven Installation',
       id: 'Instalasi Oven'
     },
-    location: { en: 'Bali', id: 'Bali' },
+    location: { en: 'Jakarta', id: 'Jakarta' },
     description: {
-      en: 'Custom pizza oven installation for an authentic Italian restaurant in Bali. Stone hearth oven with gas heating system.',
-      id: 'Instalasi oven pizza kustom untuk restoran Italia otentik di Bali. Oven tungku batu dengan sistem pemanas gas.'
+      en: 'Custom traditional Arab bread oven fabrication and installation for Central Al-Jazeerah restaurant.',
+      id: 'Fabrikasi dan instalasi oven roti Arab tradisional khusus untuk restoran Central Al-Jazeerah.'
     },
     scope: [
-      { en: 'Custom pizza oven fabrication', id: 'Fabrikasi oven pizza kustom' },
-      { en: 'Gas piping installation', id: 'Instalasi pipa gas' },
-      { en: 'Ventilation setup', id: 'Pengaturan ventilasi' }
+      { en: 'Custom Arab bread oven design', id: 'Desain oven roti Arab kustom' },
+      { en: 'Refractory brick installation', id: 'Instalasi bata tahan api' },
+      { en: 'Gas piping & burner calibration', id: 'Pipa gas & kalibrasi burner' },
+      { en: 'Heat retention testing', id: 'Pengujian retensi panas' }
     ],
-    image: '/images/projects/project-4.png',
+    image: '/images/projects/project-4-new.png',
+    featured: true,
+  },
+  {
+    id: 3,
+    image: '/images/projects/project-3-new.png',
+    name: {
+      en: 'Al-Jazeerah Polonia Traditional Arab Bread Oven',
+      id: 'Pembuatan Oven Roti Tradisional Arab Al-Jazeerah Polonia'
+    },
+    slug: 'al-jazeerah-polonia-arab-bread-oven',
+    category: {
+      en: 'Oven Installation',
+      id: 'Instalasi Oven'
+    },
+    location: { en: 'Jakarta', id: 'Jakarta' },
+    description: {
+      en: 'Custom traditional Arab bread oven fabrication and installation for Al-Jazeerah Polonia.',
+      id: 'Fabrikasi dan instalasi oven roti tradisional Arab khusus untuk Al-Jazeerah Polonia.'
+    },
+    scope: [
+      { en: 'Traditional oven design', id: 'Desain oven tradisional' },
+      { en: 'Refractory brick installation', id: 'Instalasi bata tahan api' },
+      { en: 'Gas piping & burner', id: 'Pipa gas & burner' },
+      { en: 'Testing and commissioning', id: 'Pengujian dan commissioning' }
+    ],
+    image: '/images/projects/project-5-new.png',
+    featured: true,
+  },
+  {
+    id: 4,
+    image: '/images/projects/project-1-new.png',
+    name: {
+      en: 'Nanamia Pizzeria Yogyakarta Traditional Italian Pizza Oven',
+      id: 'Proyek Oven Pizza Tradisional Itali Nanamia Pizzeria Yogyakarta'
+    },
+    slug: 'nanamia-pizzeria-yogyakarta-pizza-oven',
+    category: {
+      en: 'Oven Installation',
+      id: 'Instalasi Oven'
+    },
+    location: { en: 'Yogyakarta', id: 'Yogyakarta' },
+    description: {
+      en: 'Custom traditional Italian pizza oven fabrication and installation for Nanamia Pizzeria Yogyakarta. Authentic stone hearth oven with gas heating system.',
+      id: 'Fabrikasi dan instalasi oven pizza tradisional Itali khusus untuk Nanamia Pizzeria Yogyakarta. Oven tungku batu otentik dengan sistem pemanas gas.'
+    },
+    scope: [
+      { en: 'Italian stone hearth design', id: 'Desain tungku batu Italia' },
+      { en: 'High-temperature brickwork', id: 'Konstruksi bata suhu tinggi' },
+      { en: 'Gas heating system setup', id: 'Pengaturan sistem pemanas gas' },
+      { en: 'Chimney & ventilation', id: 'Cerobong asap & ventilasi' }
+    ],
+    image: '/images/projects/project-2-new.png',
   },
   {
     id: 5,
-    image: '/images/projects/project-2.png',
+    image: '/images/projects/project-2-new.png',
     name: {
-      en: 'Hotel Santika Commercial Kitchen',
-      id: 'Dapur Komersial Hotel Santika'
+      en: 'Zahra Al-Jazeerah Traditional Arab Bread Oven',
+      id: 'Pembuatan Oven Roti Arab Tradisional Zahra Al-Jazeerah'
     },
-    slug: 'hotel-santika-kitchen',
+    slug: 'zahra-al-jazeerah-arab-bread-oven',
     category: {
-      en: 'Kitchen Set',
-      id: 'Kitchen Set'
+      en: 'Oven Installation',
+      id: 'Instalasi Oven'
     },
-    location: { en: 'Bandung', id: 'Bandung' },
+    location: { en: 'Puncak Bogor', id: 'Puncak Bogor' },
     description: {
-      en: 'Full commercial kitchen setup for Hotel Santika Bandung, including all stainless steel work tables, cooking stations, and cold storage.',
-      id: 'Pengaturan dapur komersial penuh untuk Hotel Santika Bandung, termasuk semua meja kerja baja tahan karat, stasiun memasak, dan penyimpanan dingin.'
+      en: 'Custom traditional Arab bread oven fabrication and installation for Zahra Al-Jazeerah restaurant in Puncak Bogor.',
+      id: 'Fabrikasi dan instalasi oven roti Arab tradisional khusus untuk restoran Zahra Al-Jazeerah di Puncak Bogor.'
     },
     scope: [
-      { en: 'Full kitchen design', id: 'Desain dapur penuh' },
-      { en: 'Stainless steel fabrication', id: 'Fabrikasi baja tahan karat' },
-      { en: 'Equipment installation', id: 'Instalasi peralatan' },
-      { en: 'Electrical setup', id: 'Pengaturan kelistrikan' }
+      { en: 'Traditional Arab oven design', id: 'Desain oven Arab tradisional' },
+      { en: 'Custom steel & brick fabrication', id: 'Fabrikasi baja & bata kustom' },
+      { en: 'Gas piping & safety valves', id: 'Pipa gas & katup pengaman' },
+      { en: 'Temperature calibration', id: 'Kalibrasi suhu' }
     ],
-    image: '/images/projects/project-5.png',
+    image: '/images/projects/project-5-new.png',
   },
   {
     id: 6,
-    image: '/images/projects/project-3.png',
+    image: '/images/projects/project-3-new.png',
     name: {
-      en: 'Bakery Central Combi Oven Setup',
-      id: 'Pengaturan Oven Combi Bakery Central'
+      en: 'Born-Ga Combi Oven Setup',
+      id: 'Pengaturan Oven Combi Born-Ga'
     },
     slug: 'bakery-central-combi-oven',
     category: {
@@ -139,64 +141,64 @@ export const projects = [
     },
     location: { en: 'Jakarta', id: 'Jakarta' },
     description: {
-      en: 'Multiple combi oven and deck oven installation for a large-scale bakery production facility.',
-      id: 'Instalasi ganda oven combi dan oven dek untuk fasilitas produksi roti skala besar.'
+      en: 'Multiple combi oven and deck oven installation for Born-Ga production facility.',
+      id: 'Instalasi ganda oven combi dan oven dek untuk fasilitas produksi Born-Ga.'
     },
     scope: [
-      { en: 'Combi oven supply', id: 'Penyediaan oven combi' },
-      { en: 'Deck oven supply', id: 'Penyediaan oven dek' },
-      { en: 'Electrical installation', id: 'Instalasi kelistrikan' },
-      { en: 'Ventilation', id: 'Ventilasi' }
+      { en: 'Combi oven capacity planning', id: 'Perencanaan kapasitas oven combi' },
+      { en: 'High-volume deck oven supply', id: 'Penyediaan oven dek volume tinggi' },
+      { en: 'Heavy-duty electrical wiring', id: 'Pengkabelan listrik heavy-duty' },
+      { en: 'Steam exhaust ventilation', id: 'Ventilasi pembuangan uap' }
     ],
-    image: '/images/projects/project-6.png',
+    image: '/images/projects/project-6-new.png',
   },
   {
     id: 7,
     name: {
-      en: 'Residential Complex Gas Network',
-      id: 'Jaringan Gas Kompleks Perumahan'
+      en: 'Dashi Chazuke Zenraku Traditional Japanese Kamado Oven',
+      id: 'Pembuatan Tungku Kamado Tradisional Jepang Dashi Chazuke Zenraku'
     },
-    slug: 'residential-gas-network',
+    slug: 'dashi-chazuke-zenraku-kamado-oven',
     category: {
-      en: 'Gas Installation',
-      id: 'Instalasi Gas'
+      en: 'Oven Installation',
+      id: 'Instalasi Oven'
     },
-    location: { en: 'Tangerang', id: 'Tangerang' },
+    location: { en: 'Jakarta', id: 'Jakarta' },
     description: {
-      en: 'Complete gas distribution network installation for a new residential complex with 200+ units.',
-      id: 'Instalasi jaringan distribusi gas lengkap untuk kompleks perumahan baru dengan 200+ unit.'
+      en: 'Custom traditional Japanese Kamado oven fabrication and installation for Dashi Chazuke Zenraku restaurant.',
+      id: 'Fabrikasi dan instalasi tungku Kamado tradisional Jepang khusus untuk restoran Dashi Chazuke Zenraku.'
     },
     scope: [
-      { en: 'Gas network design', id: 'Desain jaringan gas' },
-      { en: 'Piping installation', id: 'Instalasi pipa' },
-      { en: 'Pressure testing', id: 'Pengujian tekanan' },
-      { en: 'Safety certification', id: 'Sertifikasi keselamatan' }
+      { en: 'Kamado oven design', id: 'Desain tungku Kamado' },
+      { en: 'Refractory material installation', id: 'Instalasi material tahan api' },
+      { en: 'Heat testing', id: 'Pengujian panas' },
+      { en: 'Traditional finishing', id: 'Penyelesaian tradisional' }
     ],
-    image: '/images/projects/project-7.png',
+    image: '/images/projects/project-7-new.png',
   },
   {
     id: 8,
     name: {
-      en: 'Factory Well Drilling Project',
-      id: 'Proyek Pengeboran Sumur Pabrik'
+      en: 'Al-Jazeerah Cikini Mandi Oven',
+      id: 'Pembuatan Oven Mandi Al-Jazeerah Cikini'
     },
-    slug: 'factory-well-drilling',
+    slug: 'al-jazeerah-cikini-mandi-oven',
     category: {
-      en: 'Well Drilling',
-      id: 'Pengeboran Sumur'
+      en: 'Oven Installation',
+      id: 'Instalasi Oven'
     },
-    location: { en: 'Karawang', id: 'Karawang' },
+    location: { en: 'Jakarta', id: 'Jakarta' },
     description: {
-      en: 'Deep well drilling for a manufacturing facility requiring high-volume clean water supply.',
-      id: 'Pengeboran sumur dalam untuk fasilitas manufaktur yang membutuhkan pasokan air bersih bervolume tinggi.'
+      en: 'Custom Mandi oven fabrication and installation for Al-Jazeerah Cikini restaurant.',
+      id: 'Fabrikasi dan instalasi oven Mandi khusus untuk restoran Al-Jazeerah Cikini.'
     },
     scope: [
-      { en: 'Site survey', id: 'Survei lokasi' },
-      { en: 'Deep well drilling', id: 'Pengeboran sumur dalam' },
-      { en: 'Pump installation', id: 'Instalasi pompa' },
-      { en: 'Water treatment setup', id: 'Pengaturan pengolahan air' }
+      { en: 'Mandi pit & oven design', id: 'Desain lubang & oven Mandi' },
+      { en: 'Underground insulation', id: 'Isolasi bawah tanah' },
+      { en: 'Structural fabrication', id: 'Fabrikasi struktural' },
+      { en: 'Safety and smoke testing', id: 'Pengujian keselamatan dan asap' }
     ],
-    image: '/images/projects/project-8.png',
+    image: '/images/projects/project-3-new.png',
   },
 ];
 

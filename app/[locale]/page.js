@@ -23,12 +23,12 @@ const whyChooseUs = [
 ];
 
 const testimonials = [
-  { name: 'Ahmad Rizal', company: 'Nusantara Restaurant Group', key: '1', avatar: 'AR' },
-  { name: 'Sarah Chen', company: 'Grand Hyatt Jakarta', key: '2', avatar: 'SC' },
-  { name: 'Budi Santoso', company: 'Bakery Central Indonesia', key: '3', avatar: 'BS' },
+  { name: 'Manager', company: 'Al-Jazeerah Cikini', key: '1', avatar: 'AJ' },
+  { name: 'Head Chef', company: 'Nanamia Pizzeria Yogyakarta', key: '2', avatar: 'NP' },
+  { name: 'Director', company: 'Born-Ga', key: '3', avatar: 'BG' },
 ];
 
-const clientLogos = ['Hotel Santika', 'Grand Hyatt', 'Pizza Hut', 'Sushi Tei', 'Bakmi GM', 'HokBen', 'Solaria', 'J.CO Donuts'];
+const clientLogos = ['Al-Jazeerah Cikini', 'Royal Al-Jazeerah', 'Central Al-Jazeerah', 'Al-Jazeerah Polonia', 'Zahra Al-Jazeerah', 'Nanamia Pizzeria Yogyakarta', 'Born-Ga', 'Dashi Chazuke Zenraku'];
 
 export default function Home() {
   const locale = useLocale();
@@ -47,26 +47,27 @@ export default function Home() {
     '@context': 'https://schema.org',
     '@type': ['Organization', 'LocalBusiness'],
     name: 'PT. Limars Teknik Indonesia',
-    url: 'https://www.limarsteknik.co.id',
-    logo: 'https://www.limarsteknik.co.id/logo.png',
+    url: 'https://www.limarsteknik.com',
+    logo: 'https://www.limarsteknik.com/logo.png',
     description: "Indonesia's Leading Kitchen Equipment Manufacturer and Engineering Solutions Provider.",
     address: {
       '@type': 'PostalAddress',
-      streetAddress: 'Jl. Industri No. 123',
-      addressLocality: 'Jakarta Barat',
+      streetAddress: 'Jl. Raden Saleh II/6 No. 70C',
+      addressLocality: 'Jakarta',
       addressRegion: 'DKI Jakarta',
-      postalCode: '11510',
+      postalCode: '',
       addressCountry: 'ID'
     },
     contactPoint: {
       '@type': 'ContactPoint',
-      telephone: '+62-21-1234-5678',
+      telephone: '+6281212671289',
       contactType: 'customer service',
-      email: 'info@limarsteknik.co.id'
+      email: 'info@limarsteknik.com'
     },
     sameAs: [
-      'https://www.facebook.com/limarsteknik',
-      'https://www.instagram.com/limarsteknik'
+      'https://www.facebook.com/cv.limarsteknik/',
+      'https://x.com/limarstek',
+      'https://www.youtube.com/@limarsteknik'
     ]
   };
 
@@ -290,7 +291,7 @@ export default function Home() {
           <p>{t('cta.subtitle')}</p>
           <div className={styles.ctaButtons}>
             <Link href="/contact" className="btn btn-primary">{t('cta.contactBtn')}</Link>
-            <a href="https://wa.me/6281234567890" className="btn btn-secondary" target="_blank" rel="noopener noreferrer">
+            <a href="https://wa.me/6281212671289" className="btn btn-secondary" target="_blank" rel="noopener noreferrer">
               {t('cta.whatsappBtn')}
             </a>
           </div>

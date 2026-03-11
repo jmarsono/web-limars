@@ -43,7 +43,7 @@ export default async function ProductDetailPage({ params }) {
     '@type': 'Product',
     name: product.name['en'], // default
     description: product.description['en'],
-    image: `https://www.limarsteknik.co.id/images/products/${product.slug}.png`,
+    image: `https://www.limarsteknik.com/images/products/${product.slug}.png`,
     category: product.category['en'],
     brand: {
       '@type': 'Brand',
@@ -116,7 +116,7 @@ export default async function ProductDetailPage({ params }) {
 
               <div className={styles.actions}>
                 <Link href="/contact" className="btn btn-primary">{t('requestQuote')}</Link>
-                <a href="https://wa.me/6281234567890" className="btn btn-outline" target="_blank" rel="noopener noreferrer">
+                <a href="https://wa.me/6281212671289" className="btn btn-outline" target="_blank" rel="noopener noreferrer">
                   {t('askWhatsapp')}
                 </a>
               </div>

@@ -99,7 +99,7 @@ export default function FAQPage() {
               <div className={styles.helpBox}>
                 <h3>{t('ctaTitle')}</h3>
                 <p>{t('ctaSubtitle')}</p>
-                <a href="https://wa.me/6281234567890" className="btn btn-outline" target="_blank" rel="noopener noreferrer">
+                <a href="https://wa.me/6281212671289" className="btn btn-outline" target="_blank" rel="noopener noreferrer">
                   {t('ctaBtn')}
                 </a>
               </div>

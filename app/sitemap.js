@@ -3,7 +3,7 @@ import { services } from '../data/services';
 import { projects } from '../data/projects';
 
 export default function sitemap() {
-  const baseUrl = 'https://www.limarsteknik.co.id'; // Replace with actual domain
+  const baseUrl = 'https://www.limarsteknik.com'; // Replace with actual domain
 
   // Static routes
   const routes = ['', '/about', '/products', '/services', '/projects', '/contact', '/faq'].map((route) => ({

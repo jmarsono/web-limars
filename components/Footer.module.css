@@ -46,8 +46,9 @@
   font-family: var(--font-heading);
   font-weight: 400;
   font-size: 0.6rem;
-  color: var(--light-blue);
+  color: white;
   letter-spacing: 3px;
+  opacity: 0.8;
 }
 
 .footerDesc {

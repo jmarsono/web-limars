@@ -5,6 +5,6 @@ export default function robots() {
       allow: '/',
       disallow: ['/api/', '/admin/'], // Add any private paths here
     },
-    sitemap: 'https://www.limarsteknik.co.id/sitemap.xml', // Replace with actual domain
+    sitemap: 'https://www.limarsteknik.com/sitemap.xml', // Replace with actual domain
   };
 }

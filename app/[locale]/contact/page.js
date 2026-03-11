@@ -63,7 +63,7 @@ export default function ContactPage() {
                   <div className={styles.infoIcon}>📞</div>
                   <div>
                     <h4>{t('info.phone.label')}</h4>
-                    <p>+62 21 1234 5678</p>
+                    <p>+62 812 1267 1289</p>
                   </div>
                 </div>
 
@@ -71,7 +71,7 @@ export default function ContactPage() {
                   <div className={styles.infoIcon}>📱</div>
                   <div>
                     <h4>{t('info.whatsapp.label')}</h4>
-                    <p>+62 812 3456 7890</p>
+                    <p>+62 812 1267 1289</p>
                   </div>
                 </div>
 
@@ -79,7 +79,7 @@ export default function ContactPage() {
                   <div className={styles.infoIcon}>✉️</div>
                   <div>
                     <h4>{t('info.email.label')}</h4>
-                    <p>info@limarsteknik.co.id<br />sales@limarsteknik.co.id</p>
+                    <p>info@limarsteknik.com<br />sales@limarsteknik.com</p>
                   </div>
                 </div>
 
@@ -203,7 +203,7 @@ export default function ContactPage() {
 
       <section className={styles.mapSection}>
         <iframe
-          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d126938.64735235334!2d106.7460670877569!3d-6.155459345681656!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e69f5d2e764b12d%3A0x3d2ad6e1e0e9bcc8!2sMonumen%20Nasional!5e0!3m2!1sid!2sid!4v1709825459424!5m2!1sid!2sid"
+          src="https://maps.google.com/maps?q=LIMARS%20TEKNIK%20-%20JASA%20PEMBUATAN%20TUNGKU%20ROTI%20ARAB%20DAN%20PIZZA%20TRADISIONAL&t=&z=15&ie=UTF8&iwloc=&output=embed"
           width="100%"
           height="450"
           style={{ border: 0, display: 'block' }}

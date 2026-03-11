@@ -198,7 +198,7 @@
     "info": {
       "title": "Contact Information",
       "subtitle": "Fill up the form and our team will get back to you within 24 hours.",
-      "office": { "label": "Head Office & Workshop", "line1": "Jl. Industri No. 123, Jakarta Barat", "line2": "DKI Jakarta, Indonesia 11510" },
+      "office": { "label": "Head Office & Workshop", "line1": "Jl. Raden Saleh II/6 No. 70C", "line2": "DKI Jakarta, Indonesia" },
       "phone": { "label": "Phone" },
       "whatsapp": { "label": "WhatsApp" },
       "email": { "label": "Email" },
@@ -239,5 +239,12 @@
     "ctaTitle": "Still have questions?",
     "ctaSubtitle": "Can't find the answer you're looking for? Please chat with our friendly team.",
     "ctaBtn": "Contact Support"
+  },
+  "Footer": {
+    "desc": "Your trusted partner in kitchen equipment manufacturing and engineering solutions. Quality products, professional services.",
+    "quickLinks": "Quick Links",
+    "services": "Services",
+    "contact": "Contact Us",
+    "rights": "PT. Limars Teknik Indonesia. All Rights Reserved."
   }
 }

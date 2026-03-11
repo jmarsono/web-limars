@@ -55,7 +55,7 @@ export default function ServicesPage() {
           <p>{t('ctaSubtitle')}</p>
           <div className={styles.ctaButtons}>
             <Link href="/contact" className="btn btn-primary">{t('contactBtn')}</Link>
-            <a href="https://wa.me/6281234567890" className="btn btn-secondary" target="_blank" rel="noopener noreferrer">
+            <a href="https://wa.me/6281212671289" className="btn btn-secondary" target="_blank" rel="noopener noreferrer">
               {t('whatsappBtn')}
             </a>
           </div>

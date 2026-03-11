@@ -62,9 +62,10 @@
   font-family: var(--font-heading);
   font-weight: 400;
   font-size: 0.65rem;
-  color: var(--light-blue);
+  color: white;
   letter-spacing: 3px;
   text-transform: uppercase;
+  opacity: 0.9;
 }
 
 /* Nav Links */
