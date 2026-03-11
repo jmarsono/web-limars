@@ -1,0 +1,219 @@
+.hero {
+  position: relative;
+  padding: 180px 0 100px;
+  background: var(--dark-blue);
+  overflow: hidden;
+  text-align: center;
+}
+
+.heroOverlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(135deg, rgba(27,58,92,0.95) 0%, rgba(91,164,217,0.5) 100%);
+  background-image: radial-gradient(circle at 50% 100%, rgba(91,164,217,0.15) 0%, transparent 40%);
+}
+
+.heroContent {
+  position: relative;
+  z-index: 2;
+}
+
+.heroBadge {
+  display: inline-block;
+  background: rgba(91, 164, 217, 0.15);
+  border: 1px solid rgba(91, 164, 217, 0.3);
+  color: var(--light-blue);
+  padding: 8px 20px;
+  border-radius: 50px;
+  font-size: 0.85rem;
+  font-weight: 500;
+  margin-bottom: 20px;
+}
+
+.heroContent h1 {
+  color: white;
+  font-size: 3rem;
+  margin-bottom: 20px;
+}
+
+.heroContent p {
+  color: rgba(255, 255, 255, 0.7);
+  font-size: 1.1rem;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+/* Contact Wrapper */
+.contactSection {
+  background: var(--light-gray);
+  padding: 80px 0;
+}
+
+.contactWrapper {
+  display: grid;
+  grid-template-columns: 1fr 1.5fr;
+  background: white;
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  box-shadow: var(--card-shadow);
+}
+
+/* Info Sidebar */
+.contactInfo {
+  background: var(--dark-blue);
+  color: white;
+  padding: 48px 40px;
+  position: relative;
+  overflow: hidden;
+}
+
+.contactInfo::before {
+  content: '';
+  position: absolute;
+  bottom: -50px;
+  right: -50px;
+  width: 250px;
+  height: 250px;
+  border-radius: 50%;
+  background: rgba(91, 164, 217, 0.1);
+  z-index: 1;
+}
+
+.contactInfo h2 {
+  color: white;
+  margin-bottom: 8px;
+  position: relative;
+  z-index: 2;
+}
+
+.infoDesc {
+  color: rgba(255, 255, 255, 0.7);
+  font-size: 0.95rem;
+  margin-bottom: 40px;
+  position: relative;
+  z-index: 2;
+}
+
+.infoList {
+  display: flex;
+  flex-direction: column;
+  gap: 28px;
+  position: relative;
+  z-index: 2;
+}
+
+.infoItem {
+  display: flex;
+  gap: 16px;
+  align-items: flex-start;
+}
+
+.infoIcon {
+  font-size: 1.5rem;
+  flex-shrink: 0;
+  margin-top: -4px;
+}
+
+.infoItem h4 {
+  color: var(--light-blue);
+  font-size: 1rem;
+  margin-bottom: 4px;
+}
+
+.infoItem p {
+  color: rgba(255, 255, 255, 0.85);
+  font-size: 0.9rem;
+  line-height: 1.6;
+  margin: 0;
+}
+
+/* Form Area */
+.contactForm {
+  padding: 48px 40px;
+}
+
+.contactForm h2 {
+  margin-bottom: 32px;
+  font-size: 2rem;
+}
+
+.formRow {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+}
+
+.formGroup {
+  margin-bottom: 24px;
+}
+
+.formGroup label {
+  display: block;
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: var(--dark-gray);
+  margin-bottom: 8px;
+}
+
+.formGroup input,
+.formGroup select,
+.formGroup textarea {
+  width: 100%;
+  padding: 12px 16px;
+  border: 1px solid #d1d9e0;
+  border-radius: var(--radius-sm);
+  font-family: var(--font-body);
+  font-size: 0.95rem;
+  color: var(--dark-gray);
+  transition: all var(--transition-fast);
+  background: #f8fafc;
+}
+
+.formGroup input:focus,
+.formGroup select:focus,
+.formGroup textarea:focus {
+  outline: none;
+  border-color: var(--light-blue);
+  background: white;
+  box-shadow: 0 0 0 3px rgba(91, 164, 217, 0.1);
+}
+
+.formGroup textarea {
+  resize: vertical;
+  min-height: 120px;
+}
+
+.submitBtn {
+  width: 100%;
+  padding: 16px;
+  font-size: 1.05rem;
+  margin-top: 10px;
+}
+
+.statusMessage {
+  padding: 12px 16px;
+  border-radius: var(--radius-sm);
+  margin-bottom: 20px;
+  font-size: 0.9rem;
+  font-weight: 500;
+}
+
+.success {
+  background: #dcfce7;
+  color: #166534;
+  border: 1px solid #bbf7d0;
+}
+
+@media (max-width: 968px) {
+  .contactWrapper { grid-template-columns: 1fr; }
+  .contactInfo { padding: 40px; }
+  .infoList { grid-template-columns: 1fr 1fr; display: grid; gap: 24px; }
+}
+
+@media (max-width: 768px) {
+  .hero { padding: 140px 0 80px; }
+  .heroContent h1 { font-size: 2.25rem; }
+  .contactForm { padding: 40px 24px; }
+  .infoList { grid-template-columns: 1fr; }
+  .formRow { grid-template-columns: 1fr; gap: 0; }
+}

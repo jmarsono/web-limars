@@ -1,0 +1,228 @@
+.hero {
+  position: relative;
+  padding: 180px 0 100px;
+  background: var(--dark-blue);
+  overflow: hidden;
+  text-align: center;
+}
+
+.heroOverlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(135deg, rgba(27,58,92,0.95) 0%, rgba(91,164,217,0.5) 100%);
+}
+
+.heroContent {
+  position: relative;
+  z-index: 2;
+}
+
+.heroBadge {
+  display: inline-block;
+  background: rgba(91, 164, 217, 0.15);
+  border: 1px solid rgba(91, 164, 217, 0.3);
+  color: var(--light-blue);
+  padding: 8px 20px;
+  border-radius: 50px;
+  font-size: 0.85rem;
+  font-weight: 500;
+  margin-bottom: 20px;
+}
+
+.heroContent h1 {
+  color: white;
+  font-size: 3rem;
+  margin-bottom: 20px;
+}
+
+.heroContent p {
+  color: rgba(255, 255, 255, 0.7);
+  font-size: 1.1rem;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+/* FAQ Wrapper */
+.faqSection {
+  background: var(--light-gray);
+  padding: 80px 0;
+}
+
+.faqWrapper {
+  display: grid;
+  grid-template-columns: 280px 1fr;
+  gap: 60px;
+  align-items: start;
+}
+
+/* Navigation */
+.faqNav {
+  background: white;
+  border-radius: var(--radius-md);
+  padding: 24px;
+  box-shadow: var(--card-shadow);
+  position: sticky;
+  top: 100px;
+}
+
+.faqNav h3 {
+  font-size: 1.1rem;
+  margin-bottom: 16px;
+  padding-bottom: 12px;
+  border-bottom: 1px solid var(--light-gray);
+}
+
+.faqNav ul {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.navBtn {
+  width: 100%;
+  text-align: left;
+  padding: 12px 16px;
+  border-radius: var(--radius-sm);
+  background: none;
+  font-size: 0.95rem;
+  font-weight: 500;
+  color: var(--gray);
+  transition: all var(--transition-fast);
+}
+
+.navBtn:hover {
+  background: var(--light-gray);
+  color: var(--dark-blue);
+}
+
+.navActive {
+  background: rgba(91, 164, 217, 0.1);
+  color: var(--light-blue);
+  font-weight: 600;
+}
+
+.navActive:hover {
+  background: rgba(91, 164, 217, 0.15);
+  color: var(--light-blue);
+}
+
+/* Content */
+.categoryTitle {
+  font-size: 2rem;
+  margin-bottom: 32px;
+  color: var(--dark-blue);
+}
+
+.accordionList {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  margin-bottom: 48px;
+}
+
+.accordionItem {
+  background: white;
+  border-radius: var(--radius-md);
+  box-shadow: var(--card-shadow);
+  overflow: hidden;
+  border: 1px solid transparent;
+  transition: all var(--transition-base);
+}
+
+.open {
+  border-color: var(--light-blue);
+  box-shadow: var(--card-shadow-hover);
+}
+
+.accordionHeader {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 24px;
+  background: none;
+  text-align: left;
+  gap: 16px;
+}
+
+.question {
+  font-family: var(--font-heading);
+  font-size: 1.05rem;
+  font-weight: 600;
+  color: var(--dark-gray);
+  transition: color var(--transition-fast);
+}
+
+.open .question {
+  color: var(--light-blue);
+}
+
+.icon {
+  font-size: 1.5rem;
+  font-weight: 400;
+  color: var(--gray);
+  width: 24px;
+  height: 24px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  transition: all var(--transition-fast);
+}
+
+.open .icon {
+  color: var(--light-blue);
+  transform: rotate(180deg);
+}
+
+.accordionBody {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.4s ease;
+}
+
+.open .accordionBody {
+  max-height: 500px;
+}
+
+.answer {
+  padding: 0 24px 24px;
+}
+
+.answer p {
+  color: var(--gray);
+  line-height: 1.7;
+  margin: 0;
+}
+
+/* Help Box */
+.helpBox {
+  background: rgba(27, 58, 92, 0.03);
+  border: 1px dashed rgba(27, 58, 92, 0.2);
+  border-radius: var(--radius-md);
+  padding: 32px;
+  text-align: center;
+}
+
+.helpBox h3 {
+  font-size: 1.25rem;
+  margin-bottom: 8px;
+}
+
+.helpBox p {
+  color: var(--gray);
+  margin-bottom: 24px;
+}
+
+@media (max-width: 968px) {
+  .faqWrapper { grid-template-columns: 1fr; gap: 40px; }
+  .faqNav { position: relative; top: 0; }
+}
+
+@media (max-width: 768px) {
+  .hero { padding: 140px 0 80px; }
+  .heroContent h1 { font-size: 2.25rem; }
+  .question { font-size: 1rem; }
+  .accordionHeader { padding: 16px 20px; }
+  .answer { padding: 0 20px 20px; }
+}
