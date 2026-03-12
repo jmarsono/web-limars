@@ -19,6 +19,12 @@
     "react-google-recaptcha": "^3.1.0",
     "yet-another-react-lightbox": "^3.29.1"
   },
+  "browserslist": [
+    "> 0.5%",
+    "not dead",
+    "not op_mini all",
+    "supports es6-module"
+  ],
   "devDependencies": {
     "babel-plugin-react-compiler": "1.0.0",
     "eslint": "^9",
