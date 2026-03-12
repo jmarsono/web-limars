@@ -13,27 +13,8 @@ export default function Navbar() {
   const navLinks = [
     { href: '/', label: t('home') },
     { href: '/about', label: t('about') },
-    {
-      href: '/products',
-      label: t('products'),
-      dropdown: [
-        { href: '/products?cat=Traditional+Stoves', label: t('products_traditional') },
-        { href: '/products?cat=Regional+Ovens', label: t('products_regional') },
-        { href: '/products?cat=Modern+Ovens', label: t('products_modern') },
-        { href: '/products?cat=Kitchen+Equipment', label: t('products_equipment') },
-      ],
-    },
-    {
-      href: '/services',
-      label: t('services'),
-      dropdown: [
-        { href: '/services/kitchen-sets', label: t('services_kitchen') },
-        { href: '/services/ducting', label: t('services_ducting') },
-        { href: '/services/gas-installation', label: t('services_gas') },
-        { href: '/services/well-drilling', label: t('services_well') },
-        { href: '/services/electrical', label: t('services_electrical') },
-      ],
-    },
+    { href: '/products', label: t('products') },
+    { href: '/services', label: t('services') },
     { href: '/projects', label: t('projects') },
     { href: '/contact', label: t('contact') },
   ];
