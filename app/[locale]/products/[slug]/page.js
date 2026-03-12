@@ -3,6 +3,7 @@ import { notFound } from 'next/navigation';
 import { products } from '../../../../data/products';
 import { useTranslations } from 'next-intl';
 import Image from 'next/image';
+import ProductLightbox from './ProductLightbox';
 import styles from './ProductDetail.module.css';
 
 export async function generateStaticParams() {
@@ -82,14 +83,7 @@ export default async function ProductDetailPage({ params }) {
         <div className="container">
           <div className={styles.detailGrid}>
             <div className={styles.imageSection}>
-              <div style={{ position: 'relative', width: '100%', height: '400px', backgroundColor: '#f9f9f9', borderRadius: '15px', overflow: 'hidden' }}>
-                <Image 
-                  src={product.image} 
-                  alt={product.name[locale]} 
-                  fill
-                  style={{ objectFit: 'contain', padding: '1rem' }}
-                />
-              </div>
+              <ProductLightbox src={product.image} alt={product.name[locale]} />
             </div>
             <div className={styles.infoSection}>
               <span className={styles.category}>{product.category[locale]}</span>

@@ -1,7 +1,8 @@
 'use client';
 
-import { useState } from 'react';
+import { useState, useRef } from 'react';
 import { useTranslations } from 'next-intl';
+import ReCAPTCHA from 'react-google-recaptcha';
 import styles from './Contact.module.css';
 
 export default function ContactPage() {
@@ -16,6 +17,8 @@ export default function ContactPage() {
   });
   const [status, setStatus] = useState({ type: '', message: '' });
 
+  const recaptchaRef = useRef(null);
+
   const handleChange = (e) => {
     setFormData({ ...formData, [e.target.name]: e.target.value });
   };
@@ -24,11 +27,33 @@ export default function ContactPage() {
     e.preventDefault();
     setStatus({ type: 'loading', message: t('form.sending') });
 
-    // Simulate API call
-    setTimeout(() => {
-      setStatus({ type: 'success', message: t('form.success') });
-      setFormData({ name: '', email: '', phone: '', company: '', service: '', message: '' });
-    }, 1500);
+    const captchaValue = recaptchaRef.current.getValue();
+    if (!captchaValue) {
+      setStatus({ type: 'error', message: 'Please verify that you are not a robot.' });
+      return;
+    }
+
+    try {
+      const response = await fetch('/api/contact', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({ ...formData, recaptchaToken: captchaValue }),
+      });
+
+      const data = await response.json();
+
+      if (response.ok) {
+        setStatus({ type: 'success', message: t('form.success') });
+        setFormData({ name: '', email: '', phone: '', company: '', service: '', message: '' });
+        recaptchaRef.current.reset();
+      } else {
+        setStatus({ type: 'error', message: data.error || 'Something went wrong. Please try again.' });
+      }
+    } catch (error) {
+      setStatus({ type: 'error', message: 'An unexpected error occurred. Please try again later.' });
+    }
   };
 
   return (
@@ -187,6 +212,13 @@ export default function ContactPage() {
                     {status.message}
                   </div>
                 )}
+
+                <div className={styles.formGroup} style={{ marginBottom: '1.5rem' }}>
+                  <ReCAPTCHA
+                    ref={recaptchaRef}
+                    sitekey={process.env.NEXT_PUBLIC_RECAPTCHA_SITE_KEY || '6LeIxAcTAAAAAJcZVRqyHh71UMIEGNQ_MXjiZKhI'}
+                  />
+                </div>
 
                 <button
                   type="submit"

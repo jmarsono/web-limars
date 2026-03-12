@@ -6,6 +6,8 @@ import Image from 'next/image';
 import styles from './Projects.module.css';
 
 import { useLocale, useTranslations } from 'next-intl';
+import Lightbox from 'yet-another-react-lightbox';
+import 'yet-another-react-lightbox/styles.css';
 
 export default function ProjectsPage() {
   const locale = useLocale();
@@ -13,6 +15,7 @@ export default function ProjectsPage() {
   
   const [activeCategory, setActiveCategory] = useState('All');
   const [selectedProject, setSelectedProject] = useState(null);
+  const [lightboxOpen, setLightboxOpen] = useState(false);
 
   const filteredProjects = activeCategory === 'All'
     ? projects
@@ -84,7 +87,7 @@ export default function ProjectsPage() {
         <div className={styles.modal} onClick={() => setSelectedProject(null)}>
           <div className={styles.modalContent} onClick={e => e.stopPropagation()}>
             <button className={styles.modalClose} onClick={() => setSelectedProject(null)}>✕</button>
-            <div className={styles.modalImage}>
+            <div className={styles.modalImage} onClick={() => setLightboxOpen(true)} style={{ cursor: 'zoom-in' }}>
               <div style={{ position: 'relative', width: '100%', height: '300px', backgroundColor: '#f0f0f0', borderRadius: '15px 15px 0 0', overflow: 'hidden' }}>
                 <Image 
                   src={selectedProject.image} 
@@ -110,6 +113,14 @@ export default function ProjectsPage() {
             </div>
           </div>
         </div>
+      )}
+      {/* Modal Lightbox */}
+      {selectedProject && (
+        <Lightbox
+          open={lightboxOpen}
+          close={() => setLightboxOpen(false)}
+          slides={[{ src: selectedProject.image }]}
+        />
       )}
     </>
   );
