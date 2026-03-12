@@ -100,7 +100,8 @@
       "TraditionalStoves": "Traditional Stoves",
       "RegionalOvens": "Regional Ovens",
       "ModernOvens": "Modern Ovens",
-      "KitchenEquipment": "Kitchen Equipment"
+      "KitchenEquipment": "Kitchen Equipment",
+      "CoffeeShopEquipment": "Coffee Shop Equipment"
     },
     "viewDetails": "View Details →",
     "emptyState": "No products found in this category.",

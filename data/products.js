@@ -332,6 +332,115 @@ export const products = [
     },
     image: '/images/products/hotel-bain-marie.png',
   },
+  {
+    id: 13,
+    name: {
+      en: 'Custom Coffee Bar Counter',
+      id: 'Meja Bar Kopi Kustom'
+    },
+    slug: 'custom-coffee-bar-counter',
+    category: {
+      en: 'Coffee Shop Equipment',
+      id: 'Peralatan Kedai Kopi'
+    },
+    description: {
+      en: 'Premium custom-built stainless steel coffee bar counter featuring built-in knock boxes, under-counter storage, sink stations, and dedicated space for espresso machines. Tailored specifically to your cafe layout.',
+      id: 'Meja bar kopi baja tahan karat kustom premium yang dilengkapi kotak ampas kopi bawaan (knock box), penyimpanan bawah meja, stasiun cuci piring, dan ruang khusus untuk mesin espresso. Disusun khusus untuk tata letak kafe Anda.'
+    },
+    shortDescription: {
+      en: 'Premium custom stainless steel coffee bar station.',
+      id: 'Stasiun meja bar kopi baja tahan karat premium kustom.'
+    },
+    specs: {
+      material: 'Stainless Steel 304 / 316',
+      customizable: { en: 'Fully Customizable Layout', id: 'Tata Letak Bebas Disesuaikan' },
+      features: { en: 'Sinks, Knock Boxes, Ice Bins', id: 'Wastafel, Knock Box, Tempat Es' },
+      dimensions: { en: 'Customizable per Cafe Space', id: 'Menyesuaikan Ruang Kafe' },
+    },
+    image: '/images/products/coffee-bar-counter.png',
+    featured: true,
+  },
+  {
+    id: 14,
+    name: {
+      en: 'Pastry Display Warmer',
+      id: 'Etalase Pemanas Kue (Pastry Warmer)'
+    },
+    slug: 'pastry-display-warmer',
+    category: {
+      en: 'Coffee Shop Equipment',
+      id: 'Peralatan Kedai Kopi'
+    },
+    description: {
+      en: 'Commercial curved-glass pastry display warmer with an elegant stainless steel finish. Perfect for bakeries and coffee shops offering warm croissants, pies, and savory treats with bright LED illumination.',
+      id: 'Etalase pemanas kue kaca melengkung komersial dengan lapisan luar baja tahan karat yang elegan. Sempurna untuk toko roti dan kedai kopi yang menawarkan croissant hangat, pai, dan camilan gurih dengan pencahayaan LED yang cerah.'
+    },
+    shortDescription: {
+      en: 'Elegant curved-glass pastry and food display warmer.',
+      id: 'Etalase pemanas pajangan makanan dan kue kaca melengkung yang elegan.'
+    },
+    specs: {
+      material: { en: 'Stainless Steel + Tempered Glass', id: 'Baja Tahan Karat + Kaca Tempered' },
+      shelves: { en: '2-4 Adjustable Shelves', id: '2-4 Rak yang dapat disesuaikan' },
+      temperatureRange: '30°C - 85°C',
+      power: { en: 'Electric', id: 'Listrik' },
+    },
+    image: '/images/products/pastry-display-warmer.png',
+  },
+  {
+    id: 15,
+    name: {
+      en: 'Automatic Water Boiler',
+      id: 'Mesin Pemanas Air Otomatis'
+    },
+    slug: 'automatic-water-boiler',
+    category: {
+      en: 'Coffee Shop Equipment',
+      id: 'Peralatan Kedai Kopi'
+    },
+    description: {
+      en: 'Heavy-duty automatic hot water dispenser/boiler built for continuous commercial use in busy cafes and tea houses. Precise digital temperature control ensures perfect extractions every time.',
+      id: 'Mesin dispenser/pemanas air panas otomatis tugas berat yang dibuat untuk penggunaan komersial tersu-menerus di kafe dan kedai teh yang sibuk. Kontrol suhu digital presisi memastikan ekstraksi yang sempurna setiap saat.'
+    },
+    shortDescription: {
+      en: 'Heavy-duty automatic hot water dispenser with digital control.',
+      id: 'Mesin dispenser air panas otomatis tugas berat dengan kontrol digital.'
+    },
+    specs: {
+      material: 'Stainless Steel 304',
+      capacity: { en: '10-30 Liters', id: '10-30 Liter' },
+      temperatureControl: { en: 'Digital Precision Thermostat', id: 'Termostat Digital Presisi' },
+      power: { en: 'Electric', id: 'Listrik' },
+    },
+    image: '/images/products/automatic-water-boiler.png',
+  },
+  {
+    id: 16,
+    name: {
+      en: 'Stainless Pre-rinse Sink Table',
+      id: 'Meja Sink Cuci Piring Stainless'
+    },
+    slug: 'stainless-sink-table',
+    category: {
+      en: 'Coffee Shop Equipment',
+      id: 'Peralatan Kedai Kopi'
+    },
+    description: {
+      en: 'Durable multi-compartment stainless steel sink table with a tall splashback. Designed for heavy dishwashing traffic in commercial food prep areas and cafe back-houses.',
+      id: 'Meja bak cuci piring (sink) baja tahan karat multi-kompartemen yang tahan lama dengan penyekat percikan air yang tinggi. Dirancang untuk arus pencucian piring yang berat di area persiapan makanan komersial dan dapur belakang kafe.'
+    },
+    shortDescription: {
+      en: 'Durable multi-compartment sink table for busy kitchens.',
+      id: 'Meja cuci multi-kompartemen tahan lama untuk dapur sibuk.'
+    },
+    specs: {
+      material: 'Heavy Gauge Stainless Steel 304',
+      bowls: { en: '1-3 Compartments', id: '1-3 Kompartemen Bak' },
+      features: { en: 'High Backsplash, Adjustable Bullet Feet', id: 'Pelindung Percikan Tinggi, Kaki-kaki yang Dapat Disetel' },
+      dimensions: { en: 'Custom Sizes Available', id: 'Tersedia Ukuran Kustom' }
+    },
+    image: '/images/products/stainless-sink-table.png',
+  }
 ];
 
 export const productCategories = [
@@ -340,4 +449,5 @@ export const productCategories = [
   'Regional Ovens',
   'Modern Ovens',
   'Kitchen Equipment',
+  'Coffee Shop Equipment',
 ];

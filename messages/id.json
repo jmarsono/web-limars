@@ -100,7 +100,8 @@
       "TraditionalStoves": "Kompor Tradisional",
       "RegionalOvens": "Oven Regional",
       "ModernOvens": "Oven Modern",
-      "KitchenEquipment": "Perlengkapan Dapur"
+      "KitchenEquipment": "Perlengkapan Dapur",
+      "CoffeeShopEquipment": "Peralatan Kedai Kopi"
     },
     "viewDetails": "Lihat Detail →",
     "emptyState": "Tidak ada produk yang ditemukan dalam kategori ini.",
