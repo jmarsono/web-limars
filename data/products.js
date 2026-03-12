@@ -278,7 +278,7 @@ export const products = [
       surfaceArea: '600 x 400 mm - 1200 x 600 mm',
       power: { en: 'Gas / Electric', id: 'Gas / Listrik' },
     },
-    image: '/images/products/griddle.png',
+    image: '/images/products/gas-griddle.png',
   },
   {
     id: 11,
@@ -304,7 +304,7 @@ export const products = [
       capacity: { en: '8-25 Liters', id: '8-25 Liter' },
       power: { en: 'Gas / Electric', id: 'Gas / Listrik' },
     },
-    image: '/images/products/deep-fryer.png',
+    image: '/images/products/gas-deep-fryer.png',
   },
   {
     id: 12,
@@ -330,7 +330,7 @@ export const products = [
       pans: { en: '3-6 GN Pans', id: '3-6 Nampan GN' },
       power: { en: 'Electric', id: 'Listrik' },
     },
-    image: '/images/products/bain-marie.png',
+    image: '/images/products/hotel-bain-marie.png',
   },
 ];
 
