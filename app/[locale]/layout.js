@@ -110,7 +110,7 @@ export default async function RootLayout({ children, params }) {
           <WhatsAppButton />
         </NextIntlClientProvider>
       </body>
-      <GoogleAnalytics gaId="G-EXAMPLE123" />
+      <GoogleAnalytics gaId="G-FT58X7RM42" />
     </html>
   );
 }
