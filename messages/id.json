@@ -16,7 +16,8 @@
     "projects": "Proyek",
     "contact": "Kontak",
     "faq": "FAQ",
-    "getQuote": "Minta Penawaran"
+    "getQuote": "Minta Penawaran",
+    "privacyPolicy": "Kebijakan Privasi"
   },
   "Home": {
     "heroBadge": "🏆 Produsen Peralatan Dapur Terpercaya",
@@ -252,5 +253,37 @@
     "keywords": "peralatan dapur, oven komersial, kitchen set restoran, sistem ducting, instalasi gas, pengeboran sumur, layanan listrik, Indonesia, produsen",
     "homeTitle": "Pusat Fabrikasi Peralatan Dapur Komersial & Solusi Teknik",
     "homeDescription": "Solusi lengkap kebutuhan dapur Anda. Produksi oven, kompor, kitchen set, hingga instalasi gas dan listrik untuk restoran dan hotel."
+  },
+  "PrivacyPolicy": {
+    "heroBadge": "Kebijakan Privasi",
+    "heroTitle": "Kebijakan & Ketentuan Privasi",
+    "heroSubtitle": "Pelajari bagaimana kami menangani data dan privasi Anda.",
+    "lastUpdated": "Pembaruan Terakhir: Maret 2026",
+    "sections": {
+      "informationCollection": {
+        "title": "Pengumpulan Informasi",
+        "content": "PT. Limars Teknik Indonesia ('kami') mengumpulkan informasi saat Anda menggunakan situs web kami, menghubungi kami, atau meminta penawaran. Ini mungkin termasuk nama, alamat email, nomor telepon, dan detail perusahaan Anda."
+      },
+      "informationUsage": {
+        "title": "Bagaimana Kami Menggunakan Informasi Anda",
+        "content": "Kami menggunakan informasi yang kami kumpulkan untuk berkomunikasi dengan Anda, memproses permintaan dan penawaran Anda, meningkatkan layanan kami, dan memastikan situs web kami berkinerja optimal."
+      },
+      "dataProtection": {
+        "title": "Perlindungan Data",
+        "content": "Kami menerapkan langkah-langkah keamanan teknis dan organisasi yang sesuai untuk melindungi informasi pribadi Anda dari akses, perubahan, pengungkapan, atau penghancuran yang tidak sah."
+      },
+      "thirdPartySharing": {
+        "title": "Berbagi Pihak Ketiga",
+        "content": "Kami tidak menjual atau menyewakan informasi pribadi Anda kepada pihak ketiga. Kami dapat membagikan informasi kepada penyedia layanan tepercaya yang membantu kami mengoperasikan situs web kami atau menjalankan bisnis kami, tunduk pada perjanjian kerahasiaan yang ketat."
+      },
+      "cookies": {
+        "title": "Cookie dan Pelacakan",
+        "content": "Situs web kami mungkin menggunakan cookie untuk meningkatkan pengalaman Anda. Anda dapat memilih untuk menonaktifkan cookie melalui pengaturan peramban Anda, meskipun ini dapat memengaruhi beberapa fungsionalitas situs web."
+      },
+      "yourRights": {
+        "title": "Hak-hak Anda",
+        "content": "Anda memiliki hak untuk meminta akses, perbaikan, atau penghapusan data pribadi Anda. Silakan hubungi kami menggunakan informasi yang disediakan di halaman Kontak kami untuk permintaan terkait privasi."
+      }
+    }
   }
 }

@@ -16,7 +16,8 @@
     "projects": "Projects",
     "contact": "Contact",
     "faq": "FAQ",
-    "getQuote": "Get a Quote"
+    "getQuote": "Get a Quote",
+    "privacyPolicy": "Privacy Policy"
   },
   "Home": {
     "heroBadge": "🏆 Trusted Kitchen Equipment Manufacturer",
@@ -252,5 +253,37 @@
     "keywords": "kitchen equipment, commercial oven, restaurant kitchen set, ducting system, gas installation, well drilling, electrical services, Indonesia, manufacturer",
     "homeTitle": "Commercial Kitchen Equipment Fabrication & Engineering Solutions",
     "homeDescription": "Complete solutions for your kitchen needs. Manufacturing ovens, stoves, kitchen sets, and providing gas and electrical installations for restaurants and hotels."
+  },
+  "PrivacyPolicy": {
+    "heroBadge": "Privacy Policy",
+    "heroTitle": "Privacy Policy & Terms",
+    "heroSubtitle": "Learn about how we handle your data and privacy.",
+    "lastUpdated": "Last Updated: March 2026",
+    "sections": {
+      "informationCollection": {
+        "title": "Information Collection",
+        "content": "PT. Limars Teknik Indonesia ('we', 'us', or 'our') collects information when you use our website, contact us, or request a quote. This may include your name, email address, phone number, and company details."
+      },
+      "informationUsage": {
+        "title": "How We Use Your Information",
+        "content": "We use the information we collect to communicate with you, process your requests and quotes, improve our services, and ensure our website performs optimally."
+      },
+      "dataProtection": {
+        "title": "Data Protection",
+        "content": "We implement appropriate technical and organizational security measures to protect your personal information against unauthorized access, alteration, disclosure, or destruction."
+      },
+      "thirdPartySharing": {
+        "title": "Third-Party Sharing",
+        "content": "We do not sell or rent your personal information to third parties. We may share information with trusted service providers who assist us in operating our website or conducting our business, subject to strict confidentiality agreements."
+      },
+      "cookies": {
+        "title": "Cookies and Tracking",
+        "content": "Our website may use cookies to enhance your experience. You can choose to disable cookies through your browser settings, though this may affect some website functionalities."
+      },
+      "yourRights": {
+        "title": "Your Rights",
+        "content": "You have the right to request access to, correction of, or deletion of your personal data. Please contact us using the information provided on our Contact page for any privacy-related requests."
+      }
+    }
   }
 }

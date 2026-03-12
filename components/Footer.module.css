@@ -153,13 +153,35 @@
   margin-top: 60px;
   border-top: 1px solid rgba(255, 255, 255, 0.1);
   padding: 20px 0;
-  text-align: center;
+}
+
+.footerBottomInner {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 16px;
 }
 
 .footerBottom p {
   font-size: 0.85rem;
   color: rgba(255, 255, 255, 0.4);
   margin: 0;
+}
+
+.footerBottomLinks {
+  display: flex;
+  gap: 20px;
+}
+
+.footerBottomLink {
+  font-size: 0.85rem;
+  color: rgba(255, 255, 255, 0.4);
+  transition: color var(--transition-fast);
+}
+
+.footerBottomLink:hover {
+  color: var(--light-blue);
 }
 
 @media (max-width: 968px) {

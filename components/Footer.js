@@ -106,8 +106,13 @@ export default function Footer() {
       </div>
 
       <div className={styles.footerBottom}>
-        <div className="container">
+        <div className={`container ${styles.footerBottomInner}`}>
           <p>&copy; {new Date().getFullYear()} {t('Footer.rights')}</p>
+          <div className={styles.footerBottomLinks}>
+            <Link href="/privacy-policy" className={styles.footerBottomLink}>
+              {t('Navigation.privacyPolicy')}
+            </Link>
+          </div>
         </div>
       </div>
     </footer>
