@@ -1,0 +1,126 @@
+.main {
+  padding: 140px 0 80px;
+  background: var(--white);
+}
+
+.header {
+  max-width: 800px;
+  margin: 0 auto 48px;
+  text-align: center;
+}
+
+.backLink {
+  display: inline-block;
+  color: var(--light-blue);
+  font-weight: 600;
+  text-decoration: none;
+  margin-bottom: 32px;
+  font-size: 0.9rem;
+  transition: transform var(--transition-fast);
+}
+
+.backLink:hover {
+  transform: translateX(-5px);
+}
+
+.meta {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 16px;
+  margin-bottom: 16px;
+  font-size: 0.85rem;
+  color: var(--gray);
+}
+
+.category {
+  background: var(--light-gray);
+  color: var(--dark-blue);
+  padding: 4px 12px;
+  border-radius: 50px;
+  font-weight: 600;
+}
+
+.title {
+  font-size: 3rem;
+  color: var(--dark-blue);
+  line-height: 1.2;
+  margin-bottom: 20px;
+}
+
+.author {
+  font-size: 0.95rem;
+  color: var(--gray);
+}
+
+.imageWrapper {
+  max-width: 1000px;
+  margin: 0 auto 60px;
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  box-shadow: var(--card-shadow-hover);
+}
+
+.placeholder {
+  width: 100%;
+  aspect-ratio: 21/9;
+  background: linear-gradient(135deg, #f0f3f6 0%, #e0e7ee 100%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 4rem;
+}
+
+.content {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.articleBody {
+  line-height: 1.8;
+  font-size: 1.15rem;
+  color: var(--dark-gray);
+}
+
+.articleBody h2 {
+  font-size: 2rem;
+  margin: 48px 0 24px;
+  color: var(--dark-blue);
+}
+
+.articleBody p {
+  margin-bottom: 24px;
+}
+
+.articleBody ul {
+  margin-bottom: 24px;
+  padding-left: 24px;
+}
+
+.articleBody li {
+  margin-bottom: 12px;
+}
+
+.footer {
+  max-width: 800px;
+  margin: 60px auto 0;
+  padding-top: 40px;
+  border-top: 1px solid var(--light-gray);
+  display: flex;
+  justify-content: center;
+}
+
+.share {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  color: var(--gray);
+  font-weight: 600;
+  font-size: 0.9rem;
+}
+
+@media (max-width: 768px) {
+  .title { font-size: 2.25rem; }
+  .articleBody { font-size: 1.05rem; }
+  .placeholder { aspect-ratio: 16/9; }
+}

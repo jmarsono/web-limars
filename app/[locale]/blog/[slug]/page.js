@@ -1,0 +1,109 @@
+import { notFound } from 'next/navigation';
+import { blogPosts } from '@/data/blogPosts';
+import { getMessages } from 'next-intl/server';
+import Link from 'next/link';
+import styles from './page.module.css';
+
+export async function generateMetadata({ params }) {
+  const { slug, locale } = await params;
+  const post = blogPosts.find((p) => p.slug === slug);
+
+  if (!post) return {};
+
+  const postData = post[locale];
+
+  return {
+    title: `${postData.title} | Limars Teknik Blog`,
+    description: postData.excerpt,
+    openGraph: {
+      title: postData.title,
+      description: postData.excerpt,
+      type: 'article',
+      publishedTime: post.date,
+      authors: [post.author],
+    },
+    twitter: {
+      card: 'summary_large_image',
+      title: postData.title,
+      description: postData.excerpt,
+    },
+  };
+}
+
+export default async function BlogPostPage({ params }) {
+  const { slug, locale } = await params;
+  const post = blogPosts.find((p) => p.slug === slug);
+
+  if (!post) {
+    notFound();
+  }
+
+  const messages = await getMessages({ locale });
+  const blogT = messages.Blog;
+  const postData = post[locale];
+
+  // Structured Data (JSON-LD)
+  const jsonLd = {
+    '@context': 'https://schema.org',
+    '@type': 'BlogPosting',
+    headline: postData.title,
+    image: post.image,
+    datePublished: post.date,
+    author: {
+      '@type': 'Person',
+      name: post.author,
+    },
+    description: postData.excerpt,
+    publisher: {
+      '@type': 'Organization',
+      name: 'PT. Limars Teknik Indonesia',
+      logo: {
+        '@type': 'ImageObject',
+        url: 'https://limarsteknik.co.id/logo.png', // Fallback URL
+      },
+    },
+  };
+
+  return (
+    <main className={styles.main}>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+      />
+
+      <article className="container">
+        <header className={styles.header}>
+          <Link href={`/${locale}/blog`} className={styles.backLink}>
+            {blogT.backToList}
+          </Link>
+          <div className={styles.meta}>
+            <span className={styles.category}>{post.category}</span>
+            <span className={styles.date}>{blogT.publishedOn} {post.date}</span>
+          </div>
+          <h1 className={styles.title}>{postData.title}</h1>
+          <p className={styles.author}>{blogT.by} <strong>{post.author}</strong></p>
+        </header>
+
+        <div className={styles.imageWrapper}>
+          <div className={styles.placeholder}>
+            <span>🖼️</span>
+          </div>
+        </div>
+
+        <div className={styles.content}>
+          <div 
+            dangerouslySetInnerHTML={{ __html: postData.content }} 
+            className={styles.articleBody}
+          />
+        </div>
+
+        <footer className={styles.footer}>
+          <div className={styles.share}>
+            <span>{blogT.share}</span>
+            {/* Share buttons would go here */}
+          </div>
+        </footer>
+      </article>
+    </main>
+  );
+}

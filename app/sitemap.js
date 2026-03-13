@@ -1,12 +1,13 @@
 import { products } from '../data/products';
 import { services } from '../data/services';
 import { projects } from '../data/projects';
+import { blogPosts } from '../data/blogPosts';
 
 export default function sitemap() {
   const baseUrl = 'https://limarsteknik.com';
 
   const locales = ['id', 'en'];
-  const paths = ['', '/about', '/products', '/services', '/projects', '/contact', '/faq'];
+  const paths = ['', '/about', '/products', '/services', '/projects', '/blog', '/contact', '/faq'];
 
   // Static routes with alternates
   const routes = paths.flatMap((path) => 
@@ -38,5 +39,15 @@ export default function sitemap() {
     }))
   );
 
-  return [...routes, ...productRoutes, ...serviceRoutes];
+  // Dynamic Blog routes
+  const blogRoutes = blogPosts.flatMap((post) => 
+    locales.map((locale) => ({
+      url: `${baseUrl}/${locale}/blog/${post.slug}`,
+      lastModified: post.date,
+      changeFrequency: 'monthly',
+      priority: 0.8,
+    }))
+  );
+
+  return [...routes, ...productRoutes, ...serviceRoutes, ...blogRoutes];
 }

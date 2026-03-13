@@ -17,7 +17,22 @@
     "contact": "Kontak",
     "faq": "FAQ",
     "getQuote": "Minta Penawaran",
-    "privacyPolicy": "Kebijakan Privasi"
+    "privacyPolicy": "Kebijakan Privasi",
+    "blog": "Blog"
+  },
+  "Blog": {
+    "heroBadge": "Blog & Artikel",
+    "heroTitle": "Wawasan & Tips Teknik Dapur",
+    "heroSubtitle": "Temukan artikel terbaru, tips perawatan, dan panduan teknik dari para ahli kami untuk mengoptimalkan operasional dapur Anda.",
+    "readMore": "Baca Selengkapnya →",
+    "publishedOn": "Diterbitkan pada",
+    "by": "Oleh",
+    "backToList": "← Kembali ke Daftar",
+    "share": "Bagikan Artikel Ini",
+    "related": "Artikel Terkait",
+    "noPosts": "Belum ada artikel yang tersedia.",
+    "breadcrumbHome": "Beranda",
+    "breadcrumbBlog": "Blog"
   },
   "Home": {
     "heroBadge": "🏆 Produsen Peralatan Dapur Terpercaya",

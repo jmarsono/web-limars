@@ -16,6 +16,7 @@ export default function Navbar() {
     { href: '/products', label: t('products') },
     { href: '/services', label: t('services') },
     { href: '/projects', label: t('projects') },
+    { href: '/blog', label: t('blog') },
     { href: '/contact', label: t('contact') },
   ];
 

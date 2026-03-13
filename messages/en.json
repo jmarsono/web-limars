@@ -17,7 +17,22 @@
     "contact": "Contact",
     "faq": "FAQ",
     "getQuote": "Get a Quote",
-    "privacyPolicy": "Privacy Policy"
+    "privacyPolicy": "Privacy Policy",
+    "blog": "Blog"
+  },
+  "Blog": {
+    "heroBadge": "Blog & Articles",
+    "heroTitle": "Kitchen Engineering Insights & Tips",
+    "heroSubtitle": "Discover the latest articles, maintenance tips, and engineering guides from our experts to optimize your kitchen operations.",
+    "readMore": "Read More →",
+    "publishedOn": "Published on",
+    "by": "By",
+    "backToList": "← Back to List",
+    "share": "Share This Article",
+    "related": "Related Articles",
+    "noPosts": "No articles available yet.",
+    "breadcrumbHome": "Home",
+    "breadcrumbBlog": "Blog"
   },
   "Home": {
     "heroBadge": "🏆 Trusted Kitchen Equipment Manufacturer",

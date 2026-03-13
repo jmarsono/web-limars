@@ -8,6 +8,7 @@ const quickLinks = [
   { href: '/about', labelKey: 'Navigation.about' },
   { href: '/products', labelKey: 'Navigation.products' },
   { href: '/projects', labelKey: 'Navigation.projects' },
+  { href: '/blog', labelKey: 'Navigation.blog' },
   { href: '/faq', labelKey: 'Navigation.faq' },
   { href: '/contact', labelKey: 'Navigation.contact' },
 ];
