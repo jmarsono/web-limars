@@ -13,7 +13,9 @@ export async function generateMetadata({ params }) {
   const t = messages.SEO;
 
   return {
-    title: t.homeTitle,
+    title: {
+      absolute: t.homeTitle
+    },
     description: t.homeDescription,
   };
 }
