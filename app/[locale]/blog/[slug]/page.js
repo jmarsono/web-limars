@@ -1,8 +1,18 @@
 import { notFound } from 'next/navigation';
 import { blogPosts } from '@/data/blogPosts';
-import { getMessages } from 'next-intl/server';
+import { getMessages, setRequestLocale } from 'next-intl/server';
 import Link from 'next/link';
 import styles from './page.module.css';
+import { routing } from '@/i18n/routing';
+
+export function generateStaticParams() {
+  return routing.locales.flatMap((locale) =>
+    blogPosts.map((post) => ({
+      locale,
+      slug: post.slug,
+    }))
+  );
+}
 
 export async function generateMetadata({ params }) {
   const { slug, locale } = await params;
@@ -32,6 +42,7 @@ export async function generateMetadata({ params }) {
 
 export default async function BlogPostPage({ params }) {
   const { slug, locale } = await params;
+  setRequestLocale(locale);
   const post = blogPosts.find((p) => p.slug === slug);
 
   if (!post) {

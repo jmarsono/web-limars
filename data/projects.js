@@ -22,7 +22,6 @@ export const projects = [
       { en: 'Hot kitchen & cold storage prep', id: 'Persiapan dapur panas & pendingin' },
       { en: 'Commercial exhaust integration', id: 'Integrasi exhaust komersial' }
     ],
-    image: '/images/projects/project-1-new.png',
     featured: true,
   },
   {
@@ -48,7 +47,6 @@ export const projects = [
       { en: 'Gas piping & burner calibration', id: 'Pipa gas & kalibrasi burner' },
       { en: 'Heat retention testing', id: 'Pengujian retensi panas' }
     ],
-    image: '/images/projects/project-4-new.png',
     featured: true,
   },
   {
@@ -74,12 +72,11 @@ export const projects = [
       { en: 'Gas piping & burner', id: 'Pipa gas & burner' },
       { en: 'Testing and commissioning', id: 'Pengujian dan commissioning' }
     ],
-    image: '/images/projects/project-5-new.png',
     featured: true,
   },
   {
     id: 4,
-    image: '/images/projects/project-1-new.png',
+    image: '/images/projects/project-4-new.png',
     name: {
       en: 'Nanamia Pizzeria Yogyakarta Traditional Italian Pizza Oven',
       id: 'Proyek Oven Pizza Tradisional Itali Nanamia Pizzeria Yogyakarta'
@@ -100,11 +97,10 @@ export const projects = [
       { en: 'Gas heating system setup', id: 'Pengaturan sistem pemanas gas' },
       { en: 'Chimney & ventilation', id: 'Cerobong asap & ventilasi' }
     ],
-    image: '/images/projects/project-2-new.png',
   },
   {
     id: 5,
-    image: '/images/projects/project-2-new.png',
+    image: '/images/projects/project-5-new.png',
     name: {
       en: 'Zahra Al-Jazeerah Traditional Arab Bread Oven',
       id: 'Pembuatan Oven Roti Arab Tradisional Zahra Al-Jazeerah'
@@ -125,11 +121,10 @@ export const projects = [
       { en: 'Gas piping & safety valves', id: 'Pipa gas & katup pengaman' },
       { en: 'Temperature calibration', id: 'Kalibrasi suhu' }
     ],
-    image: '/images/projects/project-5-new.png',
   },
   {
     id: 6,
-    image: '/images/projects/project-3-new.png',
+    image: '/images/projects/project-6-new.png',
     name: {
       en: 'Born-Ga Combi Oven Setup',
       id: 'Pengaturan Oven Combi Born-Ga'
@@ -150,7 +145,6 @@ export const projects = [
       { en: 'Heavy-duty electrical wiring', id: 'Pengkabelan listrik heavy-duty' },
       { en: 'Steam exhaust ventilation', id: 'Ventilasi pembuangan uap' }
     ],
-    image: '/images/projects/project-6-new.png',
   },
   {
     id: 7,
@@ -198,7 +192,7 @@ export const projects = [
       { en: 'Structural fabrication', id: 'Fabrikasi struktural' },
       { en: 'Safety and smoke testing', id: 'Pengujian keselamatan dan asap' }
     ],
-    image: '/images/projects/project-3-new.png',
+    image: '/images/projects/project-8-new.png',
   },
 ];
 

@@ -1,9 +1,8 @@
 import { Link } from '../../../i18n/routing';
 import { services } from '../../../data/services';
-import { useLocale, useTranslations } from 'next-intl';
 import styles from './Services.module.css';
 
-import { getMessages } from 'next-intl/server';
+import { getMessages, setRequestLocale, getTranslations } from 'next-intl/server';
 
 export async function generateMetadata({ params }) {
   const { locale } = await params;
@@ -16,9 +15,10 @@ export async function generateMetadata({ params }) {
   };
 }
 
-export default function ServicesPage() {
-  const locale = useLocale();
-  const t = useTranslations('Services');
+export default async function ServicesPage({ params }) {
+  const { locale } = await params;
+  setRequestLocale(locale);
+  const t = await getTranslations('Services');
 
   return (
     <>

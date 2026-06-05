@@ -1,13 +1,19 @@
-import { Link } from '../../../../i18n/routing';
+import { Link, routing } from '../../../../i18n/routing';
 import { notFound } from 'next/navigation';
 import { products } from '../../../../data/products';
 import { useTranslations } from 'next-intl';
 import Image from 'next/image';
 import ProductLightbox from './ProductLightbox';
 import styles from './ProductDetail.module.css';
+import { setRequestLocale } from 'next-intl/server';
 
 export async function generateStaticParams() {
-  return products.map((p) => ({ slug: p.slug }));
+  return routing.locales.flatMap((locale) =>
+    products.map((p) => ({
+      locale,
+      slug: p.slug,
+    }))
+  );
 }
 
 export async function generateMetadata({ params }) {
@@ -22,6 +28,7 @@ export async function generateMetadata({ params }) {
 
 export default async function ProductDetailPage({ params }) {
   const { slug, locale } = await params;
+  setRequestLocale(locale);
   const pData = products.find(p => p.slug === slug);
   if (!pData) notFound();
   

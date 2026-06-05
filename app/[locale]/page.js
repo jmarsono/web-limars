@@ -3,9 +3,8 @@ import styles from './page.module.css';
 import { products } from '../../data/products';
 import { services } from '../../data/services';
 import { projects } from '../../data/projects';
-import { useLocale, useTranslations } from 'next-intl';
-import { getMessages } from 'next-intl/server';
 import Image from 'next/image';
+import { getMessages, setRequestLocale, getTranslations } from 'next-intl/server';
 
 export async function generateMetadata({ params }) {
   const { locale } = await params;
@@ -44,9 +43,10 @@ const testimonials = [
 
 const clientLogos = ['Al-Jazeerah Cikini', 'Royal Al-Jazeerah', 'Central Al-Jazeerah', 'Al-Jazeerah Polonia', 'Zahra Al-Jazeerah', 'Nanamia Pizzeria Yogyakarta', 'Born-Ga', 'Dashi Chazuke Zenraku'];
 
-export default function Home() {
-  const locale = useLocale();
-  const t = useTranslations('Home');
+export default async function Home({ params }) {
+  const { locale } = await params;
+  setRequestLocale(locale);
+  const t = await getTranslations('Home');
   const featuredProducts = products.filter(p => p.featured).slice(0, 4);
   const featuredProjects = projects.filter(p => p.featured).slice(0, 3);
 

@@ -1,5 +1,4 @@
-import { useTranslations } from 'next-intl';
-import { getMessages } from 'next-intl/server';
+import { getMessages, setRequestLocale } from 'next-intl/server';
 import { blogPosts } from '@/data/blogPosts';
 import BlogCard from '@/components/BlogCard';
 import styles from './page.module.css';
@@ -22,6 +21,7 @@ export async function generateMetadata({ params }) {
 
 export default async function BlogPage({ params }) {
   const { locale } = await params;
+  setRequestLocale(locale);
   const messages = await getMessages({ locale });
   const blogT = messages.Blog;
 

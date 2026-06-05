@@ -1,11 +1,17 @@
-import { Link } from '../../../../i18n/routing';
+import { Link, routing } from '../../../../i18n/routing';
 import { notFound } from 'next/navigation';
 import { services } from '../../../../data/services';
 import Image from 'next/image';
 import styles from './ServiceDetail.module.css';
+import { setRequestLocale } from 'next-intl/server';
 
 export async function generateStaticParams() {
-  return services.map((s) => ({ slug: s.slug }));
+  return routing.locales.flatMap((locale) =>
+    services.map((s) => ({
+      locale,
+      slug: s.slug,
+    }))
+  );
 }
 
 export async function generateMetadata({ params }) {
@@ -20,6 +26,7 @@ export async function generateMetadata({ params }) {
 
 export default async function ServiceDetailPage({ params }) {
   const { slug, locale } = await params;
+  setRequestLocale(locale);
   const service = services.find(s => s.slug === slug);
   if (!service) notFound();
 
