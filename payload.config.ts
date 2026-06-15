@@ -40,6 +40,7 @@ export default buildConfig({
   },
   secret: process.env.PAYLOAD_SECRET || 'a-very-secret-key-123456',
   db: sqliteD1Adapter({
+    push: true,
     binding: (() => {
       try {
         const cloudflareContext = (globalThis as any)[Symbol.for('cloudflare-context')]
