@@ -40,7 +40,17 @@ export default buildConfig({
   },
   secret: process.env.PAYLOAD_SECRET || 'a-very-secret-key-123456',
   db: sqliteD1Adapter({
-    binding: process.env.DB as any, // D1 Database binding object
+    binding: (() => {
+      try {
+        const cloudflareContext = (globalThis as any)[Symbol.for('cloudflare-context')]
+        if (cloudflareContext?.env?.DB) {
+          return cloudflareContext.env.DB
+        }
+      } catch (e) {
+        // Fallback or build-time mock
+      }
+      return process.env.DB as any
+    })(),
   }),
   plugins: [
     s3Storage({
