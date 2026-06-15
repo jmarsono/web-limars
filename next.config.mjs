@@ -6,7 +6,6 @@ const withNextIntl = createNextIntlPlugin();
 const nextConfig = {
   /* config options here */
   reactCompiler: true,
-  output: "export",
   images: {
     unoptimized: true,
   },
@@ -14,6 +13,7 @@ const nextConfig = {
   env: {
     NEXT_PUBLIC_RECAPTCHA_SITE_KEY: '6LcprocsAAAAADTwm6lBmRlvJsPT_B1-OjNznCYa',
   },
+  serverExternalPackages: ['@payloadcms/db-d1-sqlite', 'drizzle-kit', 'esbuild'],
 };
 
 export default withNextIntl(nextConfig);

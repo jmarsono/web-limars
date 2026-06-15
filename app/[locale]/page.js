@@ -1,10 +1,12 @@
 import { Link } from '../../i18n/routing';
 import styles from './page.module.css';
-import { products } from '../../data/products';
-import { services } from '../../data/services';
-import { projects } from '../../data/projects';
+import { products as staticProducts } from '../../data/products';
+import { services as staticServices } from '../../data/services';
+import { projects as staticProjects } from '../../data/projects';
 import Image from 'next/image';
 import { getMessages, setRequestLocale, getTranslations } from 'next-intl/server';
+import { getPayload } from 'payload';
+import config from '../../payload.config';
 
 export async function generateMetadata({ params }) {
   const { locale } = await params;
@@ -47,8 +49,29 @@ export default async function Home({ params }) {
   const { locale } = await params;
   setRequestLocale(locale);
   const t = await getTranslations('Home');
-  const featuredProducts = products.filter(p => p.featured).slice(0, 4);
-  const featuredProjects = projects.filter(p => p.featured).slice(0, 3);
+
+  let dbProducts = [];
+  let dbServices = [];
+  let dbProjects = [];
+
+  try {
+    const payload = await getPayload({ config });
+    const prodRes = await payload.find({ collection: 'products', locale, depth: 1, limit: 100 });
+    dbProducts = prodRes.docs;
+    const servRes = await payload.find({ collection: 'services', locale, depth: 1, limit: 100 });
+    dbServices = servRes.docs;
+    const projRes = await payload.find({ collection: 'projects', locale, depth: 1, limit: 100 });
+    dbProjects = projRes.docs;
+  } catch (err) {
+    console.error('Error loading Payload CMS content:', err);
+  }
+
+  const activeProducts = dbProducts.length > 0 ? dbProducts : staticProducts;
+  const activeServices = dbServices.length > 0 ? dbServices : staticServices;
+  const activeProjects = dbProjects.length > 0 ? dbProjects : staticProjects;
+
+  const featuredProducts = activeProducts.filter(p => p.featured).slice(0, 4);
+  const featuredProjects = activeProjects.filter(p => p.featured).slice(0, 3);
 
   const stats = [
     { number: '10+', label: t('stats.years') },
@@ -164,26 +187,35 @@ export default async function Home({ params }) {
             <p>{t('products.subtitle')}</p>
           </div>
           <div className={styles.productGrid}>
-            {featuredProducts.map((product) => (
-              <Link href={`/products/${product.slug}`} key={product.id} className={styles.productCard}>
-                <div className={styles.productImage}>
-                  <div style={{ position: 'relative', width: '100%', aspectRatio: '4/3', overflow: 'hidden', backgroundColor: '#f0f0f0' }}>
-                    <Image 
-                      src={product.image} 
-                      alt={product.name[locale]} 
-                      fill
-                      style={{ objectFit: 'cover' }}
-                    />
+            {featuredProducts.map((product) => {
+              const name = typeof product.name === 'object' ? product.name[locale] : product.name;
+              const shortDesc = typeof product.shortDescription === 'object' ? product.shortDescription[locale] : product.shortDescription;
+              const category = typeof product.category === 'object' ? product.category[locale] : product.category;
+              const imageUrl = (product.image && typeof product.image === 'object') ? product.image.url : (product.image || '');
+
+              return (
+                <Link href={`/products/${product.slug}`} key={product.id} className={styles.productCard}>
+                  <div className={styles.productImage}>
+                    <div style={{ position: 'relative', width: '100%', aspectRatio: '4/3', overflow: 'hidden', backgroundColor: '#f0f0f0' }}>
+                      {imageUrl && (
+                        <Image 
+                          src={imageUrl} 
+                          alt={name} 
+                          fill
+                          style={{ objectFit: 'cover' }}
+                        />
+                      )}
+                    </div>
+                    <div className={styles.productBadge}>{category}</div>
                   </div>
-                  <div className={styles.productBadge}>{product.category[locale]}</div>
-                </div>
-                <div className={styles.productInfo}>
-                  <h3>{product.name[locale]}</h3>
-                  <p>{product.shortDescription[locale]}</p>
-                  <span className={styles.productLink}>{t('products.viewDetails')}</span>
-                </div>
-              </Link>
-            ))}
+                  <div className={styles.productInfo}>
+                    <h3>{name}</h3>
+                    <p>{shortDesc}</p>
+                    <span className={styles.productLink}>{t('products.viewDetails')}</span>
+                  </div>
+                </Link>
+              );
+            })}
           </div>
           <div className={styles.sectionCta}>
             <Link href="/products" className="btn btn-dark">{t('products.viewAll')}</Link>
@@ -199,14 +231,19 @@ export default async function Home({ params }) {
             <p>{t('services.subtitle')}</p>
           </div>
           <div className={styles.serviceGrid}>
-            {services.map((service) => (
-              <Link href={`/services/${service.slug}`} key={service.id} className={styles.serviceCard}>
-                <span className={styles.serviceIcon}>{service.icon}</span>
-                <h3>{service.title[locale]}</h3>
-                <p>{service.shortDescription[locale]}</p>
-                <span className={styles.serviceLink}>{t('services.learnMore')}</span>
-              </Link>
-            ))}
+            {activeServices.map((service) => {
+              const title = typeof service.title === 'object' ? service.title[locale] : service.title;
+              const shortDesc = typeof service.shortDescription === 'object' ? service.shortDescription[locale] : service.shortDescription;
+
+              return (
+                <Link href={`/services/${service.slug}`} key={service.id} className={styles.serviceCard}>
+                  <span className={styles.serviceIcon}>{service.icon}</span>
+                  <h3>{title}</h3>
+                  <p>{shortDesc}</p>
+                  <span className={styles.serviceLink}>{t('services.learnMore')}</span>
+                </Link>
+              );
+            })}
           </div>
         </div>
       </section>
@@ -238,25 +275,34 @@ export default async function Home({ params }) {
             <p>{t('projects.subtitle')}</p>
           </div>
           <div className={styles.projectGrid}>
-            {featuredProjects.map((project) => (
-              <div key={project.id} className={styles.projectCard}>
-                <div className={styles.projectImage}>
-                  <div style={{ position: 'relative', width: '100%', height: '100%', minHeight: '250px', overflow: 'hidden' }}>
-                    <Image 
-                      src={project.image} 
-                      alt={project.name[locale]} 
-                      fill
-                      style={{ objectFit: 'cover' }}
-                    />
-                  </div>
-                  <div className={styles.projectOverlay}>
-                    <span className={styles.projectCategory}>{project.category[locale]}</span>
-                    <h3>{project.name[locale]}</h3>
-                    <p>{project.location[locale]}</p>
+            {featuredProjects.map((project) => {
+              const name = typeof project.name === 'object' ? project.name[locale] : project.name;
+              const category = typeof project.category === 'object' ? project.category[locale] : project.category;
+              const location = typeof project.location === 'object' ? project.location[locale] : project.location;
+              const imageUrl = (project.image && typeof project.image === 'object') ? project.image.url : (project.image || '');
+
+              return (
+                <div key={project.id} className={styles.projectCard}>
+                  <div className={styles.projectImage}>
+                    <div style={{ position: 'relative', width: '100%', height: '100%', minHeight: '250px', overflow: 'hidden' }}>
+                      {imageUrl && (
+                        <Image 
+                          src={imageUrl} 
+                          alt={name} 
+                          fill
+                          style={{ objectFit: 'cover' }}
+                        />
+                      )}
+                    </div>
+                    <div className={styles.projectOverlay}>
+                      <span className={styles.projectCategory}>{category}</span>
+                      <h3>{name}</h3>
+                      <p>{location}</p>
+                    </div>
                   </div>
                 </div>
-              </div>
-            ))}
+              );
+            })}
           </div>
           <div className={styles.sectionCta}>
             <Link href="/projects" className="btn btn-dark">{t('projects.viewAll')}</Link>

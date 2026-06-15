@@ -1,0 +1,12 @@
+name = "web-limars"
+compatibility_date = "2026-06-15"
+compatibility_flags = [ "nodejs_compat" ]
+
+[[d1_databases]]
+binding = "DB"
+database_name = "limars-db"
+database_id = "d35a7fa9-7d5f-46a7-8275-658eacc94c9b"
+
+[[r2_buckets]]
+binding = "MEDIA_BUCKET"
+bucket_name = "limars-media"

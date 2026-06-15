@@ -2,17 +2,25 @@
   "name": "web-limars-temp",
   "version": "0.1.0",
   "private": true,
+  "type": "module",
   "scripts": {
     "dev": "next dev",
     "build": "next build",
     "start": "next start"
   },
   "dependencies": {
+    "@aws-sdk/client-s3": "^3.1068.0",
     "@next/third-parties": "^16.1.6",
+    "@payloadcms/db-d1-sqlite": "^3.85.1",
+    "@payloadcms/next": "^3.85.1",
+    "@payloadcms/richtext-lexical": "^3.85.1",
+    "@payloadcms/storage-s3": "^3.85.1",
     "@swc/helpers": "^0.5.19",
+    "graphql": "^16.14.2",
     "next": "16.1.6",
     "next-intl": "^4.8.3",
     "nodemailer": "^8.0.2",
+    "payload": "^3.85.1",
     "react": "19.2.3",
     "react-dom": "19.2.3",
     "react-google-recaptcha": "^3.1.0",
@@ -25,8 +33,10 @@
     "supports es6-module"
   ],
   "devDependencies": {
+    "@types/react": "^19.2.17",
     "babel-plugin-react-compiler": "1.0.0",
     "eslint": "^9",
-    "eslint-config-next": "16.1.6"
+    "eslint-config-next": "16.1.6",
+    "typescript": "^6.0.3"
   }
 }
