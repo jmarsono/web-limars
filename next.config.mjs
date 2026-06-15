@@ -16,7 +16,6 @@ const nextConfig = {
   serverExternalPackages: ['@payloadcms/db-d1-sqlite', 'drizzle-kit', 'esbuild', 'jose', '@next/env'],
   outputFileTracingExcludes: {
     '*': [
-      'node_modules/undici/lib/cache/sqlite-cache-store.js',
       'node_modules/miniflare/**',
     ],
   },

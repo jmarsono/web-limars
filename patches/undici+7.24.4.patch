@@ -1,0 +1,15 @@
+diff --git a/node_modules/undici/index.js b/node_modules/undici/index.js
+index 708a8ee..f4d75ca 100644
+--- a/node_modules/undici/index.js
++++ b/node_modules/undici/index.js
+@@ -59,8 +59,8 @@ module.exports.cacheStores = {
+   MemoryCacheStore: require('./lib/cache/memory-cache-store')
+ }
+ 
+-const SqliteCacheStore = require('./lib/cache/sqlite-cache-store')
+-module.exports.cacheStores.SqliteCacheStore = SqliteCacheStore
++// const SqliteCacheStore = require('./lib/cache/sqlite-cache-store')
++module.exports.cacheStores.SqliteCacheStore = null
+ 
+ module.exports.buildConnector = buildConnector
+ module.exports.errors = errors
