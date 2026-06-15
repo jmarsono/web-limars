@@ -1,4 +1,4 @@
-name = "web-limars"
+name = "web"
 compatibility_date = "2026-06-15"
 compatibility_flags = [ "nodejs_compat" ]
 
