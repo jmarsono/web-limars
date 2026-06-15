@@ -1,0 +1,8 @@
+diff --git a/node_modules/@opennextjs/cloudflare/dist/cli/templates/shims/env.js b/node_modules/@opennextjs/cloudflare/dist/cli/templates/shims/env.js
+index bb9094a..61750dd 100644
+--- a/node_modules/@opennextjs/cloudflare/dist/cli/templates/shims/env.js
++++ b/node_modules/@opennextjs/cloudflare/dist/cli/templates/shims/env.js
+@@ -1 +1,3 @@
+ export function loadEnvConfig() { }
++export default { loadEnvConfig };
++
