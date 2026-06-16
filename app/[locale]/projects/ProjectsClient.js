@@ -5,6 +5,7 @@ import { useState } from 'react';
 import Image from 'next/image';
 import styles from './Projects.module.css';
 import { useLocale, useTranslations } from 'next-intl';
+import { Link } from '@/i18n/routing';
 import dynamic from 'next/dynamic';
 const Lightbox = dynamic(() => import('yet-another-react-lightbox'), { ssr: false });
 import 'yet-another-react-lightbox/styles.css';
@@ -12,6 +13,7 @@ import 'yet-another-react-lightbox/styles.css';
 export default function ProjectsClient({ projects, projectCategories }) {
   const locale = useLocale();
   const t = useTranslations('Projects');
+  const homeT = useTranslations('Home');
   
   const [activeCategory, setActiveCategory] = useState('All');
   const [selectedProject, setSelectedProject] = useState(null);
@@ -92,6 +94,20 @@ export default function ProjectsClient({ projects, projectCategories }) {
               <p>{t('emptyState')}</p>
             </div>
           )}
+        </div>
+      </section>
+
+      {/* CTA */}
+      <section className={styles.ctaSection}>
+        <div className={`container ${styles.ctaContent}`}>
+          <h2>{homeT('cta.title')}</h2>
+          <p>{homeT('cta.subtitle')}</p>
+          <div className={styles.ctaButtons}>
+            <Link href="/contact" className="btn btn-primary">{homeT('cta.contactBtn')}</Link>
+            <a href="https://wa.me/6281212671289" className="btn btn-secondary" target="_blank" rel="noopener noreferrer">
+              {homeT('cta.whatsappBtn')}
+            </a>
+          </div>
         </div>
       </section>
 

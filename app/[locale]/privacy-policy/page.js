@@ -1,12 +1,14 @@
 'use client';
 
 import { useTranslations } from 'next-intl';
+import { Link } from '@/i18n/routing';
 import BreadcrumbJsonLd from '@/components/BreadcrumbJsonLd';
 import styles from './page.module.css';
 
 export default function PrivacyPolicyPage() {
   const t = useTranslations('PrivacyPolicy');
   const navT = useTranslations('Navigation');
+  const homeT = useTranslations('Home');
   const crumbs = [
     { name: navT('privacyPolicy'), path: '/privacy-policy/' }
   ];
@@ -44,6 +46,20 @@ export default function PrivacyPolicyPage() {
                 <p className={styles.policyText}>{t(`${section.key}.content`)}</p>
               </div>
             ))}
+          </div>
+        </div>
+      </section>
+
+      {/* CTA */}
+      <section className={styles.ctaSection}>
+        <div className={`container ${styles.ctaContent}`}>
+          <h2>{homeT('cta.title')}</h2>
+          <p>{homeT('cta.subtitle')}</p>
+          <div className={styles.ctaButtons}>
+            <Link href="/contact" className="btn btn-primary">{homeT('cta.contactBtn')}</Link>
+            <a href="https://wa.me/6281212671289" className="btn btn-secondary" target="_blank" rel="noopener noreferrer">
+              {homeT('cta.whatsappBtn')}
+            </a>
           </div>
         </div>
       </section>

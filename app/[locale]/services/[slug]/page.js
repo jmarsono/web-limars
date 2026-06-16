@@ -139,7 +139,7 @@ export default async function ServiceDetailPage({ params }) {
             {service.process.map((step) => (
               <div key={step.step} className={styles.processCard}>
                 <div className={styles.processNumber}>{step.step}</div>
-                <h4>{step.title[locale]}</h4>
+                <h3>{step.title[locale]}</h3>
                 <p>{step.description[locale]}</p>
               </div>
             ))}

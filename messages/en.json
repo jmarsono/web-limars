@@ -125,7 +125,10 @@
     "specifications": "Specifications",
     "requestQuote": "Request Quote",
     "askWhatsapp": "💬 Ask on WhatsApp",
-    "relatedProducts": "Related Products"
+    "relatedProducts": "Related Products",
+    "relatedServiceStove": "Need certified and safe commercial gas installation? Get <link>{serviceTitle}</link>.",
+    "relatedServiceCoffee": "Need safe power supply planning for your coffee shop? Check <link>{serviceTitle}</link>.",
+    "relatedServiceDefault": "Want to design and layout your restaurant kitchen using premium stainless steel? Call <link>{serviceTitle}</link>."
   },
   "Services": {
     "heroBadge": "Our Services",

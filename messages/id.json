@@ -125,7 +125,10 @@
     "specifications": "Spesifikasi",
     "requestQuote": "Minta Penawaran",
     "askWhatsapp": "💬 Tanya via WhatsApp",
-    "relatedProducts": "Produk Terkait"
+    "relatedProducts": "Produk Terkait",
+    "relatedServiceStove": "Butuh instalasi gas komersial yang aman dan bersertifikat? Dapatkan <link>{serviceTitle}</link>.",
+    "relatedServiceCoffee": "Membutuhkan penataan daya kelistrikan yang aman untuk kedai kopi Anda? Cek <link>{serviceTitle}</link>.",
+    "relatedServiceDefault": "Ingin mendesain dan menata dapur restoran Anda dengan stainless steel premium? Hubungi <link>{serviceTitle}</link>."
   },
   "Services": {
     "heroBadge": "Layanan Kami",

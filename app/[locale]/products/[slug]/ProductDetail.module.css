@@ -171,3 +171,33 @@
   .infoSection h1 { font-size: 1.75rem; }
   .relatedGrid { grid-template-columns: 1fr; }
 }
+
+/* Related Service Promos */
+.relatedServiceBox {
+  margin-top: 24px;
+  margin-bottom: 24px;
+  padding: 16px 20px;
+  background: white;
+  border-left: 4px solid var(--light-blue);
+  border-radius: 4px;
+  font-size: 0.9rem;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
+}
+
+.relatedServiceBox p {
+  margin: 0;
+  color: var(--gray);
+  line-height: 1.5;
+}
+
+.serviceLink {
+  color: var(--light-blue);
+  font-weight: 600;
+  text-decoration: none;
+  transition: color var(--transition-fast);
+}
+
+.serviceLink:hover {
+  color: var(--dark-blue);
+  text-decoration: underline;
+}

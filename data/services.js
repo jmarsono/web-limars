@@ -5,7 +5,7 @@ export const services = [
     image: '/images/services/kitchen-set.png',
     title: {
       en: 'Restaurant Kitchen Set',
-      id: 'Kitchen Set Restoran'
+      id: 'Jasa Kitchen Set Restoran Jakarta'
     },
     subtitle: {
       en: 'Design & Installation',
@@ -17,7 +17,7 @@ export const services = [
     },
     description: {
       en: 'We provide comprehensive restaurant kitchen set solutions from initial consultation and design through to manufacturing and installation. Our team of experienced engineers and fabricators work with premium stainless steel materials to create durable, hygienic, and efficient kitchen workspaces tailored to your specific needs.',
-      id: 'Kami menyediakan solusi kitchen set restoran yang komprehensif mulai dari konsultasi awal dan desain hingga produksi dan instalasi. Tim insinyur dan fabrikator kami yang berpengalaman bekerja dengan bahan baja tahan karat premium untuk menciptakan ruang kerja dapur yang tahan lama, higienis, dan efisien yang disesuaikan dengan kebutuhan spesifik Anda.'
+      id: 'Kami adalah penyedia jasa kitchen set restoran Jakarta terpercaya yang menyediakan solusi komprehensif mulai dari desain, fabrikasi, hingga instalasi. Sebagai spesialis jasa kitchen set restoran Jakarta, tim insinyur dan fabrikator kami yang berpengalaman memproduksi peralatan dapur stainless steel premium. Layanan jasa kitchen set restoran Jakarta kami dirancang untuk menciptakan ruang kerja dapur yang aman, higienis, dan efisien sesuai standar bisnis kuliner Anda.'
     },
     icon: '🍳',
     features: [
@@ -42,7 +42,7 @@ export const services = [
     image: '/images/services/ducting.png',
     title: {
       en: 'Ducting Systems',
-      id: 'Sistem Ducting'
+      id: 'Jasa Ducting Restoran Jakarta'
     },
     subtitle: {
       en: 'Smoke Exhaust & Air Circulation',
@@ -54,7 +54,7 @@ export const services = [
     },
     description: {
       en: 'Our ducting services cover the complete design and installation of smoke exhaust and air circulation systems. We ensure proper ventilation, compliance with building codes, and efficient air flow to maintain a comfortable and safe kitchen environment.',
-      id: 'Layanan ducting kami mencakup desain lengkap dan instalasi sistem pembuangan asap dan sirkulasi udara. Kami memastikan ventilasi yang tepat, kepatuhan terhadap kode bangunan, dan aliran udara yang efisien untuk menjaga lingkungan dapur yang nyaman dan aman.'
+      id: 'Kami menawarkan jasa ducting restoran Jakarta komprehensif yang mencakup desain tata letak, fabrikasi, hingga instalasi sistem pembuangan asap dapur. Melalui jasa ducting restoran Jakarta kami, kami memastikan sirkulasi udara di dapur komersial Anda berjalan optimal sehingga asap masakan dan bau menyengat dapat terbuang dengan efektif. Percayakan kebutuhan ventilasi Anda kepada penyedia jasa ducting restoran Jakarta berpengalaman untuk kenyamanan staf dan pelanggan Anda.'
     },
     icon: '💨',
     features: [
@@ -79,7 +79,7 @@ export const services = [
     image: '/images/services/gas-installation.png',
     title: {
       en: 'Gas Installation',
-      id: 'Instalasi Gas'
+      id: 'Instalasi Gas Dapur Komersial Jakarta'
     },
     subtitle: {
       en: 'Professional & Certified',
@@ -91,7 +91,7 @@ export const services = [
     },
     description: {
       en: 'Our certified gas installation team provides safe and reliable gas piping solutions for restaurants, commercial kitchens, and buildings. We handle everything from LPG and natural gas systems to safety compliance and pressure testing, ensuring your gas infrastructure meets all regulatory requirements.',
-      id: 'Tim instalasi gas bersertifikat kami memberikan solusi perpipaan gas yang aman dan andal untuk restoran, dapur komersial, dan bangunan. Kami menangani semuanya mulai dari sistem LPG dan gas alam hingga kepatuhan keselamatan dan pengujian tekanan, memastikan infrastruktur gas Anda memenuhi semua persyaratan peraturan.'
+      id: 'Kami menyediakan layanan instalasi gas dapur komersial Jakarta yang aman, andal, dan bersertifikat resmi untuk restoran, hotel, dan katering. Tim teknisi kami yang berpengalaman menangani seluruh alur instalasi gas dapur komersial Jakarta mulai dari perpipaan gas LPG/LNG, pemasangan katup pengaman, hingga sistem deteksi kebocoran. Hubungi kami untuk mendapatkan layanan instalasi gas dapur komersial Jakarta dengan standar keselamatan industri tertinggi dan uji tekanan pipa yang lengkap.'
     },
     icon: '🔥',
     features: [
@@ -116,7 +116,7 @@ export const services = [
     image: '/images/services/well-drilling.png',
     title: {
       en: 'Well Drilling',
-      id: 'Pengeboran Sumur'
+      id: 'Jasa Pengeboran Sumur Jakarta'
     },
     subtitle: {
       en: 'Clean Water Supply',
@@ -128,7 +128,7 @@ export const services = [
     },
     description: {
       en: 'We offer professional well drilling services to ensure a reliable clean water supply for your property. Our experienced drilling team uses modern equipment to reach optimal water sources, and we handle everything from initial site surveys to pump installation and water quality testing.',
-      id: 'Kami menawarkan layanan pengeboran sumur profesional untuk memastikan pasokan air bersih yang andal untuk properti Anda. Tim pengeboran kami yang berpengalaman menggunakan peralatan modern untuk mencapai sumber air yang optimal, dan kami menangani semuanya mulai dari survei lokasi awal hingga instalasi pompa dan pengujian kualitas air.'
+      id: 'Kami menyediakan jasa pengeboran sumur Jakarta profesional untuk menjamin pasokan air bersih yang melimpah dan higienis bagi properti komersial maupun residensial Anda. Didukung peralatan bor modern dan tim ahli geologi, layanan jasa pengeboran sumur Jakarta kami mampu menjangkau sumber mata air berkualitas pada kedalaman optimal. Dapatkan solusi lengkap jasa pengeboran sumur Jakarta mulai dari survei lokasi, pengeboran casing, hingga instalasi pompa celup submersible bergaransi.'
     },
     icon: '💧',
     features: [
@@ -153,7 +153,7 @@ export const services = [
     image: '/images/services/electrical.png',
     title: {
       en: 'Electrical Services',
-      id: 'Layanan Listrik'
+      id: 'Jasa Instalasi Listrik Restoran Jakarta'
     },
     subtitle: {
       en: 'Installation & Maintenance',
@@ -165,7 +165,7 @@ export const services = [
     },
     description: {
       en: 'Our electrical services team provides comprehensive solutions for restaurants, homes, and commercial buildings. From wiring and panel installation to lighting and power distribution, we ensure safe, efficient, and code-compliant electrical systems for all your needs.',
-      id: 'Tim layanan listrik kami menyediakan solusi komprehensif untuk restoran, rumah, dan bangunan komersial. Mulai dari pekerjaan kabel dan instalasi panel hingga pencahayaan dan distribusi daya, kami memastikan sistem kelistrikan yang aman, efisien, dan sesuai standar untuk semua kebutuhan Anda.'
+      id: 'Kami menyediakan jasa instalasi listrik restoran Jakarta secara komprehensif untuk menjamin sistem kelistrikan dapur komersial Anda beroperasi dengan aman dan efisien. Dari pemasangan panel bagi beban daya besar hingga pekerjaan kabel stop kontak peralatan masak, jasa instalasi listrik restoran Jakarta kami dikerjakan oleh teknisi ahli bersertifikat. Lindungi bisnis kuliner Anda dengan mempercayakan perancangan daya kepada penyedia jasa instalasi listrik restoran Jakarta yang mematuhi standar keselamatan kelistrikan nasional.'
     },
     icon: '⚡',
     features: [

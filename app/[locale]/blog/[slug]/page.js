@@ -1,7 +1,7 @@
 import { notFound } from 'next/navigation';
 import { blogPosts } from '@/data/blogPosts';
 import { getMessages, setRequestLocale } from 'next-intl/server';
-import Link from 'next/link';
+import { Link } from '@/i18n/routing';
 import styles from './page.module.css';
 import { routing } from '@/i18n/routing';
 
@@ -48,6 +48,7 @@ export default async function BlogPostPage({ params }) {
 
   const messages = await getMessages({ locale });
   const blogT = messages.Blog;
+  const homeT = messages.Home;
   const postData = post[locale];
 
   // Structured Data (JSON-LD)
@@ -118,6 +119,20 @@ export default async function BlogPostPage({ params }) {
           </div>
         </footer>
       </article>
+
+      {/* CTA */}
+      <section className={styles.ctaSection}>
+        <div className={`container ${styles.ctaContent}`}>
+          <h2>{homeT.cta.title}</h2>
+          <p>{homeT.cta.subtitle}</p>
+          <div className={styles.ctaButtons}>
+            <Link href="/contact" className="btn btn-primary">{homeT.cta.contactBtn}</Link>
+            <a href="https://wa.me/6281212671289" className="btn btn-secondary" target="_blank" rel="noopener noreferrer">
+              {homeT.cta.whatsappBtn}
+            </a>
+          </div>
+        </div>
+      </section>
     </main>
   );
 }

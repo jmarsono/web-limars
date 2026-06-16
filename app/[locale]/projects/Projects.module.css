@@ -218,3 +218,31 @@
 @media (max-width: 480px) {
   .projectGrid { grid-template-columns: 1fr; }
 }
+
+/* CTA */
+.ctaSection {
+  padding: 100px 0;
+  background: var(--dark-blue);
+}
+
+.ctaContent {
+  text-align: center;
+}
+
+.ctaContent h2 {
+  color: white;
+  font-size: 2.25rem;
+  margin-bottom: 12px;
+}
+
+.ctaContent p {
+  color: rgba(255, 255, 255, 0.7);
+  margin-bottom: 32px;
+}
+
+.ctaButtons {
+  display: flex;
+  gap: 16px;
+  justify-content: center;
+  flex-wrap: wrap;
+}

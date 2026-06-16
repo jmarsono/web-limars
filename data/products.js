@@ -3,7 +3,7 @@ export const products = [
     id: 1,
     name: {
       en: 'Wok Range',
-      id: 'Kompor Wajan (Wok Range)'
+      id: 'Wok Range Stainless Jakarta'
     },
     slug: 'wok-range',
     category: {
@@ -12,7 +12,7 @@ export const products = [
     },
     description: {
       en: 'High-performance wok range designed for Asian cuisine. Built with heavy-duty stainless steel and powerful burners for intense heat cooking.',
-      id: 'Kompor wajan berkinerja tinggi yang dirancang untuk masakan Asia. Dibangun dengan baja tahan karat (stainless steel) tugas berat dan pembakar bertenaga untuk memasak dengan panas tinggi.'
+      id: 'Kami menawarkan wok range stainless Jakarta berkinerja tinggi yang dirancang khusus untuk kebutuhan masakan Asia. Sebagai penunjang utama dapur profesional, unit wok range stainless Jakarta kami dibuat menggunakan baja tahan karat (stainless steel) tugas berat yang kokoh, higienis, dan mudah dibersihkan. Dilengkapi dengan pembakar (burner) bertenaga besar untuk teknik memasak dengan panas tinggi secara cepat, produk wok range stainless Jakarta ini adalah pilihan terbaik bagi restoran, katering, dan hotel yang mengutamakan kualitas dan efisiensi kerja.'
     },
     shortDescription: {
       en: 'Professional wok range for high-heat Asian cooking.',
@@ -32,7 +32,7 @@ export const products = [
     id: 2,
     name: {
       en: 'Kwali Range',
-      id: 'Kompor Kwali'
+      id: 'Kompor Kwali Dapur Restoran'
     },
     slug: 'kwali-range',
     category: {
@@ -41,7 +41,7 @@ export const products = [
     },
     description: {
       en: 'Traditional kwali range perfect for Indonesian and Chinese cooking. Features adjustable flame control and robust construction for daily commercial use.',
-      id: 'Kompor kwali tradisional yang sempurna untuk masakan Indonesia dan Tionghoa. Memiliki fitur pengatur api yang dapat disesuaikan dan konstruksi tangguh untuk penggunaan komersial sehari-hari.'
+      id: 'Kami memproduksi kompor kwali tradisional yang sempurna untuk masakan Indonesia dan Tionghoa. Unit kompor kwali ini dirancang dengan fitur pengatur api yang dapat disesuaikan serta konstruksi tangguh dari baja tahan karat. Sangat ideal untuk penggunaan kompor kwali secara intensif di dapur komersial sehari-hari.'
     },
     shortDescription: {
       en: 'Traditional kwali range for commercial kitchens.',
@@ -70,7 +70,7 @@ export const products = [
     },
     description: {
       en: 'Specialized Chinese cooking range with waterfall spout and high-powered burners. Ideal for stir-frying, deep-frying, and steaming operations.',
-      id: 'Kompor khusus masakan Tionghoa dengan pancuran air terjun dan pembakar berdaya tinggi. Ideal untuk menumis, menggoreng kering, dan mengukus.'
+      id: 'Kami menawarkan kompor masakan Tionghoa khusus yang dilengkapi dengan pancuran air terjun dan pembakar berdaya tinggi. Didesain secara ergonomis, kompor masakan Tionghoa ini ideal untuk menumis cepat (stir-fry), menggoreng kering, serta mengukus makanan. Dapatkan unit kompor masakan Tionghoa berkualitas untuk meningkatkan kecepatan penyajian makanan di restoran Anda.'
     },
     shortDescription: {
       en: 'Specialized range for authentic Chinese cooking.',
@@ -89,7 +89,7 @@ export const products = [
     id: 4,
     name: {
       en: 'Pizza Oven',
-      id: 'Oven Pizza'
+      id: 'Oven Pizza Komersial'
     },
     slug: 'pizza-oven',
     category: {
@@ -98,7 +98,7 @@ export const products = [
     },
     description: {
       en: 'Authentic pizza oven with stone hearth and dome construction. Achieves temperatures up to 500°C for perfect Neapolitan-style pizzas.',
-      id: 'Oven pizza otentik dengan tungku batu dan konstruksi kubah. Mencapai suhu hingga 500°C untuk pizza bergaya Neapolitan yang sempurna.'
+      id: 'Kami memproduksi oven pizza komersial otentik yang dilengkapi dengan tungku batu berkualitas dan konstruksi kubah standar industri. Unit oven pizza komersial ini mampu mencapai suhu tinggi hingga 500°C untuk menghasilkan pizza bergaya Neapolitan yang matang merata dalam hitungan menit. Percayakan kebutuhan oven pizza komersial Anda kepada kami untuk kualitas pemanggangan terbaik.'
     },
     shortDescription: {
       en: 'Stone hearth pizza oven for authentic results.',
@@ -118,7 +118,7 @@ export const products = [
     id: 5,
     name: {
       en: 'Tandoor Oven',
-      id: 'Oven Tandoor'
+      id: 'Oven Tandoor Harga Jakarta'
     },
     slug: 'tandoor-oven',
     category: {
@@ -127,7 +127,7 @@ export const products = [
     },
     description: {
       en: 'Traditional tandoor oven for Indian and Middle Eastern cuisine. Clay-lined interior for authentic naan bread and tandoori dishes.',
-      id: 'Oven tandoor tradisional untuk masakan India dan Timur Tengah. Bagian dalam berlapis tanah liat untuk roti naan dan hidangan tandoori yang otentik.'
+      id: 'Cari oven tandoor harga Jakarta yang bersahabat namun memiliki kualitas pengerjaan premium? Kami memproduksi oven tandoor tradisional terbaik untuk masakan India, roti naan, dan hidangan tandoori otentik. Dengan oven tandoor harga Jakarta yang terjangkau, unit kami dilapisi tanah liat khusus di bagian dalam untuk retensi panas optimal dan rasa masakan yang khas. Dapatkan penawaran oven tandoor harga Jakarta terbaik langsung dari produsen spesialis peralatan dapur komersial.'
     },
     shortDescription: {
       en: 'Clay-lined tandoor for authentic Indian cuisine.',
@@ -145,7 +145,7 @@ export const products = [
     id: 6,
     name: {
       en: 'Brick Oven',
-      id: 'Oven Bata'
+      id: 'Oven Bata Kustom'
     },
     slug: 'brick-oven',
     category: {
@@ -154,7 +154,7 @@ export const products = [
     },
     description: {
       en: 'Custom-built brick oven with excellent heat retention. Perfect for artisan bread, pizza, and roast dishes with authentic wood-fired flavor.',
-      id: 'Oven bata rancangan khusus dengan retensi panas yang sangat baik. Sempurna untuk roti artisan, pizza, dan hidangan panggang dengan rasa pembakaran kayu otentik.'
+      id: 'Kami menawarkan oven bata kustom dengan rancangan khusus yang memberikan retensi panas yang sangat baik untuk pembakaran lambat. Sempurna untuk memanggang roti artisan, pizza, dan berbagai hidangan panggang, oven bata kustom kami menghadirkan aroma pembakaran kayu yang otentik. Setiap unit oven bata kustom dibangun menggunakan bata tahan api berkualitas tinggi dan rangka baja kokoh.'
     },
     shortDescription: {
       en: 'Custom brick oven for artisan baking.',
@@ -172,7 +172,7 @@ export const products = [
     id: 7,
     name: {
       en: 'Convection Oven',
-      id: 'Oven Konveksi'
+      id: 'Oven Konveksi - Produsen Oven Komersial Indonesia'
     },
     slug: 'convection-oven',
     category: {
@@ -181,7 +181,7 @@ export const products = [
     },
     description: {
       en: 'Professional convection oven with precise temperature control and even heat distribution. Ideal for baking, roasting, and reheating in commercial kitchens.',
-      id: 'Oven konveksi profesional dengan kontrol suhu presisi dan distribusi panas merata. Ideal untuk memanggang roti, daging, dan memanaskan makanan di dapur komersial.'
+      id: 'Sebagai produsen oven komersial Indonesia terpercaya, kami menghadirkan oven konveksi profesional dengan sistem kontrol suhu presisi serta distribusi panas merata. Kami bangga menjadi produsen oven komersial Indonesia yang fokus pada durabilitas dan efisiensi energi untuk menunjang bisnis bakery, restoran, serta hotel. Jika Anda membutuhkan pasokan dari produsen oven komersial Indonesia yang memberikan garansi resmi dan dukungan teknis penuh, oven konveksi kami adalah solusi yang tepat.'
     },
     shortDescription: {
       en: 'Precision convection oven for commercial use.',
@@ -201,7 +201,7 @@ export const products = [
     id: 8,
     name: {
       en: 'Deck Oven',
-      id: 'Oven Dek (Deck Oven)'
+      id: 'Oven Dek Komersial'
     },
     slug: 'deck-oven',
     category: {
@@ -210,7 +210,7 @@ export const products = [
     },
     description: {
       en: 'Multi-deck oven for bakeries and pastry shops. Stone deck provides superior heat transfer for crispy bread crusts and perfectly baked pastries.',
-      id: 'Oven multi-dek untuk toko roti dan kue. Dek batu memberikan perpindahan panas superior untuk kerak roti yang renyah dan kue yang dipanggang dengan sempurna.'
+      id: 'Kami menyediakan oven dek komersial (deck oven) berkapasitas besar yang ideal untuk toko roti, kue, dan pastry profesional. Dilengkapi dengan dek batu berkualitas tinggi, oven dek komersial ini memberikan perpindahan panas superior untuk menghasilkan kerak roti yang renyah dan kue yang mengembang sempurna. Pilihlah oven dek komersial kami untuk hasil pemanggangan yang konsisten.'
     },
     shortDescription: {
       en: 'Multi-deck oven for bakeries and pastry shops.',
@@ -229,7 +229,7 @@ export const products = [
     id: 9,
     name: {
       en: 'Combi Oven',
-      id: 'Oven Combi'
+      id: 'Oven Combi Stainless'
     },
     slug: 'combi-oven',
     category: {
@@ -238,7 +238,7 @@ export const products = [
     },
     description: {
       en: 'Advanced combi oven combining steam and convection cooking. Programmable recipes, automatic cleaning, and versatile cooking modes for maximum kitchen efficiency.',
-      id: 'Oven combi tingkat lanjut yang menggabungkan metode memasak uap dan konveksi. Resep yang dapat diprogram, pembersihan otomatis, dan mode memasak serbaguna untuk efisiensi dapur yang maksimal.'
+      id: 'Kami menghadirkan oven combi stainless tingkat lanjut yang menggabungkan metode memasak uap (steam) dan konveksi dalam satu alat. Dengan oven combi stainless ini, Anda dapat memprogram berbagai resep masakan secara praktis dan melakukan pembersihan otomatis secara efisien. Didesain untuk fleksibilitas maksimal, oven combi stainless ini sangat menunjang produktivitas dapur hotel dan restoran modern.'
     },
     shortDescription: {
       en: 'Versatile combi oven with steam and convection.',
@@ -258,7 +258,7 @@ export const products = [
     id: 10,
     name: {
       en: 'Commercial Griddle',
-      id: 'Wajan Datar Komersial (Griddle)'
+      id: 'Wajan Datar Griddle Komersial'
     },
     slug: 'commercial-griddle',
     category: {
@@ -267,7 +267,7 @@ export const products = [
     },
     description: {
       en: 'Heavy-duty flat-top griddle for high-volume cooking. Uniform heat distribution and easy-to-clean surface for grilling, searing, and breakfast preparation.',
-      id: 'Wajan datar tugas berat untuk memasak dalam volume tinggi. Distribusi panas seragam dan permukaan yang mudah dibersihkan untuk memanggang daging dan persiapan sarapan.'
+      id: 'Kami memproduksi wajan datar griddle komersial tugas berat (heavy-duty flat-top griddle) yang dirancang untuk memasak makanan dalam volume besar secara cepat. Menyediakan distribusi panas yang seragam dan permukaan pelat yang tebal, wajan datar griddle komersial ini sangat mudah dibersihkan setelah digunakan untuk memanggang daging atau menyiapkan menu sarapan. Keandalan wajan datar griddle komersial kami menjadikannya investasi jangka panjang yang berharga.'
     },
     shortDescription: {
       en: 'Heavy-duty griddle for high-volume cooking.',
@@ -284,7 +284,7 @@ export const products = [
     id: 11,
     name: {
       en: 'Deep Fryer',
-      id: 'Penggorengan (Deep Fryer)'
+      id: 'Deep Fryer Penggorengan Komersial'
     },
     slug: 'deep-fryer',
     category: {
@@ -293,7 +293,7 @@ export const products = [
     },
     description: {
       en: 'Commercial deep fryer with precise temperature control and safety features. Available in single and double tank configurations.',
-      id: 'Penggorengan komersial dengan kontrol suhu presisi dan fitur keselamatan. Tersedia dalam konfigurasi tangki tunggal dan ganda.'
+      id: 'Kami memproduksi deep fryer penggorengan komersial berkapasitas besar yang dilengkapi dengan kontrol suhu presisi serta fitur katup pengaman. Pilihan deep fryer penggorengan komersial ini tersedia dalam konfigurasi tangki tunggal maupun ganda untuk disesuaikan dengan kapasitas produksi dapur Anda. Desain tangki deep fryer penggorengan komersial kami meminimalkan pemborosan minyak dan menjaga hasil gorengan tetap renyah.'
     },
     shortDescription: {
       en: 'Commercial deep fryer with precise control.',
@@ -310,7 +310,7 @@ export const products = [
     id: 12,
     name: {
       en: 'Bain Marie',
-      id: 'Pemanas Makanan (Bain Marie)'
+      id: 'Bain Marie Pemanas Makanan'
     },
     slug: 'bain-marie',
     category: {
@@ -319,7 +319,7 @@ export const products = [
     },
     description: {
       en: 'Stainless steel bain marie for keeping food warm and at safe serving temperatures. Multiple pan configurations available.',
-      id: 'Pemanas makanan baja tahan karat untuk menjaga makanan tetap hangat dan pada suhu penyajian yang aman. Tersedia berbagai konfigurasi nampan.'
+      id: 'Kami menawarkan unit bain marie pemanas makanan berbahan baja tahan karat untuk menjaga masakan tetap hangat pada suhu penyajian yang aman. Sangat cocok untuk restoran prasmanan dan katering, unit bain marie pemanas makanan ini tersedia dalam berbagai pilihan konfigurasi wadah (pan) sesuai kebutuhan hidangan. Konstruksi wadah air pada bain marie pemanas makanan kami memastikan pemanasan yang stabil dan higienis.'
     },
     shortDescription: {
       en: 'Food warmer for buffet and serving stations.',
@@ -336,7 +336,7 @@ export const products = [
     id: 13,
     name: {
       en: 'Custom Coffee Bar Counter',
-      id: 'Meja Bar Kopi Kustom'
+      id: 'Meja Bar Kopi Stainless Kustom'
     },
     slug: 'custom-coffee-bar-counter',
     category: {
@@ -345,7 +345,7 @@ export const products = [
     },
     description: {
       en: 'Premium custom-built stainless steel coffee bar counter featuring built-in knock boxes, under-counter storage, sink stations, and dedicated space for espresso machines. Tailored specifically to your cafe layout.',
-      id: 'Meja bar kopi baja tahan karat kustom premium yang dilengkapi kotak ampas kopi bawaan (knock box), penyimpanan bawah meja, stasiun cuci piring, dan ruang khusus untuk mesin espresso. Disusun khusus untuk tata letak kafe Anda.'
+      id: 'Kami memproduksi meja bar kopi stainless kustom premium yang dirancang khusus untuk kenyamanan alur kerja barista di kafe Anda. Dibuat dengan material berkualitas tinggi, meja bar kopi stainless kustom ini mengintegrasikan knock box ampas kopi, tempat es, sink wastafel, dan kompartemen penyimpanan bawah meja secara rapi. Dapatkan unit meja bar kopi stainless kustom yang disesuaikan secara presisi dengan layout dan ukuran kedai kopi Anda.'
     },
     shortDescription: {
       en: 'Premium custom stainless steel coffee bar station.',
@@ -364,7 +364,7 @@ export const products = [
     id: 14,
     name: {
       en: 'Pastry Display Warmer',
-      id: 'Etalase Pemanas Kue (Pastry Warmer)'
+      id: 'Etalase Pemanas Kue Pastry'
     },
     slug: 'pastry-display-warmer',
     category: {
@@ -373,7 +373,7 @@ export const products = [
     },
     description: {
       en: 'Commercial curved-glass pastry display warmer with an elegant stainless steel finish. Perfect for bakeries and coffee shops offering warm croissants, pies, and savory treats with bright LED illumination.',
-      id: 'Etalase pemanas kue kaca melengkung komersial dengan lapisan luar baja tahan karat yang elegan. Sempurna untuk toko roti dan kedai kopi yang menawarkan croissant hangat, pai, dan camilan gurih dengan pencahayaan LED yang cerah.'
+      id: 'Kami menyediakan etalase pemanas kue pastry dengan kaca melengkung (curved glass) komersial yang elegan dan pencahayaan LED yang terang. Sempurna untuk kafe dan bakery, etalase pemanas kue pastry menjaga kehangatan serta kelembutan croissant, pie, dan aneka camilan gurih lainnya pada suhu ideal. Tampilan luar dari bahan baja tahan karat membuat etalase pemanas kue pastry ini terlihat premium dan menarik perhatian pelanggan.'
     },
     shortDescription: {
       en: 'Elegant curved-glass pastry and food display warmer.',
@@ -391,7 +391,7 @@ export const products = [
     id: 15,
     name: {
       en: 'Automatic Water Boiler',
-      id: 'Mesin Pemanas Air Otomatis'
+      id: 'Mesin Pemanas Air Otomatis Jakarta'
     },
     slug: 'automatic-water-boiler',
     category: {
@@ -400,7 +400,7 @@ export const products = [
     },
     description: {
       en: 'Heavy-duty automatic hot water dispenser/boiler built for continuous commercial use in busy cafes and tea houses. Precise digital temperature control ensures perfect extractions every time.',
-      id: 'Mesin dispenser/pemanas air panas otomatis tugas berat yang dibuat untuk penggunaan komersial tersu-menerus di kafe dan kedai teh yang sibuk. Kontrol suhu digital presisi memastikan ekstraksi yang sempurna setiap saat.'
+      id: 'Kami memproduksi mesin pemanas air otomatis Jakarta tugas berat yang dibuat khusus untuk penggunaan komersial secara terus-menerus di kafe, restoran, dan kedai teh yang sibuk. Didukung dengan kontrol suhu digital presisi, mesin pemanas air otomatis Jakarta ini memastikan pasokan air panas selalu siap pada suhu konstan untuk ekstraksi teh atau kopi yang sempurna. Bodi tangki mesin pemanas air otomatis Jakarta dilapisi insulasi ganda untuk menghemat konsumsi daya listrik.'
     },
     shortDescription: {
       en: 'Heavy-duty automatic hot water dispenser with digital control.',
@@ -418,7 +418,7 @@ export const products = [
     id: 16,
     name: {
       en: 'Stainless Pre-rinse Sink Table',
-      id: 'Meja Sink Cuci Piring Stainless'
+      id: 'Meja Sink Cuci Piring Stainless Jakarta'
     },
     slug: 'stainless-sink-table',
     category: {
@@ -427,7 +427,7 @@ export const products = [
     },
     description: {
       en: 'Durable multi-compartment stainless steel sink table with a tall splashback. Designed for heavy dishwashing traffic in commercial food prep areas and cafe back-houses.',
-      id: 'Meja bak cuci piring (sink) baja tahan karat multi-kompartemen yang tahan lama dengan penyekat percikan air yang tinggi. Dirancang untuk arus pencucian piring yang berat di area persiapan makanan komersial dan dapur belakang kafe.'
+      id: 'Kami memproduksi meja sink cuci piring stainless Jakarta yang kuat dan tahan lama untuk menunjang higienitas area pencucian dapur komersial Anda. Menggunakan bahan baja tahan karat tebal (heavy-gauge SS 304), meja sink cuci piring stainless Jakarta ini dilengkapi dengan splashback tinggi untuk mencegah percikan air serta kaki yang dapat diatur tingginya. Dapatkan meja sink cuci piring stainless Jakarta kustom satu hingga tiga lubang bak cuci sesuai ruang dapur Anda.'
     },
     shortDescription: {
       en: 'Durable multi-compartment sink table for busy kitchens.',

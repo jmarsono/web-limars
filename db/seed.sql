@@ -5,13 +5,13 @@ INSERT INTO products (id, slug, name_en, name_id, category_en, category_id, shor
   1,
   'wok-range',
   'Wok Range',
-  'Kompor Wajan (Wok Range)',
+  'Wok Range Stainless Jakarta',
   'Traditional Stoves',
   'Kompor Tradisional',
   'Professional wok range for high-heat Asian cooking.',
   'Kompor wajan profesional untuk masakan Asia dengan panas tinggi.',
   'High-performance wok range designed for Asian cuisine. Built with heavy-duty stainless steel and powerful burners for intense heat cooking.',
-  'Kompor wajan berkinerja tinggi yang dirancang untuk masakan Asia. Dibangun dengan baja tahan karat (stainless steel) tugas berat dan pembakar bertenaga untuk memasak dengan panas tinggi.',
+  'Kami menawarkan wok range stainless Jakarta berkinerja tinggi yang dirancang khusus untuk kebutuhan masakan Asia. Sebagai penunjang utama dapur profesional, unit wok range stainless Jakarta kami dibuat menggunakan baja tahan karat (stainless steel) tugas berat yang kokoh, higienis, dan mudah dibersihkan. Dilengkapi dengan pembakar (burner) bertenaga besar untuk teknik memasak dengan panas tinggi secara cepat, produk wok range stainless Jakarta ini adalah pilihan terbaik bagi restoran, katering, dan hotel yang mengutamakan kualitas dan efisiensi kerja.',
   '{"material":"Stainless Steel 304","burners":{"en":"2-4 Burners","id":"2-4 Tungku"},"btuOutput":"80,000 - 160,000 BTU","fuelType":{"en":"LPG / Natural Gas","id":"LPG / Gas Alam"},"dimensions":"1200 x 800 x 850 mm"}',
   '/images/products/wok-range.png',
   1
@@ -20,13 +20,13 @@ INSERT INTO products (id, slug, name_en, name_id, category_en, category_id, shor
   2,
   'kwali-range',
   'Kwali Range',
-  'Kompor Kwali',
+  'Kompor Kwali Dapur Restoran',
   'Traditional Stoves',
   'Kompor Tradisional',
   'Traditional kwali range for commercial kitchens.',
   'Kompor kwali tradisional untuk dapur komersial.',
   'Traditional kwali range perfect for Indonesian and Chinese cooking. Features adjustable flame control and robust construction for daily commercial use.',
-  'Kompor kwali tradisional yang sempurna untuk masakan Indonesia dan Tionghoa. Memiliki fitur pengatur api yang dapat disesuaikan dan konstruksi tangguh untuk penggunaan komersial sehari-hari.',
+  'Kami memproduksi kompor kwali tradisional yang sempurna untuk masakan Indonesia dan Tionghoa. Unit kompor kwali ini dirancang dengan fitur pengatur api yang dapat disesuaikan serta konstruksi tangguh dari baja tahan karat. Sangat ideal untuk penggunaan kompor kwali secara intensif di dapur komersial sehari-hari.',
   '{"material":"Stainless Steel 304","burners":{"en":"1-3 Burners","id":"1-3 Tungku"},"btuOutput":"60,000 - 120,000 BTU","fuelType":{"en":"LPG / Natural Gas","id":"LPG / Gas Alam"},"dimensions":"900 x 800 x 850 mm"}',
   '/images/products/kwali-range.png',
   1
@@ -41,7 +41,7 @@ INSERT INTO products (id, slug, name_en, name_id, category_en, category_id, shor
   'Specialized range for authentic Chinese cooking.',
   'Kompor khusus untuk masakan Tionghoa otentik.',
   'Specialized Chinese cooking range with waterfall spout and high-powered burners. Ideal for stir-frying, deep-frying, and steaming operations.',
-  'Kompor khusus masakan Tionghoa dengan pancuran air terjun dan pembakar berdaya tinggi. Ideal untuk menumis, menggoreng kering, dan mengukus.',
+  'Kami menawarkan kompor masakan Tionghoa khusus yang dilengkapi dengan pancuran air terjun dan pembakar berdaya tinggi. Didesain secara ergonomis, kompor masakan Tionghoa ini ideal untuk menumis cepat (stir-fry), menggoreng kering, serta mengukus makanan. Dapatkan unit kompor masakan Tionghoa berkualitas untuk meningkatkan kecepatan penyajian makanan di restoran Anda.',
   '{"material":"Stainless Steel 304","burners":{"en":"1-6 Burners","id":"1-6 Tungku"},"btuOutput":"100,000 - 200,000 BTU","fuelType":{"en":"LPG / Natural Gas","id":"LPG / Gas Alam"},"dimensions":"1800 x 900 x 850 mm"}',
   '/images/products/chinese-cooking-range.png',
   0
@@ -50,13 +50,13 @@ INSERT INTO products (id, slug, name_en, name_id, category_en, category_id, shor
   4,
   'pizza-oven',
   'Pizza Oven',
-  'Oven Pizza',
+  'Oven Pizza Komersial',
   'Regional Ovens',
   'Oven Regional',
   'Stone hearth pizza oven for authentic results.',
   'Oven pizza tungku batu untuk hasil otentik.',
   'Authentic pizza oven with stone hearth and dome construction. Achieves temperatures up to 500°C for perfect Neapolitan-style pizzas.',
-  'Oven pizza otentik dengan tungku batu dan konstruksi kubah. Mencapai suhu hingga 500°C untuk pizza bergaya Neapolitan yang sempurna.',
+  'Kami memproduksi oven pizza komersial otentik yang dilengkapi dengan tungku batu berkualitas dan konstruksi kubah standar industri. Unit oven pizza komersial ini mampu mencapai suhu tinggi hingga 500°C untuk menghasilkan pizza bergaya Neapolitan yang matang merata dalam hitungan menit. Percayakan kebutuhan oven pizza komersial Anda kepada kami untuk kualitas pemanggangan terbaik.',
   '{"material":{"en":"Stainless Steel + Refractory Brick","id":"Baja Tahan Karat + Bata Tahan Api"},"capacity":{"en":"4-12 Pizzas","id":"4-12 Pizza"},"maxTemperature":"500°C","fuelType":{"en":"Gas / Wood","id":"Gas / Kayu Bakar"},"dimensions":"1500 x 1200 x 1800 mm"}',
   '/images/products/pizza-oven.png',
   1
@@ -65,13 +65,13 @@ INSERT INTO products (id, slug, name_en, name_id, category_en, category_id, shor
   5,
   'tandoor-oven',
   'Tandoor Oven',
-  'Oven Tandoor',
+  'Oven Tandoor Harga Jakarta',
   'Regional Ovens',
   'Oven Regional',
   'Clay-lined tandoor for authentic Indian cuisine.',
   'Tandoor berlapis tanah liat untuk masakan India otentik.',
   'Traditional tandoor oven for Indian and Middle Eastern cuisine. Clay-lined interior for authentic naan bread and tandoori dishes.',
-  'Oven tandoor tradisional untuk masakan India dan Timur Tengah. Bagian dalam berlapis tanah liat untuk roti naan dan hidangan tandoori yang otentik.',
+  'Cari oven tandoor harga Jakarta yang bersahabat namun memiliki kualitas pengerjaan premium? Kami memproduksi oven tandoor tradisional terbaik untuk masakan India, roti naan, dan hidangan tandoori otentik. Dengan oven tandoor harga Jakarta yang terjangkau, unit kami dilapisi tanah liat khusus di bagian dalam untuk retensi panas optimal dan rasa masakan yang khas. Dapatkan penawaran oven tandoor harga Jakarta terbaik langsung dari produsen spesialis peralatan dapur komersial.',
   '{"material":{"en":"Stainless Steel + Clay Lining","id":"Baja Tahan Karat + Lapisan Tanah Liat"},"maxTemperature":"480°C","fuelType":{"en":"Gas / Charcoal","id":"Gas / Arang"},"dimensions":"800 x 800 x 1100 mm"}',
   '/images/products/tandoor-oven.png',
   0
@@ -80,13 +80,13 @@ INSERT INTO products (id, slug, name_en, name_id, category_en, category_id, shor
   6,
   'brick-oven',
   'Brick Oven',
-  'Oven Bata',
+  'Oven Bata Kustom',
   'Regional Ovens',
   'Oven Regional',
   'Custom brick oven for artisan baking.',
   'Oven bata kustom untuk memanggang artisan.',
   'Custom-built brick oven with excellent heat retention. Perfect for artisan bread, pizza, and roast dishes with authentic wood-fired flavor.',
-  'Oven bata rancangan khusus dengan retensi panas yang sangat baik. Sempurna untuk roti artisan, pizza, dan hidangan panggang dengan rasa pembakaran kayu otentik.',
+  'Kami menawarkan oven bata kustom dengan rancangan khusus yang memberikan retensi panas yang sangat baik untuk pembakaran lambat. Sempurna untuk memanggang roti artisan, pizza, dan berbagai hidangan panggang, oven bata kustom kami menghadirkan aroma pembakaran kayu yang otentik. Setiap unit oven bata kustom dibangun menggunakan bata tahan api berkualitas tinggi dan rangka baja kokoh.',
   '{"material":{"en":"Refractory Brick + Steel Frame","id":"Bata Tahan Api + Rangka Baja"},"maxTemperature":"450°C","fuelType":{"en":"Wood / Gas","id":"Kayu Bakar / Gas"},"dimensions":{"en":"Custom","id":"Sesuai Pesanan"}}',
   '/images/products/brick-oven.png',
   0
@@ -95,13 +95,13 @@ INSERT INTO products (id, slug, name_en, name_id, category_en, category_id, shor
   7,
   'convection-oven',
   'Convection Oven',
-  'Oven Konveksi',
+  'Oven Konveksi - Produsen Oven Komersial Indonesia',
   'Modern Ovens',
   'Oven Modern',
   'Precision convection oven for commercial use.',
   'Oven konveksi presisi untuk penggunaan komersial.',
   'Professional convection oven with precise temperature control and even heat distribution. Ideal for baking, roasting, and reheating in commercial kitchens.',
-  'Oven konveksi profesional dengan kontrol suhu presisi dan distribusi panas merata. Ideal untuk memanggang roti, daging, dan memanaskan makanan di dapur komersial.',
+  'Sebagai produsen oven komersial Indonesia terpercaya, kami menghadirkan oven konveksi profesional dengan sistem kontrol suhu presisi serta distribusi panas merata. Kami bangga menjadi produsen oven komersial Indonesia yang fokus pada durabilitas dan efisiensi energi untuk menunjang bisnis bakery, restoran, serta hotel. Jika Anda membutuhkan pasokan dari produsen oven komersial Indonesia yang memberikan garansi resmi dan dukungan teknis penuh, oven konveksi kami adalah solusi yang tepat.',
   '{"material":"Stainless Steel 304","capacity":{"en":"5-10 Trays","id":"5-10 Nampan"},"temperatureRange":"50°C - 300°C","power":{"en":"Electric / Gas","id":"Listrik / Gas"},"dimensions":"800 x 700 x 1500 mm"}',
   '/images/products/convection-oven.png',
   1
@@ -110,13 +110,13 @@ INSERT INTO products (id, slug, name_en, name_id, category_en, category_id, shor
   8,
   'deck-oven',
   'Deck Oven',
-  'Oven Dek (Deck Oven)',
+  'Oven Dek Komersial',
   'Modern Ovens',
   'Oven Modern',
   'Multi-deck oven for bakeries and pastry shops.',
   'Oven multi-dek untuk toko roti dan kue.',
   'Multi-deck oven for bakeries and pastry shops. Stone deck provides superior heat transfer for crispy bread crusts and perfectly baked pastries.',
-  'Oven multi-dek untuk toko roti dan kue. Dek batu memberikan perpindahan panas superior untuk kerak roti yang renyah dan kue yang dipanggang dengan sempurna.',
+  'Kami menyediakan oven dek komersial (deck oven) berkapasitas besar yang ideal untuk toko roti, kue, dan pastry profesional. Dilengkapi dengan dek batu berkualitas tinggi, oven dek komersial ini memberikan perpindahan panas superior untuk menghasilkan kerak roti yang renyah dan kue yang mengembang sempurna. Pilihlah oven dek komersial kami untuk hasil pemanggangan yang konsisten.',
   '{"material":"Stainless Steel 304","decks":{"en":"2-4 Decks","id":"2-4 Dek"},"temperatureRange":"50°C - 350°C","power":{"en":"Electric / Gas","id":"Listrik / Gas"},"dimensions":"1200 x 900 x 1600 mm"}',
   '/images/products/deck-oven.png',
   0
@@ -125,13 +125,13 @@ INSERT INTO products (id, slug, name_en, name_id, category_en, category_id, shor
   9,
   'combi-oven',
   'Combi Oven',
-  'Oven Combi',
+  'Oven Combi Stainless',
   'Modern Ovens',
   'Oven Modern',
   'Versatile combi oven with steam and convection.',
   'Oven combi serbaguna dengan uap dan konveksi.',
   'Advanced combi oven combining steam and convection cooking. Programmable recipes, automatic cleaning, and versatile cooking modes for maximum kitchen efficiency.',
-  'Oven combi tingkat lanjut yang menggabungkan metode memasak uap dan konveksi. Resep yang dapat diprogram, pembersihan otomatis, dan mode memasak serbaguna untuk efisiensi dapur yang maksimal.',
+  'Kami menghadirkan oven combi stainless tingkat lanjut yang menggabungkan metode memasak uap (steam) dan konveksi dalam satu alat. Dengan oven combi stainless ini, Anda dapat memprogram berbagai resep masakan secara praktis dan melakukan pembersihan otomatis secara efisien. Didesain untuk fleksibilitas maksimal, oven combi stainless ini sangat menunjang produktivitas dapur hotel dan restoran modern.',
   '{"material":"Stainless Steel 304","capacity":{"en":"6-20 GN Trays","id":"6-20 Nampan GN"},"modes":{"en":"Steam / Convection / Combi","id":"Uap / Konveksi / Combi"},"power":{"en":"Electric / Gas","id":"Listrik / Gas"},"dimensions":"900 x 800 x 1800 mm"}',
   '/images/products/combi-oven.png',
   1
@@ -140,13 +140,13 @@ INSERT INTO products (id, slug, name_en, name_id, category_en, category_id, shor
   10,
   'commercial-griddle',
   'Commercial Griddle',
-  'Wajan Datar Komersial (Griddle)',
+  'Wajan Datar Griddle Komersial',
   'Kitchen Equipment',
   'Perlengkapan Dapur',
   'Heavy-duty griddle for high-volume cooking.',
   'Wajan datar tugas berat untuk memasak volume tinggi.',
   'Heavy-duty flat-top griddle for high-volume cooking. Uniform heat distribution and easy-to-clean surface for grilling, searing, and breakfast preparation.',
-  'Wajan datar tugas berat untuk memasak dalam volume tinggi. Distribusi panas seragam dan permukaan yang mudah dibersihkan untuk memanggang daging dan persiapan sarapan.',
+  'Kami memproduksi wajan datar griddle komersial tugas berat (heavy-duty flat-top griddle) yang dirancang untuk memasak makanan dalam volume besar secara cepat. Menyediakan distribusi panas yang seragam dan permukaan pelat yang tebal, wajan datar griddle komersial ini sangat mudah dibersihkan setelah digunakan untuk memanggang daging atau menyiapkan menu sarapan. Keandalan wajan datar griddle komersial kami menjadikannya investasi jangka panjang yang berharga.',
   '{"material":{"en":"Stainless Steel + Chrome Surface","id":"Baja Tahan Karat + Permukaan Krom"},"surfaceArea":"600 x 400 mm - 1200 x 600 mm","power":{"en":"Gas / Electric","id":"Gas / Listrik"}}',
   '/images/products/gas-griddle.png',
   0
@@ -155,13 +155,13 @@ INSERT INTO products (id, slug, name_en, name_id, category_en, category_id, shor
   11,
   'deep-fryer',
   'Deep Fryer',
-  'Penggorengan (Deep Fryer)',
+  'Deep Fryer Penggorengan Komersial',
   'Kitchen Equipment',
   'Perlengkapan Dapur',
   'Commercial deep fryer with precise control.',
   'Penggorengan komersial dengan presisi tinggi.',
   'Commercial deep fryer with precise temperature control and safety features. Available in single and double tank configurations.',
-  'Penggorengan komersial dengan kontrol suhu presisi dan fitur keselamatan. Tersedia dalam konfigurasi tangki tunggal dan ganda.',
+  'Kami memproduksi deep fryer penggorengan komersial berkapasitas besar yang dilengkapi dengan kontrol suhu presisi serta fitur katup pengaman. Pilihan deep fryer penggorengan komersial ini tersedia dalam konfigurasi tangki tunggal maupun ganda untuk disesuaikan dengan kapasitas produksi dapur Anda. Desain tangki deep fryer penggorengan komersial kami meminimalkan pemborosan minyak dan menjaga hasil gorengan tetap renyah.',
   '{"material":"Stainless Steel 304","capacity":{"en":"8-25 Liters","id":"8-25 Liter"},"power":{"en":"Gas / Electric","id":"Gas / Listrik"}}',
   '/images/products/gas-deep-fryer.png',
   0
@@ -170,13 +170,13 @@ INSERT INTO products (id, slug, name_en, name_id, category_en, category_id, shor
   12,
   'bain-marie',
   'Bain Marie',
-  'Pemanas Makanan (Bain Marie)',
+  'Bain Marie Pemanas Makanan',
   'Kitchen Equipment',
   'Perlengkapan Dapur',
   'Food warmer for buffet and serving stations.',
   'Penghangat makanan untuk prasmanan.',
   'Stainless steel bain marie for keeping food warm and at safe serving temperatures. Multiple pan configurations available.',
-  'Pemanas makanan baja tahan karat untuk menjaga makanan tetap hangat dan pada suhu penyajian yang aman. Tersedia berbagai konfigurasi nampan.',
+  'Kami menawarkan unit bain marie pemanas makanan berbahan baja tahan karat untuk menjaga masakan tetap hangat pada suhu penyajian yang aman. Sangat cocok untuk restoran prasmanan dan katering, unit bain marie pemanas makanan ini tersedia dalam berbagai pilihan konfigurasi wadah (pan) sesuai kebutuhan hidangan. Konstruksi wadah air pada bain marie pemanas makanan kami memastikan pemanasan yang stabil dan higienis.',
   '{"material":"Stainless Steel 304","pans":{"en":"3-6 GN Pans","id":"3-6 Nampan GN"},"power":{"en":"Electric","id":"Listrik"}}',
   '/images/products/hotel-bain-marie.png',
   0
@@ -185,13 +185,13 @@ INSERT INTO products (id, slug, name_en, name_id, category_en, category_id, shor
   13,
   'custom-coffee-bar-counter',
   'Custom Coffee Bar Counter',
-  'Meja Bar Kopi Kustom',
+  'Meja Bar Kopi Stainless Kustom',
   'Coffee Shop Equipment',
   'Peralatan Kedai Kopi',
   'Premium custom stainless steel coffee bar station.',
   'Stasiun meja bar kopi baja tahan karat premium kustom.',
   'Premium custom-built stainless steel coffee bar counter featuring built-in knock boxes, under-counter storage, sink stations, and dedicated space for espresso machines. Tailored specifically to your cafe layout.',
-  'Meja bar kopi baja tahan karat kustom premium yang dilengkapi kotak ampas kopi bawaan (knock box), penyimpanan bawah meja, stasiun cuci piring, dan ruang khusus untuk mesin espresso. Disusun khusus untuk tata letak kafe Anda.',
+  'Kami memproduksi meja bar kopi stainless kustom premium yang dirancang khusus untuk kenyamanan alur kerja barista di kafe Anda. Dibuat dengan material berkualitas tinggi, meja bar kopi stainless kustom ini mengintegrasikan knock box ampas kopi, tempat es, sink wastafel, dan kompartemen penyimpanan bawah meja secara rapi. Dapatkan unit meja bar kopi stainless kustom yang disesuaikan secara presisi dengan layout dan ukuran kedai kopi Anda.',
   '{"material":"Stainless Steel 304 / 316","customizable":{"en":"Fully Customizable Layout","id":"Tata Letak Bebas Disesuaikan"},"features":{"en":"Sinks, Knock Boxes, Ice Bins","id":"Wastafel, Knock Box, Tempat Es"},"dimensions":{"en":"Customizable per Cafe Space","id":"Menyesuaikan Ruang Kafe"}}',
   '/images/products/coffee-bar-counter.png',
   1
@@ -200,13 +200,13 @@ INSERT INTO products (id, slug, name_en, name_id, category_en, category_id, shor
   14,
   'pastry-display-warmer',
   'Pastry Display Warmer',
-  'Etalase Pemanas Kue (Pastry Warmer)',
+  'Etalase Pemanas Kue Pastry',
   'Coffee Shop Equipment',
   'Peralatan Kedai Kopi',
   'Elegant curved-glass pastry and food display warmer.',
   'Etalase pemanas pajangan makanan dan kue kaca melengkung yang elegan.',
   'Commercial curved-glass pastry display warmer with an elegant stainless steel finish. Perfect for bakeries and coffee shops offering warm croissants, pies, and savory treats with bright LED illumination.',
-  'Etalase pemanas kue kaca melengkung komersial dengan lapisan luar baja tahan karat yang elegan. Sempurna untuk toko roti dan kedai kopi yang menawarkan croissant hangat, pai, dan camilan gurih dengan pencahayaan LED yang cerah.',
+  'Kami menyediakan etalase pemanas kue pastry dengan kaca melengkung (curved glass) komersial yang elegan dan pencahayaan LED yang terang. Sempurna untuk kafe dan bakery, etalase pemanas kue pastry menjaga kehangatan serta kelembutan croissant, pie, dan aneka camilan gurih lainnya pada suhu ideal. Tampilan luar dari bahan baja tahan karat membuat etalase pemanas kue pastry ini terlihat premium dan menarik perhatian pelanggan.',
   '{"material":{"en":"Stainless Steel + Tempered Glass","id":"Baja Tahan Karat + Kaca Tempered"},"shelves":{"en":"2-4 Adjustable Shelves","id":"2-4 Rak yang dapat disesuaikan"},"temperatureRange":"30°C - 85°C","power":{"en":"Electric","id":"Listrik"}}',
   '/images/products/pastry-display-warmer.png',
   0
@@ -215,13 +215,13 @@ INSERT INTO products (id, slug, name_en, name_id, category_en, category_id, shor
   15,
   'automatic-water-boiler',
   'Automatic Water Boiler',
-  'Mesin Pemanas Air Otomatis',
+  'Mesin Pemanas Air Otomatis Jakarta',
   'Coffee Shop Equipment',
   'Peralatan Kedai Kopi',
   'Heavy-duty automatic hot water dispenser with digital control.',
   'Mesin dispenser air panas otomatis tugas berat dengan kontrol digital.',
   'Heavy-duty automatic hot water dispenser/boiler built for continuous commercial use in busy cafes and tea houses. Precise digital temperature control ensures perfect extractions every time.',
-  'Mesin dispenser/pemanas air panas otomatis tugas berat yang dibuat untuk penggunaan komersial tersu-menerus di kafe dan kedai teh yang sibuk. Kontrol suhu digital presisi memastikan ekstraksi yang sempurna setiap saat.',
+  'Kami memproduksi mesin pemanas air otomatis Jakarta tugas berat yang dibuat khusus untuk penggunaan komersial secara terus-menerus di kafe, restoran, dan kedai teh yang sibuk. Didukung dengan kontrol suhu digital presisi, mesin pemanas air otomatis Jakarta ini memastikan pasokan air panas selalu siap pada suhu konstan untuk ekstraksi teh atau kopi yang sempurna. Bodi tangki mesin pemanas air otomatis Jakarta dilapisi insulasi ganda untuk menghemat konsumsi daya listrik.',
   '{"material":"Stainless Steel 304","capacity":{"en":"10-30 Liters","id":"10-30 Liter"},"temperatureControl":{"en":"Digital Precision Thermostat","id":"Termostat Digital Presisi"},"power":{"en":"Electric","id":"Listrik"}}',
   '/images/products/automatic-water-boiler.png',
   0
@@ -230,13 +230,13 @@ INSERT INTO products (id, slug, name_en, name_id, category_en, category_id, shor
   16,
   'stainless-sink-table',
   'Stainless Pre-rinse Sink Table',
-  'Meja Sink Cuci Piring Stainless',
+  'Meja Sink Cuci Piring Stainless Jakarta',
   'Coffee Shop Equipment',
   'Peralatan Kedai Kopi',
   'Durable multi-compartment sink table for busy kitchens.',
   'Meja cuci multi-kompartemen tahan lama untuk dapur sibuk.',
   'Durable multi-compartment stainless steel sink table with a tall splashback. Designed for heavy dishwashing traffic in commercial food prep areas and cafe back-houses.',
-  'Meja bak cuci piring (sink) baja tahan karat multi-kompartemen yang tahan lama dengan penyekat percikan air yang tinggi. Dirancang untuk arus pencucian piring yang berat di area persiapan makanan komersial dan dapur belakang kafe.',
+  'Kami memproduksi meja sink cuci piring stainless Jakarta yang kuat dan tahan lama untuk menunjang higienitas area pencucian dapur komersial Anda. Menggunakan bahan baja tahan karat tebal (heavy-gauge SS 304), meja sink cuci piring stainless Jakarta ini dilengkapi dengan splashback tinggi untuk mencegah percikan air serta kaki yang dapat diatur tingginya. Dapatkan meja sink cuci piring stainless Jakarta kustom satu hingga tiga lubang bak cuci sesuai ruang dapur Anda.',
   '{"material":"Heavy Gauge Stainless Steel 304","bowls":{"en":"1-3 Compartments","id":"1-3 Kompartemen Bak"},"features":{"en":"High Backsplash, Adjustable Bullet Feet","id":"Pelindung Percikan Tinggi, Kaki-kaki yang Dapat Disetel"},"dimensions":{"en":"Custom Sizes Available","id":"Tersedia Ukuran Kustom"}}',
   '/images/products/stainless-sink-table.png',
   0
@@ -369,13 +369,13 @@ INSERT INTO services (id, slug, title_en, title_id, subtitle_en, subtitle_id, sh
   1,
   'kitchen-sets',
   'Restaurant Kitchen Set',
-  'Kitchen Set Restoran',
+  'Jasa Kitchen Set Restoran Jakarta',
   'Design & Installation',
   'Desain & Instalasi',
   'End-to-end kitchen set design and manufacturing using stainless steel and premium materials for restaurants, hotels, and catering businesses.',
   'Desain dan pembuatan kitchen set dari awal hingga akhir menggunakan baja tahan karat dan bahan premium untuk restoran, hotel, dan bisnis katering.',
   'We provide comprehensive restaurant kitchen set solutions from initial consultation and design through to manufacturing and installation. Our team of experienced engineers and fabricators work with premium stainless steel materials to create durable, hygienic, and efficient kitchen workspaces tailored to your specific needs.',
-  'Kami menyediakan solusi kitchen set restoran yang komprehensif mulai dari konsultasi awal dan desain hingga produksi dan instalasi. Tim insinyur dan fabrikator kami yang berpengalaman bekerja dengan bahan baja tahan karat premium untuk menciptakan ruang kerja dapur yang tahan lama, higienis, dan efisien yang disesuaikan dengan kebutuhan spesifik Anda.',
+  'Kami adalah penyedia jasa kitchen set restoran Jakarta terpercaya yang menyediakan solusi komprehensif mulai dari desain, fabrikasi, hingga instalasi. Sebagai spesialis jasa kitchen set restoran Jakarta, tim insinyur dan fabrikator kami yang berpengalaman memproduksi peralatan dapur stainless steel premium. Layanan jasa kitchen set restoran Jakarta kami dirancang untuk menciptakan ruang kerja dapur yang aman, higienis, dan efisien sesuai standar bisnis kuliner Anda.',
   '/images/services/kitchen-set.png',
   '🍳',
   '[{"en":"Custom stainless steel fabrication","id":"Fabrikasi baja tahan karat kustom"},{"en":"Professional 3D kitchen design","id":"Desain dapur 3D profesional"},{"en":"Full project management","id":"Manajemen proyek penuh"},{"en":"Quality materials (SS 304/316)","id":"Material berkualitas (SS 304/316)"},{"en":"Post-installation support","id":"Dukungan pasca instalasi"},{"en":"Compliance with health & safety standards","id":"Kepatuhan terhadap standar kesehatan & keselamatan"}]',
@@ -385,13 +385,13 @@ INSERT INTO services (id, slug, title_en, title_id, subtitle_en, subtitle_id, sh
   2,
   'ducting',
   'Ducting Systems',
-  'Sistem Ducting',
+  'Jasa Ducting Restoran Jakarta',
   'Smoke Exhaust & Air Circulation',
   'Pembuangan Asap & Sirkulasi Udara',
   'Design and installation of smoke exhaust and air circulation ducting systems for commercial kitchens and industrial buildings.',
   'Desain dan instalasi sistem ducting pembuangan asap dan sirkulasi udara untuk dapur komersial dan bangunan industri.',
   'Our ducting services cover the complete design and installation of smoke exhaust and air circulation systems. We ensure proper ventilation, compliance with building codes, and efficient air flow to maintain a comfortable and safe kitchen environment.',
-  'Layanan ducting kami mencakup desain lengkap dan instalasi sistem pembuangan asap dan sirkulasi udara. Kami memastikan ventilasi yang tepat, kepatuhan terhadap kode bangunan, dan aliran udara yang efisien untuk menjaga lingkungan dapur yang nyaman dan aman.',
+  'Kami menawarkan jasa ducting restoran Jakarta komprehensif yang mencakup desain tata letak, fabrikasi, hingga instalasi sistem pembuangan asap dapur. Melalui jasa ducting restoran Jakarta kami, kami memastikan sirkulasi udara di dapur komersial Anda berjalan optimal sehingga asap masakan dan bau menyengat dapat terbuang dengan efektif. Percayakan kebutuhan ventilasi Anda kepada penyedia jasa ducting restoran Jakarta berpengalaman untuk kenyamanan staf dan pelanggan Anda.',
   '/images/services/ducting.png',
   '💨',
   '[{"en":"Kitchen exhaust systems","id":"Sistem pembuangan udara dapur"},{"en":"Fresh air intake installation","id":"Instalasi asupan udara segar"},{"en":"HVAC ducting integration","id":"Integrasi ducting HVAC"},{"en":"Grease trap systems","id":"Sistem perangkap lemak (Grease trap)"},{"en":"Fire damper installation","id":"Instalasi peredam api (Fire damper)"},{"en":"Regular maintenance programs","id":"Program pemeliharaan rutin"}]',
@@ -401,13 +401,13 @@ INSERT INTO services (id, slug, title_en, title_id, subtitle_en, subtitle_id, sh
   3,
   'gas-installation',
   'Gas Installation',
-  'Instalasi Gas',
+  'Instalasi Gas Dapur Komersial Jakarta',
   'Professional & Certified',
   'Profesional & Bersertifikat',
   'Professional gas piping installation for commercial kitchens and buildings, with full safety compliance and pressure testing.',
   'Instalasi perpipaan gas profesional untuk dapur komersial dan bangunan, dengan kepatuhan keselamatan penuh dan pengujian tekanan.',
   'Our certified gas installation team provides safe and reliable gas piping solutions for restaurants, commercial kitchens, and buildings. We handle everything from LPG and natural gas systems to safety compliance and pressure testing, ensuring your gas infrastructure meets all regulatory requirements.',
-  'Tim instalasi gas bersertifikat kami memberikan solusi perpipaan gas yang aman dan andal untuk restoran, dapur komersial, dan bangunan. Kami menangani semuanya mulai dari sistem LPG dan gas alam hingga kepatuhan keselamatan dan pengujian tekanan, memastikan infrastruktur gas Anda memenuhi semua persyaratan peraturan.',
+  'Kami menyediakan layanan instalasi gas dapur komersial Jakarta yang aman, andal, dan bersertifikat resmi untuk restoran, hotel, dan katering. Tim teknisi kami yang berpengalaman menangani seluruh alur instalasi gas dapur komersial Jakarta mulai dari perpipaan gas LPG/LNG, pemasangan katup pengaman, hingga sistem deteksi kebocoran. Hubungi kami untuk mendapatkan layanan instalasi gas dapur komersial Jakarta dengan standar keselamatan industri tertinggi dan uji tekanan pipa yang lengkap.',
   '/images/services/gas-installation.png',
   '🔥',
   '[{"en":"LPG & Natural Gas systems","id":"Sistem LPG & Gas Alam"},{"en":"Certified installation team","id":"Tim instalasi bersertifikat"},{"en":"Pressure testing & certification","id":"Pengujian tekanan & sertifikasi"},{"en":"Safety valve installation","id":"Instalasi katup pengaman"},{"en":"Gas leak detection systems","id":"Sistem deteksi kebocoran gas"},{"en":"Regulatory compliance","id":"Kepatuhan terhadap peraturan"}]',
@@ -417,13 +417,13 @@ INSERT INTO services (id, slug, title_en, title_id, subtitle_en, subtitle_id, sh
   4,
   'well-drilling',
   'Well Drilling',
-  'Pengeboran Sumur',
+  'Jasa Pengeboran Sumur Jakarta',
   'Clean Water Supply',
   'Pasokan Air Bersih',
   'Professional well drilling services for clean water supply, including site survey, drilling, pump installation, and water quality testing.',
   'Layanan pengeboran sumur profesional untuk pasokan air bersih, termasuk survei lokasi, pengeboran, instalasi pompa, dan pengujian kualitas air.',
   'We offer professional well drilling services to ensure a reliable clean water supply for your property. Our experienced drilling team uses modern equipment to reach optimal water sources, and we handle everything from initial site surveys to pump installation and water quality testing.',
-  'Kami menawarkan layanan pengeboran sumur profesional untuk memastikan pasokan air bersih yang andal untuk properti Anda. Tim pengeboran kami yang berpengalaman menggunakan peralatan modern untuk mencapai sumber air yang optimal, dan kami menangani semuanya mulai dari survei lokasi awal hingga instalasi pompa dan pengujian kualitas air.',
+  'Kami menyediakan jasa pengeboran sumur Jakarta profesional untuk menjamin pasokan air bersih yang melimpah dan higienis bagi properti komersial maupun residensial Anda. Didukung peralatan bor modern dan tim ahli geologi, layanan jasa pengeboran sumur Jakarta kami mampu menjangkau sumber mata air berkualitas pada kedalaman optimal. Dapatkan solusi lengkap jasa pengeboran sumur Jakarta mulai dari survei lokasi, pengeboran casing, hingga instalasi pompa celup submersible bergaransi.',
   '/images/services/well-drilling.png',
   '💧',
   '[{"en":"Professional site survey","id":"Survei lokasi profesional"},{"en":"Modern drilling equipment","id":"Peralatan pengeboran modern"},{"en":"Submersible pump installation","id":"Instalasi pompa celup (submersible)"},{"en":"Water quality testing","id":"Pengujian kualitas air"},{"en":"Piping & distribution setup","id":"Pengaturan perpipaan & distribusi"},{"en":"Maintenance support","id":"Dukungan pemeliharaan"}]',
@@ -433,13 +433,13 @@ INSERT INTO services (id, slug, title_en, title_id, subtitle_en, subtitle_id, sh
   5,
   'electrical',
   'Electrical Services',
-  'Layanan Listrik',
+  'Jasa Instalasi Listrik Restoran Jakarta',
   'Installation & Maintenance',
   'Instalasi & Pemeliharaan',
   'Electrical installation and maintenance for restaurants, homes, and buildings, covering wiring, panel installation, and power distribution.',
   'Instalasi dan pemeliharaan listrik untuk restoran, rumah, dan bangunan, meliputi pekerjaan kabel, instalasi panel, dan distribusi daya.',
   'Our electrical services team provides comprehensive solutions for restaurants, homes, and commercial buildings. From wiring and panel installation to lighting and power distribution, we ensure safe, efficient, and code-compliant electrical systems for all your needs.',
-  'Tim layanan listrik kami menyediakan solusi komprehensif untuk restoran, rumah, dan bangunan komersial. Mulai dari pekerjaan kabel dan instalasi panel hingga pencahayaan dan distribusi daya, kami memastikan sistem kelistrikan yang aman, efisien, dan sesuai standar untuk semua kebutuhan Anda.',
+  'Kami menyediakan jasa instalasi listrik restoran Jakarta secara komprehensif untuk menjamin sistem kelistrikan dapur komersial Anda beroperasi dengan aman dan efisien. Dari pemasangan panel bagi beban daya besar hingga pekerjaan kabel stop kontak peralatan masak, jasa instalasi listrik restoran Jakarta kami dikerjakan oleh teknisi ahli bersertifikat. Lindungi bisnis kuliner Anda dengan mempercayakan perancangan daya kepada penyedia jasa instalasi listrik restoran Jakarta yang mematuhi standar keselamatan kelistrikan nasional.',
   '/images/services/electrical.png',
   '⚡',
   '[{"en":"Wiring & rewiring","id":"Instalasi kabel & pasang ulang kabel"},{"en":"Electrical panel installation","id":"Instalasi panel listrik"},{"en":"Lighting systems","id":"Sistem pencahayaan"},{"en":"Power distribution","id":"Distribusi daya"},{"en":"Safety compliance","id":"Kepatuhan keselamatan"},{"en":"Emergency electrical repair","id":"Perbaikan listrik darurat"}]',
@@ -591,34 +591,30 @@ INSERT INTO blog_posts (id, slug, title_en, title_id, excerpt_en, excerpt_id, co
   'Tips Perawatan Kompor Komersial Agar Awet dan Performa Maksimal',
   'Learn how to maintain your kwali range and wok stoves to keep them efficient and durable for your restaurant kitchen.',
   'Pelajari cara merawat kompor kwali range dan kompor wok Anda agar tetap efisien dan tahan lama untuk dapur restoran Anda.',
-  '
-        <h2>Why Stove Maintenance Matters?</h2>
-        <p>A commercial stove is the heart of any professional kitchen. Without proper maintenance, fuel efficiency can drop, and the risk of sudden breakdowns can disrupt your business operations.</p>
+  '<h2>Why Stove Maintenance Matters?</h2>
+        <p>A commercial stove is the heart of any professional kitchen. By maintaining equipment like your <a href="/en/products/wok-range/">wok range stainless Jakarta</a> or <a href="/en/products/kwali-range/">kwali range</a>, you can ensure fuel efficiency remains at its peak and avoid sudden breakdowns that disrupt operations.</p>
         
         <h2>Daily Maintenance Steps</h2>
         <ul>
-          <li><strong>Clean the Burners:</strong> Ensure burner holes are not clogged by food debris or grease.</li>
+          <li><strong>Clean the Burners:</strong> Ensure burner holes are not clogged by food debris or grease around the burners.</li>
           <li><strong>Wipe Stainless Steel Surfaces:</strong> Use a soft cloth and specialized stainless steel cleaner to prevent corrosion.</li>
-          <li><strong>Check Gas Flow:</strong> Ensure there are no unusual gas smells around the connections.</li>
+          <li><strong>Check Gas Flow:</strong> Ensure there are no unusual gas smells around the stove connections.</li>
         </ul>
 
         <h2>Periodic Professional Inspection</h2>
-        <p>In addition to daily care, it is highly recommended to perform routine service every 3-6 months by professional technicians like the Limars Teknik team to ensure the ignition system and gas pressure remain optimal.</p>
-      ',
-  '
-        <h2>Mengapa Perawatan Kompor Itu Penting?</h2>
-        <p>Kompor komersial adalah jantung dari setiap dapur profesional. Tanpa perawatan yang tepat, efisiensi bahan bakar dapat menurun, dan risiko kerusakan mendadak dapat mengganggu operasional bisnis Anda.</p>
+        <p>In addition to daily care, it is highly recommended to perform routine service every 3-6 months by professional technicians like the Limars Teknik team to ensure the ignition system and gas pressure remain optimal on your commercial stoves.</p>',
+  '<h2>Mengapa Perawatan Kompor Itu Penting?</h2>
+        <p>Kompor komersial adalah jantung dari setiap dapur profesional. Dengan merawat peralatan secara berkala seperti <a href="/id/products/wok-range/">wok range stainless Jakarta</a> atau <a href="/id/products/kwali-range/">kompor kwali range</a>, Anda dapat memastikan efisiensi bahan bakar tetap maksimal dan menghindari risiko kerusakan mendadak yang mengganggu operasional bisnis Anda.</p>
         
         <h2>Langkah-Langkah Perawatan Harian</h2>
         <ul>
-          <li><strong>Bersihkan Burner:</strong> Pastikan lubang api tidak tersumbat oleh sisa makanan atau lemak.</li>
+          <li><strong>Bersihkan Burner:</strong> Pastikan lubang api tidak tersumbat oleh sisa makanan atau lemak di sekitar tungku.</li>
           <li><strong>Lap Permukaan Stainless Steel:</strong> Gunakan kain lembut dan pembersih khusus stainless steel agar tidak korosi.</li>
-          <li><strong>Cek Aliran Gas:</strong> Pastikan tidak ada bau gas yang tidak biasa di sekitar koneksi.</li>
+          <li><strong>Cek Aliran Gas:</strong> Pastikan tidak ada bau gas yang tidak biasa di sekitar koneksi kompor.</li>
         </ul>
 
         <h2>Pemeriksaan Berkala oleh Ahli</h2>
-        <p>Selain perawatan harian, sangat disarankan untuk melakukan servis rutin setiap 3-6 bulan oleh teknisi profesional seperti tim Limars Teknik untuk memastikan sistem pemantik dan tekanan gas tetap optimal.</p>
-      ',
+        <p>Selain perawatan harian, sangat disarankan untuk melakukan servis rutin setiap 3-6 bulan oleh teknisi profesional seperti tim Limars Teknik untuk memastikan sistem pemantik dan tekanan gas tetap optimal pada kompor wajan komersial Anda.</p>',
   '/images/blog/stove-maintenance.jpg',
   '2026-03-14',
   '5 min read'
@@ -630,20 +626,16 @@ INSERT INTO blog_posts (id, slug, title_en, title_id, excerpt_en, excerpt_id, co
   'Manfaat Sistem Ducting yang Baik di Restoran Anda',
   'Poor air circulation can affect customer comfort and staff health. Find out why quality ducting is crucial for your business.',
   'Sistem sirkulasi udara yang buruk dapat mengganggu kenyamanan pelanggan dan kesehatan staf. Simak mengapa ducting berkualitas sangat krusial.',
-  '
-        <h2>Clean Air, Comfortable Customers</h2>
-        <p>A restaurant with smoke lingering in the dining area will discourage customers. A properly designed ducting system will effectively pull smoke and cooking odors out of the kitchen.</p>
+  '<h2>Clean Air, Comfortable Customers</h2>
+        <p>A restaurant with smoke lingering in the dining area will discourage customers. Using an efficient exhaust system near your <a href="/en/products/wok-range/">wok range stainless Jakarta</a> will effectively pull smoke and cooking odors out of the kitchen, maintaining clean indoor air.</p>
         
         <h2>Occupational Health and Safety</h2>
-        <p>Kitchen staff work in high-heat environments. Ducting helps lower room temperature by circulating fresh air in and expelling hot air out.</p>
-      ',
-  '
-        <h2>Udara Bersih, Pelanggan Nyaman</h2>
-        <p>Restoran dengan asap yang mengepul di area makan akan membuat pelanggan tidak betah. Sistem ducting yang dirancang dengan benar akan menarik asap dan bau masakan keluar dari dapur dengan efektif.</p>
+        <p>Kitchen staff work in high-heat environments. A ventilation system connected to our <a href="/en/services/ducting/">restaurant ducting service Jakarta</a> helps lower room temperature by circulating fresh air in and expelling hot air out.</p>',
+  '<h2>Udara Bersih, Pelanggan Nyaman</h2>
+        <p>Restoran dengan asap mengepul di area makan membuat pelanggan tidak betah. Penggunaan sistem penarikan asap yang efisien di dekat <a href="/id/products/wok-range/">wok range stainless Jakarta</a> Anda akan menarik asap dan bau masakan keluar dari dapur dengan sangat efektif. Hal ini juga membantu menjaga kebersihan seluruh peralatan dapur restoran.</p>
         
         <h2>Kesehatan dan Keselamatan Kerja</h2>
-        <p>Staf dapur bekerja di lingkungan yang panas. Ducting membantu menurunkan suhu ruangan dengan mengalirkan udara segar ke dalam (fresh air intake) dan membuang udara panas keluar.</p>
-      ',
+        <p>Staf dapur bekerja di lingkungan bersuhu tinggi. Sistem sirkulasi yang terhubung dengan <a href="/id/services/ducting/">jasa instalasi ducting restoran Jakarta</a> kami membantu menurunkan suhu ruangan dengan mengalirkan udara segar ke dalam (fresh air intake) dan membuang udara panas keluar dapur.</p>',
   '/images/blog/ducting-system.jpg',
   '2026-03-10',
   '5 min read'

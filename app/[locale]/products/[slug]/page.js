@@ -2,6 +2,7 @@
 import { Link, routing } from '../../../../i18n/routing';
 import { notFound } from 'next/navigation';
 import { products as staticProducts } from '../../../../data/products';
+import { services as staticServices } from '../../../../data/services';
 import Image from 'next/image';
 import ProductLightbox from './ProductLightbox';
 import styles from './ProductDetail.module.css';
@@ -62,6 +63,26 @@ export default async function ProductDetailPage({ params }) {
   const name = product.name[locale] || product.name || '';
   const desc = product.description[locale] || product.description || '';
   const category = product.category[locale] || product.category || '';
+
+  // Get related service slug and key
+  let relatedServiceSlug = '';
+  let translationKey = '';
+  const isStoveOrOven = ['Traditional Stoves', 'Regional Ovens', 'Modern Ovens'].includes(product.category?.en || product.category);
+  const isCoffeeShop = (product.category?.en === 'Coffee Shop Equipment' || product.category === 'Coffee Shop Equipment');
+
+  if (isStoveOrOven) {
+    relatedServiceSlug = 'gas-installation';
+    translationKey = 'relatedServiceStove';
+  } else if (isCoffeeShop) {
+    relatedServiceSlug = 'electrical';
+    translationKey = 'relatedServiceCoffee';
+  } else {
+    relatedServiceSlug = 'kitchen-sets';
+    translationKey = 'relatedServiceDefault';
+  }
+
+  const relService = staticServices.find(s => s.slug === relatedServiceSlug);
+  const serviceTitle = relService ? (relService.title[locale] || relService.title) : '';
 
   const jsonLd = {
     '@context': 'https://schema.org',
@@ -126,9 +147,25 @@ export default async function ProductDetailPage({ params }) {
               <h1>{name}</h1>
               <p className={styles.description}>{desc}</p>
 
+              {/* Related Service Promo */}
+              {relatedServiceSlug && (
+                <div className={styles.relatedServiceBox}>
+                  <p>
+                    {t.rich(translationKey, {
+                      serviceTitle: serviceTitle,
+                      link: (chunks) => (
+                        <Link href={`/services/${relatedServiceSlug}`} className={styles.serviceLink}>
+                          {chunks}
+                        </Link>
+                      )
+                    })}
+                  </p>
+                </div>
+              )}
+
               {product.specs && Object.keys(product.specs).length > 0 && (
                 <div className={styles.specs}>
-                  <h3>{t('specifications')}</h3>
+                  <h2>{t('specifications')}</h2>
                   <table className={styles.specTable}>
                     <tbody>
                       {Object.entries(product.specs).map(([key, value]) => {
@@ -180,7 +217,7 @@ export default async function ProductDetailPage({ params }) {
                         )}
                       </div>
                     </div>
-                    <h4>{rName}</h4>
+                    <h3>{rName}</h3>
                     <span className={styles.relatedLink}>{t('viewDetails')}</span>
                   </Link>
                 );

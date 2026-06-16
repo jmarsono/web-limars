@@ -2,6 +2,7 @@ import { getMessages, setRequestLocale } from 'next-intl/server';
 import { blogPosts } from '@/data/blogPosts';
 import BlogCard from '@/components/BlogCard';
 import styles from './page.module.css';
+import { Link } from '@/i18n/routing';
 
 import { constructMetadata } from '../../../lib/seo';
 import BreadcrumbJsonLd from '../../../components/BreadcrumbJsonLd';
@@ -24,6 +25,7 @@ export default async function BlogPage({ params }) {
   setRequestLocale(locale);
   const messages = await getMessages({ locale });
   const blogT = messages.Blog;
+  const homeT = messages.Home;
 
   // In a real app, you might filter or sort posts here
   const posts = blogPosts;
@@ -63,6 +65,20 @@ export default async function BlogPage({ params }) {
               <p>{blogT.noPosts}</p>
             </div>
           )}
+        </div>
+      </section>
+
+      {/* CTA */}
+      <section className={styles.ctaSection}>
+        <div className={`container ${styles.ctaContent}`}>
+          <h2>{homeT.cta.title}</h2>
+          <p>{homeT.cta.subtitle}</p>
+          <div className={styles.ctaButtons}>
+            <Link href="/contact" className="btn btn-primary">{homeT.cta.contactBtn}</Link>
+            <a href="https://wa.me/6281212671289" className="btn btn-secondary" target="_blank" rel="noopener noreferrer">
+              {homeT.cta.whatsappBtn}
+            </a>
+          </div>
         </div>
       </section>
     </main>

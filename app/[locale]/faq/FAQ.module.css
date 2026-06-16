@@ -214,6 +214,13 @@
   margin-bottom: 24px;
 }
 
+.helpButtons {
+  display: flex;
+  gap: 12px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
 @media (max-width: 968px) {
   .faqWrapper { grid-template-columns: 1fr; gap: 40px; }
   .faqNav { position: relative; top: 0; }

@@ -2,11 +2,13 @@
 
 import { useState } from 'react';
 import { useLocale, useTranslations } from 'next-intl';
+import { Link } from '@/i18n/routing';
 import styles from './FAQ.module.css';
 
 export default function FAQClient({ faqData }) {
   const locale = useLocale();
   const t = useTranslations('FAQ');
+  const navT = useTranslations('Navigation');
   const [activeCategory, setActiveCategory] = useState(0);
   const [openItems, setOpenItems] = useState({});
 
@@ -79,9 +81,14 @@ export default function FAQClient({ faqData }) {
             <div className={styles.helpBox}>
               <h2>{t('ctaTitle')}</h2>
               <p>{t('ctaSubtitle')}</p>
-              <a href="https://wa.me/6281212671289" className="btn btn-outline" target="_blank" rel="noopener noreferrer">
-                {t('ctaBtn')}
-              </a>
+              <div className={styles.helpButtons}>
+                <Link href="/contact" className="btn btn-primary">
+                  {navT('contact')}
+                </Link>
+                <a href="https://wa.me/6281212671289" className="btn btn-outline" target="_blank" rel="noopener noreferrer">
+                  {t('ctaBtn')}
+                </a>
+              </div>
             </div>
           </div>
         </div>
