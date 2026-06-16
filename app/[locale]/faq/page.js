@@ -1,34 +1,69 @@
-'use client';
-
-import { useState } from 'react';
-import { useLocale, useTranslations } from 'next-intl';
-import { faqData } from '../../../data/faq';
+// app/[locale]/faq/page.js
+import { getFaqs } from '../../../lib/db';
+import { faqData as staticFaqData } from '../../../data/faq';
+import FAQClient from './FAQClient';
 import styles from './FAQ.module.css';
+import { getMessages, setRequestLocale, getTranslations } from 'next-intl/server';
 
-export default function FAQPage() {
-  const locale = useLocale();
-  const t = useTranslations('FAQ');
-  const [activeCategory, setActiveCategory] = useState(0);
-  const [openItems, setOpenItems] = useState({});
+export const revalidate = 0; // Fresh data on D1 dynamic updates
 
-  const toggleItem = (categoryIdx, itemIdx) => {
-    const key = `${categoryIdx}-${itemIdx}`;
-    setOpenItems((prev) => ({
-      ...prev,
-      [key]: !prev[key],
-    }));
+export async function generateMetadata({ params }) {
+  const { locale } = await params;
+  const messages = await getMessages({ locale });
+  const t = messages.SEO;
+
+  return {
+    title: `FAQ | PT. Limars Teknik Indonesia`,
+    description: t.faqDescription || 'Frequently Asked Questions about kitchen equipment manufacturing.',
   };
+}
+
+export default async function FAQPage({ params }) {
+  const { locale } = await params;
+  setRequestLocale(locale);
+  
+  const t = await getTranslations('FAQ');
+  const dbFaqs = await getFaqs();
+  
+  let faqData = [];
+  if (dbFaqs && dbFaqs.length > 0) {
+    if (dbFaqs[0].items) {
+      // Already grouped (e.g. static fallback)
+      faqData = dbFaqs;
+    } else {
+      // Flat list from D1, group dynamically
+      const groupedMap = new Map();
+      dbFaqs.forEach(faq => {
+        const catEn = faq.category?.en || 'General';
+        const catId = faq.category?.id || 'Umum';
+        if (!groupedMap.has(catEn)) {
+          groupedMap.set(catEn, {
+            category: { en: catEn, id: catId },
+            items: []
+          });
+        }
+        groupedMap.get(catEn).items.push({
+          question: faq.question,
+          answer: faq.answer
+        });
+      });
+      faqData = Array.from(groupedMap.values());
+    }
+  }
+
+  // Fallback to static data if no FAQs are in database
+  const activeFaqData = faqData.length > 0 ? faqData : staticFaqData;
 
   const jsonLd = {
     '@context': 'https://schema.org',
     '@type': 'FAQPage',
-    mainEntity: faqData.flatMap(category => 
-      category.items.map(item => ({
+    mainEntity: activeFaqData.flatMap(category => 
+      (category.items || []).map(item => ({
         '@type': 'Question',
-        name: item.question[locale],
+        name: item.question?.[locale] || item.question?.en || '',
         acceptedAnswer: {
           '@type': 'Answer',
-          text: item.answer[locale]
+          text: item.answer?.[locale] || item.answer?.en || ''
         }
       }))
     )
@@ -49,64 +84,7 @@ export default function FAQPage() {
         </div>
       </section>
 
-      <section className={`section ${styles.faqSection}`}>
-        <div className="container">
-          <div className={styles.faqWrapper}>
-            {/* Sidebar Navigation */}
-            <div className={styles.faqNav}>
-              <h2>{t('categories')}</h2>
-              <ul>
-                {faqData.map((category, idx) => (
-                  <li key={idx}>
-                    <button
-                      className={`${styles.navBtn} ${activeCategory === idx ? styles.navActive : ''}`}
-                      onClick={() => setActiveCategory(idx)}
-                    >
-                      {category.category[locale]}
-                    </button>
-                  </li>
-                ))}
-              </ul>
-            </div>
-
-            {/* Accordion List */}
-            <div className={styles.faqContent}>
-              <h2 className={styles.categoryTitle}>{faqData[activeCategory].category[locale]}</h2>
-              <div className={styles.accordionList}>
-                {faqData[activeCategory].items.map((item, idx) => {
-                  const isOpen = openItems[`${activeCategory}-${idx}`];
-                  return (
-                    <div key={idx} className={`${styles.accordionItem} ${isOpen ? styles.open : ''}`}>
-                      <button
-                        className={styles.accordionHeader}
-                        onClick={() => toggleItem(activeCategory, idx)}
-                        aria-expanded={isOpen}
-                      >
-                        <span className={styles.question}>{item.question[locale]}</span>
-                        <span className={styles.icon}>{isOpen ? '−' : '+'}</span>
-                      </button>
-                      <div className={styles.accordionBody}>
-                        <div className={styles.answer}>
-                          <p>{item.answer[locale]}</p>
-                        </div>
-                      </div>
-                    </div>
-                  );
-                })}
-              </div>
-
-              {/* Still need help CTA */}
-              <div className={styles.helpBox}>
-                <h2>{t('ctaTitle')}</h2>
-                <p>{t('ctaSubtitle')}</p>
-                <a href="https://wa.me/6281212671289" className="btn btn-outline" target="_blank" rel="noopener noreferrer">
-                  {t('ctaBtn')}
-                </a>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
+      <FAQClient faqData={activeFaqData} />
     </>
   );
 }

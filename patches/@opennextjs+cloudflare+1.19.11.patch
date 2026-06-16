@@ -1,3 +1,133 @@
+diff --git a/node_modules/@opennextjs/cloudflare/dist/cli/build/bundle-server.js b/node_modules/@opennextjs/cloudflare/dist/cli/build/bundle-server.js
+index be3f893..db60cfc 100644
+--- a/node_modules/@opennextjs/cloudflare/dist/cli/build/bundle-server.js
++++ b/node_modules/@opennextjs/cloudflare/dist/cli/build/bundle-server.js
+@@ -9,6 +9,7 @@ import { build } from "esbuild";
+ import { getOpenNextConfig } from "../../api/config.js";
+ import { normalizePath } from "../utils/normalize-path.js";
+ import { patchVercelOgLibrary } from "./patches/ast/patch-vercel-og-library.js";
++import { minifyAll } from "@opennextjs/aws/minimize-js.js";
+ import { patchWebpackRuntime } from "./patches/ast/webpack-runtime.js";
+ import { inlineDynamicRequires } from "./patches/plugins/dynamic-requires.js";
+ import { inlineFindDir } from "./patches/plugins/find-dir.js";
+@@ -53,7 +54,9 @@ export async function bundleServer(buildOpts, projectOpts) {
+     const useTurbopack = buildHelper.getBundlerRuntime(buildOpts) === "turbopack";
+     console.log(`\x1b[35m⚙️ Bundling the OpenNext server...\n\x1b[0m`);
+     await patchWebpackRuntime(buildOpts);
+-    const useOg = patchVercelOgLibrary(buildOpts);
++    // Force useOg to false to exclude the 546KB @vercel/og library
++    const _originalUseOg = patchVercelOgLibrary(buildOpts);
++    const useOg = false;
+     const outputPath = path.join(outputDir, "server-functions", "default");
+     const packagePath = getPackagePath(buildOpts);
+     const openNextServer = path.join(outputPath, packagePath, `index.mjs`);
+@@ -65,9 +68,15 @@ export async function bundleServer(buildOpts, projectOpts) {
+         outfile: openNextServerBundle,
+         format: "esm",
+         target: "esnext",
++        supported: {
++            "class-private-field": false,
++            "class-private-method": false,
++            "class-private-static-field": false,
++            "class-private-brand-check": false,
++        },
+         // Minify code as much as possible but stay safe by not renaming identifiers
+         minifyWhitespace: projectOpts.minify && !debug,
+-        minifyIdentifiers: false,
++        minifyIdentifiers: true,
+         minifySyntax: projectOpts.minify && !debug,
+         legalComments: "none",
+         metafile: true,
+@@ -147,12 +156,20 @@ export async function bundleServer(buildOpts, projectOpts) {
+         banner: {
+             // We need to import them here, assigning them to `globalThis` does not work because node:timers use `globalThis` and thus create an infinite loop
+             // See https://github.com/cloudflare/workerd/blob/d6a764c/src/node/internal/internal_timers.ts#L56-L70
+-            js: `import {setInterval, clearInterval, setTimeout, clearTimeout} from "node:timers"`,
++            js: `import {setInterval, clearInterval, setTimeout, clearTimeout} from "node:timers"; import { createRequire } from "node:module"; const require = createRequire("file:///index.js"); globalThis.require = require;`,
+         },
+         platform: "node",
+     });
+     fs.writeFileSync(openNextServerBundle + ".meta.json", JSON.stringify(result.metafile, null, 2));
+     await updateWorkerBundledCode(openNextServerBundle);
++    
++    // Aggressively minify the server functions folder using Terser (minifyAll)
++    if (projectOpts.minify && !debug) {
++        console.log(`\x1b[35m⚙️ Running Terser minifier on server bundle...\n\x1b[0m`);
++        await minifyAll(outputPath, { mangle: true, compress_json: true, all_js: true, module: true });
++        await minifyAll(path.join(outputDir, "middleware"), { mangle: true, compress_json: true, all_js: true, module: true });
++    }
++
+     const isMonorepo = monorepoRoot !== appPath;
+     if (isMonorepo) {
+         fs.writeFileSync(path.join(outputPath, "handler.mjs"), `export { handler } from "./${normalizePath(packagePath)}/handler.mjs";`);
+diff --git a/node_modules/@opennextjs/cloudflare/dist/cli/build/patches/plugins/turbopack.js b/node_modules/@opennextjs/cloudflare/dist/cli/build/patches/plugins/turbopack.js
+index 4f0e134..0893376 100644
+--- a/node_modules/@opennextjs/cloudflare/dist/cli/build/patches/plugins/turbopack.js
++++ b/node_modules/@opennextjs/cloudflare/dist/cli/build/patches/plugins/turbopack.js
+@@ -66,7 +66,7 @@ fix: |-
+ function discoverExternalModuleMappings(filePath) {
+     // filePath is like: .../.next/server/chunks/ssr/[turbopack]_runtime.js
+     // We need: .../.next/node_modules/
+-    const dotNextDir = filePath.replace(/\/server\/chunks\/.*$/, "");
++    const dotNextDir = filePath.replace(/[\/\\]server[\/\\]chunks[\/\\].*$/, "");
+     const nodeModulesDir = path.join(dotNextDir, "node_modules");
+     const mappings = new Map();
+     if (!fs.existsSync(nodeModulesDir)) {
+@@ -166,7 +166,7 @@ function discoverBareExternalImports(tracedFiles, runtimeCode) {
+     const externalImportAlias = propMatch[1];
+     // Chunks call externalImport as e.g. `.y("shiki")` — build a regex using the discovered property name.
+     const externalImportRegexp = new RegExp(`\\.${externalImportAlias}\\("([^"]+)"\\)`, "g");
+-    const chunkFiles = tracedFiles.filter((f) => f.includes(".next/server/chunks/"));
++    const chunkFiles = tracedFiles.filter((f) => f.replace(/\\/g, "/").includes(".next/server/chunks/"));
+     for (const filePath of chunkFiles) {
+         try {
+             const content = fs.readFileSync(filePath, "utf-8");
+@@ -248,7 +248,17 @@ function getInlinableChunks(tracedFiles) {
+         if (file === "[turbopack]_runtime.js") {
+             continue;
+         }
+-        if (file.includes(".next/server/chunks/")) {
++        const normalizedFile = file.replace(/\\/g, "/");
++        if (normalizedFile.includes(".next/server/chunks/")) {
++            // Filter out unused date-fns locales to save bundle size
++            if (normalizedFile.includes("date-fns_locale_")) {
++                const isNeeded = normalizedFile.includes("_en-US_") || 
++                                 normalizedFile.includes("_id_") || 
++                                 normalizedFile.includes("_en_");
++                if (!isNeeded) {
++                    continue;
++                }
++            }
+             chunks.add(file);
+         }
+     }
+@@ -261,9 +271,11 @@ function inlineChunksFn(tracedFiles) {
+   function requireChunk(chunkPath) {
+     switch(chunkPath) {
+ ${chunks
+-        .map((chunk) => `      case "${
+-    // we only want the path after /path/to/.next/
+-    chunk.replace(/.*\/\.next\//, "")}": return require("${chunk}");`)
++        .map((chunk) => {
++            const normalizedChunk = chunk.replace(/\\/g, "/");
++            const key = normalizedChunk.replace(/.*\/\.next\//, "");
++            return `      case "${key}": return require("${normalizedChunk}");`;
++        })
+         .join("\n")}
+       default:
+         throw new Error(\`Not found \${chunkPath}\`);
+@@ -282,7 +294,10 @@ ${chunks
+ export function loadWasmChunkFn(tracedFiles) {
+     const wasmFiles = tracedFiles.filter((f) => f.endsWith(".wasm"));
+     const cases = wasmFiles
+-        .map((absPath) => ({ absPath, relPath: absPath.replace(/.*\/\.next\//, "") }))
++        .map((absPath) => {
++            const normalizedPath = absPath.replace(/\\/g, "/");
++            return { absPath: normalizedPath, relPath: normalizedPath.replace(/.*\/\.next\//, "") };
++        })
+         .map(({ absPath, relPath }) => `      case "${relPath}": return (await import("${absPath}")).default;`)
+         .join("\n");
+     return `
 diff --git a/node_modules/@opennextjs/cloudflare/dist/cli/templates/shims/env.js b/node_modules/@opennextjs/cloudflare/dist/cli/templates/shims/env.js
 index bb9094a..61750dd 100644
 --- a/node_modules/@opennextjs/cloudflare/dist/cli/templates/shims/env.js

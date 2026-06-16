@@ -5,8 +5,7 @@ import { services as staticServices } from '../../data/services';
 import { projects as staticProjects } from '../../data/projects';
 import Image from 'next/image';
 import { getMessages, setRequestLocale, getTranslations } from 'next-intl/server';
-import { getPayload } from 'payload';
-import config from '../../payload.config';
+import { getProducts, getProjects, getServices } from '../../lib/db';
 
 export async function generateMetadata({ params }) {
   const { locale } = await params;
@@ -55,15 +54,11 @@ export default async function Home({ params }) {
   let dbProjects = [];
 
   try {
-    const payload = await getPayload({ config });
-    const prodRes = await payload.find({ collection: 'products', locale, depth: 1, limit: 100 });
-    dbProducts = prodRes.docs;
-    const servRes = await payload.find({ collection: 'services', locale, depth: 1, limit: 100 });
-    dbServices = servRes.docs;
-    const projRes = await payload.find({ collection: 'projects', locale, depth: 1, limit: 100 });
-    dbProjects = projRes.docs;
+    dbProducts = await getProducts();
+    dbServices = await getServices();
+    dbProjects = await getProjects();
   } catch (err) {
-    console.error('Error loading Payload CMS content:', err);
+    console.error('Error loading database content:', err);
   }
 
   const activeProducts = dbProducts.length > 0 ? dbProducts : staticProducts;

@@ -1,15 +1,18 @@
+// app/[locale]/products/[slug]/page.js
 import { Link, routing } from '../../../../i18n/routing';
 import { notFound } from 'next/navigation';
-import { products } from '../../../../data/products';
-import { useTranslations } from 'next-intl';
+import { products as staticProducts } from '../../../../data/products';
 import Image from 'next/image';
 import ProductLightbox from './ProductLightbox';
 import styles from './ProductDetail.module.css';
 import { setRequestLocale } from 'next-intl/server';
+import { getProductBySlug, getProducts } from '../../../../lib/db';
+
+export const revalidate = 0; // Fresh data for D1 dynamic updates
 
 export async function generateStaticParams() {
   return routing.locales.flatMap((locale) =>
-    products.map((p) => ({
+    staticProducts.map((p) => ({
       locale,
       slug: p.slug,
     }))
@@ -18,41 +21,49 @@ export async function generateStaticParams() {
 
 export async function generateMetadata({ params }) {
   const { slug, locale } = await params;
-  const product = products.find(p => p.slug === slug);
+  const product = await getProductBySlug(slug);
   if (!product) return { title: 'Product Not Found' };
+  
+  const name = product.name[locale] || product.name || '';
+  const desc = product.shortDescription[locale] || product.shortDescription || '';
+
   return {
-    title: `${product.name[locale]} | PT. Limars Teknik Indonesia`,
-    description: product.shortDescription[locale],
+    title: `${name} | PT. Limars Teknik Indonesia`,
+    description: desc,
   };
 }
 
 export default async function ProductDetailPage({ params }) {
   const { slug, locale } = await params;
   setRequestLocale(locale);
-  const pData = products.find(p => p.slug === slug);
-  if (!pData) notFound();
   
-  // We cannot use hooks inside an async component trivially in Server Components,
-  // but if we need a translation dictionary we can fetch it via getTranslations or just pass locale.
-  // The simplest here is:
-  const isEn = locale === 'en';
-  // Let's grab some UI labels directly or we can use next-intl/server getTranslations
+  const product = await getProductBySlug(slug);
+  if (!product) notFound();
+  
   const getTranslations = (await import('next-intl/server')).getTranslations;
   const t = await getTranslations({ locale, namespace: 'Products' });
 
-  const product = pData;
-
-  const relatedProducts = products
-    .filter(p => (p.category.en === product.category.en || p.category.id === product.category.id) && p.id !== product.id)
+  // Load products list for related recommendations
+  const allProducts = await getProducts();
+  
+  const relatedProducts = allProducts
+    .filter(p => {
+      const matchCat = (p.category?.en === product.category?.en || p.category === product.category);
+      return matchCat && p.id !== product.id;
+    })
     .slice(0, 3);
+
+  const name = product.name[locale] || product.name || '';
+  const desc = product.description[locale] || product.description || '';
+  const category = product.category[locale] || product.category || '';
 
   const jsonLd = {
     '@context': 'https://schema.org',
     '@type': 'Product',
-    name: product.name['en'], // default
-    description: product.description['en'],
-    image: `https://www.limarsteknik.com/images/products/${product.slug}.png`,
-    category: product.category['en'],
+    name: product.name['en'] || product.name || '',
+    description: product.description['en'] || product.description || '',
+    image: product.image.startsWith('http') ? product.image : `https://www.limarsteknik.com${product.image}`,
+    category: product.category['en'] || product.category || '',
     brand: {
       '@type': 'Brand',
       name: 'Limars Teknik'
@@ -81,7 +92,7 @@ export default async function ProductDetailPage({ params }) {
           <span>/</span>
           <Link href="/products">{t('breadcrumbProducts')}</Link>
           <span>/</span>
-          <span className={styles.current}>{product.name[locale]}</span>
+          <span className={styles.current}>{name}</span>
         </div>
       </section>
 
@@ -90,26 +101,29 @@ export default async function ProductDetailPage({ params }) {
         <div className="container">
           <div className={styles.detailGrid}>
             <div className={styles.imageSection}>
-              <ProductLightbox src={product.image} alt={product.name[locale]} />
+              <ProductLightbox src={product.image} alt={name} />
             </div>
             <div className={styles.infoSection}>
-              <span className={styles.category}>{product.category[locale]}</span>
-              <h1>{product.name[locale]}</h1>
-              <p className={styles.description}>{product.description[locale]}</p>
+              <span className={styles.category}>{category}</span>
+              <h1>{name}</h1>
+              <p className={styles.description}>{desc}</p>
 
-              {product.specs && (
+              {product.specs && Object.keys(product.specs).length > 0 && (
                 <div className={styles.specs}>
                   <h3>{t('specifications')}</h3>
                   <table className={styles.specTable}>
                     <tbody>
-                      {Object.entries(product.specs).map(([key, value]) => (
-                        <tr key={key}>
-                          <td className={styles.specLabel}>
-                            {key.replace(/([A-Z])/g, ' $1').replace(/^./, s => s.toUpperCase())}
-                          </td>
-                          <td className={styles.specValue}>{typeof value === 'object' ? value[locale] : value}</td>
-                        </tr>
-                      ))}
+                      {Object.entries(product.specs).map(([key, value]) => {
+                        const valDisplay = typeof value === 'object' ? value[locale] || value.en : value;
+                        return (
+                          <tr key={key}>
+                            <td className={styles.specLabel}>
+                              {key.replace(/([A-Z])/g, ' $1').replace(/^./, s => s.toUpperCase())}
+                            </td>
+                            <td className={styles.specValue}>{valDisplay}</td>
+                          </tr>
+                        );
+                      })}
                     </tbody>
                   </table>
                 </div>
@@ -132,22 +146,27 @@ export default async function ProductDetailPage({ params }) {
           <div className="container">
             <h2>{t('relatedProducts')}</h2>
             <div className={styles.relatedGrid}>
-              {relatedProducts.map((p) => (
-                <Link href={`/products/${p.slug}`} key={p.id} className={styles.relatedCard}>
-                  <div className={styles.relatedImage}>
-                    <div style={{ position: 'relative', width: '100%', height: '150px', backgroundColor: '#f0f0f0', borderRadius: '10px 10px 0 0', overflow: 'hidden' }}>
-                      <Image 
-                        src={p.image} 
-                        alt={p.name[locale]} 
-                        fill
-                        style={{ objectFit: 'cover' }}
-                      />
+              {relatedProducts.map((p) => {
+                const rName = p.name[locale] || p.name || '';
+                return (
+                  <Link href={`/products/${p.slug}`} key={p.id} className={styles.relatedCard}>
+                    <div className={styles.relatedImage}>
+                      <div style={{ position: 'relative', width: '100%', height: '150px', backgroundColor: '#f0f0f0', borderRadius: '10px 10px 0 0', overflow: 'hidden' }}>
+                        {p.image && (
+                          <Image 
+                            src={p.image} 
+                            alt={rName} 
+                            fill
+                            style={{ objectFit: 'cover' }}
+                          />
+                        )}
+                      </div>
                     </div>
-                  </div>
-                  <h4>{p.name[locale]}</h4>
-                  <span className={styles.relatedLink}>{t('viewDetails')}</span>
-                </Link>
-              ))}
+                    <h4>{rName}</h4>
+                    <span className={styles.relatedLink}>{t('viewDetails')}</span>
+                  </Link>
+                );
+              })}
             </div>
           </div>
         </section>

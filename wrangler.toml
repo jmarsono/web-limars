@@ -3,6 +3,20 @@ main = ".open-next/worker.js"
 compatibility_date = "2026-06-15"
 compatibility_flags = [ "nodejs_compat", "enable_nodejs_sqlite_module" ]
 
+find_additional_modules = true
+
+[[rules]]
+type = "ESModule"
+globs = [
+  "server-functions/default/handler.mjs",
+  "middleware/handler.mjs",
+  "middleware/open-next.config.mjs",
+  "cloudflare/*.js",
+  "cloudflare/*.mjs",
+  ".build/durable-objects/*.js"
+]
+fallthrough = true
+
 [assets]
 directory = ".open-next/assets"
 binding = "ASSETS"

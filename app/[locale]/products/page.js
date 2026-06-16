@@ -1,99 +1,21 @@
-'use client';
-
-import { useState } from 'react';
-import { Link } from '../../../i18n/routing';
-import { useSearchParams } from 'next/navigation';
-import { products, productCategories } from '../../../data/products';
-import styles from './Products.module.css';
+// app/[locale]/products/page.js
+import { getProducts } from '../../../lib/db';
+import { productCategories } from '../../../data/products';
+import ProductsClient from './ProductsClient';
 import { Suspense } from 'react';
-import Image from 'next/image';
+import { setRequestLocale } from 'next-intl/server';
 
-import { useLocale, useTranslations } from 'next-intl';
+export const revalidate = 0; // Ensure fresh data on D1 updates
 
-function ProductsContent() {
-  const searchParams = useSearchParams();
-  const locale = useLocale();
-  const t = useTranslations('Products');
-  
-  const initialCat = searchParams.get('cat') || 'All';
-  const [activeCategory, setActiveCategory] = useState(initialCat);
+export default async function ProductsPage({ params }) {
+  const { locale } = await params;
+  setRequestLocale(locale);
 
-  const filteredProducts = activeCategory === 'All'
-    ? products
-    : products.filter(p => p.category.en === activeCategory || p.category.id === activeCategory);
+  const dbProducts = await getProducts();
 
   return (
-    <>
-      {/* Hero */}
-      <section className={styles.hero}>
-        <div className={styles.heroOverlay}></div>
-        <div className={`container ${styles.heroContent}`}>
-          <span className={styles.heroBadge}>{t('heroBadge')}</span>
-          <h1>{t('heroTitle')}</h1>
-          <p>{t('heroSubtitle')}</p>
-        </div>
-      </section>
-
-      {/* Products */}
-      <section className={`section ${styles.productsSection}`}>
-        <div className="container">
-          <h2 className="sr-only">{t('heroTitle')}</h2>
-          {/* Filter */}
-          <div className={styles.filterBar}>
-            {productCategories.map((catKey) => {
-              // 'All' is a special key, the rest we look up in translations (or just map directly)
-              const catDisplay = catKey === 'All' ? t('all') : t(`categories.${catKey.replace(/\s+/g, '')}`);
-              return (
-                <button
-                  key={catKey}
-                  className={`${styles.filterBtn} ${activeCategory === catKey ? styles.filterActive : ''}`}
-                  onClick={() => setActiveCategory(catKey)}
-                >
-                  {catDisplay}
-                </button>
-              );
-            })}
-          </div>
-
-          {/* Grid */}
-          <div className={styles.productGrid}>
-            {filteredProducts.map((product) => (
-              <Link href={`/products/${product.slug}`} key={product.id} className={styles.productCard}>
-                <div className={styles.productImage}>
-                  <div style={{ position: 'relative', width: '100%', aspectRatio: '4/3', overflow: 'hidden', backgroundColor: '#f0f0f0' }}>
-                    <Image 
-                      src={product.image} 
-                      alt={product.name[locale]} 
-                      fill
-                      style={{ objectFit: 'cover' }}
-                    />
-                  </div>
-                  <div className={styles.productBadge}>{product.category[locale]}</div>
-                </div>
-                <div className={styles.productInfo}>
-                  <h3>{product.name[locale]}</h3>
-                  <p>{product.shortDescription[locale]}</p>
-                  <span className={styles.productLink}>{t('viewDetails')}</span>
-                </div>
-              </Link>
-            ))}
-          </div>
-
-          {filteredProducts.length === 0 && (
-            <div className={styles.empty}>
-              <p>{t('emptyState')}</p>
-            </div>
-          )}
-        </div>
-      </section>
-    </>
-  );
-}
-
-export default function ProductsPage() {
-  return (
-    <Suspense>
-      <ProductsContent />
+    <Suspense fallback={<div className="container" style={{ padding: '80px 20px', textLight: 'center' }}>Loading products...</div>}>
+      <ProductsClient products={dbProducts} productCategories={productCategories} />
     </Suspense>
   );
 }
