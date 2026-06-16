@@ -7,13 +7,13 @@ export async function generateMetadata({ params }) {
   const t = messages.SEO;
 
   return constructMetadata({
-    title: t.projectsTitle,
-    description: t.projectsDesc,
-    path: '/projects/',
+    title: t.privacyTitle,
+    description: t.privacyDesc,
+    path: '/privacy-policy/',
     locale,
   });
 }
 
-export default function ProjectsLayout({ children }) {
+export default function PrivacyPolicyLayout({ children }) {
   return <>{children}</>;
 }

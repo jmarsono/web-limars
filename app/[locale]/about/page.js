@@ -1,10 +1,16 @@
 'use client';
 
 import { useTranslations } from 'next-intl';
+import BreadcrumbJsonLd from '@/components/BreadcrumbJsonLd';
 import styles from './About.module.css';
 
 export default function AboutPage() {
   const t = useTranslations('About');
+  const navT = useTranslations('Navigation');
+
+  const crumbs = [
+    { name: navT('about'), path: '/about/' }
+  ];
 
   const timeline = [
     { year: '2014', title: t('timeline.2014.title'), description: t('timeline.2014.desc') },
@@ -32,6 +38,7 @@ export default function AboutPage() {
 
   return (
     <>
+      <BreadcrumbJsonLd crumbs={crumbs} />
       {/* Hero */}
       <section className={styles.hero}>
         <div className={styles.heroOverlay}></div>

@@ -22,51 +22,28 @@ const poppins = Poppins({
   display: 'swap',
 });
 
+import { constructMetadata } from '../../lib/seo';
+
 export async function generateMetadata({ params }) {
   const { locale } = await params;
   const messages = await getMessages({ locale });
   const t = messages.SEO;
 
-  const baseUrl = 'https://limarsteknik.com';
+  const baseMetadata = constructMetadata({
+    title: t.title,
+    description: t.description,
+    path: '/',
+    locale,
+  });
 
   return {
-    metadataBase: new URL(baseUrl),
+    ...baseMetadata,
+    metadataBase: new URL('https://limarsteknik.com'),
     title: {
       default: t.title,
       template: `%s | PT. Limars Teknik Indonesia`
     },
-    description: t.description,
     keywords: t.keywords,
-    alternates: {
-      canonical: `/${locale}`,
-      languages: {
-        'id-ID': '/id',
-        'en-US': '/en',
-      },
-    },
-    openGraph: {
-      title: t.title,
-      description: t.description,
-      url: './',
-      siteName: 'PT. Limars Teknik Indonesia',
-      images: [
-        {
-          url: '/logo.png',
-          width: 800,
-          height: 600,
-          alt: 'Limars Teknik Logo',
-        },
-      ],
-      locale: locale === 'id' ? 'id_ID' : 'en_US',
-      type: 'website',
-    },
-    twitter: {
-      card: 'summary_large_image',
-      title: t.title,
-      description: t.description,
-      images: ['/logo.png'],
-      creator: '@limarstek',
-    },
     robots: {
       index: true,
       follow: true,

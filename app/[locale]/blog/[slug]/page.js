@@ -14,6 +14,9 @@ export function generateStaticParams() {
   );
 }
 
+import { constructMetadata } from '@/lib/seo';
+import BreadcrumbJsonLd from '@/components/BreadcrumbJsonLd';
+
 export async function generateMetadata({ params }) {
   const { slug, locale } = await params;
   const post = blogPosts.find((p) => p.slug === slug);
@@ -22,22 +25,16 @@ export async function generateMetadata({ params }) {
 
   const postData = post[locale];
 
-  return {
+  return constructMetadata({
     title: `${postData.title} | Limars Teknik Blog`,
     description: postData.excerpt,
-    openGraph: {
-      title: postData.title,
-      description: postData.excerpt,
-      type: 'article',
-      publishedTime: post.date,
-      authors: [post.author],
-    },
-    twitter: {
-      card: 'summary_large_image',
-      title: postData.title,
-      description: postData.excerpt,
-    },
-  };
+    path: `/blog/${slug}/`,
+    locale,
+    image: post.image,
+    type: 'article',
+    publishedTime: post.date,
+    authors: [post.author],
+  });
 }
 
 export default async function BlogPostPage({ params }) {
@@ -70,10 +67,15 @@ export default async function BlogPostPage({ params }) {
       name: 'PT. Limars Teknik Indonesia',
       logo: {
         '@type': 'ImageObject',
-        url: 'https://limarsteknik.co.id/logo.png', // Fallback URL
+        url: 'https://limarsteknik.com/logo.png', // Corrected domain
       },
     },
   };
+
+  const crumbs = [
+    { name: blogT.breadcrumbBlog || 'Blog', path: '/blog/' },
+    { name: postData.title, path: `/blog/${slug}/` }
+  ];
 
   return (
     <main className={styles.main}>
@@ -81,6 +83,7 @@ export default async function BlogPostPage({ params }) {
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
       />
+      <BreadcrumbJsonLd crumbs={crumbs} />
 
       <article className="container">
         <header className={styles.header}>

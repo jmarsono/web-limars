@@ -14,14 +14,24 @@ export async function generateStaticParams() {
   );
 }
 
+import { constructMetadata } from '../../../../lib/seo';
+import BreadcrumbJsonLd from '../../../../components/BreadcrumbJsonLd';
+
 export async function generateMetadata({ params }) {
   const { slug, locale } = await params;
   const service = services.find(s => s.slug === slug);
   if (!service) return { title: 'Service Not Found' };
-  return {
-    title: `${service.title[locale]} | PT. Limars Teknik Indonesia`,
-    description: service.shortDescription[locale],
-  };
+
+  const title = service.title[locale];
+  const desc = service.shortDescription[locale];
+
+  return constructMetadata({
+    title: `${title} | PT. Limars Teknik Indonesia`,
+    description: desc,
+    path: `/services/${slug}/`,
+    locale,
+    image: service.image,
+  });
 }
 
 export default async function ServiceDetailPage({ params }) {
@@ -37,29 +47,34 @@ export default async function ServiceDetailPage({ params }) {
   const jsonLd = {
     '@context': 'https://schema.org',
     '@type': 'Service',
-    serviceType: service.title.en, // Schema.org prefers default/en usually
+    serviceType: service.title[locale],
     provider: {
       '@type': 'LocalBusiness',
       name: 'PT. Limars Teknik Indonesia'
     },
-    description: service.shortDescription.en,
+    description: service.shortDescription[locale],
     areaServed: {
       '@type': 'Country',
       name: 'Indonesia'
     },
     hasOfferCatalog: {
       '@type': 'OfferCatalog',
-      name: service.title.en + ' Services',
+      name: locale === 'id' ? `Layanan ${service.title[locale]}` : `${service.title[locale]} Services`,
       itemListElement: service.features.map((featureObj, index) => ({
         '@type': 'Offer',
         itemOffered: {
           '@type': 'Service',
-          name: featureObj.en
+          name: featureObj[locale]
         },
         position: index + 1
       }))
     }
   };
+
+  const crumbs = [
+    { name: t('heroBadge'), path: '/services/' },
+    { name: service.title[locale], path: `/services/${slug}/` }
+  ];
 
   return (
     <>
@@ -67,6 +82,7 @@ export default async function ServiceDetailPage({ params }) {
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
       />
+      <BreadcrumbJsonLd crumbs={crumbs} />
       {/* Hero */}
       <section className={styles.hero}>
         <div className={styles.heroOverlay}></div>

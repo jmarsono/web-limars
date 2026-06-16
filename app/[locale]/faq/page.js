@@ -7,15 +7,20 @@ import { getMessages, setRequestLocale, getTranslations } from 'next-intl/server
 
 export const revalidate = 0; // Fresh data on D1 dynamic updates
 
+import { constructMetadata } from '../../../lib/seo';
+import BreadcrumbJsonLd from '../../../components/BreadcrumbJsonLd';
+
 export async function generateMetadata({ params }) {
   const { locale } = await params;
   const messages = await getMessages({ locale });
   const t = messages.SEO;
 
-  return {
-    title: `FAQ | PT. Limars Teknik Indonesia`,
-    description: t.faqDescription || 'Frequently Asked Questions about kitchen equipment manufacturing.',
-  };
+  return constructMetadata({
+    title: t.faqTitle,
+    description: t.faqDesc,
+    path: '/faq/',
+    locale,
+  });
 }
 
 export default async function FAQPage({ params }) {
@@ -69,12 +74,19 @@ export default async function FAQPage({ params }) {
     )
   };
 
+  const getTranslations = (await import('next-intl/server')).getTranslations;
+  const navT = await getTranslations({ locale, namespace: 'Navigation' });
+  const crumbs = [
+    { name: navT('faq'), path: '/faq/' }
+  ];
+
   return (
     <>
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
       />
+      <BreadcrumbJsonLd crumbs={crumbs} />
       <section className={styles.hero}>
         <div className={styles.heroOverlay}></div>
         <div className={`container ${styles.heroContent}`}>

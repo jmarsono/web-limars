@@ -4,15 +4,20 @@ import styles from './Services.module.css';
 
 import { getMessages, setRequestLocale, getTranslations } from 'next-intl/server';
 
+import { constructMetadata } from '../../../lib/seo';
+import BreadcrumbJsonLd from '../../../components/BreadcrumbJsonLd';
+
 export async function generateMetadata({ params }) {
   const { locale } = await params;
   const messages = await getMessages({ locale });
-  const t = messages.Navigation; // Using Navigation or a specific SEO entry
+  const t = messages.SEO;
 
-  return {
-    title: t.services,
-    description: 'Comprehensive services: restaurant kitchen sets, ducting systems, gas installation, well drilling, and electrical services.',
-  };
+  return constructMetadata({
+    title: t.servicesTitle,
+    description: t.servicesDesc,
+    path: '/services/',
+    locale,
+  });
 }
 
 export default async function ServicesPage({ params }) {
@@ -20,8 +25,13 @@ export default async function ServicesPage({ params }) {
   setRequestLocale(locale);
   const t = await getTranslations('Services');
 
+  const crumbs = [
+    { name: t('heroBadge'), path: '/services/' }
+  ];
+
   return (
     <>
+      <BreadcrumbJsonLd crumbs={crumbs} />
       {/* Hero */}
       <section className={styles.hero}>
         <div className={styles.heroOverlay}></div>

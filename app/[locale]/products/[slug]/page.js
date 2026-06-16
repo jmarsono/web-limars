@@ -19,6 +19,9 @@ export async function generateStaticParams() {
   );
 }
 
+import { constructMetadata } from '../../../../lib/seo';
+import BreadcrumbJsonLd from '../../../../components/BreadcrumbJsonLd';
+
 export async function generateMetadata({ params }) {
   const { slug, locale } = await params;
   const product = await getProductBySlug(slug);
@@ -27,10 +30,13 @@ export async function generateMetadata({ params }) {
   const name = product.name[locale] || product.name || '';
   const desc = product.shortDescription[locale] || product.shortDescription || '';
 
-  return {
+  return constructMetadata({
     title: `${name} | PT. Limars Teknik Indonesia`,
     description: desc,
-  };
+    path: `/products/${slug}/`,
+    locale,
+    image: product.image,
+  });
 }
 
 export default async function ProductDetailPage({ params }) {
@@ -60,18 +66,20 @@ export default async function ProductDetailPage({ params }) {
   const jsonLd = {
     '@context': 'https://schema.org',
     '@type': 'Product',
-    name: product.name['en'] || product.name || '',
-    description: product.description['en'] || product.description || '',
+    name: name,
+    description: desc,
     image: product.image.startsWith('http') ? product.image : `https://www.limarsteknik.com${product.image}`,
-    category: product.category['en'] || product.category || '',
+    category: category,
     brand: {
       '@type': 'Brand',
       name: 'Limars Teknik'
     },
     offers: {
       '@type': 'Offer',
-      availability: 'https://schema.org/InStock',
+      price: '0',
       priceCurrency: 'IDR',
+      url: `https://limarsteknik.com/${locale}/products/${slug}/`,
+      availability: 'https://schema.org/InStock',
       seller: {
         '@type': 'Organization',
         name: 'PT. Limars Teknik Indonesia'
@@ -79,12 +87,18 @@ export default async function ProductDetailPage({ params }) {
     }
   };
 
+  const crumbs = [
+    { name: t('breadcrumbProducts'), path: '/products/' },
+    { name: name, path: `/products/${slug}/` }
+  ];
+
   return (
     <>
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
       />
+      <BreadcrumbJsonLd crumbs={crumbs} />
       {/* Breadcrumb */}
       <section className={styles.breadcrumb}>
         <div className="container">

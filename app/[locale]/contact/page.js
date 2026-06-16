@@ -3,10 +3,15 @@
 import { useState, useRef } from 'react';
 import { useTranslations } from 'next-intl';
 import ReCAPTCHA from 'react-google-recaptcha';
+import BreadcrumbJsonLd from '@/components/BreadcrumbJsonLd';
 import styles from './Contact.module.css';
 
 export default function ContactPage() {
   const t = useTranslations('Contact');
+  const navT = useTranslations('Navigation');
+  const crumbs = [
+    { name: navT('contact'), path: '/contact/' }
+  ];
   const [formData, setFormData] = useState({
     name: '',
     email: '',
@@ -58,6 +63,7 @@ export default function ContactPage() {
 
   return (
     <>
+      <BreadcrumbJsonLd crumbs={crumbs} />
       <section className={styles.hero}>
         <div className={styles.heroOverlay}></div>
         <div className={`container ${styles.heroContent}`}>

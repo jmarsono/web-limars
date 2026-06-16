@@ -3,6 +3,7 @@ import { getProjects } from '../../../lib/db';
 import { projectCategories } from '../../../data/projects';
 import ProjectsClient from './ProjectsClient';
 import { setRequestLocale } from 'next-intl/server';
+import BreadcrumbJsonLd from '../../../components/BreadcrumbJsonLd';
 
 export const revalidate = 0; // Fresh data for D1 dynamic updates
 
@@ -11,8 +12,17 @@ export default async function ProjectsPage({ params }) {
   setRequestLocale(locale);
 
   const dbProjects = await getProjects();
+  const getTranslations = (await import('next-intl/server')).getTranslations;
+  const navT = await getTranslations({ locale, namespace: 'Navigation' });
+
+  const crumbs = [
+    { name: navT('projects'), path: '/projects/' }
+  ];
 
   return (
-    <ProjectsClient projects={dbProjects} projectCategories={projectCategories} />
+    <>
+      <BreadcrumbJsonLd crumbs={crumbs} />
+      <ProjectsClient projects={dbProjects} projectCategories={projectCategories} />
+    </>
   );
 }

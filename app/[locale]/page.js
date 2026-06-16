@@ -7,16 +7,26 @@ import Image from 'next/image';
 import { getMessages, setRequestLocale, getTranslations } from 'next-intl/server';
 import { getProducts, getProjects, getServices } from '../../lib/db';
 
+import { constructMetadata } from '../../lib/seo';
+import BreadcrumbJsonLd from '../../components/BreadcrumbJsonLd';
+
 export async function generateMetadata({ params }) {
   const { locale } = await params;
   const messages = await getMessages({ locale });
   const t = messages.SEO;
 
-  return {
-    title: {
-      absolute: t.homeTitle
-    },
+  const metadata = constructMetadata({
+    title: t.homeTitle,
     description: t.homeDescription,
+    path: '/',
+    locale,
+  });
+
+  return {
+    ...metadata,
+    title: {
+      absolute: t.homeTitle,
+    },
   };
 }
 
@@ -117,6 +127,7 @@ export default async function Home({ params }) {
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
       />
+      <BreadcrumbJsonLd crumbs={[]} />
       {/* ===== HERO ===== */}
       <section className={styles.hero}>
         <div className={styles.heroOverlay}></div>

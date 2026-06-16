@@ -3,20 +3,20 @@ import { blogPosts } from '@/data/blogPosts';
 import BlogCard from '@/components/BlogCard';
 import styles from './page.module.css';
 
+import { constructMetadata } from '../../../lib/seo';
+import BreadcrumbJsonLd from '../../../components/BreadcrumbJsonLd';
+
 export async function generateMetadata({ params }) {
   const { locale } = await params;
   const messages = await getMessages({ locale });
-  const t = messages.Blog;
+  const t = messages.SEO;
 
-  return {
-    title: `${t.heroTitle} | PT. Limars Teknik Indonesia`,
-    description: t.heroSubtitle,
-    openGraph: {
-      title: t.heroTitle,
-      description: t.heroSubtitle,
-      type: 'website',
-    },
-  };
+  return constructMetadata({
+    title: t.blogTitle,
+    description: t.blogDesc,
+    path: '/blog/',
+    locale,
+  });
 }
 
 export default async function BlogPage({ params }) {
@@ -28,8 +28,14 @@ export default async function BlogPage({ params }) {
   // In a real app, you might filter or sort posts here
   const posts = blogPosts;
 
+  const navT = messages.Navigation;
+  const crumbs = [
+    { name: navT.blog || 'Blog', path: '/blog/' }
+  ];
+
   return (
     <main className={styles.main}>
+      <BreadcrumbJsonLd crumbs={crumbs} />
       {/* Hero Section */}
       <section className={styles.hero}>
         <div className={styles.heroOverlay}></div>

@@ -1,10 +1,15 @@
 'use client';
 
 import { useTranslations } from 'next-intl';
+import BreadcrumbJsonLd from '@/components/BreadcrumbJsonLd';
 import styles from './page.module.css';
 
 export default function PrivacyPolicyPage() {
   const t = useTranslations('PrivacyPolicy');
+  const navT = useTranslations('Navigation');
+  const crumbs = [
+    { name: navT('privacyPolicy'), path: '/privacy-policy/' }
+  ];
 
   const sections = [
     { id: 'informationCollection', key: 'sections.informationCollection' },
@@ -17,6 +22,7 @@ export default function PrivacyPolicyPage() {
 
   return (
     <>
+      <BreadcrumbJsonLd crumbs={crumbs} />
       {/* Hero Section */}
       <section className={styles.hero}>
         <div className={styles.heroOverlay}></div>
