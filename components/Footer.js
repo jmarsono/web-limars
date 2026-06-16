@@ -23,7 +23,7 @@ const serviceLinks = [
 
 export default function Footer() {
   const t = useTranslations();
-  
+
   return (
     <footer className={styles.footer}>
       <div className={`container ${styles.footerContainer}`}>
@@ -84,19 +84,19 @@ export default function Footer() {
             <h4 className={styles.footerTitle}>{t('Footer.contact')}</h4>
             <ul className={styles.contactList}>
               <li>
-                <span className={styles.contactIcon}>📍</span>
+                <span className={styles.contactIcon} aria-hidden="true">📍</span>
                 <span>Jl. Raden Saleh II/6 No. 70C, DKI Jakarta, Indonesia</span>
               </li>
               <li>
-                <span className={styles.contactIcon}>📞</span>
+                <span className={styles.contactIcon} aria-hidden="true">📞</span>
                 <span>+62 812 1267 1289</span>
               </li>
               <li>
-                <span className={styles.contactIcon}>✉️</span>
+                <span className={styles.contactIcon} aria-hidden="true">✉️</span>
                 <span>info@limarsteknik.com</span>
               </li>
               <li>
-                <span className={styles.contactIcon}>💬</span>
+                <span className={styles.contactIcon} aria-hidden="true">💬</span>
                 <a href="https://wa.me/6281212671289" target="_blank" rel="noopener noreferrer">
                   WhatsApp: +62 812 1267 1289
                 </a>

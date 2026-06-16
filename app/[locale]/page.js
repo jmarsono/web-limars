@@ -38,11 +38,11 @@ const whyChooseUs = [
 
 const testimonials = [
   { name: 'Manager', company: 'Al-Jazeerah Cikini', key: '1', avatar: 'AJ' },
-  { name: 'Head Chef', company: 'Nanamia Pizzeria Yogyakarta', key: '2', avatar: 'NP' },
+  { name: 'Head Chef', company: 'Namamia Pizzeria Yogyakarta', key: '2', avatar: 'NP' },
   { name: 'Director', company: 'Born-Ga', key: '3', avatar: 'BG' },
 ];
 
-const clientLogos = ['Al-Jazeerah Cikini', 'Royal Al-Jazeerah', 'Central Al-Jazeerah', 'Al-Jazeerah Polonia', 'Zahra Al-Jazeerah', 'Nanamia Pizzeria Yogyakarta', 'Born-Ga', 'Dashi Chazuke Zenraku'];
+const clientLogos = ['Al-Jazeerah Cikini', 'Royal Al-Jazeerah', 'Central Al-Jazeerah', 'Al-Jazeerah Polonia', 'Zahra Al-Jazeerah', 'Namamia Pizzeria Yogyakarta', 'Born-Ga', 'Dashi Chazuke Zenraku'];
 
 export default async function Home({ params }) {
   const { locale } = await params;
@@ -161,9 +161,9 @@ export default async function Home({ params }) {
               <Link href="/about" className="btn btn-outline">{t('companyBrief.cta')}</Link>
             </div>
             <div className={styles.briefImage}>
-              <div style={{ position: 'relative', width: '100%', height: '100%', minHeight: '300px', borderRadius: '15px', overflow: 'hidden' }}>
-                <Image 
-                  src="/images/facility.png" 
+              <div style={{ position: 'relative', width: '100%', minHeight: '300px', borderRadius: '15px', overflow: 'hidden' }}>
+                <Image
+                  src="/images/facility.png"
                   alt={t('companyBrief.imgCaption')}
                   fill
                   style={{ objectFit: 'cover' }}
@@ -193,9 +193,9 @@ export default async function Home({ params }) {
                   <div className={styles.productImage}>
                     <div style={{ position: 'relative', width: '100%', aspectRatio: '4/3', overflow: 'hidden', backgroundColor: '#f0f0f0' }}>
                       {imageUrl && (
-                        <Image 
-                          src={imageUrl} 
-                          alt={name} 
+                        <Image
+                          src={imageUrl}
+                          alt={name}
                           fill
                           style={{ objectFit: 'cover' }}
                         />
@@ -279,11 +279,11 @@ export default async function Home({ params }) {
               return (
                 <div key={project.id} className={styles.projectCard}>
                   <div className={styles.projectImage}>
-                    <div style={{ position: 'relative', width: '100%', height: '100%', minHeight: '250px', overflow: 'hidden' }}>
+                    <div style={{ position: 'relative', width: '100%', minHeight: '250px', overflow: 'hidden' }}>
                       {imageUrl && (
-                        <Image 
-                          src={imageUrl} 
-                          alt={name} 
+                        <Image
+                          src={imageUrl}
+                          alt={name}
                           fill
                           style={{ objectFit: 'cover' }}
                         />

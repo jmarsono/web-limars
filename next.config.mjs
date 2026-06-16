@@ -7,7 +7,7 @@ const nextConfig = {
   /* config options here */
   reactCompiler: true,
   images: {
-    unoptimized: true,
+    unoptimized: false,
   },
   trailingSlash: true,
   env: {

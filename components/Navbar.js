@@ -1,6 +1,6 @@
 'use client';
 
-import { useState, useEffect } from 'react';
+import { useState, useEffect, useRef } from 'react';
 import { Link } from '../i18n/routing';
 import Image from 'next/image';
 import styles from './Navbar.module.css';
@@ -9,7 +9,7 @@ import LanguageSwitcher from './LanguageSwitcher';
 
 export default function Navbar() {
   const t = useTranslations('Navigation');
-  
+
   const navLinks = [
     { href: '/', label: t('home') },
     { href: '/about', label: t('about') },
@@ -23,6 +23,7 @@ export default function Navbar() {
   const [scrolled, setScrolled] = useState(false);
   const [mobileOpen, setMobileOpen] = useState(false);
   const [activeDropdown, setActiveDropdown] = useState(null);
+  const dropdownRefs = useRef([]);
 
   useEffect(() => {
     const handleScroll = () => setScrolled(window.scrollY > 50);
@@ -38,6 +39,29 @@ export default function Navbar() {
   const toggleDropdown = (idx) => {
     setActiveDropdown(activeDropdown === idx ? null : idx);
   };
+
+  const handleKeyDown = (e, idx) => {
+    if (e.key === 'Enter' || e.key === ' ') {
+      e.preventDefault();
+      toggleDropdown(idx);
+    } else if (e.key === 'Escape' && activeDropdown === idx) {
+      setActiveDropdown(null);
+    }
+  };
+
+  // Handle click outside to close dropdown (optional)
+  useEffect(() => {
+    const handleClickOutside = (e) => {
+      if (activeDropdown !== null) {
+        // Check if click is outside the navbar
+        if (!e.target.closest('nav')) {
+          setActiveDropdown(null);
+        }
+      }
+    };
+    document.addEventListener('mousedown', handleClickOutside);
+    return () => document.removeEventListener('mousedown', handleClickOutside);
+  }, [activeDropdown]);
 
   return (
     <nav className={`${styles.navbar} ${scrolled ? styles.scrolled : ''}`}>
@@ -65,14 +89,20 @@ export default function Navbar() {
                   <button
                     className={styles.navLink}
                     onClick={() => toggleDropdown(idx)}
+                    onKeyDown={(e) => handleKeyDown(e, idx)}
                     aria-expanded={activeDropdown === idx}
+                    aria-controls={`dropdown-${idx}`}
                   >
                     {link.label}
                     <svg className={`${styles.chevron} ${activeDropdown === idx ? styles.chevronOpen : ''}`} width="10" height="6" viewBox="0 0 10 6" fill="none">
                       <path d="M1 1L5 5L9 1" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
                     </svg>
                   </button>
-                  <div className={`${styles.dropdown} ${activeDropdown === idx ? styles.dropdownOpen : ''}`}>
+                  <div
+                    id={`dropdown-${idx}`}
+                    className={`${styles.dropdown} ${activeDropdown === idx ? styles.dropdownOpen : ''}`}
+                    ref={(el) => { dropdownRefs.current[idx] = el; }}
+                  >
                     {link.dropdown.map((subLink, subIdx) => (
                       <Link
                         key={subIdx}
