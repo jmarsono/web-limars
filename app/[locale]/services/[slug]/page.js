@@ -117,8 +117,9 @@ export default async function ServiceDetailPage({ params }) {
               <div style={{ position: 'relative', width: '100%', height: '100%', minHeight: '350px', backgroundColor: '#f0f0f0', borderRadius: '15px', overflow: 'hidden' }}>
                 <Image 
                   src={service.image} 
-                  alt={service.title[locale]} 
+                  alt={`${service.title[locale]} - Jasa Instalasi & Fabrikasi PT Limars Teknik Indonesia`}
                   fill
+                  sizes="(max-width: 768px) 100vw, 50vw"
                   style={{ objectFit: 'cover' }}
                 />
               </div>

@@ -68,7 +68,7 @@ export default function Navbar() {
       <div className={`container ${styles.navContainer}`}>
         <Link href="/" className={styles.logo} onClick={() => setMobileOpen(false)}>
           <div className={styles.logoIcon}>
-            <Image src="/logo.png" alt="Limars Teknik Logo" width={42} height={42} />
+            <Image src="/logo.png" alt="Limars Teknik Logo" width={42} height={42} priority={true} />
           </div>
           <div className={styles.logoText}>
             <span className={styles.logoName}>LIMARS TEKNIK</span>

@@ -5,7 +5,7 @@ export default function robots() {
     rules: {
       userAgent: '*',
       allow: '/',
-      disallow: ['/api/', '/admin/'], // Add any private paths here
+      disallow: ['/api/', '/admin/', '/*/admin/'], // Block API and admin paths (including localized ones)
     },
     sitemap: 'https://limarsteknik.com/sitemap.xml',
   };

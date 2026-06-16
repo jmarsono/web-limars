@@ -5,7 +5,8 @@ import { useState } from 'react';
 import Image from 'next/image';
 import styles from './Projects.module.css';
 import { useLocale, useTranslations } from 'next-intl';
-import Lightbox from 'yet-another-react-lightbox';
+import dynamic from 'next/dynamic';
+const Lightbox = dynamic(() => import('yet-another-react-lightbox'), { ssr: false });
 import 'yet-another-react-lightbox/styles.css';
 
 export default function ProjectsClient({ projects, projectCategories }) {
@@ -68,8 +69,9 @@ export default function ProjectsClient({ projects, projectCategories }) {
                       {project.image && (
                         <Image 
                           src={project.image} 
-                          alt={name} 
+                          alt={`${name} - Proyek Instalasi Kitchen Set Stainless Steel PT Limars Teknik Indonesia`}
                           fill
+                          sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                           style={{ objectFit: 'cover' }}
                         />
                       )}
@@ -103,8 +105,9 @@ export default function ProjectsClient({ projects, projectCategories }) {
                 {selectedProject.image && (
                   <Image 
                     src={selectedProject.image} 
-                    alt={selectedProject.name[locale] || selectedProject.name || ''} 
+                    alt={`${selectedProject.name[locale] || selectedProject.name || ''} - Proyek Fabrikasi Limars Teknik`}
                     fill
+                    sizes="(max-width: 768px) 100vw, 50vw"
                     style={{ objectFit: 'cover' }}
                   />
                 )}

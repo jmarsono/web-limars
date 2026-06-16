@@ -173,10 +173,11 @@ export default async function Home({ params }) {
             </div>
             <div className={styles.briefImage}>
               <div style={{ position: 'relative', width: '100%', minHeight: '300px', borderRadius: '15px', overflow: 'hidden' }}>
-                <Image
-                  src="/images/facility.png"
-                  alt={t('companyBrief.imgCaption')}
+                <Image 
+                  src="/images/facility.png" 
+                  alt="Fasilitas Produksi PT Limars Teknik Indonesia - Fabrikasi Kitchen Set Stainless Steel Jakarta"
                   fill
+                  sizes="(max-width: 768px) 100vw, 50vw"
                   style={{ objectFit: 'cover' }}
                 />
               </div>
@@ -206,8 +207,9 @@ export default async function Home({ params }) {
                       {imageUrl && (
                         <Image
                           src={imageUrl}
-                          alt={name}
+                          alt={`${name} - Peralatan Dapur Komersial Limars Teknik Jakarta`}
                           fill
+                          sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 25vw"
                           style={{ objectFit: 'cover' }}
                         />
                       )}
@@ -294,8 +296,9 @@ export default async function Home({ params }) {
                       {imageUrl && (
                         <Image
                           src={imageUrl}
-                          alt={name}
+                          alt={`${name} - Proyek Fabrikasi PT Limars Teknik Indonesia`}
                           fill
+                          sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                           style={{ objectFit: 'cover' }}
                         />
                       )}

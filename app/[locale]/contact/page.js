@@ -2,7 +2,8 @@
 
 import { useState, useRef } from 'react';
 import { useTranslations } from 'next-intl';
-import ReCAPTCHA from 'react-google-recaptcha';
+import dynamic from 'next/dynamic';
+const ReCAPTCHA = dynamic(() => import('react-google-recaptcha'), { ssr: false });
 import BreadcrumbJsonLd from '@/components/BreadcrumbJsonLd';
 import styles from './Contact.module.css';
 

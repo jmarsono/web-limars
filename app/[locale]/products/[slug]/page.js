@@ -115,7 +115,11 @@ export default async function ProductDetailPage({ params }) {
         <div className="container">
           <div className={styles.detailGrid}>
             <div className={styles.imageSection}>
-              <ProductLightbox src={product.image} alt={name} />
+              <ProductLightbox
+                src={product.image}
+                alt={`${name} - Peralatan Dapur Komersial PT Limars Teknik Indonesia`}
+                priority={true}
+              />
             </div>
             <div className={styles.infoSection}>
               <span className={styles.category}>{category}</span>

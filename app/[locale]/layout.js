@@ -79,6 +79,11 @@ export default async function RootLayout({ children, params }) {
 
   return (
     <html lang={locale}>
+      <head>
+        <link rel="preconnect" href="https://www.google.com" crossOrigin="anonymous" />
+        <link rel="preconnect" href="https://www.gstatic.com" crossOrigin="anonymous" />
+        <link rel="preconnect" href="https://www.googletagmanager.com" crossOrigin="anonymous" />
+      </head>
       <body className={`${inter.variable} ${poppins.variable}`}>
         <NextIntlClientProvider messages={messages}>
           <Navbar />

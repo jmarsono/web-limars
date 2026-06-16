@@ -66,8 +66,9 @@ export default function ProductsClient({ products, productCategories }) {
                       {product.image && (
                         <Image 
                           src={product.image} 
-                          alt={name} 
+                          alt={`${name} - Jual Peralatan Dapur Komersial PT Limars Teknik Indonesia`}
                           fill
+                          sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                           style={{ objectFit: 'cover' }}
                         />
                       )}

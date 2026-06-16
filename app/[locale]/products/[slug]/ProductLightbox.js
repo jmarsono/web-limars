@@ -2,10 +2,11 @@
 
 import { useState } from 'react';
 import Image from 'next/image';
-import Lightbox from 'yet-another-react-lightbox';
+import dynamic from 'next/dynamic';
+const Lightbox = dynamic(() => import('yet-another-react-lightbox'), { ssr: false });
 import 'yet-another-react-lightbox/styles.css';
 
-export default function ProductLightbox({ src, alt }) {
+export default function ProductLightbox({ src, alt, priority = false }) {
   const [open, setOpen] = useState(false);
 
   return (
@@ -18,6 +19,8 @@ export default function ProductLightbox({ src, alt }) {
           src={src} 
           alt={alt} 
           fill
+          priority={priority}
+          sizes="(max-width: 768px) 100vw, 50vw"
           style={{ objectFit: 'contain', padding: '1rem' }}
         />
       </div>
