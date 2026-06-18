@@ -109,9 +109,22 @@
 }
 
 .infoIcon {
-  font-size: 1.5rem;
+  color: var(--light-blue);
   flex-shrink: 0;
-  margin-top: -4px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 1px;
+}
+
+.infoLink {
+  color: rgba(255, 255, 255, 0.85);
+  text-decoration: none;
+  transition: color var(--transition-fast);
+}
+
+.infoLink:hover {
+  color: var(--light-blue);
 }
 
 .infoTitle,
