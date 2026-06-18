@@ -48,3 +48,7 @@ next-env.d.ts
 
 # scratch / temp scripts
 /scratch/
+
+# deployment logs
+/deployments.txt
+
