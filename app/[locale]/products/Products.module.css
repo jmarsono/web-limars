@@ -155,14 +155,15 @@
 }
 
 .productLink {
-  color: var(--light-blue);
+  color: var(--dark-blue);
   font-weight: 600;
   font-size: 0.875rem;
-  transition: color var(--transition-fast);
+  transition: all var(--transition-fast);
+  text-decoration: underline transparent;
 }
 
 .productCard:hover .productLink {
-  color: var(--dark-blue);
+  text-decoration: underline;
 }
 
 .empty {

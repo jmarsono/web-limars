@@ -124,7 +124,7 @@
 
 .sectionTag {
   display: inline-block;
-  color: var(--light-blue);
+  color: var(--dark-blue);
   font-weight: 600;
   font-size: 0.85rem;
   text-transform: uppercase;
@@ -246,14 +246,15 @@
 }
 
 .productLink {
-  color: var(--light-blue);
+  color: var(--dark-blue);
   font-weight: 600;
   font-size: 0.85rem;
-  transition: color var(--transition-fast);
+  transition: all var(--transition-fast);
+  text-decoration: underline transparent;
 }
 
 .productCard:hover .productLink {
-  color: var(--dark-blue);
+  text-decoration: underline;
 }
 
 .sectionCta {
@@ -308,13 +309,15 @@
 }
 
 .serviceLink {
-  color: var(--light-blue);
+  color: var(--dark-blue);
   font-weight: 600;
   font-size: 0.85rem;
+  transition: all var(--transition-fast);
+  text-decoration: underline transparent;
 }
 
 .serviceCard:hover .serviceLink {
-  color: var(--dark-blue);
+  text-decoration: underline;
 }
 
 /* ===== WHY CHOOSE US ===== */

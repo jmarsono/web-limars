@@ -174,7 +174,7 @@ export default async function Home({ params }) {
             <div className={styles.briefImage}>
               <div style={{ position: 'relative', width: '100%', minHeight: '300px', borderRadius: '15px', overflow: 'hidden' }}>
                 <Image 
-                  src="/images/facility.png" 
+                  src="/images/facility.webp" 
                   alt="Fasilitas Produksi PT Limars Teknik Indonesia - Fabrikasi Kitchen Set Stainless Steel Jakarta"
                   fill
                   sizes="(max-width: 768px) 100vw, 50vw"

@@ -179,7 +179,7 @@ p { margin-bottom: 1rem; }
 
 .btn-primary {
   background: var(--light-blue);
-  color: var(--white);
+  color: var(--dark-blue);
 }
 
 .btn-primary:hover {

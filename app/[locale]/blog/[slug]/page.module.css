@@ -11,16 +11,17 @@
 
 .backLink {
   display: inline-block;
-  color: var(--light-blue);
+  color: #1b5ba4;
   font-weight: 600;
-  text-decoration: none;
+  text-decoration: underline transparent;
   margin-bottom: 32px;
   font-size: 0.9rem;
-  transition: transform var(--transition-fast);
+  transition: all var(--transition-fast);
 }
 
 .backLink:hover {
   transform: translateX(-5px);
+  text-decoration: underline;
 }
 
 .meta {

@@ -86,7 +86,7 @@
 
 .serviceSubtitle {
   display: block;
-  color: var(--light-blue);
+  color: #1b5ba4;
   font-size: 0.85rem;
   font-weight: 600;
   margin-bottom: 12px;
@@ -116,9 +116,15 @@
 }
 
 .serviceLink {
-  color: var(--light-blue);
+  color: var(--dark-blue);
   font-weight: 600;
   font-size: 0.9rem;
+  transition: all var(--transition-fast);
+  text-decoration: underline transparent;
+}
+
+.serviceCard:hover .serviceLink {
+  text-decoration: underline;
 }
 
 /* CTA */

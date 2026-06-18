@@ -25,7 +25,7 @@ export const products = [
       fuelType: { en: 'LPG / Natural Gas', id: 'LPG / Gas Alam' },
       dimensions: '1200 x 800 x 850 mm',
     },
-    image: '/images/products/wok-range.png',
+    image: '/images/products/wok-range.webp',
     featured: true,
   },
   {
@@ -54,7 +54,7 @@ export const products = [
       fuelType: { en: 'LPG / Natural Gas', id: 'LPG / Gas Alam' },
       dimensions: '900 x 800 x 850 mm',
     },
-    image: '/images/products/kwali-range.png',
+    image: '/images/products/kwali-range.webp',
     featured: true,
   },
   {
@@ -83,7 +83,7 @@ export const products = [
       fuelType: { en: 'LPG / Natural Gas', id: 'LPG / Gas Alam' },
       dimensions: '1800 x 900 x 850 mm',
     },
-    image: '/images/products/chinese-cooking-range.png',
+    image: '/images/products/chinese-cooking-range.webp',
   },
   {
     id: 4,
@@ -111,7 +111,7 @@ export const products = [
       fuelType: { en: 'Gas / Wood', id: 'Gas / Kayu Bakar' },
       dimensions: '1500 x 1200 x 1800 mm',
     },
-    image: '/images/products/pizza-oven.png',
+    image: '/images/products/pizza-oven.webp',
     featured: true,
   },
   {
@@ -139,7 +139,7 @@ export const products = [
       fuelType: { en: 'Gas / Charcoal', id: 'Gas / Arang' },
       dimensions: '800 x 800 x 1100 mm',
     },
-    image: '/images/products/tandoor-oven.png',
+    image: '/images/products/tandoor-oven.webp',
   },
   {
     id: 6,
@@ -166,7 +166,7 @@ export const products = [
       fuelType: { en: 'Wood / Gas', id: 'Kayu Bakar / Gas' },
       dimensions: { en: 'Custom', id: 'Sesuai Pesanan' },
     },
-    image: '/images/products/brick-oven.png',
+    image: '/images/products/brick-oven.webp',
   },
   {
     id: 7,
@@ -194,7 +194,7 @@ export const products = [
       power: { en: 'Electric / Gas', id: 'Listrik / Gas' },
       dimensions: '800 x 700 x 1500 mm',
     },
-    image: '/images/products/convection-oven.png',
+    image: '/images/products/convection-oven.webp',
     featured: true,
   },
   {
@@ -223,7 +223,7 @@ export const products = [
       power: { en: 'Electric / Gas', id: 'Listrik / Gas' },
       dimensions: '1200 x 900 x 1600 mm',
     },
-    image: '/images/products/deck-oven.png',
+    image: '/images/products/deck-oven.webp',
   },
   {
     id: 9,
@@ -251,7 +251,7 @@ export const products = [
       power: { en: 'Electric / Gas', id: 'Listrik / Gas' },
       dimensions: '900 x 800 x 1800 mm',
     },
-    image: '/images/products/combi-oven.png',
+    image: '/images/products/combi-oven.webp',
     featured: true,
   },
   {
@@ -278,7 +278,7 @@ export const products = [
       surfaceArea: '600 x 400 mm - 1200 x 600 mm',
       power: { en: 'Gas / Electric', id: 'Gas / Listrik' },
     },
-    image: '/images/products/gas-griddle.png',
+    image: '/images/products/gas-griddle.webp',
   },
   {
     id: 11,
@@ -304,7 +304,7 @@ export const products = [
       capacity: { en: '8-25 Liters', id: '8-25 Liter' },
       power: { en: 'Gas / Electric', id: 'Gas / Listrik' },
     },
-    image: '/images/products/gas-deep-fryer.png',
+    image: '/images/products/gas-deep-fryer.webp',
   },
   {
     id: 12,
@@ -330,7 +330,7 @@ export const products = [
       pans: { en: '3-6 GN Pans', id: '3-6 Nampan GN' },
       power: { en: 'Electric', id: 'Listrik' },
     },
-    image: '/images/products/hotel-bain-marie.png',
+    image: '/images/products/hotel-bain-marie.webp',
   },
   {
     id: 13,
@@ -357,7 +357,7 @@ export const products = [
       features: { en: 'Sinks, Knock Boxes, Ice Bins', id: 'Wastafel, Knock Box, Tempat Es' },
       dimensions: { en: 'Customizable per Cafe Space', id: 'Menyesuaikan Ruang Kafe' },
     },
-    image: '/images/products/coffee-bar-counter.png',
+    image: '/images/products/coffee-bar-counter.webp',
     featured: true,
   },
   {
@@ -385,7 +385,7 @@ export const products = [
       temperatureRange: '30°C - 85°C',
       power: { en: 'Electric', id: 'Listrik' },
     },
-    image: '/images/products/pastry-display-warmer.png',
+    image: '/images/products/pastry-display-warmer.webp',
   },
   {
     id: 15,
@@ -412,7 +412,7 @@ export const products = [
       temperatureControl: { en: 'Digital Precision Thermostat', id: 'Termostat Digital Presisi' },
       power: { en: 'Electric', id: 'Listrik' },
     },
-    image: '/images/products/automatic-water-boiler.png',
+    image: '/images/products/automatic-water-boiler.webp',
   },
   {
     id: 16,
@@ -439,7 +439,7 @@ export const products = [
       features: { en: 'High Backsplash, Adjustable Bullet Feet', id: 'Pelindung Percikan Tinggi, Kaki-kaki yang Dapat Disetel' },
       dimensions: { en: 'Custom Sizes Available', id: 'Tersedia Ukuran Kustom' }
     },
-    image: '/images/products/stainless-sink-table.png',
+    image: '/images/products/stainless-sink-table.webp',
   }
 ];
 

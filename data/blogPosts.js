@@ -78,7 +78,7 @@ export const blogPosts = [
     date: '2026-06-16',
     author: 'SEO Team',
     category: 'Buying Guide',
-    image: '/images/products/pizza-oven.png',
+    image: '/images/products/pizza-oven.webp',
     tags: ['oven pizza', 'dapur restoran', 'peralatan komersial'],
     id: {
       title: 'Cara Memilih Oven Pizza Komersial untuk Dapur Restoran Anda',
@@ -173,7 +173,7 @@ export const blogPosts = [
     date: '2026-06-16',
     author: 'Tech Advisor',
     category: 'Service Guide',
-    image: '/images/services/gas-installation.png',
+    image: '/images/services/gas-installation.webp',
     tags: ['instalasi gas', 'biaya dapur', 'keselamatan dapur'],
     id: {
       title: 'Berapa Biaya Instalasi Gas Dapur Restoran di Jakarta?',
@@ -337,7 +337,7 @@ export const blogPosts = [
     date: '2026-06-15',
     author: 'Chef Consultant',
     category: 'Equipment Guide',
-    image: '/images/products/wok-range.png',
+    image: '/images/products/wok-range.webp',
     tags: ['wok range', 'kwali range', 'kompor komersial'],
     id: {
       title: 'Perbedaan Wok Range dan Kwali Range: Mana yang Tepat?',
@@ -467,7 +467,7 @@ export const blogPosts = [
     date: '2026-06-15',
     author: 'Maintenance Lead',
     category: 'Maintenance',
-    image: '/images/services/kitchen-set.png',
+    image: '/images/services/kitchen-set.webp',
     tags: ['perawatan stainless', 'kitchen set', 'kebersihan dapur'],
     id: {
       title: 'Tips Merawat Kitchen Set Stainless Steel agar Tahan Lama',
@@ -543,7 +543,7 @@ export const blogPosts = [
     date: '2026-06-15',
     author: 'Ventilation Expert',
     category: 'Engineering Guide',
-    image: '/images/services/ducting.png',
+    image: '/images/services/ducting.webp',
     tags: ['ducting dapur', 'sistem exhaust', 'ventilasi restoran'],
     id: {
       title: 'Panduan Lengkap Sistem Ducting Dapur Komersial',

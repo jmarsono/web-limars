@@ -13,12 +13,13 @@
 }
 
 .breadcrumb a {
-  color: var(--light-blue);
+  color: #1b5ba4;
   font-weight: 500;
 }
 
 .breadcrumb a:hover {
   color: var(--dark-blue);
+  text-decoration: underline;
 }
 
 .current {
@@ -55,8 +56,8 @@
 
 .category {
   display: inline-block;
-  background: rgba(91, 164, 217, 0.1);
-  color: var(--light-blue);
+  background: rgba(27, 58, 92, 0.08);
+  color: var(--dark-blue);
   padding: 6px 16px;
   border-radius: 50px;
   font-size: 0.8rem;
@@ -160,9 +161,15 @@
 }
 
 .relatedLink {
-  color: var(--light-blue);
+  color: var(--dark-blue);
   font-weight: 600;
   font-size: 0.85rem;
+  transition: all var(--transition-fast);
+  text-decoration: underline transparent;
+}
+
+.relatedCard:hover .relatedLink {
+  text-decoration: underline;
 }
 
 /* Responsive */
@@ -191,13 +198,12 @@
 }
 
 .serviceLink {
-  color: var(--light-blue);
+  color: var(--dark-blue);
   font-weight: 600;
-  text-decoration: none;
-  transition: color var(--transition-fast);
+  text-decoration: underline transparent;
+  transition: all var(--transition-fast);
 }
 
 .serviceLink:hover {
-  color: var(--dark-blue);
   text-decoration: underline;
 }

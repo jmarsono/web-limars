@@ -2,7 +2,7 @@ export const services = [
   {
     id: 1,
     slug: 'kitchen-sets',
-    image: '/images/services/kitchen-set.png',
+    image: '/images/services/kitchen-set.webp',
     title: {
       en: 'Restaurant Kitchen Set',
       id: 'Jasa Kitchen Set Restoran Jakarta'
@@ -39,7 +39,7 @@ export const services = [
   {
     id: 2,
     slug: 'ducting',
-    image: '/images/services/ducting.png',
+    image: '/images/services/ducting.webp',
     title: {
       en: 'Ducting Systems',
       id: 'Jasa Ducting Restoran Jakarta'
@@ -76,7 +76,7 @@ export const services = [
   {
     id: 3,
     slug: 'gas-installation',
-    image: '/images/services/gas-installation.png',
+    image: '/images/services/gas-installation.webp',
     title: {
       en: 'Gas Installation',
       id: 'Instalasi Gas Dapur Komersial Jakarta'
@@ -113,7 +113,7 @@ export const services = [
   {
     id: 4,
     slug: 'well-drilling',
-    image: '/images/services/well-drilling.png',
+    image: '/images/services/well-drilling.webp',
     title: {
       en: 'Well Drilling',
       id: 'Jasa Pengeboran Sumur Jakarta'
@@ -150,7 +150,7 @@ export const services = [
   {
     id: 5,
     slug: 'electrical',
-    image: '/images/services/electrical.png',
+    image: '/images/services/electrical.webp',
     title: {
       en: 'Electrical Services',
       id: 'Jasa Instalasi Listrik Restoran Jakarta'

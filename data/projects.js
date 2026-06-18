@@ -1,7 +1,7 @@
 export const projects = [
   {
     id: 1,
-    image: '/images/projects/project-1-new.png',
+    image: '/images/projects/project-1-new.webp',
     name: {
       en: 'Royal Al-Jazeerah Kitchen Renovation',
       id: 'Renovasi Dapur Royal Al-Jazeerah'
@@ -26,7 +26,7 @@ export const projects = [
   },
   {
     id: 2,
-    image: '/images/projects/project-2-new.png',
+    image: '/images/projects/project-2-new.webp',
     name: {
       en: 'Central Al-Jazeerah Traditional Arab Bread Oven',
       id: 'Pembuatan Oven Roti Arab Tradisional Central Al-Jazeerah'
@@ -51,7 +51,7 @@ export const projects = [
   },
   {
     id: 3,
-    image: '/images/projects/project-3-new.png',
+    image: '/images/projects/project-3-new.webp',
     name: {
       en: 'Al-Jazeerah Polonia Traditional Arab Bread Oven',
       id: 'Pembuatan Oven Roti Tradisional Arab Al-Jazeerah Polonia'
@@ -76,7 +76,7 @@ export const projects = [
   },
   {
     id: 4,
-    image: '/images/projects/project-4-new.png',
+    image: '/images/projects/project-4-new.webp',
     name: {
       en: 'Nanamia Pizzeria Yogyakarta Traditional Italian Pizza Oven',
       id: 'Proyek Oven Pizza Tradisional Itali Nanamia Pizzeria Yogyakarta'
@@ -100,7 +100,7 @@ export const projects = [
   },
   {
     id: 5,
-    image: '/images/projects/project-5-new.png',
+    image: '/images/projects/project-5-new.webp',
     name: {
       en: 'Zahra Al-Jazeerah Traditional Arab Bread Oven',
       id: 'Pembuatan Oven Roti Arab Tradisional Zahra Al-Jazeerah'
@@ -124,7 +124,7 @@ export const projects = [
   },
   {
     id: 6,
-    image: '/images/projects/project-6-new.png',
+    image: '/images/projects/project-6-new.webp',
     name: {
       en: 'Born-Ga Combi Oven Setup',
       id: 'Pengaturan Oven Combi Born-Ga'
@@ -168,7 +168,7 @@ export const projects = [
       { en: 'Heat testing', id: 'Pengujian panas' },
       { en: 'Traditional finishing', id: 'Penyelesaian tradisional' }
     ],
-    image: '/images/projects/project-7-new.png',
+    image: '/images/projects/project-7-new.webp',
   },
   {
     id: 8,
@@ -192,7 +192,7 @@ export const projects = [
       { en: 'Structural fabrication', id: 'Fabrikasi struktural' },
       { en: 'Safety and smoke testing', id: 'Pengujian keselamatan dan asap' }
     ],
-    image: '/images/projects/project-8-new.png',
+    image: '/images/projects/project-8-new.webp',
   },
 ];
 
