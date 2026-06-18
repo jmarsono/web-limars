@@ -3,7 +3,7 @@ import nodemailer from 'nodemailer';
 
 export async function POST(req) {
   try {
-    const { name, email, phone, company, service, message, recaptchaToken, turnstileToken } = await req.json();
+    const { name, email, phone, company, service, message, turnstileToken } = await req.json();
 
     // Basic validation
     if (!name || !email || !message) {
@@ -13,39 +13,27 @@ export async function POST(req) {
       );
     }
 
-    const verificationToken = turnstileToken || recaptchaToken;
-    if (!verificationToken) {
+    if (!turnstileToken) {
       return NextResponse.json(
         { error: 'Please verify that you are not a robot.' },
         { status: 400 }
       );
     }
 
-    // Verify token using Turnstile (if turnstileToken is present) or Google reCAPTCHA
-    let isVerificationSuccess = false;
+    // Verify token using Turnstile
+    const turnstileSecret = process.env.TURNSTILE_SECRET_KEY || '1x0000000000000000000000000000000AA';
+    const verifyUrl = 'https://challenges.cloudflare.com/turnstile/v0/siteverify';
 
-    if (turnstileToken) {
-      const turnstileSecret = process.env.TURNSTILE_SECRET_KEY || '1x0000000000000000000000000000000AA';
-      const verifyUrl = 'https://challenges.cloudflare.com/turnstile/v0/siteverify';
-      
-      const turnstileRes = await fetch(verifyUrl, {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({
-          secret: turnstileSecret,
-          response: turnstileToken,
-        }),
-      });
-      const turnstileData = await turnstileRes.json();
-      isVerificationSuccess = !!turnstileData.success;
-    } else {
-      const recaptchaSecret = process.env.RECAPTCHA_SECRET_KEY || '6LeIxAcTAAAAAGG-vFI1TnRWxMZNFuojJ4WifJWe';
-      const verifyUrl = `https://www.google.com/recaptcha/api/siteverify?secret=${recaptchaSecret}&response=${recaptchaToken}`;
-      
-      const recaptchaRes = await fetch(verifyUrl, { method: 'POST' });
-      const recaptchaData = await recaptchaRes.json();
-      isVerificationSuccess = !!recaptchaData.success;
-    }
+    const turnstileRes = await fetch(verifyUrl, {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({
+        secret: turnstileSecret,
+        response: turnstileToken,
+      }),
+    });
+    const turnstileData = await turnstileRes.json();
+    const isVerificationSuccess = !!turnstileData.success;
 
     if (!isVerificationSuccess) {
       return NextResponse.json(

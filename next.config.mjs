@@ -10,9 +10,6 @@ const nextConfig = {
     unoptimized: false,
   },
   trailingSlash: true,
-  env: {
-    NEXT_PUBLIC_RECAPTCHA_SITE_KEY: '6LcprocsAAAAADTwm6lBmRlvJsPT_B1-OjNznCYa',
-  },
 };
 
 export default withNextIntl(nextConfig);
