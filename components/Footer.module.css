@@ -148,6 +148,13 @@
   flex-shrink: 0;
 }
 
+.contactLinkWithIcon {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  width: 100%;
+}
+
 /* Bottom Bar */
 .footerBottom {
   margin-top: 60px;
