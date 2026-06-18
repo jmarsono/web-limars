@@ -3,7 +3,7 @@ import nodemailer from 'nodemailer';
 
 export async function POST(req) {
   try {
-    const { name, email, phone, company, service, message, recaptchaToken } = await req.json();
+    const { name, email, phone, company, service, message, recaptchaToken, turnstileToken } = await req.json();
 
     // Basic validation
     if (!name || !email || !message) {
@@ -13,23 +13,43 @@ export async function POST(req) {
       );
     }
 
-    if (!recaptchaToken) {
+    const verificationToken = turnstileToken || recaptchaToken;
+    if (!verificationToken) {
       return NextResponse.json(
         { error: 'Please verify that you are not a robot.' },
         { status: 400 }
       );
     }
 
-    // Verify reCAPTCHA token
-    const secretKey = process.env.RECAPTCHA_SECRET_KEY || '6LeIxAcTAAAAAGG-vFI1TnRWxMZNFuojJ4WifJWe';
-    const verifyUrl = `https://www.google.com/recaptcha/api/siteverify?secret=${secretKey}&response=${recaptchaToken}`;
+    // Verify token using Turnstile (if turnstileToken is present) or Google reCAPTCHA
+    let isVerificationSuccess = false;
 
-    const recaptchaRes = await fetch(verifyUrl, { method: 'POST' });
-    const recaptchaData = await recaptchaRes.json();
+    if (turnstileToken) {
+      const turnstileSecret = process.env.TURNSTILE_SECRET_KEY || '1x0000000000000000000000000000000AA';
+      const verifyUrl = 'https://challenges.cloudflare.com/turnstile/v0/siteverify';
+      
+      const turnstileRes = await fetch(verifyUrl, {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({
+          secret: turnstileSecret,
+          response: turnstileToken,
+        }),
+      });
+      const turnstileData = await turnstileRes.json();
+      isVerificationSuccess = !!turnstileData.success;
+    } else {
+      const recaptchaSecret = process.env.RECAPTCHA_SECRET_KEY || '6LeIxAcTAAAAAGG-vFI1TnRWxMZNFuojJ4WifJWe';
+      const verifyUrl = `https://www.google.com/recaptcha/api/siteverify?secret=${recaptchaSecret}&response=${recaptchaToken}`;
+      
+      const recaptchaRes = await fetch(verifyUrl, { method: 'POST' });
+      const recaptchaData = await recaptchaRes.json();
+      isVerificationSuccess = !!recaptchaData.success;
+    }
 
-    if (!recaptchaData.success) {
+    if (!isVerificationSuccess) {
       return NextResponse.json(
-        { error: 'reCAPTCHA verification failed. Please try again.' },
+        { error: 'Verification failed. Please try again.' },
         { status: 400 }
       );
     }

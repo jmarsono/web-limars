@@ -2,8 +2,7 @@
 
 import { useState, useRef } from 'react';
 import { useTranslations } from 'next-intl';
-import dynamic from 'next/dynamic';
-const ReCAPTCHA = dynamic(() => import('react-google-recaptcha'), { ssr: false });
+import TurnstileWidget from '@/components/TurnstileWidget';
 import BreadcrumbJsonLd from '@/components/BreadcrumbJsonLd';
 import styles from './Contact.module.css';
 
@@ -23,7 +22,7 @@ export default function ContactPage() {
   });
   const [status, setStatus] = useState({ type: '', message: '' });
 
-  const recaptchaRef = useRef(null);
+  const [turnstileToken, setTurnstileToken] = useState('');
 
   const handleChange = (e) => {
     setFormData({ ...formData, [e.target.name]: e.target.value });
@@ -33,8 +32,7 @@ export default function ContactPage() {
     e.preventDefault();
     setStatus({ type: 'loading', message: t('form.sending') });
 
-    const captchaValue = recaptchaRef.current.getValue();
-    if (!captchaValue) {
+    if (!turnstileToken) {
       setStatus({ type: 'error', message: 'Please verify that you are not a robot.' });
       return;
     }
@@ -45,7 +43,7 @@ export default function ContactPage() {
         headers: {
           'Content-Type': 'application/json',
         },
-        body: JSON.stringify({ ...formData, recaptchaToken: captchaValue }),
+        body: JSON.stringify({ ...formData, turnstileToken }),
       });
 
       const data = await response.json();
@@ -53,7 +51,7 @@ export default function ContactPage() {
       if (response.ok) {
         setStatus({ type: 'success', message: t('form.success') });
         setFormData({ name: '', email: '', phone: '', company: '', service: '', message: '' });
-        recaptchaRef.current.reset();
+        setTurnstileToken('');
       } else {
         setStatus({ type: 'error', message: data.error || 'Something went wrong. Please try again.' });
       }
@@ -256,9 +254,9 @@ export default function ContactPage() {
                 )}
 
                 <div className={styles.formGroup} style={{ marginBottom: '1.5rem' }}>
-                  <ReCAPTCHA
-                    ref={recaptchaRef}
-                    sitekey={process.env.NEXT_PUBLIC_RECAPTCHA_SITE_KEY || '6LeIxAcTAAAAAJcZVRqyHh71UMIEGNQ_MXjiZKhI'}
+                  <TurnstileWidget
+                    siteKey={process.env.NEXT_PUBLIC_TURNSTILE_SITE_KEY || '1x00000000000000000000AA'}
+                    onSuccess={(token) => setTurnstileToken(token)}
                   />
                 </div>
 
