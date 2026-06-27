@@ -31,12 +31,7 @@ export async function generateMetadata({ params }) {
   };
 }
 
-const stats = [
-  { number: '10+', label: 'Years Experience' },
-  { number: '500+', label: 'Projects Completed' },
-  { number: '300+', label: 'Clients Served' },
-  { number: '50+', label: 'Team Members' },
-];
+
 
 const whyChooseUs = [
   { icon: '🔩', key: 'fabrication' },
@@ -59,6 +54,8 @@ export default async function Home({ params }) {
   const { locale } = await params;
   setRequestLocale(locale);
   const t = await getTranslations('Home');
+
+
 
   let dbProducts = [];
   let dbServices = [];
