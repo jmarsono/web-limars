@@ -16,7 +16,7 @@
     "projects": "Projects",
     "contact": "Contact",
     "faq": "FAQ",
-    "getQuote": "Get a Quote",
+    "getQuote": "Request Consultation",
     "privacyPolicy": "Privacy Policy",
     "blog": "Blog"
   },
@@ -35,22 +35,22 @@
     "breadcrumbBlog": "Blog"
   },
   "Home": {
-    "heroBadge": "🏆 Trusted Kitchen Equipment Manufacturer",
-    "heroSubtitle": "Your Trusted Partner in Kitchen Equipment Manufacturing & Engineering Solutions. From traditional stoves to modern commercial ovens — we build it all.",
-    "exploreProducts": "Explore Products",
-    "getQuote": "Get a Quote",
+    "heroBadge": "⚙️ Commercial Kitchen Engineering & Precision Fabrication",
+    "heroSubtitle": "Indonesia's specialist in commercial kitchen engineering, precision stainless steel fabrication, and integrated infrastructure solutions — from gas piping systems to full-scale kitchen buildouts.",
+    "exploreProducts": "Explore Our Solutions",
+    "getQuote": "Schedule Engineering Consultation",
     "stats": {
       "years": "Years Experience",
       "projects": "Projects Completed",
       "clients": "Clients Served",
-      "team": "Team Members"
+      "team": "Engineers & Partners"
     },
     "companyBrief": {
-      "tag": "About Us",
-      "title": "Indonesia's Leading Kitchen Equipment Manufacturer",
-      "desc1": "PT. Limars Teknik Indonesia is a specialized manufacturer of commercial and residential kitchen heating equipment. With over a decade of experience, we deliver high-quality products and comprehensive engineering services across Indonesia.",
-      "desc2": "From traditional wok ranges and tandoor ovens to state-of-the-art combi ovens, we combine craftsmanship with modern engineering to create kitchen solutions that last.",
-      "cta": "Learn More About Us",
+      "tag": "Engineering Excellence",
+      "title": "Precision-Engineered Kitchen Infrastructure Since 2014",
+      "desc1": "PT. Limars Teknik Indonesia is a full-service commercial kitchen engineering firm specializing in precision stainless steel fabrication, certified gas piping systems, and integrated MEP solutions. With over a decade of field-proven expertise, we engineer kitchen infrastructure built for operational durability and safety compliance.",
+      "desc2": "Every project is backed by in-house fabrication capabilities, rigorous pressure testing protocols, and a dedicated engineering team — ensuring your kitchen systems perform reliably under the most demanding conditions.",
+      "cta": "Discover Our Engineering Capabilities",
       "imgCaption": "Our Manufacturing Facility"
     },
     "products": {
@@ -60,26 +60,26 @@
       "viewAll": "View All Products"
     },
     "services": {
-      "title": "Our Services",
-      "subtitle": "Comprehensive engineering and installation services for restaurants, homes, and commercial buildings.",
+      "title": "Integrated Engineering Solutions",
+      "subtitle": "End-to-end technical solutions engineered for safety compliance, operational durability, and peak performance — from certified gas piping and ducting systems to precision-fabricated kitchen infrastructure.",
       "learnMore": "Learn More →"
     },
     "why": {
-      "title": "Why Choose Limars Teknik?",
-      "subtitle": "We bring together quality manufacturing, expert engineering, and dedicated service.",
+      "title": "Engineering Excellence",
+      "subtitle": "Precision-driven processes, safety-first protocols, and a vertically integrated engineering approach that sets us apart.",
       "items": {
-        "mfg_title": "Own Manufacturing",
-        "mfg_desc": "In-house fabrication facility with modern equipment for precise, high-quality production.",
-        "team_title": "Expert Team",
-        "team_desc": "Experienced engineers, fabricators, and installers dedicated to every project.",
-        "custom_title": "Custom Solutions",
-        "custom_desc": "Tailored equipment and installations to meet your exact specifications and needs.",
-        "mat_title": "Quality Materials",
-        "mat_desc": "Premium stainless steel and certified components for lasting durability.",
-        "safe_title": "Safety Certified",
-        "safe_desc": "All installations comply with safety regulations and industry standards.",
-        "support_title": "After-Sales Support",
-        "support_desc": "Ongoing maintenance, repairs, and support long after installation."
+        "fabrication_title": "In-House Precision Fabrication",
+        "fabrication_desc": "Our dedicated fabrication facility utilizes CNC-grade processes and premium SS 304/316L stainless steel to manufacture equipment with tight tolerances and consistent quality control.",
+        "compliance_title": "Compliance & Safety Standards",
+        "compliance_desc": "Every installation undergoes rigorous HSE protocols, certified gas pressure testing, and ducting integrity assessments — ensuring full regulatory compliance before handover.",
+        "engineering_title": "Expert Engineering Team",
+        "engineering_desc": "Our projects are led by qualified technical engineers, not general contractors. From load calculations to system commissioning, every phase is engineered to specification.",
+        "mfg_title": "Vertically Integrated Operations",
+        "mfg_desc": "Design, fabrication, installation, and commissioning — all executed in-house. This vertical integration eliminates coordination gaps and ensures accountability at every stage.",
+        "custom_title": "Tailored Technical Solutions",
+        "custom_desc": "We don't sell off-the-shelf. Every system is custom-engineered to your site conditions, operational flow, and specific compliance requirements.",
+        "support_title": "Lifecycle Support & Maintenance",
+        "support_desc": "Our commitment extends beyond installation — scheduled maintenance programs, rapid-response repairs, and system performance audits keep your kitchen running at peak efficiency."
       }
     },
     "projects": {
@@ -91,19 +91,19 @@
       "title": "Trusted by Leading Brands Across Indonesia"
     },
     "testimonials": {
-      "title": "What Our Clients Say",
-      "subtitle": "Hear from businesses who trust Limars Teknik for their kitchen solutions.",
+      "title": "Trusted by Industry Leaders",
+      "subtitle": "Hear from commercial operators who trust Limars Teknik for mission-critical kitchen infrastructure.",
       "quotes": {
-        "1": "Limars Teknik delivered our complete kitchen setup on time and with exceptional quality. Their team was professional from design to installation.",
-        "2": "We chose Limars for their expertise in commercial kitchen equipment. The custom wok ranges and ducting system have been performing flawlessly.",
-        "3": "The combi ovens and deck ovens from Limars are built to last. Their after-sales service is responsive and reliable."
+        "1": "Limars Teknik engineered and delivered our complete kitchen infrastructure on schedule, meeting all safety compliance requirements. Their technical team was meticulous from initial survey through final commissioning.",
+        "2": "We selected Limars for their proven engineering capability in commercial kitchen systems. The custom wok ranges, gas piping, and ducting have been operating flawlessly under heavy daily load.",
+        "3": "The precision fabrication quality of Limars equipment is exceptional — built for industrial durability. Their lifecycle support program ensures our systems maintain peak performance year after year."
       }
     },
     "cta": {
-      "title": "Ready to Build Your Dream Kitchen?",
-      "subtitle": "Get in touch with our team for a free consultation and quotation.",
-      "contactBtn": "Contact Us Today",
-      "whatsappBtn": "💬 Chat on WhatsApp"
+      "title": "Ready to Engineer Your Next Kitchen Project?",
+      "subtitle": "Schedule a no-obligation engineering consultation. Our technical team will assess your requirements, site conditions, and compliance needs.",
+      "contactBtn": "Schedule Engineering Consultation",
+      "whatsappBtn": "💬 Request Site Survey via WhatsApp"
     }
   },
   "Products": {
@@ -260,7 +260,7 @@
     "ctaBtn": "Contact Support"
   },
   "Footer": {
-    "desc": "Your trusted partner in kitchen equipment manufacturing and engineering solutions. Quality products, professional services.",
+    "desc": "Indonesia's specialist in commercial kitchen engineering, precision stainless steel fabrication, and integrated infrastructure solutions.",
     "quickLinks": "Quick Links",
     "services": "Services",
     "contact": "Contact Us",
@@ -270,8 +270,8 @@
     "title": "Limars Teknik Indonesia, PT | Kitchen Hot Equipment Specialist",
     "description": "PT. Limars Teknik Indonesia specializes in commercial kitchen equipment, tandoor ovens, restaurant kitchen sets, and ducting systems in Indonesia.",
     "keywords": "kitchen equipment, commercial oven, restaurant kitchen set, ducting system, gas installation, well drilling, electrical services, Indonesia, manufacturer",
-    "homeTitle": "Limars Teknik | Commercial Kitchen Equipment Manufacturer",
-    "homeDescription": "Need professional kitchen sets or commercial ovens? Contact PT Limars Teknik Indonesia for a free consultation and quotation today!",
+    "homeTitle": "Limars Teknik | Commercial Kitchen Engineering & Precision Fabrication Specialist",
+    "homeDescription": "Indonesia's leading commercial kitchen engineering firm. Precision stainless steel fabrication, certified gas piping, ducting systems & integrated MEP solutions. Schedule a free engineering consultation.",
     "aboutTitle": "About Us | PT Limars Teknik Indonesia",
     "aboutDesc": "PT Limars Teknik Indonesia has been a trusted kitchen equipment manufacturer and engineering partner since 2014. Learn our story!",
     "productsTitle": "Commercial Kitchen Equipment & Products | Limars Teknik",

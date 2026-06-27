@@ -16,7 +16,7 @@
     "projects": "Proyek",
     "contact": "Kontak",
     "faq": "FAQ",
-    "getQuote": "Minta Penawaran",
+    "getQuote": "Minta Konsultasi",
     "privacyPolicy": "Kebijakan Privasi",
     "blog": "Blog"
   },
@@ -35,22 +35,22 @@
     "breadcrumbBlog": "Blog"
   },
   "Home": {
-    "heroBadge": "🏆 Produsen Peralatan Dapur Terpercaya",
-    "heroSubtitle": "Mitra Terpercaya Anda dalam Pembuatan Peralatan Dapur & Solusi Teknik. Dari kompor tradisional hingga oven komersial modern — kami membangun semuanya.",
-    "exploreProducts": "Jelajahi Produk",
-    "getQuote": "Minta Penawaran",
+    "heroBadge": "⚙️ Engineering Dapur Komersial & Fabrikasi Presisi",
+    "heroSubtitle": "Spesialis engineering dapur komersial, fabrikasi stainless steel presisi, dan solusi infrastruktur terintegrasi di Indonesia — dari sistem perpipaan gas hingga pembangunan dapur skala penuh.",
+    "exploreProducts": "Jelajahi Solusi Kami",
+    "getQuote": "Jadwalkan Konsultasi Teknik",
     "stats": {
       "years": "Tahun Pengalaman",
       "projects": "Proyek Selesai",
       "clients": "Klien Dilayani",
-      "team": "Anggota Tim"
+      "team": "Insinyur & Mitra"
     },
     "companyBrief": {
-      "tag": "Tentang Kami",
-      "title": "Produsen Peralatan Dapur Terkemuka di Indonesia",
-      "desc1": "PT. Limars Teknik Indonesia adalah produsen khusus peralatan pemanas dapur komersial dan residensial. Dengan pengalaman lebih dari satu dekade, kami menghadirkan produk berkualitas tinggi dan layanan teknik komprehensif di seluruh Indonesia.",
-      "desc2": "Dari kompor wajan tradisional dan oven tandoor hingga oven combi canggih, kami memadukan pengerjaan tangan dengan teknik modern untuk menciptakan solusi dapur yang tahan lama.",
-      "cta": "Pelajari Lebih Lanjut Tentang Kami",
+      "tag": "Keunggulan Teknik",
+      "title": "Infrastruktur Dapur Presisi Sejak 2014",
+      "desc1": "PT. Limars Teknik Indonesia adalah perusahaan engineering dapur komersial berskala penuh yang mengkhususkan diri dalam fabrikasi stainless steel presisi, sistem perpipaan gas bersertifikat, dan solusi MEP terintegrasi. Dengan keahlian lapangan lebih dari satu dekade, kami merancang infrastruktur dapur yang dibangun untuk ketahanan operasional dan kepatuhan keselamatan.",
+      "desc2": "Setiap proyek didukung oleh kapabilitas fabrikasi in-house, protokol uji tekanan yang ketat, dan tim engineering berdedikasi — memastikan sistem dapur Anda beroperasi andal dalam kondisi paling menuntut sekalipun.",
+      "cta": "Pelajari Kapabilitas Engineering Kami",
       "imgCaption": "Fasilitas Produksi Kami"
     },
     "products": {
@@ -60,26 +60,26 @@
       "viewAll": "Lihat Semua Produk"
     },
     "services": {
-      "title": "Layanan Kami",
-      "subtitle": "Layanan teknik dan instalasi komprehensif untuk restoran, rumah, dan bangunan komersial.",
+      "title": "Solusi Engineering Terintegrasi",
+      "subtitle": "Solusi teknis end-to-end yang dirancang untuk kepatuhan keselamatan, ketahanan operasional, dan performa puncak — dari perpipaan gas bersertifikat dan sistem ducting hingga infrastruktur dapur berfabrikasi presisi.",
       "learnMore": "Pelajari Lebih Lanjut →"
     },
     "why": {
-      "title": "Mengapa Memilih Limars Teknik?",
-      "subtitle": "Kami menyatukan kualitas produksi, teknisi ahli, dan layanan yang berdedikasi.",
+      "title": "Keunggulan Engineering",
+      "subtitle": "Proses berbasis presisi, protokol keselamatan prioritas, dan pendekatan engineering terintegrasi vertikal yang membedakan kami.",
       "items": {
-        "mfg_title": "Produksi Sendiri",
-        "mfg_desc": "Fasilitas fabrikasi in-house dengan peralatan modern untuk produksi yang presisi dan berkualitas tinggi.",
-        "team_title": "Tim Ahli",
-        "team_desc": "Insinyur, fabrikator, dan instalatur berpengalaman yang didedikasikan untuk setiap proyek.",
-        "custom_title": "Solusi Kustom",
-        "custom_desc": "Peralatan dan instalasi yang disesuaikan untuk memenuhi spesifikasi dan kebutuhan tepat Anda.",
-        "mat_title": "Material Berkualitas",
-        "mat_desc": "Baja tahan karat (stainless steel) premium dan komponen bersertifikat untuk daya tahan yang lama.",
-        "safe_title": "Bersertifikasi Aman",
-        "safe_desc": "Semua instalasi mematuhi peraturan keselamatan dan standar industri.",
-        "support_title": "Dukungan Purna Jual",
-        "support_desc": "Pemeliharaan, perbaikan, dan dukungan berkelanjutan jauh setelah instalasi."
+        "fabrication_title": "Fabrikasi Presisi In-House",
+        "fabrication_desc": "Fasilitas fabrikasi kami memanfaatkan proses berstandar CNC dan stainless steel premium SS 304/316L untuk memproduksi peralatan dengan toleransi ketat dan kontrol kualitas konsisten.",
+        "compliance_title": "Standar Kepatuhan & Keselamatan",
+        "compliance_desc": "Setiap instalasi melalui protokol HSE yang ketat, pengujian tekanan gas bersertifikat, dan penilaian integritas ducting — memastikan kepatuhan regulasi penuh sebelum serah terima.",
+        "engineering_title": "Tim Engineering Ahli",
+        "engineering_desc": "Proyek kami dipimpin oleh insinyur teknis berkualifikasi, bukan kontraktor umum. Dari perhitungan beban hingga komisioning sistem, setiap fase di-engineer sesuai spesifikasi.",
+        "mfg_title": "Operasi Terintegrasi Vertikal",
+        "mfg_desc": "Desain, fabrikasi, instalasi, dan komisioning — semuanya dieksekusi in-house. Integrasi vertikal ini menghilangkan celah koordinasi dan memastikan akuntabilitas di setiap tahap.",
+        "custom_title": "Solusi Teknis Terukur",
+        "custom_desc": "Kami tidak menjual produk massal. Setiap sistem di-custom-engineer sesuai kondisi lokasi, alur operasional, dan persyaratan kepatuhan spesifik Anda.",
+        "support_title": "Dukungan Siklus Hidup & Perawatan",
+        "support_desc": "Komitmen kami melampaui instalasi — program pemeliharaan terjadwal, perbaikan respons cepat, dan audit performa sistem menjaga dapur Anda beroperasi pada efisiensi puncak."
       }
     },
     "projects": {
@@ -91,19 +91,19 @@
       "title": "Dipercaya Oleh Merek Terkemuka di Seluruh Indonesia"
     },
     "testimonials": {
-      "title": "Apa Kata Klien Kami",
-      "subtitle": "Dengarkan dari bisnis yang mempercayai Limars Teknik untuk solusi dapur mereka.",
+      "title": "Dipercaya oleh Pemimpin Industri",
+      "subtitle": "Dengarkan dari operator komersial yang mempercayai Limars Teknik untuk infrastruktur dapur yang kritis.",
       "quotes": {
-        "1": "Limars Teknik menyelesaikan seluruh setup dapur kami tepat waktu dan dengan kualitas yang luar biasa. Tim mereka sangat profesional mulai dari desain hingga instalasi.",
-        "2": "Kami memilih Limars karena keahlian mereka dalam peralatan dapur komersial. Kompor wajan khusus dan sistem ducting kami telah beroperasi dengan lancar.",
-        "3": "Oven combi dan oven deck dari Limars dibangun agar tahan lama. Layanan purna jual mereka responsif dan dapat diandalkan."
+        "1": "Limars Teknik merancang dan menyelesaikan seluruh infrastruktur dapur kami tepat jadwal, memenuhi semua persyaratan kepatuhan keselamatan. Tim teknis mereka sangat teliti dari survei awal hingga komisioning akhir.",
+        "2": "Kami memilih Limars karena kapabilitas engineering terbukti dalam sistem dapur komersial. Kompor wajan kustom, perpipaan gas, dan ducting telah beroperasi lancar di bawah beban harian berat.",
+        "3": "Kualitas fabrikasi presisi peralatan Limars luar biasa — dibangun untuk ketahanan industrial. Program dukungan siklus hidup mereka memastikan sistem kami mempertahankan performa puncak tahun demi tahun."
       }
     },
     "cta": {
-      "title": "Siap Membangun Dapur Impian Anda?",
-      "subtitle": "Hubungi tim kami untuk konsultasi dan penawaran gratis.",
-      "contactBtn": "Hubungi Kami Hari Ini",
-      "whatsappBtn": "💬 Chat via WhatsApp"
+      "title": "Siap Merancang Proyek Dapur Anda Berikutnya?",
+      "subtitle": "Jadwalkan konsultasi teknik tanpa kewajiban. Tim teknis kami akan mengkaji kebutuhan, kondisi lokasi, dan persyaratan kepatuhan Anda.",
+      "contactBtn": "Jadwalkan Konsultasi Teknik",
+      "whatsappBtn": "💬 Minta Survei Lokasi via WhatsApp"
     }
   },
   "Products": {
@@ -260,7 +260,7 @@
     "ctaBtn": "Hubungi Dukungan"
   },
   "Footer": {
-    "desc": "Mitra tepercaya Anda dalam pembuatan peralatan dapur dan solusi teknik. Produk berkualitas, layanan profesional.",
+    "desc": "Spesialis engineering dapur komersial, fabrikasi stainless steel presisi, dan solusi infrastruktur terintegrasi di Indonesia.",
     "quickLinks": "Tautan Cepat",
     "services": "Layanan",
     "contact": "Hubungi Kami",
@@ -270,8 +270,8 @@
     "title": "PT. Limars Teknik Indonesia | Spesialis Peralatan Panas",
     "description": "PT. Limars Teknik Indonesia adalah produsen spesialis peralatan dapur komersial, oven tandoor, kitchen set restoran, dan sistem ducting berkualitas di Indonesia.",
     "keywords": "peralatan dapur, oven komersial, kitchen set restoran, sistem ducting, instalasi gas, pengeboran sumur, layanan listrik, Indonesia, produsen",
-    "homeTitle": "Limars Teknik | Produsen Kitchen Set & Kompor Komersial",
-    "homeDescription": "Cari kitchen set restoran & kompor komersial berkualitas? Hubungi PT Limars Teknik Indonesia untuk konsultasi & penawaran gratis sekarang!",
+    "homeTitle": "Limars Teknik | Spesialis Engineering Dapur Komersial & Fabrikasi Presisi",
+    "homeDescription": "Perusahaan engineering dapur komersial terdepan di Indonesia. Fabrikasi stainless steel presisi, perpipaan gas bersertifikat, sistem ducting & solusi MEP terintegrasi. Jadwalkan konsultasi teknik gratis.",
     "aboutTitle": "Tentang Kami | PT Limars Teknik Indonesia",
     "aboutDesc": "PT Limars Teknik Indonesia didirikan sejak 2014, berpengalaman dalam produksi peralatan dapur dan instalasi gas komersial.",
     "productsTitle": "Produk Peralatan Dapur Komersial | Limars Teknik",

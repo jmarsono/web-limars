@@ -38,11 +38,11 @@ const stats = [
 ];
 
 const whyChooseUs = [
+  { icon: '🔩', key: 'fabrication' },
+  { icon: '📋', key: 'compliance' },
+  { icon: '👨‍🔬', key: 'engineering' },
   { icon: '🏭', key: 'mfg' },
-  { icon: '👷', key: 'team' },
   { icon: '🔧', key: 'custom' },
-  { icon: '✅', key: 'mat' },
-  { icon: '🛡️', key: 'safe' },
   { icon: '🤝', key: 'support' },
 ];
 
@@ -80,9 +80,9 @@ export default async function Home({ params }) {
 
   const stats = [
     { number: '10+', label: t('stats.years') },
-    { number: '500+', label: t('stats.projects') },
-    { number: '300+', label: t('stats.clients') },
-    { number: '50+', label: t('stats.team') },
+    { number: '200+', label: t('stats.projects') },
+    { number: '100+', label: t('stats.clients') },
+    { number: '30+', label: t('stats.team') },
   ];
 
   const jsonLd = {
@@ -91,7 +91,7 @@ export default async function Home({ params }) {
     name: 'PT. Limars Teknik Indonesia',
     url: 'https://www.limarsteknik.com',
     logo: 'https://www.limarsteknik.com/logo.png',
-    description: "Indonesia's Leading Kitchen Equipment Manufacturer and Engineering Solutions Provider.",
+    description: "Indonesia's leading commercial kitchen engineering firm specializing in precision stainless steel fabrication, certified gas piping systems, ducting, and integrated MEP solutions.",
     priceRange: '$$',
     openingHours: 'Mo-Fr 08:00-17:00, Sa 08:00-14:00',
     address: {
