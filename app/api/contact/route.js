@@ -54,7 +54,7 @@ export async function POST(req) {
       },
     });
 
-    const contactEmail = process.env.CONTACT_EMAIL || 'info@limarsteknik.com';
+    const contactEmail = process.env.CONTACT_EMAIL || 'sales@limarsteknik.com';
 
     // Email to Admin/Company
     const adminMailOptions = {
