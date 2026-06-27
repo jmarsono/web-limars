@@ -113,7 +113,7 @@ export async function POST(req) {
   } catch (error) {
     console.error('Email sending error:', error);
     return NextResponse.json(
-      { error: 'Failed to send message. Please try again later.' },
+      { error: `Email sending error: ${error.message || error.toString()}` },
       { status: 500 }
     );
   }
