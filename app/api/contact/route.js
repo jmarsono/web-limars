@@ -58,7 +58,7 @@ export async function POST(req) {
 
     // Email to Admin/Company
     const adminMailOptions = {
-      from: `"\${name}" <\${process.env.SMTP_USER || email}>`, // Using normal string + var but next/server parses it OK, wait, I need to provide EXACT standard JS string template.
+      from: `"${name}" <${process.env.SMTP_USER || email}>`, // Using normal string + var but next/server parses it OK, wait, I need to provide EXACT standard JS string template.
       replyTo: email,
       to: contactEmail,
       subject: `New Lead: ${service ? '[' + service + '] ' : ''}Inquiry from ${name}`,
