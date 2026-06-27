@@ -34,7 +34,7 @@ npx wrangler deploy
 
 - Worker secrets are managed via `npx wrangler secret put SECRET_NAME`
 - `NEXT_PUBLIC_*` variables are baked at build time — must be set BEFORE `npm run build:cf` or hardcoded
-- Current Worker secrets: `TURNSTILE_SECRET_KEY`, `SMTP_USER`, `SMTP_PASS`
+- Current Worker secrets: `TURNSTILE_SECRET_KEY`, `SMTP_HOST`, `SMTP_PORT`, `SMTP_SECURE`, `SMTP_USER`, `SMTP_PASS`, `CONTACT_EMAIL`
 
 ## Tech Stack
 
