@@ -4,6 +4,7 @@ import { getMessages, setRequestLocale } from 'next-intl/server';
 import { Link } from '@/i18n/routing';
 import styles from './page.module.css';
 import { routing } from '@/i18n/routing';
+import WhatsAppIcon from '@/components/WhatsAppIcon';
 
 export function generateStaticParams() {
   return routing.locales.flatMap((locale) =>
@@ -128,6 +129,7 @@ export default async function BlogPostPage({ params }) {
           <div className={styles.ctaButtons}>
             <Link href="/contact" className="btn btn-primary">{homeT.cta.contactBtn}</Link>
             <a href="https://wa.me/6281212671289" className="btn btn-secondary" target="_blank" rel="noopener noreferrer">
+              <WhatsAppIcon />
               {homeT.cta.whatsappBtn}
             </a>
           </div>

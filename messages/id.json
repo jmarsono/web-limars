@@ -103,7 +103,7 @@
       "title": "Siap Merancang Proyek Dapur Anda Berikutnya?",
       "subtitle": "Jadwalkan konsultasi teknik tanpa kewajiban. Tim teknis kami akan mengkaji kebutuhan, kondisi lokasi, dan persyaratan kepatuhan Anda.",
       "contactBtn": "Jadwalkan Konsultasi Teknik",
-      "whatsappBtn": "💬 Minta Survei Lokasi via WhatsApp"
+      "whatsappBtn": "Minta Survei Lokasi via WhatsApp"
     }
   },
   "Products": {
@@ -124,7 +124,7 @@
     "breadcrumbProducts": "Produk",
     "specifications": "Spesifikasi",
     "requestQuote": "Minta Penawaran",
-    "askWhatsapp": "💬 Tanya via WhatsApp",
+    "askWhatsapp": "Tanya via WhatsApp",
     "relatedProducts": "Produk Terkait",
     "relatedServiceStove": "Butuh instalasi gas komersial yang aman dan bersertifikat? Dapatkan <link>{serviceTitle}</link>.",
     "relatedServiceCoffee": "Membutuhkan penataan daya kelistrikan yang aman untuk kedai kopi Anda? Cek <link>{serviceTitle}</link>.",
@@ -138,7 +138,7 @@
     "ctaTitle": "Butuh Solusi Khusus?",
     "ctaSubtitle": "Hubungi kami untuk mendiskusikan kebutuhan spesifik Anda. Tim teknik kami siap membantu.",
     "contactBtn": "Hubungi Kami",
-    "whatsappBtn": "💬 WhatsApp",
+    "whatsappBtn": "WhatsApp",
     "backLink": "← Semua Layanan",
     "aboutService": "Tentang Layanan Ini",
     "whatWeOffer": "Apa yang Kami Tawarkan",
@@ -147,7 +147,7 @@
     "interestedIn": "Tertarik dengan {title}?",
     "interestedSubtitle": "Hubungi kami untuk konsultasi dan penawaran gratis.",
     "requestQuote": "Minta Penawaran",
-    "chatWhatsapp": "💬 Chat via WhatsApp"
+    "chatWhatsapp": "Chat via WhatsApp"
   },
   "Projects": {
     "heroBadge": "Portofolio Kami",

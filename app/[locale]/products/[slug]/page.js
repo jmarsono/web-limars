@@ -8,6 +8,7 @@ import ProductLightbox from './ProductLightbox';
 import styles from './ProductDetail.module.css';
 import { setRequestLocale } from 'next-intl/server';
 import { getProductBySlug, getProducts } from '../../../../lib/db';
+import WhatsAppIcon from '../../../../components/WhatsAppIcon';
 
 export const revalidate = 0; // Fresh data for D1 dynamic updates
 
@@ -187,6 +188,7 @@ export default async function ProductDetailPage({ params }) {
               <div className={styles.actions}>
                 <Link href="/contact" className="btn btn-primary">{t('requestQuote')}</Link>
                 <a href="https://wa.me/6281212671289" className="btn btn-outline" target="_blank" rel="noopener noreferrer">
+                  <WhatsAppIcon />
                   {t('askWhatsapp')}
                 </a>
               </div>

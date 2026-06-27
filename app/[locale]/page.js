@@ -9,6 +9,7 @@ import { getProducts, getProjects, getServices } from '../../lib/db';
 
 import { constructMetadata } from '../../lib/seo';
 import BreadcrumbJsonLd from '../../components/BreadcrumbJsonLd';
+import WhatsAppIcon from '../../components/WhatsAppIcon';
 
 export async function generateMetadata({ params }) {
   const { locale } = await params;
@@ -369,6 +370,7 @@ export default async function Home({ params }) {
           <div className={styles.ctaButtons}>
             <Link href="/contact" className="btn btn-primary">{t('cta.contactBtn')}</Link>
             <a href="https://wa.me/6281212671289" className="btn btn-secondary" target="_blank" rel="noopener noreferrer">
+              <WhatsAppIcon />
               {t('cta.whatsappBtn')}
             </a>
           </div>

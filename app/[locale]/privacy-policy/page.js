@@ -4,6 +4,7 @@ import { useTranslations } from 'next-intl';
 import { Link } from '@/i18n/routing';
 import BreadcrumbJsonLd from '@/components/BreadcrumbJsonLd';
 import styles from './page.module.css';
+import WhatsAppIcon from '@/components/WhatsAppIcon';
 
 export default function PrivacyPolicyPage() {
   const t = useTranslations('PrivacyPolicy');
@@ -58,6 +59,7 @@ export default function PrivacyPolicyPage() {
           <div className={styles.ctaButtons}>
             <Link href="/contact" className="btn btn-primary">{homeT('cta.contactBtn')}</Link>
             <a href="https://wa.me/6281212671289" className="btn btn-secondary" target="_blank" rel="noopener noreferrer">
+              <WhatsAppIcon />
               {homeT('cta.whatsappBtn')}
             </a>
           </div>

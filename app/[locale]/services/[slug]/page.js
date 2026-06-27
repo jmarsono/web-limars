@@ -4,6 +4,7 @@ import { services } from '../../../../data/services';
 import Image from 'next/image';
 import styles from './ServiceDetail.module.css';
 import { setRequestLocale } from 'next-intl/server';
+import WhatsAppIcon from '../../../../components/WhatsAppIcon';
 
 export async function generateStaticParams() {
   return routing.locales.flatMap((locale) =>
@@ -155,6 +156,7 @@ export default async function ServiceDetailPage({ params }) {
           <div className={styles.ctaButtons}>
             <Link href="/contact" className="btn btn-primary">{t('requestQuote')}</Link>
             <a href="https://wa.me/6281212671289" className="btn btn-secondary" target="_blank" rel="noopener noreferrer">
+              <WhatsAppIcon />
               {t('chatWhatsapp')}
             </a>
           </div>

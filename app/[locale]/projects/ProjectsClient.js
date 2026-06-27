@@ -9,6 +9,7 @@ import { Link } from '@/i18n/routing';
 import dynamic from 'next/dynamic';
 const Lightbox = dynamic(() => import('yet-another-react-lightbox'), { ssr: false });
 import 'yet-another-react-lightbox/styles.css';
+import WhatsAppIcon from '@/components/WhatsAppIcon';
 
 export default function ProjectsClient({ projects, projectCategories }) {
   const locale = useLocale();
@@ -105,6 +106,7 @@ export default function ProjectsClient({ projects, projectCategories }) {
           <div className={styles.ctaButtons}>
             <Link href="/contact" className="btn btn-primary">{homeT('cta.contactBtn')}</Link>
             <a href="https://wa.me/6281212671289" className="btn btn-secondary" target="_blank" rel="noopener noreferrer">
+              <WhatsAppIcon />
               {homeT('cta.whatsappBtn')}
             </a>
           </div>
