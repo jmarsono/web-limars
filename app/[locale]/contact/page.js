@@ -255,7 +255,7 @@ export default function ContactPage() {
 
                 <div className={styles.formGroup} style={{ marginBottom: '1.5rem' }}>
                   <TurnstileWidget
-                    siteKey={process.env.NEXT_PUBLIC_TURNSTILE_SITE_KEY || '1x00000000000000000000AA'}
+                    siteKey={process.env.NEXT_PUBLIC_TURNSTILE_SITE_KEY || '0x4AAAAAADm6k8s_lcNBTYTv'}
                     onSuccess={(token) => setTurnstileToken(token)}
                   />
                 </div>

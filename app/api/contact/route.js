@@ -21,7 +21,7 @@ export async function POST(req) {
     }
 
     // Verify token using Turnstile
-    const turnstileSecret = process.env.TURNSTILE_SECRET_KEY || '1x0000000000000000000000000000000AA';
+    const turnstileSecret = process.env.TURNSTILE_SECRET_KEY;
     const verifyUrl = 'https://challenges.cloudflare.com/turnstile/v0/siteverify';
 
     const turnstileRes = await fetch(verifyUrl, {
