@@ -89,7 +89,7 @@ export default async function BlogPostPage({ params }) {
 
       <article className="container">
         <header className={styles.header}>
-          <Link href={`/${locale}/blog`} className={styles.backLink}>
+          <Link href="/blog" className={styles.backLink}>
             {blogT.backToList}
           </Link>
           <div className={styles.meta}>
