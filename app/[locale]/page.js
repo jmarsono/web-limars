@@ -134,8 +134,8 @@ export default async function Home({ params }) {
                 {t('heroBadge')}
               </span>
               <h1 className={styles.heroTitle}>
-                PT. LIMARS
-                <span>TEKNIK INDONESIA</span>
+                LIMARS
+                <span>TEKNIK</span>
               </h1>
               <p className={styles.heroSubtitle}>{t('heroSubtitle')}</p>
               <div className={styles.heroButtons}>
