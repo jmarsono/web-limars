@@ -70,7 +70,10 @@
 }
 
 .vmIcon {
-  font-size: 2.5rem;
+  display: block;
+  width: 2.5rem;
+  height: 2.5rem;
+  color: var(--light-blue);
   margin-bottom: 20px;
 }
 
@@ -98,11 +101,15 @@
 }
 
 .vmCard ul li::before {
-  content: '✓';
+  content: '';
   position: absolute;
-  left: 0;
-  color: var(--light-blue);
-  font-weight: 700;
+  left: 4px;
+  top: 10px;
+  width: 6px;
+  height: 11px;
+  border-right: 2px solid var(--light-blue);
+  border-bottom: 2px solid var(--light-blue);
+  transform: rotate(45deg);
 }
 
 /* Timeline */
@@ -213,9 +220,11 @@
 }
 
 .valueIcon {
-  font-size: 2rem;
-  margin-bottom: 16px;
   display: block;
+  width: 2rem;
+  height: 2rem;
+  color: var(--light-blue);
+  margin-bottom: 16px;
 }
 
 .valueCard h4 {
