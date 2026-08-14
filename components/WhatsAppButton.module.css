@@ -52,9 +52,10 @@
 
 @media (max-width: 768px) {
   .whatsapp {
-    width: 52px;
-    height: 52px;
-    bottom: 20px;
-    right: 20px;
+    width: 48px;
+    height: 48px;
+    /* move the FAB up on small screens to avoid overlapping hero inset */
+    bottom: 88px;
+    right: 16px;
   }
 }

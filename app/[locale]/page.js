@@ -54,7 +54,7 @@ const clientLogos = [
   { name: 'Central Al-Jazeerah', variant: 'clientLogoCentral', image: '/images/clients/central-al-jazeerah.jpg' },
   { name: 'Al-Jazeerah Polonia', variant: 'clientLogoPolonia', image: '/images/clients/al-jazeerah-polonia.webp' },
   { name: 'Zahra Al-Jazeerah', variant: 'clientLogoZahra', image: '/images/clients/zahra-al-jazeerah.jpg' },
-  { name: 'Nanamia Pizzeria Yogyakarta', variant: 'clientLogoNanamia', image: 'https://ugc.production.linktr.ee/4frNGiSuCEanOyoOYFwg_H68km6Qkr2v9U45N?io=true&size=avatar-v3_0' },
+  { name: 'Nanamia Pizzeria Yogyakarta', variant: 'clientLogoNanamia', image: '/images/clients/nanamia-pizzeria-yogyakarta.png' },
   { name: 'Born-Ga', variant: 'clientLogoBornGa', image: '/images/clients/born-ga.jpg' },
   { name: 'Dashi Chazuke Zenraku', variant: 'clientLogoDashi', image: '/images/clients/dashi-chazuke-zenraku.jpg' },
 ];

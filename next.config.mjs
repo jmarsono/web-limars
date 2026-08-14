@@ -8,13 +8,7 @@ const nextConfig = {
   reactCompiler: true,
   images: {
     unoptimized: false,
-    remotePatterns: [
-      {
-        protocol: 'https',
-        hostname: 'ugc.production.linktr.ee',
-        pathname: '/**',
-      },
-    ],
+    remotePatterns: [],
   },
   trailingSlash: true,
 };
