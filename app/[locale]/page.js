@@ -49,14 +49,14 @@ const testimonials = [
 ];
 
 const clientLogos = [
-  'Al-Jazeerah Cikini',
-  'Royal Al-Jazeerah',
-  'Central Al-Jazeerah',
-  'Al-Jazeerah Polonia',
-  'Zahra Al-Jazeerah',
-  'Namamia Pizzeria Yogyakarta',
-  'Born-Ga',
-  'Dashi Chazuke Zenraku',
+  { name: 'Al-Jazeerah Cikini' },
+  { name: 'Royal Al-Jazeerah' },
+  { name: 'Central Al-Jazeerah' },
+  { name: 'Al-Jazeerah Polonia' },
+  { name: 'Zahra Al-Jazeerah' },
+  { name: 'Namamia Pizzeria Yogyakarta' },
+  { name: 'Born-Ga' },
+  { name: 'Dashi Chazuke Zenraku', image: '/images/clients/dashi-chazuke-zenraku.svg' },
 ];
 
 export default async function Home({ params }) {
@@ -364,7 +364,15 @@ export default async function Home({ params }) {
         <div className="container">
           <p className={styles.clientTitle}>{t('clients.title')}</p>
           <div className={styles.clientList}>
-            {clientLogos.map((logo) => <span key={logo}>{logo}</span>)}
+            {clientLogos.map((logo) => (
+              <span key={logo.name} className={styles.clientLogo}>
+                {logo.image ? (
+                  <Image src={logo.image} alt={logo.name} width={150} height={92} />
+                ) : (
+                  logo.name
+                )}
+              </span>
+            ))}
           </div>
         </div>
       </section>
