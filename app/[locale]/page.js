@@ -54,7 +54,7 @@ const clientLogos = [
   { name: 'Central Al-Jazeerah', image: '/images/clients/central-al-jazeerah.jpg' },
   { name: 'Al-Jazeerah Polonia', image: '/images/clients/al-jazeerah-polonia.webp' },
   { name: 'Zahra Al-Jazeerah', image: '/images/clients/zahra-al-jazeerah.png' },
-  { name: 'Namamia Pizzeria Yogyakarta' },
+  { name: 'Nanamia Pizzeria Yogyakarta', image: 'https://ugc.production.linktr.ee/4frNGiSuCEanOyoOYFwg_H68km6Qkr2v9U45N?io=true&size=avatar-v3_0' },
   { name: 'Born-Ga', image: '/images/clients/born-ga.png' },
   { name: 'Dashi Chazuke Zenraku', image: '/images/clients/dashi-chazuke-zenraku.jpg' },
 ];
@@ -367,7 +367,7 @@ export default async function Home({ params }) {
             {clientLogos.map((logo) => (
               <span key={logo.name} className={styles.clientLogo}>
                 {logo.image ? (
-                  <img src={logo.image} alt={logo.name} width="150" height="92" />
+                  <img src={logo.image} alt={logo.name} />
                 ) : (
                   logo.name
                 )}
