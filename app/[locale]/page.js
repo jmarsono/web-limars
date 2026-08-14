@@ -49,14 +49,14 @@ const testimonials = [
 ];
 
 const clientLogos = [
-  { name: 'Al-Jazeerah Cikini', image: '/images/clients/al-jazeerah-signature.svg' },
-  { name: 'Royal Al-Jazeerah', image: '/images/clients/al-jazeerah-signature.svg' },
-  { name: 'Central Al-Jazeerah', image: '/images/clients/central-al-jazeerah.svg' },
-  { name: 'Al-Jazeerah Polonia', image: '/images/clients/al-jazeerah-polonia.svg' },
-  { name: 'Zahra Al-Jazeerah', image: '/images/clients/zahra-al-jazeerah.svg' },
+  { name: 'Al-Jazeerah Cikini', image: '/images/clients/al-jazeerah-signature.png' },
+  { name: 'Royal Al-Jazeerah', image: '/images/clients/al-jazeerah-signature.png' },
+  { name: 'Central Al-Jazeerah', image: '/images/clients/central-al-jazeerah.jpg' },
+  { name: 'Al-Jazeerah Polonia', image: '/images/clients/al-jazeerah-polonia.webp' },
+  { name: 'Zahra Al-Jazeerah', image: '/images/clients/zahra-al-jazeerah.png' },
   { name: 'Namamia Pizzeria Yogyakarta' },
-  { name: 'Born-Ga', image: '/images/clients/born-ga.svg' },
-  { name: 'Dashi Chazuke Zenraku', image: '/images/clients/dashi-chazuke-zenraku.svg' },
+  { name: 'Born-Ga', image: '/images/clients/born-ga.png' },
+  { name: 'Dashi Chazuke Zenraku', image: '/images/clients/dashi-chazuke-zenraku.jpg' },
 ];
 
 export default async function Home({ params }) {
