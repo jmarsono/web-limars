@@ -8,6 +8,7 @@ import { constructMetadata } from '../../../lib/seo';
 import BreadcrumbJsonLd from '../../../components/BreadcrumbJsonLd';
 import WhatsAppIcon from '../../../components/WhatsAppIcon';
 import ServiceIcon from '../../../components/ServiceIcon';
+import UiIcon from '../../../components/UiIcon';
 
 export async function generateMetadata({ params }) {
   const { locale } = await params;
@@ -57,7 +58,7 @@ export default async function ServicesPage({ params }) {
                   <p>{service.shortDescription[locale]}</p>
                   <ul className={styles.featureList}>
                     {service.features.slice(0, 3).map((f, i) => (
-                      <li key={i}>✓ {f[locale]}</li>
+                      <li key={i}><UiIcon name="check" size={15} /> {f[locale]}</li>
                     ))}
                   </ul>
                   <span className={styles.serviceLink}>{t('learnMore')}</span>
