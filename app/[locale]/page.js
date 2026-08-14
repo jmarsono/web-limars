@@ -367,7 +367,7 @@ export default async function Home({ params }) {
             {clientLogos.map((logo) => (
               <span key={logo.name} className={styles.clientLogo}>
                 {logo.image ? (
-                  <Image src={logo.image} alt={logo.name} width={150} height={92} />
+                  <Image src={logo.image} alt={logo.name} width={150} height={92} unoptimized />
                 ) : (
                   logo.name
                 )}
