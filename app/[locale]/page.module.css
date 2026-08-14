@@ -663,7 +663,7 @@
 }
 
 .clientLogoSignature img {
-  transform: scale(2.05);
+  transform: scale(1);
 }
 
 .clientLogoCentral img {
@@ -683,7 +683,7 @@
 }
 
 .clientLogoBornGa img {
-  transform: scale(1.08);
+  transform: scale(1.5);
 }
 
 .clientLogoDashi img {
