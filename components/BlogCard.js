@@ -1,3 +1,4 @@
+import Image from 'next/image';
 import Link from 'next/link';
 import styles from './BlogCard.module.css';
 import { useTranslations } from 'next-intl';
@@ -9,9 +10,13 @@ export default function BlogCard({ post, locale }) {
   return (
     <Link href={`/${locale}/blog/${post.slug}`} className={styles.card}>
       <div className={styles.imageWrapper}>
-        <div className={styles.placeholder}>
-          <span>📝</span>
-        </div>
+        <Image
+          src={post.image}
+          alt={postData.title}
+          fill
+          sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+          className={styles.image}
+        />
         <div className={styles.category}>{post.category}</div>
       </div>
       <div className={styles.content}>

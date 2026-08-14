@@ -1,3 +1,4 @@
+import Image from 'next/image';
 import { notFound } from 'next/navigation';
 import { blogPosts } from '@/data/blogPosts';
 import { getMessages, setRequestLocale } from 'next-intl/server';
@@ -101,9 +102,14 @@ export default async function BlogPostPage({ params }) {
         </header>
 
         <div className={styles.imageWrapper}>
-          <div className={styles.placeholder}>
-            <span>🖼️</span>
-          </div>
+          <Image
+            src={post.image}
+            alt={postData.title}
+            width={1600}
+            height={900}
+            priority
+            className={styles.featuredImage}
+          />
         </div>
 
         <div className={styles.content}>

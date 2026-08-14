@@ -4,7 +4,7 @@ export const blogPosts = [
     date: '2026-03-14',
     author: 'Jules Google',
     category: 'Tips & Trick',
-    image: '/images/blog/stove-maintenance.jpg',
+    image: '/images/products/wok-range.webp',
     tags: ['perawatan', 'kompor', 'komersial'],
     id: {
       title: 'Tips Perawatan Kompor Komersial Agar Awet dan Performa Maksimal',
@@ -48,7 +48,7 @@ export const blogPosts = [
     date: '2026-03-10',
     author: 'Jules Google',
     category: 'Service Guide',
-    image: '/images/blog/ducting-system.jpg',
+    image: '/images/products/exhaust-hood.webp',
     tags: ['ducting', 'sirkulasi', 'restoran'],
     id: {
       title: 'Manfaat Sistem Ducting yang Baik di Restoran Anda',

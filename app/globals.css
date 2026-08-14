@@ -65,7 +65,7 @@ body {
   line-height: 1.7;
   color: var(--dark-gray);
   background-color: var(--white);
-  overflow-x: hidden;
+  overflow-x: clip;
 }
 
 a {
@@ -91,7 +91,16 @@ button {
   font-family: var(--font-body);
 }
 
-/* ===== TYPOGRAPHY ===== */
+button:focus-visible,
+a:focus-visible,
+select:focus-visible,
+input:focus-visible,
+textarea:focus-visible {
+  outline: 3px solid var(--light-blue);
+  outline-offset: 3px;
+}
+
+  /* ===== TYPOGRAPHY ===== */
 h1, h2, h3, h4, h5, h6 {
   font-family: var(--font-heading);
   color: var(--dark-gray);
@@ -198,6 +207,7 @@ p { margin-bottom: 1rem; }
   background: var(--white);
   color: var(--dark-blue);
   transform: translateY(-2px);
+  box-shadow: 0 8px 25px rgba(27, 58, 92, 0.4);
 }
 
 .btn-outline {
@@ -219,6 +229,7 @@ p { margin-bottom: 1rem; }
 
 .btn-dark:hover {
   background: var(--dark-blue-hover);
+  color: var(--white);
   transform: translateY(-2px);
   box-shadow: 0 8px 25px rgba(27, 58, 92, 0.4);
 }

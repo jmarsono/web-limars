@@ -31,9 +31,11 @@
 }
 
 .heroIcon {
-  font-size: 4rem;
+  width: 4rem;
+  height: 4rem;
   display: block;
-  margin-bottom: 20px;
+  margin: 0 auto 20px;
+  color: var(--light-blue);
 }
 
 .heroContent h1 {
@@ -90,8 +92,8 @@
 
 .checkIcon {
   color: #1b5ba4;
-  font-weight: 700;
-  font-size: 1.1rem;
+  width: 1rem;
+  height: 1rem;
   flex-shrink: 0;
 }
 

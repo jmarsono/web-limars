@@ -5,6 +5,7 @@ import { Link } from '@/i18n/routing';
 import BreadcrumbJsonLd from '@/components/BreadcrumbJsonLd';
 import styles from './About.module.css';
 import WhatsAppIcon from '@/components/WhatsAppIcon';
+import UiIcon from '@/components/UiIcon';
 
 export default function AboutPage() {
   const t = useTranslations('About');
@@ -25,12 +26,12 @@ export default function AboutPage() {
   ];
 
   const values = [
-    { icon: '⭐', title: t('values.quality.title'), description: t('values.quality.desc') },
-    { icon: '🤝', title: t('values.reliability.title'), description: t('values.reliability.desc') },
-    { icon: '💡', title: t('values.innovation.title'), description: t('values.innovation.desc') },
-    { icon: '🛡️', title: t('values.safety.title'), description: t('values.safety.desc') },
-    { icon: '🎯', title: t('values.customerFocus.title'), description: t('values.customerFocus.desc') },
-    { icon: '🌱', title: t('values.sustainability.title'), description: t('values.sustainability.desc') },
+    { icon: 'star', title: t('values.quality.title'), description: t('values.quality.desc') },
+    { icon: 'handshake', title: t('values.reliability.title'), description: t('values.reliability.desc') },
+    { icon: 'lightbulb', title: t('values.innovation.title'), description: t('values.innovation.desc') },
+    { icon: 'shield', title: t('values.safety.title'), description: t('values.safety.desc') },
+    { icon: 'target', title: t('values.customerFocus.title'), description: t('values.customerFocus.desc') },
+    { icon: 'leaf', title: t('values.sustainability.title'), description: t('values.sustainability.desc') },
   ];
 
   const team = [
@@ -57,12 +58,12 @@ export default function AboutPage() {
         <div className="container">
           <div className={styles.vmGrid}>
             <div className={styles.vmCard}>
-              <div className={styles.vmIcon}>🔭</div>
+              <UiIcon name="telescope" className={styles.vmIcon} />
               <h2>{t('visionTitle')}</h2>
               <p>{t('visionDesc')}</p>
             </div>
             <div className={styles.vmCard}>
-              <div className={styles.vmIcon}>🎯</div>
+              <UiIcon name="target" className={styles.vmIcon} />
               <h2>{t('missionTitle')}</h2>
               <ul>
                 <li>{t('missionList.1')}</li>
@@ -107,7 +108,7 @@ export default function AboutPage() {
           <div className={styles.valuesGrid}>
             {values.map((value, idx) => (
               <div key={idx} className={styles.valueCard}>
-                <span className={styles.valueIcon}>{value.icon}</span>
+                <UiIcon name={value.icon} className={styles.valueIcon} />
                 <h3>{value.title}</h3>
                 <p>{value.description}</p>
               </div>
