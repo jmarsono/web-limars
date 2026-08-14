@@ -333,7 +333,7 @@ export default async function Home({ params }) {
               const imageUrl = project.image && typeof project.image === 'object' ? project.image.url : project.image;
 
               return (
-                <Link href={`/projects/${project.slug}`} key={project.id} className={`${styles.projectCard} ${index === 0 ? styles.projectCardLarge : ''}`}>
+                <Link href="/projects" key={project.id} className={`${styles.projectCard} ${index === 0 ? styles.projectCardLarge : ''}`}>
                   <div className={styles.projectImage}>
                     {imageUrl && (
                       <Image
