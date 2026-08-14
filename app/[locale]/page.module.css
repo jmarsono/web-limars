@@ -455,8 +455,10 @@
 
 .serviceIcon {
   margin: auto 0 22px;
-  font-size: 2rem;
-  filter: saturate(0.7);
+  width: 2.2rem;
+  height: 2.2rem;
+  color: var(--light-blue);
+  flex-shrink: 0;
 }
 
 .serviceCard h3 {
