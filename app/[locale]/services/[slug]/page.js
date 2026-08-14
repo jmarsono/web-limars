@@ -6,6 +6,7 @@ import styles from './ServiceDetail.module.css';
 import { setRequestLocale } from 'next-intl/server';
 import WhatsAppIcon from '../../../../components/WhatsAppIcon';
 import ServiceIcon from '../../../../components/ServiceIcon';
+import UiIcon from '../../../../components/UiIcon';
 
 export async function generateStaticParams() {
   return routing.locales.flatMap((locale) =>
@@ -108,7 +109,7 @@ export default async function ServiceDetailPage({ params }) {
                 <ul>
                   {service.features.map((feature, idx) => (
                     <li key={idx}>
-                      <span className={styles.checkIcon}>✓</span>
+                      <UiIcon name="check" className={styles.checkIcon} size={15} />
                       {feature[locale]}
                     </li>
                   ))}
