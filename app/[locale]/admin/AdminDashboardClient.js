@@ -2,6 +2,7 @@
 'use client';
 
 import { useState } from 'react';
+import UiIcon from '@/components/UiIcon';
 import { useRouter } from 'next/navigation';
 import { 
   logoutAction, 
@@ -203,19 +204,19 @@ export default function AdminDashboardClient({ initialProducts, initialProjects,
           className={activeTab === 'products' ? styles.tabActive : ''} 
           onClick={() => { setActiveTab('products'); setEditingItem(null); }}
         >
-          📦 Products
+          <><UiIcon name="package" size={17} /> Products</>
         </button>
         <button 
           className={activeTab === 'projects' ? styles.tabActive : ''} 
           onClick={() => { setActiveTab('projects'); setEditingItem(null); }}
         >
-          🏗️ Projects
+          <><UiIcon name="building" size={17} /> Projects</>
         </button>
         <button 
           className={activeTab === 'faqs' ? styles.tabActive : ''} 
           onClick={() => { setActiveTab('faqs'); setEditingItem(null); }}
         >
-          ❓ FAQs
+          <><UiIcon name="question" size={17} /> FAQs</>
         </button>
       </div>
 
