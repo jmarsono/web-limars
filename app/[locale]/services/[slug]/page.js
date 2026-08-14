@@ -5,6 +5,7 @@ import Image from 'next/image';
 import styles from './ServiceDetail.module.css';
 import { setRequestLocale } from 'next-intl/server';
 import WhatsAppIcon from '../../../../components/WhatsAppIcon';
+import ServiceIcon from '../../../../components/ServiceIcon';
 
 export async function generateStaticParams() {
   return routing.locales.flatMap((locale) =>
@@ -89,7 +90,7 @@ export default async function ServiceDetailPage({ params }) {
         <div className={styles.heroOverlay}></div>
         <div className={`container ${styles.heroContent}`}>
           <Link href="/services" className={styles.backLink}>{t('backLink')}</Link>
-          <span className={styles.heroIcon}>{service.icon}</span>
+          <ServiceIcon slug={service.slug} className={styles.heroIcon} />
           <h1>{service.title[locale]}</h1>
           <p className={styles.heroSubtitle}>{service.subtitle[locale]}</p>
         </div>
