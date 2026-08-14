@@ -10,6 +10,7 @@ import { getProducts, getProjects, getServices } from '../../lib/db';
 import { constructMetadata } from '../../lib/seo';
 import BreadcrumbJsonLd from '../../components/BreadcrumbJsonLd';
 import WhatsAppIcon from '../../components/WhatsAppIcon';
+import ServiceIcon from '../../components/ServiceIcon';
 
 export async function generateMetadata({ params }) {
   const { locale } = await params;
@@ -280,7 +281,7 @@ export default async function Home({ params }) {
               return (
                 <Link href={`/services/${service.slug}`} key={service.id} className={styles.serviceCard}>
                   <span className={styles.serviceIndex}>0{index + 1}</span>
-                  <span className={styles.serviceIcon}>{service.icon}</span>
+                  <ServiceIcon slug={service.slug} className={styles.serviceIcon} />
                   <h3>{title}</h3>
                   <p>{shortDesc}</p>
                   <span className={styles.serviceLink}>Learn more <span>↗</span></span>
