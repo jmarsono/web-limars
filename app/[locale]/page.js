@@ -226,7 +226,7 @@ export default async function Home({ params }) {
             </div>
             <div>
               <p>{t('products.subtitle')}</p>
-              <Link href="/products" className={styles.textLink}>{t('products.viewAll')} <span>↗</span></Link>
+              <Link href="/products" className={styles.textLink}>{t('products.viewAll')} <UiIcon name="arrowUpRight" size={14} className={styles.textLinkIcon} /></Link>
             </div>
           </div>
 
@@ -255,7 +255,7 @@ export default async function Home({ params }) {
                   <div className={styles.productInfo}>
                     <h3>{name}</h3>
                     <p>{shortDesc}</p>
-                    <span className={styles.productLink}>{t('products.viewDetails')} <span>↗</span></span>
+                    <span className={styles.productLink}>{t('products.viewDetails')} <UiIcon name="arrowUpRight" size={12} /></span>
                   </div>
                 </Link>
               );
@@ -285,7 +285,7 @@ export default async function Home({ params }) {
                   <ServiceIcon slug={service.slug} className={styles.serviceIcon} />
                   <h3>{title}</h3>
                   <p>{shortDesc}</p>
-                  <span className={styles.serviceLink}>Learn more <span>↗</span></span>
+                  <span className={styles.serviceLink}>{t('services.learnMore')} <UiIcon name="arrowUpRight" size={12} /></span>
                 </Link>
               );
             })}
@@ -323,7 +323,7 @@ export default async function Home({ params }) {
             </div>
             <div>
               <p>{t('projects.subtitle')}</p>
-              <Link href="/projects" className={styles.textLink}>{t('projects.viewAll')} <span>↗</span></Link>
+              <Link href="/projects" className={styles.textLink}>{t('projects.viewAll')} <UiIcon name="arrowUpRight" size={14} className={styles.textLinkIcon} /></Link>
             </div>
           </div>
 
@@ -351,7 +351,7 @@ export default async function Home({ params }) {
                       <strong>{name}</strong>
                       <small>{location}</small>
                     </div>
-                    <span className={styles.projectArrow}>↗</span>
+                    <span className={styles.projectArrow}><UiIcon name="arrowUpRight" size={14} /></span>
                   </div>
                 </Link>
               );
@@ -367,7 +367,15 @@ export default async function Home({ params }) {
             {clientLogos.map((logo) => (
               <span key={logo.name} className={`${styles.clientLogo} ${logo.variant ? styles[logo.variant] : ''}`}>
                 {logo.image ? (
-                  <img src={logo.image} alt={logo.name} />
+                  typeof logo.image === 'string' && logo.image.startsWith('http') ? (
+                    // External logos are rendered with <img> to avoid remote image domain config issues
+                    // eslint-disable-next-line @next/next/no-img-element
+                    <img src={logo.image} alt={logo.name} />
+                  ) : (
+                    <div style={{ position: 'relative', width: '100%', height: '100%' }}>
+                      <Image src={logo.image} alt={logo.name} fill sizes="200px" style={{ objectFit: 'contain' }} />
+                    </div>
+                  )
                 ) : (
                   logo.name
                 )}
