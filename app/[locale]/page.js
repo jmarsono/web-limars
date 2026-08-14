@@ -51,7 +51,7 @@ const testimonials = [
 const clientLogos = [
   { name: 'Al-Jazeerah Cikini' },
   { name: 'Royal Al-Jazeerah' },
-  { name: 'Central Al-Jazeerah' },
+  { name: 'Central Al-Jazeerah', image: '/images/clients/central-al-jazeerah.svg' },
   { name: 'Al-Jazeerah Polonia', image: '/images/clients/al-jazeerah-polonia.svg' },
   { name: 'Zahra Al-Jazeerah' },
   { name: 'Namamia Pizzeria Yogyakarta' },
