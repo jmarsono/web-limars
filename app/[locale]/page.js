@@ -44,7 +44,7 @@ const whyChooseUs = [
 
 const testimonials = [
   { name: 'Manager', company: 'Al-Jazeerah Cikini', key: '1', avatar: 'AJ' },
-  { name: 'Head Chef', company: 'Namamia Pizzeria Yogyakarta', key: '2', avatar: 'NP' },
+  { name: 'Head Chef', company: 'Nanamia Pizzeria Yogyakarta', key: '2', avatar: 'NP' },
   { name: 'Director', company: 'Born-Ga', key: '3', avatar: 'BG' },
 ];
 
