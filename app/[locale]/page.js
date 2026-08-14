@@ -367,15 +367,9 @@ export default async function Home({ params }) {
             {clientLogos.map((logo) => (
               <span key={logo.name} className={`${styles.clientLogo} ${logo.variant ? styles[logo.variant] : ''}`}>
                 {logo.image ? (
-                  typeof logo.image === 'string' && logo.image.startsWith('http') ? (
-                    // External logos are rendered with <img> to avoid remote image domain config issues
-                    // eslint-disable-next-line @next/next/no-img-element
-                    <img src={logo.image} alt={logo.name} />
-                  ) : (
-                    <div style={{ position: 'relative', width: '100%', height: '100%' }}>
-                      <Image src={logo.image} alt={logo.name} fill sizes="200px" style={{ objectFit: 'contain' }} />
-                    </div>
-                  )
+                  <div style={{ position: 'relative', width: '100%', height: '100%' }}>
+                    <Image src={logo.image} alt={logo.name} fill sizes="200px" style={{ objectFit: 'contain' }} />
+                  </div>
                 ) : (
                   logo.name
                 )}
