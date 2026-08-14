@@ -52,7 +52,7 @@ const clientLogos = [
   { name: 'Al-Jazeerah Cikini' },
   { name: 'Royal Al-Jazeerah' },
   { name: 'Central Al-Jazeerah' },
-  { name: 'Al-Jazeerah Polonia' },
+  { name: 'Al-Jazeerah Polonia', image: '/images/clients/al-jazeerah-polonia.svg' },
   { name: 'Zahra Al-Jazeerah' },
   { name: 'Namamia Pizzeria Yogyakarta' },
   { name: 'Born-Ga' },
