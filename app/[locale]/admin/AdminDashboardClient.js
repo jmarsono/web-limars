@@ -289,7 +289,7 @@ export default function AdminDashboardClient({ initialProducts, initialProjects,
                 {editingItem.type === 'product' && (
                   <>
                     <div className={styles.formGroup}>
-                      <label>Slug (Unique identifier URL, e.g. 'wok-range')</label>
+                      <label>Slug (Unique identifier URL, e.g. &apos;wok-range&apos;)</label>
                       <input 
                         type="text" 
                         value={editingItem.data.slug} 
