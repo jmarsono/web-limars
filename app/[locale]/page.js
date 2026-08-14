@@ -11,6 +11,7 @@ import { constructMetadata } from '../../lib/seo';
 import BreadcrumbJsonLd from '../../components/BreadcrumbJsonLd';
 import WhatsAppIcon from '../../components/WhatsAppIcon';
 import ServiceIcon from '../../components/ServiceIcon';
+import UiIcon from '../../components/UiIcon';
 
 export async function generateMetadata({ params }) {
   const { locale } = await params;
@@ -381,7 +382,7 @@ export default async function Home({ params }) {
             {testimonials.map((item) => (
               <figure key={item.key} className={styles.testimonialCard}>
                 <div className={styles.testimonialTop}>
-                  <span className={styles.testimonialStars}>★★★★★</span>
+                  <span className={styles.testimonialStars}>{Array.from({ length: 5 }, (_, starIndex) => <UiIcon key={starIndex} name="star" size={14} />)}</span>
                   <span>0{item.key}</span>
                 </div>
                 <blockquote>“{t(`testimonials.quotes.${item.key}`)}”</blockquote>
