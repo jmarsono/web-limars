@@ -643,6 +643,20 @@
   font: 600 0.86rem/1.2 var(--font-heading);
 }
 
+.clientLogo {
+  display: inline-flex;
+  min-height: 64px;
+  align-items: center;
+  justify-content: center;
+}
+
+.clientLogo img {
+  width: auto;
+  height: 64px;
+  max-width: 150px;
+  object-fit: contain;
+}
+
 /* ===== TESTIMONIALS ===== */
 .testimonialCard {
   min-height: 300px;
