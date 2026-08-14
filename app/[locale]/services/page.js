@@ -7,6 +7,7 @@ import { getMessages, setRequestLocale, getTranslations } from 'next-intl/server
 import { constructMetadata } from '../../../lib/seo';
 import BreadcrumbJsonLd from '../../../components/BreadcrumbJsonLd';
 import WhatsAppIcon from '../../../components/WhatsAppIcon';
+import ServiceIcon from '../../../components/ServiceIcon';
 
 export async function generateMetadata({ params }) {
   const { locale } = await params;
@@ -49,7 +50,7 @@ export default async function ServicesPage({ params }) {
           <div className={styles.servicesGrid}>
             {services.map((service, idx) => (
               <Link href={`/services/${service.slug}`} key={service.id} className={`${styles.serviceCard} ${idx === 0 ? styles.serviceCardLarge : ''}`}>
-                <div className={styles.serviceIcon}>{service.icon}</div>
+                <ServiceIcon slug={service.slug} className={styles.serviceIcon} />
                 <div className={styles.serviceContent}>
                   <h3>{service.title[locale]}</h3>
                   <span className={styles.serviceSubtitle}>{service.subtitle[locale]}</span>
