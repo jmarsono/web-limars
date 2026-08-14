@@ -10,6 +10,7 @@ import dynamic from 'next/dynamic';
 const Lightbox = dynamic(() => import('yet-another-react-lightbox'), { ssr: false });
 import 'yet-another-react-lightbox/styles.css';
 import WhatsAppIcon from '@/components/WhatsAppIcon';
+import UiIcon from '@/components/UiIcon';
 
 export default function ProjectsClient({ projects, projectCategories }) {
   const locale = useLocale();
@@ -82,7 +83,7 @@ export default function ProjectsClient({ projects, projectCategories }) {
                     <div className={styles.projectOverlay}>
                       <span className={styles.projectCategory}>{category}</span>
                       <h3>{name}</h3>
-                      <p className={styles.projectLocation}>📍 {location}</p>
+                      <p className={styles.projectLocation}><UiIcon name="location" size={15} /> {location}</p>
                     </div>
                   </div>
                 </div>
@@ -117,7 +118,7 @@ export default function ProjectsClient({ projects, projectCategories }) {
       {selectedProject && (
         <div className={styles.modal} onClick={() => setSelectedProject(null)}>
           <div className={styles.modalContent} onClick={e => e.stopPropagation()}>
-            <button className={styles.modalClose} onClick={() => setSelectedProject(null)}>✕</button>
+            <button className={styles.modalClose} onClick={() => setSelectedProject(null)} aria-label="Close project details"><UiIcon name="close" size={18} /></button>
             <div className={styles.modalImage} onClick={() => setLightboxOpen(true)} style={{ cursor: 'zoom-in' }}>
               <div style={{ position: 'relative', width: '100%', height: '300px', backgroundColor: '#f0f0f0', borderRadius: '15px 15px 0 0', overflow: 'hidden' }}>
                 {selectedProject.image && (
@@ -137,7 +138,7 @@ export default function ProjectsClient({ projects, projectCategories }) {
               </span>
               <h2>{selectedProject.name[locale] || selectedProject.name || ''}</h2>
               <p className={styles.modalLocation}>
-                📍 {selectedProject.location[locale] || selectedProject.location || ''}
+                <UiIcon name="location" size={15} /> {selectedProject.location[locale] || selectedProject.location || ''}
               </p>
               <p className={styles.modalDesc}>
                 {selectedProject.description[locale] || selectedProject.description || ''}
@@ -147,7 +148,7 @@ export default function ProjectsClient({ projects, projectCategories }) {
                   <h3>{t('scopeOfWork')}</h3>
                   <ul>
                     {selectedProject.scope.map((s, i) => (
-                      <li key={i}>✓ {typeof s === 'object' ? s[locale] || s.en : s}</li>
+                      <li key={i}><UiIcon name="check" size={15} /> {typeof s === 'object' ? s[locale] || s.en : s}</li>
                     ))}
                   </ul>
                 </div>
