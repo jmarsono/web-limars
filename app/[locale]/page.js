@@ -53,7 +53,7 @@ const clientLogos = [
   { name: 'Royal Al-Jazeerah', image: '/images/clients/al-jazeerah-signature.svg' },
   { name: 'Central Al-Jazeerah', image: '/images/clients/central-al-jazeerah.svg' },
   { name: 'Al-Jazeerah Polonia', image: '/images/clients/al-jazeerah-polonia.svg' },
-  { name: 'Zahra Al-Jazeerah' },
+  { name: 'Zahra Al-Jazeerah', image: '/images/clients/zahra-al-jazeerah.svg' },
   { name: 'Namamia Pizzeria Yogyakarta' },
   { name: 'Born-Ga' },
   { name: 'Dashi Chazuke Zenraku', image: '/images/clients/dashi-chazuke-zenraku.svg' },
