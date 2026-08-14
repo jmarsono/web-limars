@@ -127,7 +127,14 @@
 }
 
 .projectOverlay h3 { color: white; font-size: 1.1rem; margin-bottom: 4px; }
-.projectLocation { color: rgba(255,255,255,0.7); font-size: 0.85rem; margin: 0 !important; }
+.projectLocation {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  color: rgba(255,255,255,0.7);
+  font-size: 0.85rem;
+  margin: 0 !important;
+}
 
 .empty { text-align: center; padding: 80px 0; color: var(--gray); }
 
