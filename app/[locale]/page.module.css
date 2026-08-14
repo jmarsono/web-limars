@@ -675,7 +675,9 @@
 
 .testimonialStars {
   color: #f59e0b;
-  letter-spacing: 0.14em;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.15rem;
 }
 
 .testimonialCard blockquote {
