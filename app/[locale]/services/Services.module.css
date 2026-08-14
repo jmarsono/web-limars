@@ -75,7 +75,9 @@
 }
 
 .serviceIcon {
-  font-size: 3rem;
+  width: 3rem;
+  height: 3rem;
+  color: var(--light-blue);
   flex-shrink: 0;
 }
 
