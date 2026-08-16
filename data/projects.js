@@ -182,8 +182,9 @@ export const projects = [
       { en: 'Exhaust hood & ducting installation', id: 'Instalasi exhaust hood & ducting' },
       { en: 'Supporting kitchen equipment supply & install', id: 'Penyediaan & instalasi kitchen equipment pendukung' }
     ],
-    image: '/images/projects/dashi-chazuke-zenraku-gi/dashi-chazuke-zenraku-gi-1.webp',
+    image: '/images/projects/dashi-chazuke-zenraku-gi/dashi-chazuke-zenraku-gi-6.webp',
     images: [
+      '/images/projects/dashi-chazuke-zenraku-gi/dashi-chazuke-zenraku-gi-6.webp',
       '/images/projects/dashi-chazuke-zenraku-gi/dashi-chazuke-zenraku-gi-1.webp',
       '/images/projects/dashi-chazuke-zenraku-gi/dashi-chazuke-zenraku-gi-2.webp',
       '/images/projects/dashi-chazuke-zenraku-gi/dashi-chazuke-zenraku-gi-3.webp',
