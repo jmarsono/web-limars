@@ -1,5 +1,62 @@
 export const products = [
   {
+    id: 6,
+    name: {
+      en: 'Traditional Pizza Oven',
+      id: 'Oven Pizza Tradisional'
+    },
+    slug: 'brick-oven',
+    category: {
+      en: 'Regional Ovens',
+      id: 'Oven Regional'
+    },
+    description: {
+      en: 'Authentic custom-built brick & masonry dome pizza oven engineered for maximum heat retention (>500°C) and true wood-fired Neapolitan flavor. Handcrafted in Indonesia by Limars Teknik.',
+      id: 'Oven pizza kubah bata refraktori otentik yang dirancang khusus oleh Limars Teknik untuk retensi panas maksimal (>500°C) dan aroma kayu bakar khas Neapolitan. Dibuat secara buatan tangan (handcrafted) di Indonesia dengan material refraktori berkualitas tinggi dan rangka kokoh.'
+    },
+    shortDescription: {
+      en: 'Handcrafted brick dome pizza oven for authentic wood-fired baking.',
+      id: 'Oven kubah bata tradisional untuk hasil panggang kayu bakar otentik.'
+    },
+    specs: {
+      material: { en: 'Refractory Brick + Steel Frame', id: 'Bata Tahan Api + Rangka Baja' },
+      maxTemperature: '500°C+',
+      fuelType: { en: 'Wood / Gas / Hybrid', id: 'Kayu Bakar / Gas / Kombinasi' },
+      dimensions: { en: 'Custom / Project-Based', id: 'Sesuai Pesanan Resto' },
+    },
+    image: '/images/products/brick-oven.webp',
+    featured: true,
+  },
+  {
+    id: 4,
+    name: {
+      en: 'Portable Pizza Oven',
+      id: 'Oven Pizza Portable'
+    },
+    slug: 'pizza-oven',
+    category: {
+      en: 'Regional Ovens',
+      id: 'Oven Regional'
+    },
+    description: {
+      en: 'Compact and high-performance portable gas pizza oven designed for SMEs, pop-up kitchens, and catering setups. Reaches 450°C quickly for fast artisan pizza baking.',
+      id: 'Oven pizza portable berbasis gas bertenaga tinggi yang dirancang khusus untuk UMKM, katering, dan restoran modern. Mencapai suhu 450°C dengan cepat dan efisien, memberikan hasil panggangan pizza berkualitas tinggi yang dapat dipindahkan dengan mudah.'
+    },
+    shortDescription: {
+      en: 'Portable gas pizza oven for SMEs and mobile catering.',
+      id: 'Oven pizza portable bertenaga gas untuk UMKM & resto.'
+    },
+    specs: {
+      material: { en: 'Stainless Steel + Cordierite Stone', id: 'Baja Tahan Karat + Batu Cordierite' },
+      capacity: { en: '1-2 Pizzas', id: '1-2 Pizza' },
+      maxTemperature: '450°C',
+      fuelType: { en: 'LPG Gas', id: 'Gas LPG' },
+      dimensions: '650 x 550 x 400 mm',
+    },
+    image: '/images/products/pizza-oven.webp',
+    featured: true,
+  },
+  {
     id: 1,
     name: {
       en: 'Wok Range',
@@ -86,35 +143,6 @@ export const products = [
     image: '/images/products/chinese-cooking-range.webp',
   },
   {
-    id: 4,
-    name: {
-      en: 'Pizza Oven',
-      id: 'Oven Pizza Komersial'
-    },
-    slug: 'pizza-oven',
-    category: {
-      en: 'Regional Ovens',
-      id: 'Oven Regional'
-    },
-    description: {
-      en: 'Authentic pizza oven with stone hearth and dome construction. Achieves temperatures up to 500°C for perfect Neapolitan-style pizzas.',
-      id: 'Kami memproduksi oven pizza komersial otentik yang dilengkapi dengan tungku batu berkualitas dan konstruksi kubah standar industri. Unit oven pizza komersial ini mampu mencapai suhu tinggi hingga 500°C untuk menghasilkan pizza bergaya Neapolitan yang matang merata dalam hitungan menit. Percayakan kebutuhan oven pizza komersial Anda kepada kami untuk kualitas pemanggangan terbaik.'
-    },
-    shortDescription: {
-      en: 'Stone hearth pizza oven for authentic results.',
-      id: 'Oven pizza tungku batu untuk hasil otentik.'
-    },
-    specs: {
-      material: { en: 'Stainless Steel + Refractory Brick', id: 'Baja Tahan Karat + Bata Tahan Api' },
-      capacity: { en: '4-12 Pizzas', id: '4-12 Pizza' },
-      maxTemperature: '500°C',
-      fuelType: { en: 'Gas / Wood', id: 'Gas / Kayu Bakar' },
-      dimensions: '1500 x 1200 x 1800 mm',
-    },
-    image: '/images/products/pizza-oven.webp',
-    featured: true,
-  },
-  {
     id: 5,
     name: {
       en: 'Tandoor Oven',
@@ -140,33 +168,6 @@ export const products = [
       dimensions: '800 x 800 x 1100 mm',
     },
     image: '/images/products/tandoor-oven.webp',
-  },
-  {
-    id: 6,
-    name: {
-      en: 'Brick Oven',
-      id: 'Oven Bata Kustom'
-    },
-    slug: 'brick-oven',
-    category: {
-      en: 'Regional Ovens',
-      id: 'Oven Regional'
-    },
-    description: {
-      en: 'Custom-built brick oven with excellent heat retention. Perfect for artisan bread, pizza, and roast dishes with authentic wood-fired flavor.',
-      id: 'Kami menawarkan oven bata kustom dengan rancangan khusus yang memberikan retensi panas yang sangat baik untuk pembakaran lambat. Sempurna untuk memanggang roti artisan, pizza, dan berbagai hidangan panggang, oven bata kustom kami menghadirkan aroma pembakaran kayu yang otentik. Setiap unit oven bata kustom dibangun menggunakan bata tahan api berkualitas tinggi dan rangka baja kokoh.'
-    },
-    shortDescription: {
-      en: 'Custom brick oven for artisan baking.',
-      id: 'Oven bata kustom untuk memanggang artisan.'
-    },
-    specs: {
-      material: { en: 'Refractory Brick + Steel Frame', id: 'Bata Tahan Api + Rangka Baja' },
-      maxTemperature: '450°C',
-      fuelType: { en: 'Wood / Gas', id: 'Kayu Bakar / Gas' },
-      dimensions: { en: 'Custom', id: 'Sesuai Pesanan' },
-    },
-    image: '/images/products/brick-oven.webp',
   },
   {
     id: 7,
