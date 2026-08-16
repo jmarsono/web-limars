@@ -442,6 +442,23 @@ INSERT INTO projects (id, slug, name_en, name_id, category_en, category_id, loca
   0,
   'https://youtu.be/g_WFAg6_n6Q'
 );
+INSERT INTO projects (id, slug, name_en, name_id, category_en, category_id, location_en, location_id, description_en, description_id, image, images, scope, year_completed, featured) VALUES (
+  13,
+  'nanamia-pizzeria-yogyakarta-branch-2-pizza-oven',
+  'Nanamia Pizzeria Yogyakarta Branch 2 Pizza Oven (2021)',
+  'Pembuatan Oven Pizza Nanamia Pizzeria Yogyakarta Cabang 2 (2021)',
+  'Oven Installation',
+  'Instalasi Oven',
+  'Yogyakarta',
+  'Yogyakarta',
+  'Second wood-fired pizza oven installation for Nanamia Pizzeria Yogyakarta at their second branch (2021), featuring a custom earth-rendered dome oven with internal wood combustion and temperature gauge setup.',
+  'Instalasi oven pizza kayu bakar kedua untuk Nanamia Pizzeria Yogyakarta di cabang kedua mereka (2021), menampilkan oven kubah plester tanah liat kustom dengan pembakaran kayu internal dan pengaturan pengukur suhu.',
+  '/images/projects/nanamia-pizzeria-yogyakarta-branch-2/nanamia-pizzeria-branch2-1.webp',
+  '["/images/projects/nanamia-pizzeria-yogyakarta-branch-2/nanamia-pizzeria-branch2-1.webp","/images/projects/nanamia-pizzeria-yogyakarta-branch-2/nanamia-pizzeria-branch2-2.webp"]',
+  '[{"en":"Custom earth-rendered dome oven fabrication","id":"Fabrikasi oven kubah plester tanah liat kustom"},{"en":"Refractory hearth bricklaying & insulation","id":"Pemasangan bata tungku tahan api & insulasi"},{"en":"Wood-fired combustion system setup","id":"Pengaturan sistem pembakaran kayu bakar"},{"en":"Temperature gauge calibration & testing","id":"Kalibrasi pengukur suhu & pengujian"}]',
+  2021,
+  1
+);
 
 -- SEED SERVICES
 INSERT INTO services (id, slug, title_en, title_id, subtitle_en, subtitle_id, short_description_en, short_description_id, description_en, description_id, image, icon, features, process) VALUES (

@@ -363,6 +363,36 @@ export const projects = [
     ],
     featured: false,
   },
+  {
+    id: 13,
+    name: {
+      en: 'Nanamia Pizzeria Yogyakarta Branch 2 Pizza Oven (2021)',
+      id: 'Pembuatan Oven Pizza Nanamia Pizzeria Yogyakarta Cabang 2 (2021)'
+    },
+    slug: 'nanamia-pizzeria-yogyakarta-branch-2-pizza-oven',
+    category: {
+      en: 'Oven Installation',
+      id: 'Instalasi Oven'
+    },
+    location: { en: 'Yogyakarta', id: 'Yogyakarta' },
+    year: 2021,
+    description: {
+      en: 'Second wood-fired pizza oven installation for Nanamia Pizzeria Yogyakarta at their second branch (2021), featuring a custom earth-rendered dome oven with internal wood combustion and temperature gauge setup.',
+      id: 'Instalasi oven pizza kayu bakar kedua untuk Nanamia Pizzeria Yogyakarta di cabang kedua mereka (2021), menampilkan oven kubah plester tanah liat kustom dengan pembakaran kayu internal dan pengaturan pengukur suhu.'
+    },
+    scope: [
+      { en: 'Custom earth-rendered dome oven fabrication', id: 'Fabrikasi oven kubah plester tanah liat kustom' },
+      { en: 'Refractory hearth bricklaying & insulation', id: 'Pemasangan bata tungku tahan api & insulasi' },
+      { en: 'Wood-fired combustion system setup', id: 'Pengaturan sistem pembakaran kayu bakar' },
+      { en: 'Temperature gauge calibration & testing', id: 'Kalibrasi pengukur suhu & pengujian' }
+    ],
+    image: '/images/projects/nanamia-pizzeria-yogyakarta-branch-2/nanamia-pizzeria-branch2-1.webp',
+    images: [
+      '/images/projects/nanamia-pizzeria-yogyakarta-branch-2/nanamia-pizzeria-branch2-1.webp',
+      '/images/projects/nanamia-pizzeria-yogyakarta-branch-2/nanamia-pizzeria-branch2-2.webp'
+    ],
+    featured: true,
+  },
 ];
 
 export const projectCategories = [
