@@ -388,6 +388,23 @@ INSERT INTO projects (id, slug, name_en, name_id, category_en, category_id, loca
   2018,
   0
 );
+INSERT INTO projects (id, slug, name_en, name_id, category_en, category_id, location_en, location_id, description_en, description_id, image, images, scope, year_completed, featured) VALUES (
+  10,
+  'royal-aljazeerah-puncak-tannur-oven',
+  'Royal Al-Jazeerah Puncak Tannur/Tandoor Oven',
+  'Pembuatan Oven Tannur/Tandoor Royal Al-Jazeerah Puncak',
+  'Oven Installation',
+  'Instalasi Oven',
+  'Puncak, Bogor',
+  'Puncak, Bogor',
+  'Custom underground pit-style Tannur/Tandoor oven fabrication and installation for Royal Al-Jazeerah Restaurant in Puncak, Bogor (2017). A traditional Middle Eastern in-ground cooking pit used for slow-roasting meats and traditional flatbreads, complete with a heavy sealed lid system to retain heat.',
+  'Fabrikasi dan instalasi oven Tannur/Tandoor bawah tanah kustom untuk Royal Al-Jazeerah Restaurant di Puncak, Bogor (2017). Lubang masak tradisional Timur Tengah yang digunakan untuk memanggang daging secara perlahan dan roti tradisional, dilengkapi sistem tutup rapat untuk menjaga panas.',
+  '/images/projects/royal-aljazeerah-puncak-tannur/royal-aljazeerah-puncak-tannur-1.webp',
+  '["/images/projects/royal-aljazeerah-puncak-tannur/royal-aljazeerah-puncak-tannur-1.webp","/images/projects/royal-aljazeerah-puncak-tannur/royal-aljazeerah-puncak-tannur-2.webp"]',
+  '[{"en":"Underground pit oven excavation & construction","id":"Penggalian & konstruksi lubang oven bawah tanah"},{"en":"Refractory brick-lined pit fabrication","id":"Fabrikasi lubang berlapis bata tahan api"},{"en":"Heavy-duty sealed lid system","id":"Sistem tutup rapat heavy-duty"},{"en":"Heat retention & ventilation testing","id":"Pengujian retensi panas & ventilasi"}]',
+  2017,
+  0
+);
 
 -- SEED SERVICES
 INSERT INTO services (id, slug, title_en, title_id, subtitle_en, subtitle_id, short_description_en, short_description_id, description_en, description_id, image, icon, features, process) VALUES (
