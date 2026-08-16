@@ -90,10 +90,10 @@ export default async function Home({ params }) {
   }).slice(0, 3);
 
   const stats = [
-    { number: '10+', label: t('stats.years') },
-    { number: '200+', label: t('stats.projects') },
-    { number: '100+', label: t('stats.clients') },
-    { number: '30+', label: t('stats.team') },
+    { number: '11+', label: t('stats.years') },
+    { number: '20+', label: t('stats.projects') },
+    { number: '50+', label: t('stats.clients') },
+    { number: '20+', label: t('stats.team') },
   ];
 
   const leadProject = featuredProjects[0] || activeProjects[0];
