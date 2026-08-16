@@ -196,6 +196,24 @@ export default function ProjectsClient({ projects, projectCategories }) {
                   </ul>
                 </div>
               )}
+              {selectedProject.videoUrl && (() => {
+                const match = selectedProject.videoUrl.match(/(?:youtu\.be\/|v=|\/embed\/|\/watch\?v=)([\w-]{11})/);
+                return match ? (
+                  <div className={styles.modalVideo}>
+                    <h3>Video Dokumentasi</h3>
+                    <div style={{ position: 'relative', paddingBottom: '56.25%', height: 0, overflow: 'hidden', borderRadius: 8 }}>
+                      <iframe
+                        src={`https://www.youtube.com/embed/${match[1]}`}
+                        title={`Video dokumentasi ${selectedProject.name[locale] || selectedProject.name || ''}`}
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                        referrerPolicy="strict-origin-when-cross-origin"
+                        allowFullScreen
+                        style={{ position: 'absolute', top: 0, left: 0, width: '100%', height: '100%', border: 0 }}
+                      />
+                    </div>
+                  </div>
+                ) : null;
+              })()}
             </div>
           </div>
         </div>

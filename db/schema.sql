@@ -31,8 +31,10 @@ CREATE TABLE projects (
   description_en TEXT,
   description_id TEXT,
   image TEXT NOT NULL,
+  images TEXT, -- JSON string array of image paths for gallery/slideshow
   scope TEXT, -- JSON string of array of localized objects: [{"en": "Fabrication", "id": "Fabrikasi"}]
   year_completed INTEGER, -- Year the project was completed (public-facing, no financial data)
+  video_url TEXT, -- Optional YouTube documentation video URL
   featured INTEGER DEFAULT 0,
   created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
 );

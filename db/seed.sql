@@ -422,6 +422,24 @@ INSERT INTO projects (id, slug, name_en, name_id, category_en, category_id, loca
   2016,
   0
 );
+INSERT INTO projects (id, slug, name_en, name_id, category_en, category_id, location_en, location_id, description_en, description_id, image, images, scope, year_completed, featured, video_url) VALUES (
+  12,
+  'al-jazeerah-cikini-pizza-2020-new-restaurant',
+  'Al-Jazeerah Cikini Pizza Oven 2020 New Restaurant Project',
+  'Pembuatan Oven Pizza untuk Restoran Baru Al-Jazeerah Cikini 2020',
+  'Oven Installation',
+  'Instalasi Oven',
+  'Cikini, Jakarta',
+  'Cikini, Jakarta',
+  'Custom pizza oven fabrication and installation for the new Al-Jazeerah Cikini restaurant (2020), built adjacent to our earlier Mandi oven and 2016 pizza oven projects at the same location. Features a refractory firebrick chamber, layered thermal insulation system, and dual exhaust chimneys.',
+  'Fabrikasi oven pizza kustom untuk restoran baru Al-Jazeerah Cikini (2020), dibangun berdekatan dengan proyek oven Mandi dan oven pizza 2016 kami di lokasi yang sama. Dilengkapi ruang bakar bata tahan api, sistem isolasi termal berlapis, dan dua cerobong pembuangan asap.',
+  '/images/projects/aljazeerah-cikini-pizza-2020-new-restaurant/aljazeerah-cikini-pizza-2020-new-restaurant-1.webp',
+  '["/images/projects/aljazeerah-cikini-pizza-2020-new-restaurant/aljazeerah-cikini-pizza-2020-new-restaurant-1.webp"]',
+  '[{"en":"Traditional pizza oven design","id":"Desain oven pizza tradisional"},{"en":"Layered thermal insulation system","id":"Sistem isolasi termal berlapis"},{"en":"Refractory brick chamber construction","id":"Konstruksi ruang bakar bata tahan api"},{"en":"Dual exhaust chimney fabrication","id":"Fabrikasi cerobong pembuangan asap ganda"}]',
+  2020,
+  0,
+  'https://youtu.be/g_WFAg6_n6Q'
+);
 
 -- SEED SERVICES
 INSERT INTO services (id, slug, title_en, title_id, subtitle_en, subtitle_id, short_description_en, short_description_id, description_en, description_id, image, icon, features, process) VALUES (

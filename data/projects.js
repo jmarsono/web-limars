@@ -331,6 +331,36 @@ export const projects = [
     ],
     featured: false,
   },
+  {
+    id: 12,
+    name: {
+      en: 'Al-Jazeerah Cikini Pizza Oven 2020 New Restaurant Project',
+      id: 'Pembuatan Oven Pizza untuk Restoran Baru Al-Jazeerah Cikini 2020'
+    },
+    slug: 'al-jazeerah-cikini-pizza-2020-new-restaurant',
+    category: {
+      en: 'Oven Installation',
+      id: 'Instalasi Oven'
+    },
+    location: { en: 'Cikini, Jakarta', id: 'Cikini, Jakarta' },
+    year: 2020,
+    description: {
+      en: 'Custom pizza oven fabrication and installation for the new Al-Jazeerah Cikini restaurant (2020), built adjacent to our earlier Mandi oven and 2016 pizza oven projects at the same location. Features a refractory firebrick chamber, layered thermal insulation system, and dual exhaust chimneys.',
+      id: 'Fabrikasi oven pizza kustom untuk restoran baru Al-Jazeerah Cikini (2020), dibangun berdekatan dengan proyek oven Mandi dan oven pizza 2016 kami di lokasi yang sama. Dilengkapi ruang bakar bata tahan api, sistem isolasi termal berlapis, dan dua cerobong pembuangan asap.'
+    },
+    scope: [
+      { en: 'Traditional pizza oven design', id: 'Desain oven pizza tradisional' },
+      { en: 'Layered thermal insulation system', id: 'Sistem isolasi termal berlapis' },
+      { en: 'Refractory brick chamber construction', id: 'Konstruksi ruang bakar bata tahan api' },
+      { en: 'Dual exhaust chimney fabrication', id: 'Fabrikasi cerobong pembuangan asap ganda' }
+    ],
+    videoUrl: 'https://youtu.be/g_WFAg6_n6Q',
+    image: '/images/projects/aljazeerah-cikini-pizza-2020-new-restaurant/aljazeerah-cikini-pizza-2020-new-restaurant-1.webp',
+    images: [
+      '/images/projects/aljazeerah-cikini-pizza-2020-new-restaurant/aljazeerah-cikini-pizza-2020-new-restaurant-1.webp'
+    ],
+    featured: false,
+  },
 ];
 
 export const projectCategories = [

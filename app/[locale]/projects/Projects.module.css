@@ -294,6 +294,19 @@
 .modalScope ul { display: flex; flex-direction: column; gap: 8px; }
 .modalScope li { color: var(--dark-gray); font-size: 0.9rem; }
 
+.modalVideo {
+  padding: 0 32px 32px;
+}
+
+.modalVideo h3 {
+  margin: 0 0 12px;
+  font-size: 1.1rem;
+}
+
+.modalVideo iframe {
+  border-radius: 8px;
+}
+
 @media (max-width: 768px) {
   .hero { padding: 140px 0 80px; }
   .heroContent h1 { font-size: 2rem; }
