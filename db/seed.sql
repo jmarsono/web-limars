@@ -300,11 +300,11 @@ INSERT INTO projects (id, slug, name_en, name_id, category_en, category_id, loca
   'Instalasi Oven',
   'Yogyakarta',
   'Yogyakarta',
-  'Custom traditional Italian pizza oven fabrication and installation for Nanamia Pizzeria Yogyakarta. Authentic stone hearth oven with gas heating system.',
-  'Fabrikasi dan instalasi oven pizza tradisional Itali khusus untuk Nanamia Pizzeria Yogyakarta. Oven tungku batu otentik dengan sistem pemanas gas.',
-  '/images/projects/project-4-new.webp',
-  '[{"en":"Italian stone hearth design","id":"Desain tungku batu Italia"},{"en":"High-temperature brickwork","id":"Konstruksi bata suhu tinggi"},{"en":"Gas heating system setup","id":"Pengaturan sistem pemanas gas"},{"en":"Chimney & ventilation","id":"Cerobong asap & ventilasi"}]',
-  NULL,
+  'Custom traditional Italian wood-fired dome pizza oven fabrication and installation for Nanamia Pizzeria Yogyakarta (2018). Built on a custom steel-frame table with refractory firebrick hearth, hand-laid dome masonry, gas heating system, and stainless steel chimney -- a fully authentic Italian stone hearth oven.',
+  'Fabrikasi dan instalasi oven pizza tradisional Itali khusus untuk Nanamia Pizzeria Yogyakarta (2018). Dibangun di atas rangka baja kustom dengan lantai tungku bata tahan api, kubah batu tangan, sistem pemanas gas, dan cerobong stainless steel -- oven tungku batu Italia yang otentik.',
+  '/images/projects/nanamia-pizzeria-yogyakarta/nanamia-pizzeria-1.webp',
+  '[{"en":"Custom steel frame table construction","id":"Konstruksi meja rangka baja kustom"},{"en":"Refractory firebrick hearth & dome masonry","id":"Lantai tungku bata tahan api & masonry kubah"},{"en":"Gas heating system setup","id":"Pengaturan sistem pemanas gas"},{"en":"Stainless steel chimney installation","id":"Instalasi cerobong stainless steel"}]',
+  2018,
   0
 );
 INSERT INTO projects (id, slug, name_en, name_id, category_en, category_id, location_en, location_id, description_en, description_id, image, scope, year_completed, featured) VALUES (

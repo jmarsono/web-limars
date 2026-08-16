@@ -85,7 +85,6 @@ export const projects = [
   },
   {
     id: 4,
-    image: '/images/projects/project-4-new.webp',
     name: {
       en: 'Nanamia Pizzeria Yogyakarta Traditional Italian Pizza Oven',
       id: 'Proyek Oven Pizza Tradisional Itali Nanamia Pizzeria Yogyakarta'
@@ -96,16 +95,25 @@ export const projects = [
       id: 'Instalasi Oven'
     },
     location: { en: 'Yogyakarta', id: 'Yogyakarta' },
+    year: 2018,
     description: {
-      en: 'Custom traditional Italian pizza oven fabrication and installation for Nanamia Pizzeria Yogyakarta. Authentic stone hearth oven with gas heating system.',
-      id: 'Fabrikasi dan instalasi oven pizza tradisional Itali khusus untuk Nanamia Pizzeria Yogyakarta. Oven tungku batu otentik dengan sistem pemanas gas.'
+      en: 'Custom traditional Italian wood-fired dome pizza oven fabrication and installation for Nanamia Pizzeria Yogyakarta (2018). Built on a custom steel-frame table with refractory firebrick hearth, hand-laid dome masonry, gas heating system, and stainless steel chimney — a fully authentic Italian stone hearth oven.',
+      id: 'Fabrikasi dan instalasi oven pizza tradisional Itali khusus untuk Nanamia Pizzeria Yogyakarta (2018). Dibangun di atas rangka baja kustom dengan lantai tungku bata tahan api, kubah batu tangan, sistem pemanas gas, dan cerobong stainless steel — oven tungku batu Italia yang otentik.'
     },
     scope: [
-      { en: 'Italian stone hearth design', id: 'Desain tungku batu Italia' },
-      { en: 'High-temperature brickwork', id: 'Konstruksi bata suhu tinggi' },
+      { en: 'Custom steel frame table construction', id: 'Konstruksi meja rangka baja kustom' },
+      { en: 'Refractory firebrick hearth & dome masonry', id: 'Lantai tungku bata tahan api & masonry kubah' },
       { en: 'Gas heating system setup', id: 'Pengaturan sistem pemanas gas' },
-      { en: 'Chimney & ventilation', id: 'Cerobong asap & ventilasi' }
+      { en: 'Stainless steel chimney installation', id: 'Instalasi cerobong stainless steel' }
     ],
+    image: '/images/projects/nanamia-pizzeria-yogyakarta/nanamia-pizzeria-1.webp',
+    images: [
+      '/images/projects/nanamia-pizzeria-yogyakarta/nanamia-pizzeria-1.webp',
+      '/images/projects/nanamia-pizzeria-yogyakarta/nanamia-pizzeria-2.webp',
+      '/images/projects/nanamia-pizzeria-yogyakarta/nanamia-pizzeria-3.webp',
+      '/images/projects/nanamia-pizzeria-yogyakarta/nanamia-pizzeria-4.webp'
+    ],
+    featured: false,
   },
   {
     id: 5,
