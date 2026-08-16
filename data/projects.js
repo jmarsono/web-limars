@@ -56,7 +56,6 @@ export const projects = [
   },
   {
     id: 3,
-    image: '/images/projects/aljazeerah-polonia/aljazeerah-polonia-1.webp',
     name: {
       en: 'Al-Jazeerah Polonia Function Hall Large Pizza Oven (180cm)',
       id: 'Pembuatan Oven Pizza Besar (180cm) Al-Jazeerah Polonia Function Hall'
@@ -77,6 +76,10 @@ export const projects = [
       { en: 'Large-scale refractory brick fabrication', id: 'Fabrikasi bata tahan api skala besar' },
       { en: 'High-capacity gas & burner system', id: 'Sistem gas & burner kapasitas tinggi' },
       { en: 'Performance testing and commissioning', id: 'Uji performa dan commissioning' }
+    ],
+    image: '/images/projects/aljazeerah-polonia/aljazeerah-polonia-1.webp',
+    images: [
+      '/images/projects/aljazeerah-polonia/aljazeerah-polonia-1.webp'
     ],
     featured: true,
   },
