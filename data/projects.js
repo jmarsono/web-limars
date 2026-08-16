@@ -27,6 +27,10 @@ export const projects = [
   {
     id: 2,
     image: '/images/projects/central-aljazeerah-pramuka/central-aljazeerah-pramuka-1.webp',
+    images: [
+      '/images/projects/central-aljazeerah-pramuka/central-aljazeerah-pramuka-1.webp',
+      '/images/projects/central-aljazeerah-pramuka/central-aljazeerah-pramuka-2.webp'
+    ],
     name: {
       en: 'Central Al-Jazeerah Traditional Pizza Oven',
       id: 'Pembuatan Oven Pizza Tradisional Central Al-Jazeerah'
@@ -103,6 +107,11 @@ export const projects = [
   {
     id: 5,
     image: '/images/projects/zahra-al-jazeerah-cianjur/zahra-aljazeerah-cianjur-1.webp',
+    images: [
+      '/images/projects/zahra-al-jazeerah-cianjur/zahra-aljazeerah-cianjur-1.webp',
+      '/images/projects/zahra-al-jazeerah-cianjur/zahra-aljazeerah-cianjur-2.webp',
+      '/images/projects/zahra-al-jazeerah-cianjur/zahra-aljazeerah-cianjur-3.webp'
+    ],
     name: {
       en: 'Zahra Al-Jazeerah Restaurant & Family Villas Pizza Oven',
       id: 'Pembuatan Oven Pizza Zahra Al-Jazeerah Restaurant & Family Villas'
@@ -197,6 +206,12 @@ export const projects = [
       { en: 'Safety and doneness testing', id: 'Pengujian keselamatan & kematangan' }
     ],
     image: '/images/projects/aljazeerah-cikini-mandi-oven/aljazeerah-cikini-mandi-oven-1.webp',
+    images: [
+      '/images/projects/aljazeerah-cikini-mandi-oven/aljazeerah-cikini-mandi-oven-1.webp',
+      '/images/projects/aljazeerah-cikini-mandi-oven/aljazeerah-cikini-mandi-oven-2.webp',
+      '/images/projects/aljazeerah-cikini-mandi-oven/aljazeerah-cikini-mandi-oven-3.webp',
+      '/images/projects/aljazeerah-cikini-mandi-oven/aljazeerah-cikini-mandi-oven-4.webp'
+    ],
   },
 ];
 

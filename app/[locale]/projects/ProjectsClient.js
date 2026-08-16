@@ -19,7 +19,29 @@ export default function ProjectsClient({ projects, projectCategories }) {
   
   const [activeCategory, setActiveCategory] = useState('All');
   const [selectedProject, setSelectedProject] = useState(null);
+  const [currentImgIndex, setCurrentImgIndex] = useState(0);
   const [lightboxOpen, setLightboxOpen] = useState(false);
+
+  const handleOpenProject = (project) => {
+    setSelectedProject(project);
+    setCurrentImgIndex(0);
+  };
+
+  const projectImages = selectedProject
+    ? (selectedProject.images && selectedProject.images.length > 0
+        ? selectedProject.images
+        : [selectedProject.image])
+    : [];
+
+  const handlePrevImg = (e) => {
+    e.stopPropagation();
+    setCurrentImgIndex((prev) => (prev === 0 ? projectImages.length - 1 : prev - 1));
+  };
+
+  const handleNextImg = (e) => {
+    e.stopPropagation();
+    setCurrentImgIndex((prev) => (prev === projectImages.length - 1 ? 0 : prev + 1));
+  };
 
   const filteredProjects = activeCategory === 'All'
     ? projects
@@ -67,7 +89,7 @@ export default function ProjectsClient({ projects, projectCategories }) {
               const location = project.location[locale] || project.location || '';
               
               return (
-                <div key={project.id} className={styles.projectCard} onClick={() => setSelectedProject(project)}>
+                <div key={project.id} className={styles.projectCard} onClick={() => handleOpenProject(project)}>
                   <div className={styles.projectImage}>
                     <div style={{ position: 'relative', width: '100%', aspectRatio: '4/3', backgroundColor: '#f0f0f0', overflow: 'hidden' }}>
                       {project.image && (
@@ -121,18 +143,37 @@ export default function ProjectsClient({ projects, projectCategories }) {
         <div className={styles.modal} onClick={() => setSelectedProject(null)}>
           <div className={styles.modalContent} onClick={e => e.stopPropagation()}>
             <button className={styles.modalClose} onClick={() => setSelectedProject(null)} aria-label="Close project details"><UiIcon name="close" size={18} /></button>
-            <div className={styles.modalImage} onClick={() => setLightboxOpen(true)} style={{ cursor: 'zoom-in' }}>
-              <div style={{ position: 'relative', width: '100%', height: '300px', backgroundColor: '#f0f0f0', borderRadius: '15px 15px 0 0', overflow: 'hidden' }}>
-                {selectedProject.image && (
-                  <Image 
-                    src={selectedProject.image} 
-                    alt={`${selectedProject.name[locale] || selectedProject.name || ''} - Proyek Fabrikasi Limars Teknik`}
-                    fill
-                    sizes="(max-width: 768px) 100vw, 50vw"
-                    style={{ objectFit: 'cover' }}
-                  />
-                )}
-              </div>
+            <div className={styles.modalSlider} onClick={() => setLightboxOpen(true)} style={{ cursor: 'zoom-in' }}>
+              {projectImages.length > 1 && (
+                <div className={styles.imageCounter}>
+                  {currentImgIndex + 1} / {projectImages.length}
+                </div>
+              )}
+              {projectImages[currentImgIndex] && (
+                <Image 
+                  src={projectImages[currentImgIndex]} 
+                  alt={`${selectedProject.name[locale] || selectedProject.name || ''} - foto ${currentImgIndex + 1}`}
+                  fill
+                  sizes="(max-width: 768px) 100vw, 50vw"
+                  style={{ objectFit: 'cover' }}
+                />
+              )}
+              {projectImages.length > 1 && (
+                <>
+                  <button className={`${styles.sliderBtn} ${styles.sliderPrev}`} onClick={handlePrevImg} aria-label="Previous image">‹</button>
+                  <button className={`${styles.sliderBtn} ${styles.sliderNext}`} onClick={handleNextImg} aria-label="Next image">›</button>
+                  <div className={styles.sliderDots}>
+                    {projectImages.map((_, idx) => (
+                      <button
+                        key={idx}
+                        className={`${styles.dot} ${idx === currentImgIndex ? styles.dotActive : ''}`}
+                        onClick={(e) => { e.stopPropagation(); setCurrentImgIndex(idx); }}
+                        aria-label={`Go to slide ${idx + 1}`}
+                      />
+                    ))}
+                  </div>
+                </>
+              )}
             </div>
             <div className={styles.modalBody}>
               <span className={styles.modalCategory}>
@@ -164,7 +205,8 @@ export default function ProjectsClient({ projects, projectCategories }) {
         <Lightbox
           open={lightboxOpen}
           close={() => setLightboxOpen(false)}
-          slides={[{ src: selectedProject.image }]}
+          index={currentImgIndex}
+          slides={projectImages.map(src => ({ src }))}
         />
       )}
     </>
