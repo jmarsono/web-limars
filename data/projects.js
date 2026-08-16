@@ -79,7 +79,8 @@ export const projects = [
     ],
     image: '/images/projects/aljazeerah-polonia/aljazeerah-polonia-1.webp',
     images: [
-      '/images/projects/aljazeerah-polonia/aljazeerah-polonia-1.webp'
+      '/images/projects/aljazeerah-polonia/aljazeerah-polonia-1.webp',
+      '/images/projects/aljazeerah-polonia/aljazeerah-polonia-2.webp'
     ],
     featured: true,
   },

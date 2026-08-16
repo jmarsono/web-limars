@@ -275,7 +275,7 @@ INSERT INTO projects (id, slug, name_en, name_id, category_en, category_id, loca
   2015,
   1
 );
-INSERT INTO projects (id, slug, name_en, name_id, category_en, category_id, location_en, location_id, description_en, description_id, image, scope, year_completed, featured) VALUES (
+INSERT INTO projects (id, slug, name_en, name_id, category_en, category_id, location_en, location_id, description_en, description_id, image, images, scope, year_completed, featured) VALUES (
   3,
   'al-jazeerah-polonia-function-hall-pizza-oven',
   'Al-Jazeerah Polonia Function Hall Large Pizza Oven (180cm)',
@@ -287,6 +287,7 @@ INSERT INTO projects (id, slug, name_en, name_id, category_en, category_id, loca
   'Large-format traditional pizza oven with 180cm internal diameter, custom-engineered for Al-Jazeerah Restaurant & Function Hall - Polonia (2016) to serve high-volume event catering needs.',
   'Oven pizza tradisional berukuran besar dengan diameter dalam 180cm, direkayasa khusus untuk Al-Jazeerah Restaurant & Function Hall - Polonia (2016) guna memenuhi kebutuhan katering acara berkapasitas tinggi.',
   '/images/projects/aljazeerah-polonia/aljazeerah-polonia-1.webp',
+  '["/images/projects/aljazeerah-polonia/aljazeerah-polonia-1.webp","/images/projects/aljazeerah-polonia/aljazeerah-polonia-2.webp"]',
   '[{"en":"Large-diameter oven design (180cm)","id":"Desain oven diameter besar (180cm)"},{"en":"Large-scale refractory brick fabrication","id":"Fabrikasi bata tahan api skala besar"},{"en":"High-capacity gas & burner system","id":"Sistem gas & burner kapasitas tinggi"},{"en":"Performance testing and commissioning","id":"Uji performa dan commissioning"}]',
   2016,
   1
