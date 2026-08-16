@@ -133,6 +133,7 @@ export const projects = [
       { en: 'Gas piping & safety valves', id: 'Pipa gas & katup pengaman' },
       { en: 'Temperature calibration for Arab bread', id: 'Kalibrasi suhu untuk roti Arab' }
     ],
+    featured: true,
   },
   {
     id: 6,
@@ -212,6 +213,7 @@ export const projects = [
       '/images/projects/aljazeerah-cikini-mandi-oven/aljazeerah-cikini-mandi-oven-3.webp',
       '/images/projects/aljazeerah-cikini-mandi-oven/aljazeerah-cikini-mandi-oven-4.webp'
     ],
+    featured: true,
   },
 ];
 
