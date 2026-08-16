@@ -43,13 +43,8 @@ export default function ProjectsClient({ projects, projectCategories }) {
     setCurrentImgIndex((prev) => (prev === projectImages.length - 1 ? 0 : prev + 1));
   };
 
-  const filteredProjects = activeCategory === 'All'
-    ? projects
-    : projects.filter(p => {
-        const catEn = p.category?.en || p.category_en || p.category || '';
-        const catId = p.category?.id || p.category_id || p.category || '';
-        return catEn === activeCategory || catId === activeCategory;
-      });
+  // Sort projects by year descending (newest first, oldest last)
+  const sortedProjects = [...projects].sort((a, b) => (b.year || 0) - (a.year || 0));
 
   return (
     <>
@@ -67,25 +62,10 @@ export default function ProjectsClient({ projects, projectCategories }) {
       <section className={`section ${styles.projectsSection}`}>
         <div className="container">
           <h2 className="sr-only">{t('heroTitle')}</h2>
-          <div className={styles.filterBar}>
-            {projectCategories.map((catKey) => {
-              const catDisplay = catKey === 'All' ? t('all') : t(`categories.${catKey.replace(/\s+/g, '')}`);
-              return (
-                <button
-                  key={catKey}
-                  className={`${styles.filterBtn} ${activeCategory === catKey ? styles.filterActive : ''}`}
-                  onClick={() => setActiveCategory(catKey)}
-                >
-                  {catDisplay}
-                </button>
-              );
-            })}
-          </div>
 
           <div className={styles.projectGrid}>
-            {filteredProjects.map((project) => {
+            {sortedProjects.map((project) => {
               const name = project.name[locale] || project.name || '';
-              const category = project.category[locale] || project.category || '';
               const location = project.location[locale] || project.location || '';
               
               return (
@@ -103,7 +83,6 @@ export default function ProjectsClient({ projects, projectCategories }) {
                       )}
                     </div>
                     <div className={styles.projectOverlay}>
-                      <span className={styles.projectCategory}>{category}</span>
                       <h3>{name}</h3>
                       <p className={styles.projectLocation}>
                         <UiIcon name="location" size={15} /> {location}{project.year ? ` • ${project.year}` : ''}
@@ -115,7 +94,7 @@ export default function ProjectsClient({ projects, projectCategories }) {
             })}
           </div>
 
-          {filteredProjects.length === 0 && (
+          {sortedProjects.length === 0 && (
             <div className={styles.empty}>
               <p>{t('emptyState')}</p>
             </div>
@@ -176,9 +155,6 @@ export default function ProjectsClient({ projects, projectCategories }) {
               )}
             </div>
             <div className={styles.modalBody}>
-              <span className={styles.modalCategory}>
-                {selectedProject.category[locale] || selectedProject.category || ''}
-              </span>
               <h2>{selectedProject.name[locale] || selectedProject.name || ''}</h2>
               <p className={styles.modalLocation}>
                 <UiIcon name="location" size={15} /> {selectedProject.location[locale] || selectedProject.location || ''}{selectedProject.year ? ` • ${selectedProject.year}` : ''}
