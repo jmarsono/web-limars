@@ -35,8 +35,8 @@
     "breadcrumbBlog": "Blog"
   },
   "Home": {
-    "heroBadge": "Engineering Dapur Komersial & Fabrikasi Presisi",
-    "heroSubtitle": "Spesialis engineering dapur komersial, fabrikasi stainless steel presisi, dan solusi infrastruktur terintegrasi di Indonesia — dari sistem perpipaan gas hingga pembangunan dapur skala penuh.",
+    "heroBadge": "Spesialis Builder Oven Tradisional & Infrastruktur Dapur Resto di Indonesia",
+    "heroSubtitle": "Spesialis terkemuka dalam pembangunan oven tradisional (Pizza Wood-Fired, Mandi, Tannur & Kamado) serta rekayasa infrastruktur dapur komersial berskala penuh di seluruh Indonesia sejak 2014.",
     "exploreProducts": "Jelajahi Solusi Kami",
     "getQuote": "Jadwalkan Konsultasi Teknik",
     "stats": {
@@ -48,7 +48,7 @@
     "companyBrief": {
       "tag": "Keunggulan Teknik",
       "title": "Infrastruktur Dapur Presisi Sejak 2014",
-      "desc1": "PT. Limars Teknik Indonesia adalah perusahaan engineering dapur komersial berskala penuh yang mengkhususkan diri dalam fabrikasi stainless steel presisi, sistem perpipaan gas bersertifikat, dan solusi MEP terintegrasi. Dengan keahlian lapangan lebih dari satu dekade, kami merancang infrastruktur dapur yang dibangun untuk ketahanan operasional dan kepatuhan keselamatan.",
+      "desc1": "PT. Limars Teknik Indonesia adalah penyedia spesialis pembangunan oven & tungku tradisional (Wood-Fired Pizza, Mandi, Tannur, Kamado) serta rekayasa infrastruktur dapur komersial berskala penuh. Dengan pengalaman lapangan sejak 2014, kami menggabungkan keahlian refraktori termal presisi dengan fabrikasi stainless steel dan instalasi MEP terintegrasi.",
       "desc2": "Setiap proyek didukung oleh kapabilitas fabrikasi in-house, protokol uji tekanan yang ketat, dan tim engineering berdedikasi — memastikan sistem dapur Anda beroperasi andal dalam kondisi paling menuntut sekalipun.",
       "cta": "Pelajari Kapabilitas Engineering Kami",
       "imgCaption": "Fasilitas Produksi Kami"
@@ -267,11 +267,11 @@
     "rights": "PT. Limars Teknik Indonesia. Hak Cipta Dilindungi."
   },
   "SEO": {
-    "title": "PT. Limars Teknik Indonesia | Spesialis Peralatan Panas",
-    "description": "PT. Limars Teknik Indonesia adalah produsen spesialis peralatan dapur komersial, oven tandoor, kitchen set restoran, dan sistem ducting berkualitas di Indonesia.",
-    "keywords": "peralatan dapur, oven komersial, kitchen set restoran, sistem ducting, instalasi gas, pengeboran sumur, layanan listrik, Indonesia, produsen",
-    "homeTitle": "Limars Teknik | Spesialis Engineering Dapur Komersial & Fabrikasi Presisi",
-    "homeDescription": "Perusahaan engineering dapur komersial terdepan di Indonesia. Fabrikasi stainless steel presisi, perpipaan gas bersertifikat, sistem ducting & solusi MEP terintegrasi. Jadwalkan konsultasi teknik gratis.",
+    "title": "Spesialis Builder Oven Tradisional & Infrastruktur Dapur Resto | PT. Limars Teknik Indonesia",
+    "description": "PT. Limars Teknik Indonesia adalah spesialisbuilder oven tradisional (Pizza Wood-Fired, Mandi, Tannur & Kamado) serta penyedia infrastruktur dapur komersial berskala penuh di Indonesia.",
+    "keywords": "builder oven tradisional, oven pizza kayu bakar, oven mandi domba, oven tannur, oven tandoor, oven kamado, kitchen set restoran, sistem ducting, instalasi gas, Indonesia",
+    "homeTitle": "Limars Teknik | Spesialis Builder Oven Tradisional & Infrastruktur Dapur Resto",
+    "homeDescription": "Spesialis terkemuka builder oven tradisional (Pizza Wood-Fired, Mandi, Tannur & Kamado) serta rekayasa infrastruktur dapur komersial di Indonesia sejak 2014. Konsultasikan kebutuhan restoran Anda.",
     "aboutTitle": "Tentang Kami | PT Limars Teknik Indonesia",
     "aboutDesc": "PT Limars Teknik Indonesia didirikan sejak 2014, berpengalaman dalam produksi peralatan dapur dan instalasi gas komersial.",
     "productsTitle": "Produk Peralatan Dapur Komersial | Limars Teknik",
