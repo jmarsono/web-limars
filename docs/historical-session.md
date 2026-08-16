@@ -4,7 +4,7 @@
 2026-08-16 (Asia/Jakarta, WIB, UTC+07:00)
 
 ## Summary
-Migrated the existing Limars Teknik website repository from the personal GitHub account `734250no/web-limars` to the organizational account under Bang Julian's `jmarsono` profile as `project-limars-teknik-website`. The migration preserved all Git history (14 branches), updated SSH/gh authentication to use the dedicated `jmarsono` SSH key, and aligned the project with the Hermes workspace standards by adding `metadata.yaml`, `IDEA.md`, and initializing standard folders (`docs/`, `outputs/`, `scripts/`).
+Migrated the existing Limars Teknik website repository from the personal GitHub account `734250no/web-limars` to the organizational account under Julian's `jmarsono` profile as `project-limars-teknik-website`. The migration preserved all Git history (14 branches), updated SSH/gh authentication to use the dedicated `jmarsono` SSH key, and aligned the project with the Hermes workspace standards by adding `metadata.yaml`, `IDEA.md`, and initializing standard folders (`docs/`, `outputs/`, `scripts/`).
 
 ## Actions Performed
 1. Cloned source repo:
@@ -45,8 +45,8 @@ The live production site `https://www.limarsteknik.com` is served by a **Cloudfl
 Skipping Steps 2 and 3 will NOT update the live site.
 
 ## Participants
-- Bang Julian (project owner, HOD Infra FIT)
-- Bang Muza (Hermes AI Infrastructure Partner)
+- Julian (project owner, HOD Infra FIT)
+- Muza AI Assistant (Hermes AI Infrastructure Partner)
 
 ## Related Repos
 - `jmarsono/hermes-config` — stores sensitive configuration & credentials (SMTP, Turnstile secrets, etc.)

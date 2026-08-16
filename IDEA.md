@@ -59,7 +59,7 @@ Website resmi PT Limars Teknik Indonesia yang tidak hanya menampilkan portofolio
 - Logo: Limars Teknik (sudah ada di `public/logo/`)
 - Consistent dengan brand guidelines `limarsteknik` parent project
 
-## Integrasi Hermes AI (Bang Muza)
+## Integrasi Hermes AI (Muza AI Assistant)
 - Script otomatis generate proposal teknis dari website inquiry
 - AI-assisted content generation untuk blog post (SEO optimized)
 - Automated BoQ/RAB generation dari inquiry form data
