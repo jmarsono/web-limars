@@ -1,30 +1,5 @@
 export const projects = [
   {
-    id: 1,
-    image: '/images/projects/project-1-new.webp',
-    name: {
-      en: 'Royal Al-Jazeerah Kitchen Renovation',
-      id: 'Renovasi Dapur Royal Al-Jazeerah'
-    },
-    slug: 'grand-hyatt-kitchen',
-    category: {
-      en: 'Kitchen Set',
-      id: 'Kitchen Set'
-    },
-    location: { en: 'Jakarta', id: 'Jakarta' },
-    description: {
-      en: 'Complete kitchen renovation for Royal Al-Jazeerah, including custom stainless steel kitchen sets, commercial cooking equipment, and integrated ducting system.',
-      id: 'Renovasi dapur lengkap untuk Royal Al-Jazeerah, termasuk kitchen set baja tahan karat kustom, peralatan memasak komersial, dan sistem ducting terintegrasi.'
-    },
-    scope: [
-      { en: 'Kitchen layout & 3D design', id: 'Desain layout & 3D dapur' },
-      { en: 'Custom stainless fabrication', id: 'Fabrikasi stainless kustom' },
-      { en: 'Hot kitchen & cold storage prep', id: 'Persiapan dapur panas & pendingin' },
-      { en: 'Commercial exhaust integration', id: 'Integrasi exhaust komersial' }
-    ],
-    featured: true,
-  },
-  {
     id: 2,
     image: '/images/projects/central-aljazeerah-pramuka/central-aljazeerah-pramuka-1.webp',
     images: [
@@ -149,30 +124,6 @@ export const projects = [
       { en: 'Temperature calibration for Arab bread', id: 'Kalibrasi suhu untuk roti Arab' }
     ],
     featured: true,
-  },
-  {
-    id: 6,
-    image: '/images/projects/project-6-new.webp',
-    name: {
-      en: 'Born-Ga Combi Oven Setup',
-      id: 'Pengaturan Oven Combi Born-Ga'
-    },
-    slug: 'bakery-central-combi-oven',
-    category: {
-      en: 'Oven Installation',
-      id: 'Instalasi Oven'
-    },
-    location: { en: 'Jakarta', id: 'Jakarta' },
-    description: {
-      en: 'Multiple combi oven and deck oven installation for Born-Ga production facility.',
-      id: 'Instalasi ganda oven combi dan oven dek untuk fasilitas produksi Born-Ga.'
-    },
-    scope: [
-      { en: 'Combi oven capacity planning', id: 'Perencanaan kapasitas oven combi' },
-      { en: 'High-volume deck oven supply', id: 'Penyediaan oven dek volume tinggi' },
-      { en: 'Heavy-duty electrical wiring', id: 'Pengkabelan listrik heavy-duty' },
-      { en: 'Steam exhaust ventilation', id: 'Ventilasi pembuangan uap' }
-    ],
   },
   {
     id: 7,

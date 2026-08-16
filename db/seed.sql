@@ -244,22 +244,6 @@ INSERT INTO products (id, slug, name_en, name_id, category_en, category_id, shor
 
 -- SEED PROJECTS
 INSERT INTO projects (id, slug, name_en, name_id, category_en, category_id, location_en, location_id, description_en, description_id, image, scope, year_completed, featured) VALUES (
-  1,
-  'grand-hyatt-kitchen',
-  'Royal Al-Jazeerah Kitchen Renovation',
-  'Renovasi Dapur Royal Al-Jazeerah',
-  'Kitchen Set',
-  'Kitchen Set',
-  'Jakarta',
-  'Jakarta',
-  'Complete kitchen renovation for Royal Al-Jazeerah, including custom stainless steel kitchen sets, commercial cooking equipment, and integrated ducting system.',
-  'Renovasi dapur lengkap untuk Royal Al-Jazeerah, termasuk kitchen set baja tahan karat kustom, peralatan memasak komersial, dan sistem ducting terintegrasi.',
-  '/images/projects/project-1-new.webp',
-  '[{"en":"Kitchen layout & 3D design","id":"Desain layout & 3D dapur"},{"en":"Custom stainless fabrication","id":"Fabrikasi stainless kustom"},{"en":"Hot kitchen & cold storage prep","id":"Persiapan dapur panas & pendingin"},{"en":"Commercial exhaust integration","id":"Integrasi exhaust komersial"}]',
-  NULL,
-  1
-);
-INSERT INTO projects (id, slug, name_en, name_id, category_en, category_id, location_en, location_id, description_en, description_id, image, scope, year_completed, featured) VALUES (
   2,
   'central-al-jazeerah-pramuka-pizza-oven',
   'Central Al-Jazeerah Traditional Pizza Oven',
@@ -323,22 +307,6 @@ INSERT INTO projects (id, slug, name_en, name_id, category_en, category_id, loca
   '["/images/projects/zahra-al-jazeerah-cianjur/zahra-aljazeerah-cianjur-final-gold.webp","/images/projects/zahra-al-jazeerah-cianjur/zahra-aljazeerah-cianjur-1.webp","/images/projects/zahra-al-jazeerah-cianjur/zahra-aljazeerah-cianjur-2.webp","/images/projects/zahra-al-jazeerah-cianjur/zahra-aljazeerah-cianjur-3.webp"]',
   '[{"en":"Traditional pizza oven design","id":"Desain oven pizza tradisional"},{"en":"Custom steel & brick fabrication","id":"Fabrikasi baja & bata kustom"},{"en":"Gas piping & safety valves","id":"Pipa gas & katup pengaman"},{"en":"Temperature calibration for Arab bread","id":"Kalibrasi suhu untuk roti Arab"}]',
   2014,
-  0
-);
-INSERT INTO projects (id, slug, name_en, name_id, category_en, category_id, location_en, location_id, description_en, description_id, image, scope, year_completed, featured) VALUES (
-  6,
-  'bakery-central-combi-oven',
-  'Born-Ga Combi Oven Setup',
-  'Pengaturan Oven Combi Born-Ga',
-  'Oven Installation',
-  'Instalasi Oven',
-  'Jakarta',
-  'Jakarta',
-  'Multiple combi oven and deck oven installation for Born-Ga production facility.',
-  'Instalasi ganda oven combi dan oven dek untuk fasilitas produksi Born-Ga.',
-  '/images/projects/project-6-new.webp',
-  '[{"en":"Combi oven capacity planning","id":"Perencanaan kapasitas oven combi"},{"en":"High-volume deck oven supply","id":"Penyediaan oven dek volume tinggi"},{"en":"Heavy-duty electrical wiring","id":"Pengkabelan listrik heavy-duty"},{"en":"Steam exhaust ventilation","id":"Ventilasi pembuangan uap"}]',
-  NULL,
   0
 );
 INSERT INTO projects (id, slug, name_en, name_id, category_en, category_id, location_en, location_id, description_en, description_id, image, scope, year_completed, featured) VALUES (
