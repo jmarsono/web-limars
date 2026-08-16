@@ -3,6 +3,7 @@ import '../globals.css';
 import Navbar from '../../components/Navbar';
 import Footer from '../../components/Footer';
 import WhatsAppButton from '../../components/WhatsAppButton';
+import ImageProtectionListener from '../../components/ImageProtectionListener';
 import { NextIntlClientProvider } from 'next-intl';
 import { getMessages, setRequestLocale } from 'next-intl/server';
 import { routing } from '../../i18n/routing';
@@ -86,6 +87,7 @@ export default async function RootLayout({ children, params }) {
       </head>
       <body className={`${inter.variable} ${poppins.variable}`}>
         <NextIntlClientProvider messages={messages}>
+          <ImageProtectionListener />
           <Navbar />
           <main>{children}</main>
           <Footer />

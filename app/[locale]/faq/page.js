@@ -74,7 +74,6 @@ export default async function FAQPage({ params }) {
     )
   };
 
-  const getTranslations = (await import('next-intl/server')).getTranslations;
   const navT = await getTranslations({ locale, namespace: 'Navigation' });
   const crumbs = [
     { name: navT('faq'), path: '/faq/' }
