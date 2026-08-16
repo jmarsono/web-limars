@@ -170,18 +170,27 @@ export const projects = [
       en: 'Oven Installation',
       id: 'Instalasi Oven'
     },
-    location: { en: 'Jakarta', id: 'Jakarta' },
+    location: { en: 'Grand Indonesia Mall, Jakarta', id: 'Mall Grand Indonesia, Jakarta' },
+    year: 2018,
     description: {
-      en: 'Custom traditional Japanese Kamado oven fabrication and installation for Dashi Chazuke Zenraku restaurant.',
-      id: 'Fabrikasi dan instalasi tungku Kamado tradisional Jepang khusus untuk restoran Dashi Chazuke Zenraku.'
+      en: 'Full kitchen fit-out project worth nearly Rp100 million for Dashi Chazuke Zenraku at Grand Indonesia Mall, Jakarta (2018). Scope covered a custom traditional Japanese Kamado oven with gas burner system, a commercial gas alarm & safety interlock system, exhaust hood/ducting installation, and several supporting kitchen equipment.',
+      id: 'Proyek fit-out dapur lengkap bernilai hampir Rp100 juta untuk Dashi Chazuke Zenraku di Mall Grand Indonesia, Jakarta (2018). Lingkup pekerjaan mencakup pembuatan tungku Kamado tradisional Jepang kustom dengan sistem burner gas, sistem alarm & pengaman gas komersial, instalasi ducting/exhaust hood, serta beberapa kitchen equipment pendukung.'
     },
     scope: [
-      { en: 'Kamado oven design', id: 'Desain tungku Kamado' },
-      { en: 'Refractory material installation', id: 'Instalasi material tahan api' },
-      { en: 'Heat testing', id: 'Pengujian panas' },
-      { en: 'Traditional finishing', id: 'Penyelesaian tradisional' }
+      { en: 'Custom Kamado oven design & construction', id: 'Desain & konstruksi tungku Kamado kustom' },
+      { en: 'Gas piping with alarm & safety interlock system', id: 'Pemipaan gas dengan sistem alarm & pengaman' },
+      { en: 'Exhaust hood & ducting installation', id: 'Instalasi exhaust hood & ducting' },
+      { en: 'Supporting kitchen equipment supply & install', id: 'Penyediaan & instalasi kitchen equipment pendukung' }
     ],
-    image: '/images/projects/project-7-new.webp',
+    image: '/images/projects/dashi-chazuke-zenraku-gi/dashi-chazuke-zenraku-gi-1.webp',
+    images: [
+      '/images/projects/dashi-chazuke-zenraku-gi/dashi-chazuke-zenraku-gi-1.webp',
+      '/images/projects/dashi-chazuke-zenraku-gi/dashi-chazuke-zenraku-gi-2.webp',
+      '/images/projects/dashi-chazuke-zenraku-gi/dashi-chazuke-zenraku-gi-3.webp',
+      '/images/projects/dashi-chazuke-zenraku-gi/dashi-chazuke-zenraku-gi-4.webp',
+      '/images/projects/dashi-chazuke-zenraku-gi/dashi-chazuke-zenraku-gi-5.webp'
+    ],
+    featured: true,
   },
   {
     id: 8,

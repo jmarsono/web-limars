@@ -346,14 +346,14 @@ INSERT INTO projects (id, slug, name_en, name_id, category_en, category_id, loca
   'Pembuatan Tungku Kamado Tradisional Jepang Dashi Chazuke Zenraku',
   'Oven Installation',
   'Instalasi Oven',
-  'Jakarta',
-  'Jakarta',
-  'Custom traditional Japanese Kamado oven fabrication and installation for Dashi Chazuke Zenraku restaurant.',
-  'Fabrikasi dan instalasi tungku Kamado tradisional Jepang khusus untuk restoran Dashi Chazuke Zenraku.',
-  '/images/projects/project-7-new.webp',
-  '[{"en":"Kamado oven design","id":"Desain tungku Kamado"},{"en":"Refractory material installation","id":"Instalasi material tahan api"},{"en":"Heat testing","id":"Pengujian panas"},{"en":"Traditional finishing","id":"Penyelesaian tradisional"}]',
-  NULL,
-  0
+  'Grand Indonesia Mall, Jakarta',
+  'Mall Grand Indonesia, Jakarta',
+  'Full kitchen fit-out project worth nearly Rp100 million for Dashi Chazuke Zenraku at Grand Indonesia Mall, Jakarta (2018). Scope covered a custom traditional Japanese Kamado oven with gas burner system, a commercial gas alarm & safety interlock system, exhaust hood/ducting installation, and several supporting kitchen equipment.',
+  'Proyek fit-out dapur lengkap bernilai hampir Rp100 juta untuk Dashi Chazuke Zenraku di Mall Grand Indonesia, Jakarta (2018). Lingkup pekerjaan mencakup pembuatan tungku Kamado tradisional Jepang kustom dengan sistem burner gas, sistem alarm & pengaman gas komersial, instalasi ducting/exhaust hood, serta beberapa kitchen equipment pendukung.',
+  '/images/projects/dashi-chazuke-zenraku-gi/dashi-chazuke-zenraku-gi-1.webp',
+  '[{"en":"Custom Kamado oven design & construction","id":"Desain & konstruksi tungku Kamado kustom"},{"en":"Gas piping with alarm & safety interlock system","id":"Pemipaan gas dengan sistem alarm & pengaman"},{"en":"Exhaust hood & ducting installation","id":"Instalasi exhaust hood & ducting"},{"en":"Supporting kitchen equipment supply & install","id":"Penyediaan & instalasi kitchen equipment pendukung"}]',
+  2018,
+  1
 );
 INSERT INTO projects (id, slug, name_en, name_id, category_en, category_id, location_en, location_id, description_en, description_id, image, scope, year_completed, featured) VALUES (
   8,
