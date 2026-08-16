@@ -214,8 +214,9 @@ export const projects = [
       { en: 'Firebrick & refractory dome fabrication', id: 'Fabrikasi kubah bata tahan api' },
       { en: 'Underground brick-lined pit installation', id: 'Instalasi lubang berlapis bata bawah tanah' }
     ],
-    image: '/images/projects/istanbul-turkey-kemang/istanbul-turkey-kemang-1.webp',
+    image: '/images/projects/istanbul-turkey-kemang/istanbul-turkey-kemang-final-gold.webp',
     images: [
+      '/images/projects/istanbul-turkey-kemang/istanbul-turkey-kemang-final-gold.webp',
       '/images/projects/istanbul-turkey-kemang/istanbul-turkey-kemang-1.webp',
       '/images/projects/istanbul-turkey-kemang/istanbul-turkey-kemang-2.webp',
       '/images/projects/istanbul-turkey-kemang/istanbul-turkey-kemang-3.webp',
