@@ -243,7 +243,7 @@ INSERT INTO products (id, slug, name_en, name_id, category_en, category_id, shor
 );
 
 -- SEED PROJECTS
-INSERT INTO projects (id, slug, name_en, name_id, category_en, category_id, location_en, location_id, description_en, description_id, image, scope, featured) VALUES (
+INSERT INTO projects (id, slug, name_en, name_id, category_en, category_id, location_en, location_id, description_en, description_id, image, scope, year_completed, featured) VALUES (
   1,
   'grand-hyatt-kitchen',
   'Royal Al-Jazeerah Kitchen Renovation',
@@ -256,39 +256,42 @@ INSERT INTO projects (id, slug, name_en, name_id, category_en, category_id, loca
   'Renovasi dapur lengkap untuk Royal Al-Jazeerah, termasuk kitchen set baja tahan karat kustom, peralatan memasak komersial, dan sistem ducting terintegrasi.',
   '/images/projects/project-1-new.webp',
   '[{"en":"Kitchen layout & 3D design","id":"Desain layout & 3D dapur"},{"en":"Custom stainless fabrication","id":"Fabrikasi stainless kustom"},{"en":"Hot kitchen & cold storage prep","id":"Persiapan dapur panas & pendingin"},{"en":"Commercial exhaust integration","id":"Integrasi exhaust komersial"}]',
+  NULL,
   1
 );
-INSERT INTO projects (id, slug, name_en, name_id, category_en, category_id, location_en, location_id, description_en, description_id, image, scope, featured) VALUES (
+INSERT INTO projects (id, slug, name_en, name_id, category_en, category_id, location_en, location_id, description_en, description_id, image, scope, year_completed, featured) VALUES (
   2,
-  'central-al-jazeerah-arab-bread-oven',
-  'Central Al-Jazeerah Traditional Arab Bread Oven',
-  'Pembuatan Oven Roti Arab Tradisional Central Al-Jazeerah',
+  'central-al-jazeerah-pramuka-pizza-oven',
+  'Central Al-Jazeerah Traditional Pizza Oven',
+  'Pembuatan Oven Pizza Tradisional Central Al-Jazeerah',
   'Oven Installation',
   'Instalasi Oven',
-  'Jakarta',
-  'Jakarta',
-  'Custom traditional Arab bread oven fabrication and installation for Central Al-Jazeerah restaurant.',
-  'Fabrikasi dan instalasi oven roti Arab tradisional khusus untuk restoran Central Al-Jazeerah.',
-  '/images/projects/project-2-new.webp',
-  '[{"en":"Custom Arab bread oven design","id":"Desain oven roti Arab kustom"},{"en":"Refractory brick installation","id":"Instalasi bata tahan api"},{"en":"Gas piping & burner calibration","id":"Pipa gas & kalibrasi burner"},{"en":"Heat retention testing","id":"Pengujian retensi panas"}]',
+  'Pramuka, Jakarta',
+  'Pramuka, Jakarta',
+  'Traditional pizza-style oven fabrication and installation for Central Al-Jazeerah restaurant in Pramuka, Jakarta (2015), continuing our track record in custom traditional oven engineering.',
+  'Fabrikasi dan instalasi oven pizza tradisional untuk restoran Central Al-Jazeerah di Pramuka, Jakarta (2015), melanjutkan rekam jejak kami dalam rekayasa oven tradisional kustom.',
+  '/images/projects/central-aljazeerah-pramuka/central-aljazeerah-pramuka-1.webp',
+  '[{"en":"Traditional pizza oven design","id":"Desain oven pizza tradisional"},{"en":"Refractory brick installation","id":"Instalasi bata tahan api"},{"en":"Gas piping & burner calibration","id":"Pipa gas & kalibrasi burner"},{"en":"Testing and commissioning","id":"Pengujian dan commissioning"}]',
+  2015,
   1
 );
-INSERT INTO projects (id, slug, name_en, name_id, category_en, category_id, location_en, location_id, description_en, description_id, image, scope, featured) VALUES (
+INSERT INTO projects (id, slug, name_en, name_id, category_en, category_id, location_en, location_id, description_en, description_id, image, scope, year_completed, featured) VALUES (
   3,
-  'al-jazeerah-polonia-arab-bread-oven',
-  'Al-Jazeerah Polonia Traditional Arab Bread Oven',
-  'Pembuatan Oven Roti Tradisional Arab Al-Jazeerah Polonia',
+  'al-jazeerah-polonia-function-hall-pizza-oven',
+  'Al-Jazeerah Polonia Function Hall Large Pizza Oven (180cm)',
+  'Pembuatan Oven Pizza Besar (180cm) Al-Jazeerah Polonia Function Hall',
   'Oven Installation',
   'Instalasi Oven',
-  'Jakarta',
-  'Jakarta',
-  'Custom traditional Arab bread oven fabrication and installation for Al-Jazeerah Polonia.',
-  'Fabrikasi dan instalasi oven roti tradisional Arab khusus untuk Al-Jazeerah Polonia.',
-  '/images/projects/project-3-new.webp',
-  '[{"en":"Traditional oven design","id":"Desain oven tradisional"},{"en":"Refractory brick installation","id":"Instalasi bata tahan api"},{"en":"Gas piping & burner","id":"Pipa gas & burner"},{"en":"Testing and commissioning","id":"Pengujian dan commissioning"}]',
+  'Polonia, East Jakarta',
+  'Polonia, Jakarta Timur',
+  'Large-format traditional pizza oven with 180cm internal diameter, custom-engineered for Al-Jazeerah Restaurant & Function Hall - Polonia (2016) to serve high-volume event catering needs.',
+  'Oven pizza tradisional berukuran besar dengan diameter dalam 180cm, direkayasa khusus untuk Al-Jazeerah Restaurant & Function Hall - Polonia (2016) guna memenuhi kebutuhan katering acara berkapasitas tinggi.',
+  '/images/projects/aljazeerah-polonia/aljazeerah-polonia-1.webp',
+  '[{"en":"Large-diameter oven design (180cm)","id":"Desain oven diameter besar (180cm)"},{"en":"Large-scale refractory brick fabrication","id":"Fabrikasi bata tahan api skala besar"},{"en":"High-capacity gas & burner system","id":"Sistem gas & burner kapasitas tinggi"},{"en":"Performance testing and commissioning","id":"Uji performa dan commissioning"}]',
+  2016,
   1
 );
-INSERT INTO projects (id, slug, name_en, name_id, category_en, category_id, location_en, location_id, description_en, description_id, image, scope, featured) VALUES (
+INSERT INTO projects (id, slug, name_en, name_id, category_en, category_id, location_en, location_id, description_en, description_id, image, scope, year_completed, featured) VALUES (
   4,
   'nanamia-pizzeria-yogyakarta-pizza-oven',
   'Nanamia Pizzeria Yogyakarta Traditional Italian Pizza Oven',
@@ -301,24 +304,26 @@ INSERT INTO projects (id, slug, name_en, name_id, category_en, category_id, loca
   'Fabrikasi dan instalasi oven pizza tradisional Itali khusus untuk Nanamia Pizzeria Yogyakarta. Oven tungku batu otentik dengan sistem pemanas gas.',
   '/images/projects/project-4-new.webp',
   '[{"en":"Italian stone hearth design","id":"Desain tungku batu Italia"},{"en":"High-temperature brickwork","id":"Konstruksi bata suhu tinggi"},{"en":"Gas heating system setup","id":"Pengaturan sistem pemanas gas"},{"en":"Chimney & ventilation","id":"Cerobong asap & ventilasi"}]',
+  NULL,
   0
 );
-INSERT INTO projects (id, slug, name_en, name_id, category_en, category_id, location_en, location_id, description_en, description_id, image, scope, featured) VALUES (
+INSERT INTO projects (id, slug, name_en, name_id, category_en, category_id, location_en, location_id, description_en, description_id, image, scope, year_completed, featured) VALUES (
   5,
-  'zahra-al-jazeerah-arab-bread-oven',
-  'Zahra Al-Jazeerah Traditional Arab Bread Oven',
-  'Pembuatan Oven Roti Arab Tradisional Zahra Al-Jazeerah',
+  'zahra-al-jazeerah-family-villas-cianjur',
+  'Zahra Al-Jazeerah Restaurant & Family Villas Pizza Oven',
+  'Pembuatan Oven Pizza Zahra Al-Jazeerah Restaurant & Family Villas',
   'Oven Installation',
   'Instalasi Oven',
-  'Puncak Bogor',
-  'Puncak Bogor',
-  'Custom traditional Arab bread oven fabrication and installation for Zahra Al-Jazeerah restaurant in Puncak Bogor.',
-  'Fabrikasi dan instalasi oven roti Arab tradisional khusus untuk restoran Zahra Al-Jazeerah di Puncak Bogor.',
-  '/images/projects/project-5-new.webp',
-  '[{"en":"Traditional Arab oven design","id":"Desain oven Arab tradisional"},{"en":"Custom steel & brick fabrication","id":"Fabrikasi baja & bata kustom"},{"en":"Gas piping & safety valves","id":"Pipa gas & katup pengaman"},{"en":"Temperature calibration","id":"Kalibrasi suhu"}]',
+  'Cipanas, Cianjur, West Java',
+  'Cipanas, Cianjur, Jawa Barat',
+  'Limars Teknik very first traditional pizza-style oven project, custom-built for Arab bread baking at Zahra Al-Jazeerah Restaurant & Family Villas in Cipanas, Cianjur (2014). This project laid the foundation for our expertise in traditional oven fabrication.',
+  'Proyek oven pizza tradisional pertama Limars Teknik, dibuat khusus untuk pembuatan roti Arab di Zahra Al-Jazeerah Restaurant & Family Villas, Cipanas, Cianjur (2014). Proyek ini menjadi fondasi keahlian kami dalam fabrikasi oven tradisional.',
+  '/images/projects/zahra-al-jazeerah-cianjur/zahra-aljazeerah-cianjur-1.webp',
+  '[{"en":"Traditional pizza oven design","id":"Desain oven pizza tradisional"},{"en":"Custom steel & brick fabrication","id":"Fabrikasi baja & bata kustom"},{"en":"Gas piping & safety valves","id":"Pipa gas & katup pengaman"},{"en":"Temperature calibration for Arab bread","id":"Kalibrasi suhu untuk roti Arab"}]',
+  2014,
   0
 );
-INSERT INTO projects (id, slug, name_en, name_id, category_en, category_id, location_en, location_id, description_en, description_id, image, scope, featured) VALUES (
+INSERT INTO projects (id, slug, name_en, name_id, category_en, category_id, location_en, location_id, description_en, description_id, image, scope, year_completed, featured) VALUES (
   6,
   'bakery-central-combi-oven',
   'Born-Ga Combi Oven Setup',
@@ -331,9 +336,10 @@ INSERT INTO projects (id, slug, name_en, name_id, category_en, category_id, loca
   'Instalasi ganda oven combi dan oven dek untuk fasilitas produksi Born-Ga.',
   '/images/projects/project-6-new.webp',
   '[{"en":"Combi oven capacity planning","id":"Perencanaan kapasitas oven combi"},{"en":"High-volume deck oven supply","id":"Penyediaan oven dek volume tinggi"},{"en":"Heavy-duty electrical wiring","id":"Pengkabelan listrik heavy-duty"},{"en":"Steam exhaust ventilation","id":"Ventilasi pembuangan uap"}]',
+  NULL,
   0
 );
-INSERT INTO projects (id, slug, name_en, name_id, category_en, category_id, location_en, location_id, description_en, description_id, image, scope, featured) VALUES (
+INSERT INTO projects (id, slug, name_en, name_id, category_en, category_id, location_en, location_id, description_en, description_id, image, scope, year_completed, featured) VALUES (
   7,
   'dashi-chazuke-zenraku-kamado-oven',
   'Dashi Chazuke Zenraku Traditional Japanese Kamado Oven',
@@ -346,21 +352,23 @@ INSERT INTO projects (id, slug, name_en, name_id, category_en, category_id, loca
   'Fabrikasi dan instalasi tungku Kamado tradisional Jepang khusus untuk restoran Dashi Chazuke Zenraku.',
   '/images/projects/project-7-new.webp',
   '[{"en":"Kamado oven design","id":"Desain tungku Kamado"},{"en":"Refractory material installation","id":"Instalasi material tahan api"},{"en":"Heat testing","id":"Pengujian panas"},{"en":"Traditional finishing","id":"Penyelesaian tradisional"}]',
+  NULL,
   0
 );
-INSERT INTO projects (id, slug, name_en, name_id, category_en, category_id, location_en, location_id, description_en, description_id, image, scope, featured) VALUES (
+INSERT INTO projects (id, slug, name_en, name_id, category_en, category_id, location_en, location_id, description_en, description_id, image, scope, year_completed, featured) VALUES (
   8,
   'al-jazeerah-cikini-mandi-oven',
-  'Al-Jazeerah Cikini Mandi Oven',
-  'Pembuatan Oven Mandi Al-Jazeerah Cikini',
+  'Al-Jazeerah Cikini Traditional "Mandi" Lamb Oven',
+  'Pembuatan Oven "Mandi" Domba Tradisional Al-Jazeerah Cikini',
   'Oven Installation',
   'Instalasi Oven',
-  'Jakarta',
-  'Jakarta',
-  'Custom Mandi oven fabrication and installation for Al-Jazeerah Cikini restaurant.',
-  'Fabrikasi dan instalasi oven Mandi khusus untuk restoran Al-Jazeerah Cikini.',
-  '/images/projects/project-8-new.webp',
-  '[{"en":"Mandi pit & oven design","id":"Desain lubang & oven Mandi"},{"en":"Underground insulation","id":"Isolasi bawah tanah"},{"en":"Structural fabrication","id":"Fabrikasi struktural"},{"en":"Safety and smoke testing","id":"Pengujian keselamatan dan asap"}]',
+  'Cikini, Jakarta',
+  'Cikini, Jakarta',
+  'Custom traditional Mandi oven, sized like a large refrigerator, fabricated for Al-Jazeerah Cikini restaurant (2014-2015). Purpose-built to slow-roast multiple whole young lambs simultaneously, achieving fall-off-the-bone tenderness — a specialty Middle Eastern cooking technique.',
+  'Oven Mandi tradisional kustom, berukuran seperti kulkas besar, dibuat untuk restoran Al-Jazeerah Cikini (2014-2015). Dirancang khusus untuk memanggang beberapa ekor anak domba utuh sekaligus hingga daging lepas dari tulang dengan sendirinya — teknik memasak khas Timur Tengah.',
+  '/images/projects/aljazeerah-cikini-mandi-oven/aljazeerah-cikini-mandi-oven-1.webp',
+  '[{"en":"Multi-lamb capacity oven design","id":"Desain oven berkapasitas multi-domba"},{"en":"Steel structure & refractory fabrication","id":"Fabrikasi struktur baja & bata tahan api"},{"en":"Heat circulation system","id":"Sistem sirkulasi panas"},{"en":"Safety and doneness testing","id":"Pengujian keselamatan & kematangan"}]',
+  2015,
   0
 );
 
