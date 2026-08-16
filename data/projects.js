@@ -27,7 +27,7 @@ export const projects = [
       { en: 'Gas piping & burner calibration', id: 'Pipa gas & kalibrasi burner' },
       { en: 'Testing and commissioning', id: 'Pengujian dan commissioning' }
     ],
-    featured: true,
+    featured: false,
   },
   {
     id: 3,
@@ -123,7 +123,7 @@ export const projects = [
       { en: 'Gas piping & safety valves', id: 'Pipa gas & katup pengaman' },
       { en: 'Temperature calibration for Arab bread', id: 'Kalibrasi suhu untuk roti Arab' }
     ],
-    featured: true,
+    featured: false,
   },
   {
     id: 7,
@@ -189,7 +189,7 @@ export const projects = [
       '/images/projects/aljazeerah-cikini-mandi-oven/aljazeerah-cikini-mandi-oven-3.webp',
       '/images/projects/aljazeerah-cikini-mandi-oven/aljazeerah-cikini-mandi-oven-4.webp'
     ],
-    featured: true,
+    featured: false,
   },
   {
     id: 9,

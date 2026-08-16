@@ -80,7 +80,14 @@ export default async function Home({ params }) {
   const activeServices = dbServices.length > 0 ? dbServices : staticServices;
   const activeProjects = dbProjects.length > 0 ? dbProjects : staticProjects;
   const featuredProducts = activeProducts.filter((product) => product.featured).slice(0, 4);
-  const featuredProjects = activeProjects.filter((project) => project.featured).slice(0, 3);
+  const featuredProjectsRaw = activeProjects.filter((project) => project.featured);
+  // Sort featured projects: Dashi Chazuke Kamado (id 7) first for large hero card, then Nanamia B2 (id 13), then Polonia (id 3)
+  const featuredOrder = [7, 13, 3];
+  const featuredProjects = featuredProjectsRaw.sort((a, b) => {
+    const idxA = featuredOrder.indexOf(a.id);
+    const idxB = featuredOrder.indexOf(b.id);
+    return (idxA === -1 ? 99 : idxA) - (idxB === -1 ? 99 : idxB);
+  }).slice(0, 3);
 
   const stats = [
     { number: '10+', label: t('stats.years') },

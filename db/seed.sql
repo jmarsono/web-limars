@@ -256,9 +256,7 @@ INSERT INTO projects (id, slug, name_en, name_id, category_en, category_id, loca
   'Fabrikasi dan instalasi oven pizza tradisional untuk restoran Central Al-Jazeerah di Pramuka, Jakarta (2015), melanjutkan rekam jejak kami dalam rekayasa oven tradisional kustom.',
   '/images/projects/central-aljazeerah-pramuka/central-aljazeerah-pramuka-1.webp',
   '[{"en":"Traditional pizza oven design","id":"Desain oven pizza tradisional"},{"en":"Refractory brick installation","id":"Instalasi bata tahan api"},{"en":"Gas piping & burner calibration","id":"Pipa gas & kalibrasi burner"},{"en":"Testing and commissioning","id":"Pengujian dan commissioning"}]',
-  2015,
-  1
-);
+  2015, 0);
 INSERT INTO projects (id, slug, name_en, name_id, category_en, category_id, location_en, location_id, description_en, description_id, image, images, scope, year_completed, featured) VALUES (
   3,
   'al-jazeerah-polonia-function-hall-pizza-oven',
@@ -273,9 +271,7 @@ INSERT INTO projects (id, slug, name_en, name_id, category_en, category_id, loca
   '/images/projects/aljazeerah-polonia/aljazeerah-polonia-1.webp',
   '["/images/projects/aljazeerah-polonia/aljazeerah-polonia-1.webp","/images/projects/aljazeerah-polonia/aljazeerah-polonia-2.webp"]',
   '[{"en":"Large-diameter oven design (180cm)","id":"Desain oven diameter besar (180cm)"},{"en":"Large-scale refractory brick fabrication","id":"Fabrikasi bata tahan api skala besar"},{"en":"High-capacity gas & burner system","id":"Sistem gas & burner kapasitas tinggi"},{"en":"Performance testing and commissioning","id":"Uji performa dan commissioning"}]',
-  2016,
-  1
-);
+  2016, 1);
 INSERT INTO projects (id, slug, name_en, name_id, category_en, category_id, location_en, location_id, description_en, description_id, image, scope, year_completed, featured) VALUES (
   4,
   'nanamia-pizzeria-yogyakarta-pizza-oven',
@@ -306,9 +302,7 @@ INSERT INTO projects (id, slug, name_en, name_id, category_en, category_id, loca
   '/images/projects/zahra-al-jazeerah-cianjur/zahra-aljazeerah-cianjur-final-gold.webp',
   '["/images/projects/zahra-al-jazeerah-cianjur/zahra-aljazeerah-cianjur-final-gold.webp","/images/projects/zahra-al-jazeerah-cianjur/zahra-aljazeerah-cianjur-1.webp","/images/projects/zahra-al-jazeerah-cianjur/zahra-aljazeerah-cianjur-2.webp","/images/projects/zahra-al-jazeerah-cianjur/zahra-aljazeerah-cianjur-3.webp"]',
   '[{"en":"Traditional pizza oven design","id":"Desain oven pizza tradisional"},{"en":"Custom steel & brick fabrication","id":"Fabrikasi baja & bata kustom"},{"en":"Gas piping & safety valves","id":"Pipa gas & katup pengaman"},{"en":"Temperature calibration for Arab bread","id":"Kalibrasi suhu untuk roti Arab"}]',
-  2014,
-  0
-);
+  2014, 0);
 INSERT INTO projects (id, slug, name_en, name_id, category_en, category_id, location_en, location_id, description_en, description_id, image, scope, year_completed, featured) VALUES (
   7,
   'dashi-chazuke-zenraku-kamado-oven',
@@ -322,9 +316,7 @@ INSERT INTO projects (id, slug, name_en, name_id, category_en, category_id, loca
   'Proyek fit-out dapur lengkap bernilai hampir Rp100 juta untuk Dashi Chazuke Zenraku di Mall Grand Indonesia, Jakarta (2018). Lingkup pekerjaan mencakup pembuatan tungku Kamado tradisional Jepang kustom dengan sistem burner gas, sistem alarm & pengaman gas komersial, instalasi ducting/exhaust hood, serta beberapa kitchen equipment pendukung.',
   '/images/projects/dashi-chazuke-zenraku-gi/dashi-chazuke-zenraku-gi-6.webp',
   '[{"en":"Custom Kamado oven design & construction","id":"Desain & konstruksi tungku Kamado kustom"},{"en":"Gas piping with alarm & safety interlock system","id":"Pemipaan gas dengan sistem alarm & pengaman"},{"en":"Exhaust hood & ducting installation","id":"Instalasi exhaust hood & ducting"},{"en":"Supporting kitchen equipment supply & install","id":"Penyediaan & instalasi kitchen equipment pendukung"}]',
-  2018,
-  1
-);
+  2018, 1);
 INSERT INTO projects (id, slug, name_en, name_id, category_en, category_id, location_en, location_id, description_en, description_id, image, scope, year_completed, featured) VALUES (
   8,
   'al-jazeerah-cikini-mandi-oven',
@@ -338,9 +330,7 @@ INSERT INTO projects (id, slug, name_en, name_id, category_en, category_id, loca
   'Oven Mandi tradisional kustom, berukuran seperti kulkas besar, dibuat untuk restoran Al-Jazeerah Cikini (2014-2015). Dirancang khusus untuk memanggang beberapa ekor anak domba utuh sekaligus hingga daging lepas dari tulang dengan sendirinya — teknik memasak khas Timur Tengah.',
   '/images/projects/aljazeerah-cikini-mandi-oven/aljazeerah-cikini-mandi-oven-1.webp',
   '[{"en":"Multi-lamb capacity oven design","id":"Desain oven berkapasitas multi-domba"},{"en":"Steel structure & refractory fabrication","id":"Fabrikasi struktur baja & bata tahan api"},{"en":"Heat circulation system","id":"Sistem sirkulasi panas"},{"en":"Safety and doneness testing","id":"Pengujian keselamatan & kematangan"}]',
-  2015,
-  1
-);
+  2015, 0);
 INSERT INTO projects (id, slug, name_en, name_id, category_en, category_id, location_en, location_id, description_en, description_id, image, images, scope, year_completed, featured) VALUES (
   9,
   'istanbul-turkey-restaurant-kemang-oven',
@@ -355,9 +345,7 @@ INSERT INTO projects (id, slug, name_en, name_id, category_en, category_id, loca
   '/images/projects/istanbul-turkey-kemang/istanbul-turkey-kemang-final-gold.webp',
   '["/images/projects/istanbul-turkey-kemang/istanbul-turkey-kemang-final-gold.webp","/images/projects/istanbul-turkey-kemang/istanbul-turkey-kemang-1.webp","/images/projects/istanbul-turkey-kemang/istanbul-turkey-kemang-2.webp","/images/projects/istanbul-turkey-kemang/istanbul-turkey-kemang-3.webp","/images/projects/istanbul-turkey-kemang/istanbul-turkey-kemang-4.webp","/images/projects/istanbul-turkey-kemang/istanbul-turkey-kemang-5.webp","/images/projects/istanbul-turkey-kemang/istanbul-turkey-kemang-6.webp"]',
   '[{"en":"Custom pizza-style Arab bread oven construction","id":"Konstruksi oven pizza untuk roti Arab"},{"en":"Traditional Tannur oven pit construction","id":"Konstruksi lubang oven Tannur tradisional"},{"en":"Firebrick & refractory dome fabrication","id":"Fabrikasi kubah bata tahan api"},{"en":"Underground brick-lined pit installation","id":"Instalasi lubang berlapis bata bawah tanah"}]',
-  2018,
-  0
-);
+  2018, 0);
 INSERT INTO projects (id, slug, name_en, name_id, category_en, category_id, location_en, location_id, description_en, description_id, image, images, scope, year_completed, featured) VALUES (
   10,
   'royal-aljazeerah-puncak-tannur-oven',
@@ -372,9 +360,7 @@ INSERT INTO projects (id, slug, name_en, name_id, category_en, category_id, loca
   '/images/projects/royal-aljazeerah-puncak-tannur/royal-aljazeerah-puncak-tannur-1.webp',
   '["/images/projects/royal-aljazeerah-puncak-tannur/royal-aljazeerah-puncak-tannur-1.webp","/images/projects/royal-aljazeerah-puncak-tannur/royal-aljazeerah-puncak-tannur-2.webp"]',
   '[{"en":"Underground pit oven excavation & construction","id":"Penggalian & konstruksi lubang oven bawah tanah"},{"en":"Refractory brick-lined pit fabrication","id":"Fabrikasi lubang berlapis bata tahan api"},{"en":"Heavy-duty sealed lid system","id":"Sistem tutup rapat heavy-duty"},{"en":"Heat retention & ventilation testing","id":"Pengujian retensi panas & ventilasi"}]',
-  2017,
-  0
-);
+  2017, 0);
 INSERT INTO projects (id, slug, name_en, name_id, category_en, category_id, location_en, location_id, description_en, description_id, image, images, scope, year_completed, featured) VALUES (
   11,
   'al-jazeerah-cikini-pizza-oven-arab-bread',
@@ -389,9 +375,7 @@ INSERT INTO projects (id, slug, name_en, name_id, category_en, category_id, loca
   '/images/projects/aljazeerah-cikini-pizza-oven/aljazeerah-cikini-pizza-oven-1.webp',
   '["/images/projects/aljazeerah-cikini-pizza-oven/aljazeerah-cikini-pizza-oven-1.webp"]',
   '[{"en":"Traditional pizza-style oven design","id":"Desain oven bergaya pizza tradisional"},{"en":"Refractory firebrick chamber construction","id":"Konstruksi ruang bakar bata tahan api"},{"en":"Stainless steel front trim installation","id":"Instalasi trim depan stainless steel"},{"en":"Dual exhaust chimney fabrication","id":"Fabrikasi cerobong pembuangan asap ganda"}]',
-  2016,
-  0
-);
+  2016, 0);
 INSERT INTO projects (id, slug, name_en, name_id, category_en, category_id, location_en, location_id, description_en, description_id, image, images, scope, year_completed, featured, video_url) VALUES (
   12,
   'al-jazeerah-cikini-pizza-2020-new-restaurant',
@@ -406,10 +390,8 @@ INSERT INTO projects (id, slug, name_en, name_id, category_en, category_id, loca
   '/images/projects/aljazeerah-cikini-pizza-2020-new-restaurant/aljazeerah-cikini-pizza-2020-new-restaurant-1.webp',
   '["/images/projects/aljazeerah-cikini-pizza-2020-new-restaurant/aljazeerah-cikini-pizza-2020-new-restaurant-1.webp"]',
   '[{"en":"Traditional pizza oven design","id":"Desain oven pizza tradisional"},{"en":"Layered thermal insulation system","id":"Sistem isolasi termal berlapis"},{"en":"Refractory brick chamber construction","id":"Konstruksi ruang bakar bata tahan api"},{"en":"Dual exhaust chimney fabrication","id":"Fabrikasi cerobong pembuangan asap ganda"}]',
-  2020,
-  0,
-  'https://youtu.be/g_WFAg6_n6Q'
-);
+  2020, 0,
+  'https://youtu.be/g_WFAg6_n6Q');
 INSERT INTO projects (id, slug, name_en, name_id, category_en, category_id, location_en, location_id, description_en, description_id, image, images, scope, year_completed, featured) VALUES (
   13,
   'nanamia-pizzeria-yogyakarta-branch-2-pizza-oven',
@@ -424,9 +406,7 @@ INSERT INTO projects (id, slug, name_en, name_id, category_en, category_id, loca
   '/images/projects/nanamia-pizzeria-yogyakarta-branch-2/nanamia-pizzeria-branch2-1.webp',
   '["/images/projects/nanamia-pizzeria-yogyakarta-branch-2/nanamia-pizzeria-branch2-1.webp","/images/projects/nanamia-pizzeria-yogyakarta-branch-2/nanamia-pizzeria-branch2-2.webp"]',
   '[{"en":"Custom earth-rendered dome oven fabrication","id":"Fabrikasi oven kubah plester tanah liat kustom"},{"en":"Refractory hearth bricklaying & insulation","id":"Pemasangan bata tungku tahan api & insulasi"},{"en":"Wood-fired combustion system setup","id":"Pengaturan sistem pembakaran kayu bakar"},{"en":"Temperature gauge calibration & testing","id":"Kalibrasi pengukur suhu & pengujian"}]',
-  2021,
-  1
-);
+  2021, 1);
 INSERT INTO projects (id, slug, name_en, name_id, category_en, category_id, location_en, location_id, description_en, description_id, image, images, scope, year_completed, featured) VALUES (
   14,
   'nanamia-pizzeria-yogyakarta-branch-3-pizza-oven',
@@ -441,9 +421,7 @@ INSERT INTO projects (id, slug, name_en, name_id, category_en, category_id, loca
   '/images/projects/nanamia-pizzeria-yogyakarta-branch-3/nanamia-pizzeria-branch3-1.webp',
   '["/images/projects/nanamia-pizzeria-yogyakarta-branch-3/nanamia-pizzeria-branch3-1.webp","/images/projects/nanamia-pizzeria-yogyakarta-branch-3/nanamia-pizzeria-branch3-2.webp","/images/projects/nanamia-pizzeria-yogyakarta-branch-3/nanamia-pizzeria-branch3-3.webp"]',
   '[{"en":"Refractory firebrick dome construction","id":"Konstruksi kubah bata tahan api"},{"en":"Firewood storage cavity design","id":"Desain ruang penyimpanan kayu bakar"},{"en":"Custom brick arch installation","id":"Instalasi lengkungan bata kustom"},{"en":"Gas piping & venting setup","id":"Perpipaan gas & ventilasi"}]',
-  2023,
-  0
-);
+  2023, 0);
 
 -- SEED SERVICES
 INSERT INTO services (id, slug, title_en, title_id, subtitle_en, subtitle_id, short_description_en, short_description_id, description_en, description_id, image, icon, features, process) VALUES (
