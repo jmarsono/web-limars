@@ -1,0 +1,41 @@
+name: "Limars Teknik Website"
+slug: "limars-teknik-website"
+category: "web-development"
+status: "active"
+owner: "Bang Julian"
+created_date: "2026-08-16"
+last_updated: "2026-08-16"
+parent_project: "limarsteknik"
+website: "https://www.limarsteknik.com"
+description: "Website perusahaan PT Limars Teknik Indonesia — Next.js 16 App Router, OpenNext for Cloudflare Worker, i18n (EN/ID), Cloudflare D1 DB, R2 Bucket."
+
+repository:
+  old_origin: "git@github.com:734250no/web-limars.git"
+  origin: "git@github-jmarsono:jmarsono/project-limars-teknik-website.git"
+  github_url: "https://github.com/jmarsono/project-limars-teknik-website"
+
+tech_stack:
+  framework: "Next.js 16 (App Router)"
+  adapter: "OpenNext for Cloudflare (@opennextjs/cloudflare)"
+  i18n: "next-intl (EN/ID)"
+  deployment:
+    cloudflare_pages: "webpages-2ld.pages.dev (auto on git push — NOT production)"
+    cloudflare_worker: "limarsteknik.com (PRODUCTION — manual deploy wrangler)"
+  database: "Cloudflare D1 (limars-db)"
+  storage: "Cloudflare R2 (limars-media)"
+  captcha: "Cloudflare Turnstile"
+
+deployment_steps:
+  - "git push origin main"
+  - "npm run build:cf"
+  - "npx wrangler deploy"
+  note: "MANDATORY 3 steps — git push alone does NOT update production"
+
+worker_secrets:
+  - TURNSTILE_SECRET_KEY
+  - SMTP_HOST
+  - SMTP_PORT
+  - SMTP_SECURE
+  - SMTP_USER
+  - SMTP_PASS
+  - CONTACT_EMAIL
