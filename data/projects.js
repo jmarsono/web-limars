@@ -106,8 +106,10 @@ export const projects = [
       { en: 'Gas heating system setup', id: 'Pengaturan sistem pemanas gas' },
       { en: 'Stainless steel chimney installation', id: 'Instalasi cerobong stainless steel' }
     ],
-    image: '/images/projects/nanamia-pizzeria-yogyakarta/nanamia-pizzeria-1.webp',
+    image: '/images/projects/nanamia-pizzeria-yogyakarta/nanamia-pizzeria-final-1.webp',
     images: [
+      '/images/projects/nanamia-pizzeria-yogyakarta/nanamia-pizzeria-final-1.webp',
+      '/images/projects/nanamia-pizzeria-yogyakarta/nanamia-pizzeria-final-2.webp',
       '/images/projects/nanamia-pizzeria-yogyakarta/nanamia-pizzeria-1.webp',
       '/images/projects/nanamia-pizzeria-yogyakarta/nanamia-pizzeria-2.webp',
       '/images/projects/nanamia-pizzeria-yogyakarta/nanamia-pizzeria-3.webp',

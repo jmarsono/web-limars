@@ -302,7 +302,7 @@ INSERT INTO projects (id, slug, name_en, name_id, category_en, category_id, loca
   'Yogyakarta',
   'Custom traditional Italian wood-fired dome pizza oven fabrication and installation for Nanamia Pizzeria Yogyakarta (2018). Built on a custom steel-frame table with refractory firebrick hearth, hand-laid dome masonry, gas heating system, and stainless steel chimney -- a fully authentic Italian stone hearth oven.',
   'Fabrikasi dan instalasi oven pizza tradisional Itali khusus untuk Nanamia Pizzeria Yogyakarta (2018). Dibangun di atas rangka baja kustom dengan lantai tungku bata tahan api, kubah batu tangan, sistem pemanas gas, dan cerobong stainless steel -- oven tungku batu Italia yang otentik.',
-  '/images/projects/nanamia-pizzeria-yogyakarta/nanamia-pizzeria-1.webp',
+  '/images/projects/nanamia-pizzeria-yogyakarta/nanamia-pizzeria-final-1.webp',
   '[{"en":"Custom steel frame table construction","id":"Konstruksi meja rangka baja kustom"},{"en":"Refractory firebrick hearth & dome masonry","id":"Lantai tungku bata tahan api & masonry kubah"},{"en":"Gas heating system setup","id":"Pengaturan sistem pemanas gas"},{"en":"Stainless steel chimney installation","id":"Instalasi cerobong stainless steel"}]',
   2018,
   0
