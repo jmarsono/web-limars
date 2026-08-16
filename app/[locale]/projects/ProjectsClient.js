@@ -83,7 +83,9 @@ export default function ProjectsClient({ projects, projectCategories }) {
                     <div className={styles.projectOverlay}>
                       <span className={styles.projectCategory}>{category}</span>
                       <h3>{name}</h3>
-                      <p className={styles.projectLocation}><UiIcon name="location" size={15} /> {location}</p>
+                      <p className={styles.projectLocation}>
+                        <UiIcon name="location" size={15} /> {location}{project.year ? ` • ${project.year}` : ''}
+                      </p>
                     </div>
                   </div>
                 </div>
@@ -138,7 +140,7 @@ export default function ProjectsClient({ projects, projectCategories }) {
               </span>
               <h2>{selectedProject.name[locale] || selectedProject.name || ''}</h2>
               <p className={styles.modalLocation}>
-                <UiIcon name="location" size={15} /> {selectedProject.location[locale] || selectedProject.location || ''}
+                <UiIcon name="location" size={15} /> {selectedProject.location[locale] || selectedProject.location || ''}{selectedProject.year ? ` • ${selectedProject.year}` : ''}
               </p>
               <p className={styles.modalDesc}>
                 {selectedProject.description[locale] || selectedProject.description || ''}

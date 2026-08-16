@@ -32,6 +32,7 @@ CREATE TABLE projects (
   description_id TEXT,
   image TEXT NOT NULL,
   scope TEXT, -- JSON string of array of localized objects: [{"en": "Fabrication", "id": "Fabrikasi"}]
+  year_completed INTEGER, -- Year the project was completed (public-facing, no financial data)
   featured INTEGER DEFAULT 0,
   created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
 );

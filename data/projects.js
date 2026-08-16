@@ -26,51 +26,53 @@ export const projects = [
   },
   {
     id: 2,
-    image: '/images/projects/project-2-new.webp',
+    image: '/images/projects/central-aljazeerah-pramuka/central-aljazeerah-pramuka-1.webp',
     name: {
-      en: 'Central Al-Jazeerah Traditional Arab Bread Oven',
-      id: 'Pembuatan Oven Roti Arab Tradisional Central Al-Jazeerah'
+      en: 'Central Al-Jazeerah Traditional Pizza Oven',
+      id: 'Pembuatan Oven Pizza Tradisional Central Al-Jazeerah'
     },
-    slug: 'central-al-jazeerah-arab-bread-oven',
+    slug: 'central-al-jazeerah-pramuka-pizza-oven',
     category: {
       en: 'Oven Installation',
       id: 'Instalasi Oven'
     },
-    location: { en: 'Jakarta', id: 'Jakarta' },
+    location: { en: 'Pramuka, Jakarta', id: 'Pramuka, Jakarta' },
+    year: 2015,
     description: {
-      en: 'Custom traditional Arab bread oven fabrication and installation for Central Al-Jazeerah restaurant.',
-      id: 'Fabrikasi dan instalasi oven roti Arab tradisional khusus untuk restoran Central Al-Jazeerah.'
+      en: 'Traditional pizza-style oven fabrication and installation for Central Al-Jazeerah restaurant in Pramuka, Jakarta (2015), continuing our track record in custom traditional oven engineering.',
+      id: 'Fabrikasi dan instalasi oven pizza tradisional untuk restoran Central Al-Jazeerah di Pramuka, Jakarta (2015), melanjutkan rekam jejak kami dalam rekayasa oven tradisional kustom.'
     },
     scope: [
-      { en: 'Custom Arab bread oven design', id: 'Desain oven roti Arab kustom' },
+      { en: 'Traditional pizza oven design', id: 'Desain oven pizza tradisional' },
       { en: 'Refractory brick installation', id: 'Instalasi bata tahan api' },
       { en: 'Gas piping & burner calibration', id: 'Pipa gas & kalibrasi burner' },
-      { en: 'Heat retention testing', id: 'Pengujian retensi panas' }
+      { en: 'Testing and commissioning', id: 'Pengujian dan commissioning' }
     ],
     featured: true,
   },
   {
     id: 3,
-    image: '/images/projects/project-3-new.webp',
+    image: '/images/projects/aljazeerah-polonia/aljazeerah-polonia-1.webp',
     name: {
-      en: 'Al-Jazeerah Polonia Traditional Arab Bread Oven',
-      id: 'Pembuatan Oven Roti Tradisional Arab Al-Jazeerah Polonia'
+      en: 'Al-Jazeerah Polonia Function Hall Large Pizza Oven (180cm)',
+      id: 'Pembuatan Oven Pizza Besar (180cm) Al-Jazeerah Polonia Function Hall'
     },
-    slug: 'al-jazeerah-polonia-arab-bread-oven',
+    slug: 'al-jazeerah-polonia-function-hall-pizza-oven',
     category: {
       en: 'Oven Installation',
       id: 'Instalasi Oven'
     },
-    location: { en: 'Jakarta', id: 'Jakarta' },
+    location: { en: 'Polonia, East Jakarta', id: 'Polonia, Jakarta Timur' },
+    year: 2016,
     description: {
-      en: 'Custom traditional Arab bread oven fabrication and installation for Al-Jazeerah Polonia.',
-      id: 'Fabrikasi dan instalasi oven roti tradisional Arab khusus untuk Al-Jazeerah Polonia.'
+      en: 'Large-format traditional pizza oven with 180cm internal diameter, custom-engineered for Al-Jazeerah Restaurant & Function Hall - Polonia (2016) to serve high-volume event catering needs.',
+      id: 'Oven pizza tradisional berukuran besar dengan diameter dalam 180cm, direkayasa khusus untuk Al-Jazeerah Restaurant & Function Hall - Polonia (2016) guna memenuhi kebutuhan katering acara berkapasitas tinggi.'
     },
     scope: [
-      { en: 'Traditional oven design', id: 'Desain oven tradisional' },
-      { en: 'Refractory brick installation', id: 'Instalasi bata tahan api' },
-      { en: 'Gas piping & burner', id: 'Pipa gas & burner' },
-      { en: 'Testing and commissioning', id: 'Pengujian dan commissioning' }
+      { en: 'Large-diameter oven design (180cm)', id: 'Desain oven diameter besar (180cm)' },
+      { en: 'Large-scale refractory brick fabrication', id: 'Fabrikasi bata tahan api skala besar' },
+      { en: 'High-capacity gas & burner system', id: 'Sistem gas & burner kapasitas tinggi' },
+      { en: 'Performance testing and commissioning', id: 'Uji performa dan commissioning' }
     ],
     featured: true,
   },
@@ -100,26 +102,27 @@ export const projects = [
   },
   {
     id: 5,
-    image: '/images/projects/project-5-new.webp',
+    image: '/images/projects/zahra-al-jazeerah-cianjur/zahra-aljazeerah-cianjur-1.webp',
     name: {
-      en: 'Zahra Al-Jazeerah Traditional Arab Bread Oven',
-      id: 'Pembuatan Oven Roti Arab Tradisional Zahra Al-Jazeerah'
+      en: 'Zahra Al-Jazeerah Restaurant & Family Villas Pizza Oven',
+      id: 'Pembuatan Oven Pizza Zahra Al-Jazeerah Restaurant & Family Villas'
     },
-    slug: 'zahra-al-jazeerah-arab-bread-oven',
+    slug: 'zahra-al-jazeerah-family-villas-cianjur',
     category: {
       en: 'Oven Installation',
       id: 'Instalasi Oven'
     },
-    location: { en: 'Puncak Bogor', id: 'Puncak Bogor' },
+    location: { en: 'Cipanas, Cianjur, West Java', id: 'Cipanas, Cianjur, Jawa Barat' },
+    year: 2014,
     description: {
-      en: 'Custom traditional Arab bread oven fabrication and installation for Zahra Al-Jazeerah restaurant in Puncak Bogor.',
-      id: 'Fabrikasi dan instalasi oven roti Arab tradisional khusus untuk restoran Zahra Al-Jazeerah di Puncak Bogor.'
+      en: "Limars Teknik's very first traditional pizza-style oven project, custom-built for Arab bread baking at Zahra Al-Jazeerah Restaurant & Family Villas in Cipanas, Cianjur (2014). This project laid the foundation for our expertise in traditional oven fabrication.",
+      id: 'Proyek oven pizza tradisional pertama Limars Teknik, dibuat khusus untuk pembuatan roti Arab di Zahra Al-Jazeerah Restaurant & Family Villas, Cipanas, Cianjur (2014). Proyek ini menjadi fondasi keahlian kami dalam fabrikasi oven tradisional.'
     },
     scope: [
-      { en: 'Traditional Arab oven design', id: 'Desain oven Arab tradisional' },
+      { en: 'Traditional pizza oven design', id: 'Desain oven pizza tradisional' },
       { en: 'Custom steel & brick fabrication', id: 'Fabrikasi baja & bata kustom' },
       { en: 'Gas piping & safety valves', id: 'Pipa gas & katup pengaman' },
-      { en: 'Temperature calibration', id: 'Kalibrasi suhu' }
+      { en: 'Temperature calibration for Arab bread', id: 'Kalibrasi suhu untuk roti Arab' }
     ],
   },
   {
@@ -173,26 +176,27 @@ export const projects = [
   {
     id: 8,
     name: {
-      en: 'Al-Jazeerah Cikini Mandi Oven',
-      id: 'Pembuatan Oven Mandi Al-Jazeerah Cikini'
+      en: 'Al-Jazeerah Cikini Traditional "Mandi" Lamb Oven',
+      id: 'Pembuatan Oven "Mandi" Domba Tradisional Al-Jazeerah Cikini'
     },
     slug: 'al-jazeerah-cikini-mandi-oven',
     category: {
       en: 'Oven Installation',
       id: 'Instalasi Oven'
     },
-    location: { en: 'Jakarta', id: 'Jakarta' },
+    location: { en: 'Cikini, Jakarta', id: 'Cikini, Jakarta' },
+    year: 2015,
     description: {
-      en: 'Custom Mandi oven fabrication and installation for Al-Jazeerah Cikini restaurant.',
-      id: 'Fabrikasi dan instalasi oven Mandi khusus untuk restoran Al-Jazeerah Cikini.'
+      en: "Custom traditional 'Mandi' oven, sized like a large refrigerator, fabricated for Al-Jazeerah Cikini restaurant (2014-2015). Purpose-built to slow-roast multiple whole young lambs simultaneously, achieving fall-off-the-bone tenderness — a specialty Middle Eastern cooking technique.",
+      id: "Oven Mandi tradisional kustom, berukuran seperti kulkas besar, dibuat untuk restoran Al-Jazeerah Cikini (2014-2015). Dirancang khusus untuk memanggang beberapa ekor anak domba utuh sekaligus hingga daging lepas dari tulang dengan sendirinya — teknik memasak khas Timur Tengah."
     },
     scope: [
-      { en: 'Mandi pit & oven design', id: 'Desain lubang & oven Mandi' },
-      { en: 'Underground insulation', id: 'Isolasi bawah tanah' },
-      { en: 'Structural fabrication', id: 'Fabrikasi struktural' },
-      { en: 'Safety and smoke testing', id: 'Pengujian keselamatan dan asap' }
+      { en: 'Multi-lamb capacity oven design', id: 'Desain oven berkapasitas multi-domba' },
+      { en: 'Steel structure & refractory fabrication', id: 'Fabrikasi struktur baja & bata tahan api' },
+      { en: 'Heat circulation system', id: 'Sistem sirkulasi panas' },
+      { en: 'Safety and doneness testing', id: 'Pengujian keselamatan & kematangan' }
     ],
-    image: '/images/projects/project-8-new.webp',
+    image: '/images/projects/aljazeerah-cikini-mandi-oven/aljazeerah-cikini-mandi-oven-1.webp',
   },
 ];
 
