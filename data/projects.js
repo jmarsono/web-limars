@@ -302,6 +302,35 @@ export const projects = [
     ],
     featured: false,
   },
+  {
+    id: 11,
+    name: {
+      en: 'Al-Jazeerah Cikini Pizza-Style Arab Bread Oven',
+      id: 'Pembuatan Oven Pizza untuk Roti Arab Al-Jazeerah Cikini'
+    },
+    slug: 'al-jazeerah-cikini-pizza-oven-arab-bread',
+    category: {
+      en: 'Oven Installation',
+      id: 'Instalasi Oven'
+    },
+    location: { en: 'Cikini, Jakarta', id: 'Cikini, Jakarta' },
+    year: 2016,
+    description: {
+      en: 'Custom pizza-style oven fabrication for traditional Arab bread baking at Al-Jazeerah Cikini restaurant (2016), located near our earlier Mandi oven project at the same restaurant. Features a refractory firebrick chamber with a red brick facade, stainless steel front trim, and dual exhaust chimneys.',
+      id: 'Fabrikasi oven bergaya pizza kustom untuk pemanggangan roti Arab tradisional di restoran Al-Jazeerah Cikini (2016), berlokasi berdekatan dengan proyek oven Mandi kami sebelumnya di restoran yang sama. Dilengkapi ruang bakar bata tahan api dengan fasad bata merah, trim depan stainless steel, dan dua cerobong pembuangan asap.'
+    },
+    scope: [
+      { en: 'Traditional pizza-style oven design', id: 'Desain oven bergaya pizza tradisional' },
+      { en: 'Refractory firebrick chamber construction', id: 'Konstruksi ruang bakar bata tahan api' },
+      { en: 'Stainless steel front trim installation', id: 'Instalasi trim depan stainless steel' },
+      { en: 'Dual exhaust chimney fabrication', id: 'Fabrikasi cerobong pembuangan asap ganda' }
+    ],
+    image: '/images/projects/aljazeerah-cikini-pizza-oven/aljazeerah-cikini-pizza-oven-1.webp',
+    images: [
+      '/images/projects/aljazeerah-cikini-pizza-oven/aljazeerah-cikini-pizza-oven-1.webp'
+    ],
+    featured: false,
+  },
 ];
 
 export const projectCategories = [

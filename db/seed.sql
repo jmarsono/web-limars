@@ -405,6 +405,23 @@ INSERT INTO projects (id, slug, name_en, name_id, category_en, category_id, loca
   2017,
   0
 );
+INSERT INTO projects (id, slug, name_en, name_id, category_en, category_id, location_en, location_id, description_en, description_id, image, images, scope, year_completed, featured) VALUES (
+  11,
+  'al-jazeerah-cikini-pizza-oven-arab-bread',
+  'Al-Jazeerah Cikini Pizza-Style Arab Bread Oven',
+  'Pembuatan Oven Pizza untuk Roti Arab Al-Jazeerah Cikini',
+  'Oven Installation',
+  'Instalasi Oven',
+  'Cikini, Jakarta',
+  'Cikini, Jakarta',
+  'Custom pizza-style oven fabrication for traditional Arab bread baking at Al-Jazeerah Cikini restaurant (2016), located near our earlier Mandi oven project at the same restaurant. Features a refractory firebrick chamber with a red brick facade, stainless steel front trim, and dual exhaust chimneys.',
+  'Fabrikasi oven bergaya pizza kustom untuk pemanggangan roti Arab tradisional di restoran Al-Jazeerah Cikini (2016), berlokasi berdekatan dengan proyek oven Mandi kami sebelumnya di restoran yang sama. Dilengkapi ruang bakar bata tahan api dengan fasad bata merah, trim depan stainless steel, dan dua cerobong pembuangan asap.',
+  '/images/projects/aljazeerah-cikini-pizza-oven/aljazeerah-cikini-pizza-oven-1.webp',
+  '["/images/projects/aljazeerah-cikini-pizza-oven/aljazeerah-cikini-pizza-oven-1.webp"]',
+  '[{"en":"Traditional pizza-style oven design","id":"Desain oven bergaya pizza tradisional"},{"en":"Refractory firebrick chamber construction","id":"Konstruksi ruang bakar bata tahan api"},{"en":"Stainless steel front trim installation","id":"Instalasi trim depan stainless steel"},{"en":"Dual exhaust chimney fabrication","id":"Fabrikasi cerobong pembuangan asap ganda"}]',
+  2016,
+  0
+);
 
 -- SEED SERVICES
 INSERT INTO services (id, slug, title_en, title_id, subtitle_en, subtitle_id, short_description_en, short_description_id, description_en, description_id, image, icon, features, process) VALUES (
