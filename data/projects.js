@@ -224,6 +224,40 @@ export const projects = [
     ],
     featured: true,
   },
+  {
+    id: 9,
+    name: {
+      en: 'Istanbul Turkey Restaurant Pizza & Tannur Oven',
+      id: 'Pembuatan Oven Pizza & Tannur Istanbul Turkey Restaurant'
+    },
+    slug: 'istanbul-turkey-restaurant-kemang-oven',
+    category: {
+      en: 'Oven Installation',
+      id: 'Instalasi Oven'
+    },
+    location: { en: 'Kemang Raya, Jakarta', id: 'Jl. Kemang Raya, Jakarta' },
+    year: 2018,
+    description: {
+      en: 'Custom pizza-style Arab bread oven and traditional Tannur oven fabrication for Istanbul Turkey Restaurant on Jl. Kemang Raya, Jakarta (2018), a Middle Eastern restaurant requiring authentic dual-oven cooking setup for traditional bread and grilled dishes.',
+      id: 'Pembuatan oven pizza untuk roti Arab dan oven Tannur tradisional khusus untuk Istanbul Turkey Restaurant di Jl. Kemang Raya, Jakarta (2018), restoran Timur Tengah yang membutuhkan setup dua oven otentik untuk roti tradisional dan hidangan panggang.'
+    },
+    scope: [
+      { en: 'Custom pizza-style Arab bread oven construction', id: 'Konstruksi oven pizza untuk roti Arab' },
+      { en: 'Traditional Tannur oven pit construction', id: 'Konstruksi lubang oven Tannur tradisional' },
+      { en: 'Firebrick & refractory dome fabrication', id: 'Fabrikasi kubah bata tahan api' },
+      { en: 'Underground brick-lined pit installation', id: 'Instalasi lubang berlapis bata bawah tanah' }
+    ],
+    image: '/images/projects/istanbul-turkey-kemang/istanbul-turkey-kemang-1.webp',
+    images: [
+      '/images/projects/istanbul-turkey-kemang/istanbul-turkey-kemang-1.webp',
+      '/images/projects/istanbul-turkey-kemang/istanbul-turkey-kemang-2.webp',
+      '/images/projects/istanbul-turkey-kemang/istanbul-turkey-kemang-3.webp',
+      '/images/projects/istanbul-turkey-kemang/istanbul-turkey-kemang-4.webp',
+      '/images/projects/istanbul-turkey-kemang/istanbul-turkey-kemang-5.webp',
+      '/images/projects/istanbul-turkey-kemang/istanbul-turkey-kemang-6.webp'
+    ],
+    featured: false,
+  },
 ];
 
 export const projectCategories = [

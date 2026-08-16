@@ -369,6 +369,23 @@ INSERT INTO projects (id, slug, name_en, name_id, category_en, category_id, loca
   '/images/projects/aljazeerah-cikini-mandi-oven/aljazeerah-cikini-mandi-oven-1.webp',
   '[{"en":"Multi-lamb capacity oven design","id":"Desain oven berkapasitas multi-domba"},{"en":"Steel structure & refractory fabrication","id":"Fabrikasi struktur baja & bata tahan api"},{"en":"Heat circulation system","id":"Sistem sirkulasi panas"},{"en":"Safety and doneness testing","id":"Pengujian keselamatan & kematangan"}]',
   2015,
+  1
+);
+INSERT INTO projects (id, slug, name_en, name_id, category_en, category_id, location_en, location_id, description_en, description_id, image, images, scope, year_completed, featured) VALUES (
+  9,
+  'istanbul-turkey-restaurant-kemang-oven',
+  'Istanbul Turkey Restaurant Pizza & Tannur Oven',
+  'Pembuatan Oven Pizza & Tannur Istanbul Turkey Restaurant',
+  'Oven Installation',
+  'Instalasi Oven',
+  'Kemang Raya, Jakarta',
+  'Jl. Kemang Raya, Jakarta',
+  'Custom pizza-style Arab bread oven and traditional Tannur oven fabrication for Istanbul Turkey Restaurant on Jl. Kemang Raya, Jakarta (2018), a Middle Eastern restaurant requiring authentic dual-oven cooking setup for traditional bread and grilled dishes.',
+  'Pembuatan oven pizza untuk roti Arab dan oven Tannur tradisional khusus untuk Istanbul Turkey Restaurant di Jl. Kemang Raya, Jakarta (2018), restoran Timur Tengah yang membutuhkan setup dua oven otentik untuk roti tradisional dan hidangan panggang.',
+  '/images/projects/istanbul-turkey-kemang/istanbul-turkey-kemang-1.webp',
+  '["/images/projects/istanbul-turkey-kemang/istanbul-turkey-kemang-1.webp","/images/projects/istanbul-turkey-kemang/istanbul-turkey-kemang-2.webp","/images/projects/istanbul-turkey-kemang/istanbul-turkey-kemang-3.webp","/images/projects/istanbul-turkey-kemang/istanbul-turkey-kemang-4.webp","/images/projects/istanbul-turkey-kemang/istanbul-turkey-kemang-5.webp","/images/projects/istanbul-turkey-kemang/istanbul-turkey-kemang-6.webp"]',
+  '[{"en":"Custom pizza-style Arab bread oven construction","id":"Konstruksi oven pizza untuk roti Arab"},{"en":"Traditional Tannur oven pit construction","id":"Konstruksi lubang oven Tannur tradisional"},{"en":"Firebrick & refractory dome fabrication","id":"Fabrikasi kubah bata tahan api"},{"en":"Underground brick-lined pit installation","id":"Instalasi lubang berlapis bata bawah tanah"}]',
+  2018,
   0
 );
 
