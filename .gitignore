@@ -52,3 +52,6 @@ next-env.d.ts
 # deployment logs
 /deployments.txt
 
+# project image originals backup
+/public/images/projects/.originals/
+
