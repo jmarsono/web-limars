@@ -120,8 +120,9 @@ export const projects = [
   },
   {
     id: 5,
-    image: '/images/projects/zahra-al-jazeerah-cianjur/zahra-aljazeerah-cianjur-1.webp',
+    image: '/images/projects/zahra-al-jazeerah-cianjur/zahra-aljazeerah-cianjur-final-gold.webp',
     images: [
+      '/images/projects/zahra-al-jazeerah-cianjur/zahra-aljazeerah-cianjur-final-gold.webp',
       '/images/projects/zahra-al-jazeerah-cianjur/zahra-aljazeerah-cianjur-1.webp',
       '/images/projects/zahra-al-jazeerah-cianjur/zahra-aljazeerah-cianjur-2.webp',
       '/images/projects/zahra-al-jazeerah-cianjur/zahra-aljazeerah-cianjur-3.webp'

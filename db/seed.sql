@@ -308,7 +308,7 @@ INSERT INTO projects (id, slug, name_en, name_id, category_en, category_id, loca
   2018,
   0
 );
-INSERT INTO projects (id, slug, name_en, name_id, category_en, category_id, location_en, location_id, description_en, description_id, image, scope, year_completed, featured) VALUES (
+INSERT INTO projects (id, slug, name_en, name_id, category_en, category_id, location_en, location_id, description_en, description_id, image, images, scope, year_completed, featured) VALUES (
   5,
   'zahra-al-jazeerah-family-villas-cianjur',
   'Zahra Al-Jazeerah Restaurant & Family Villas Pizza Oven',
@@ -319,7 +319,8 @@ INSERT INTO projects (id, slug, name_en, name_id, category_en, category_id, loca
   'Cipanas, Cianjur, Jawa Barat',
   'Limars Teknik very first traditional pizza-style oven project, custom-built for Arab bread baking at Zahra Al-Jazeerah Restaurant & Family Villas in Cipanas, Cianjur (2014). This project laid the foundation for our expertise in traditional oven fabrication.',
   'Proyek oven pizza tradisional pertama Limars Teknik, dibuat khusus untuk pembuatan roti Arab di Zahra Al-Jazeerah Restaurant & Family Villas, Cipanas, Cianjur (2014). Proyek ini menjadi fondasi keahlian kami dalam fabrikasi oven tradisional.',
-  '/images/projects/zahra-al-jazeerah-cianjur/zahra-aljazeerah-cianjur-1.webp',
+  '/images/projects/zahra-al-jazeerah-cianjur/zahra-aljazeerah-cianjur-final-gold.webp',
+  '["/images/projects/zahra-al-jazeerah-cianjur/zahra-aljazeerah-cianjur-final-gold.webp","/images/projects/zahra-al-jazeerah-cianjur/zahra-aljazeerah-cianjur-1.webp","/images/projects/zahra-al-jazeerah-cianjur/zahra-aljazeerah-cianjur-2.webp","/images/projects/zahra-al-jazeerah-cianjur/zahra-aljazeerah-cianjur-3.webp"]',
   '[{"en":"Traditional pizza oven design","id":"Desain oven pizza tradisional"},{"en":"Custom steel & brick fabrication","id":"Fabrikasi baja & bata kustom"},{"en":"Gas piping & safety valves","id":"Pipa gas & katup pengaman"},{"en":"Temperature calibration for Arab bread","id":"Kalibrasi suhu untuk roti Arab"}]',
   2014,
   0
