@@ -169,25 +169,25 @@
     "heroBadge": "About Us",
     "heroTitle1": "Building Kitchen Excellence",
     "heroTitle2": "Since 2014",
-    "heroSubtitle": "We are PT. Limars Teknik Indonesia — your trusted partner in kitchen equipment manufacturing and engineering solutions across Indonesia.",
+    "heroSubtitle": "We are PT. Limars Teknik Indonesia — Indonesia's trusted artisan oven builder and commercial kitchen infrastructure specialist.",
     "visionTitle": "Our Vision",
-    "visionDesc": "To be Indonesia's most trusted and innovative kitchen equipment manufacturer, setting the standard for quality, safety, and service excellence in the food service industry.",
+    "visionDesc": "To be Indonesia's #1 specialist builder and manufacturer of traditional artisan ovens and refractory thermal engineering, setting the benchmark for commercial kitchen infrastructure excellence.",
     "missionTitle": "Our Mission",
     "missionList": {
-      "1": "Manufacture world-class kitchen equipment using premium materials",
-      "2": "Provide end-to-end engineering services for commercial and residential projects",
-      "3": "Continuously innovate to meet evolving industry demands",
-      "4": "Deliver exceptional service and build lasting client relationships"
+      "1": "Engineer and construct high-performance wood-fired pizza ovens, Mandi ovens, Tannurs, and Kamados with precise heat retention above 500°C",
+      "2": "Deliver comprehensive commercial kitchen infrastructure solutions (Stainless Steel Fabrication, Gas Piping, Ducting, & MEP) that ensure operational safety and durability",
+      "3": "Innovate accessible portable pizza oven lines to empower culinary SMEs and modern portable restaurants across Indonesia",
+      "4": "Provide dedicated technical support, precision commissioning, and long-term partnerships for every commercial food service operator"
     },
     "journeyTitle": "Our Journey",
-    "journeySubtitle": "A decade of growth, innovation, and excellence in kitchen engineering.",
+    "journeySubtitle": "A decade of proven project milestones and dedicated kitchen engineering since 2014.",
     "timeline": {
-      "2014": { "title": "Company Founded", "desc": "PT. Limars Teknik Indonesia established in Jakarta, starting with stainless steel kitchen fabrication." },
-      "2016": { "title": "Expanded Product Line", "desc": "Added traditional stoves, regional ovens, and modern commercial oven manufacturing." },
-      "2018": { "title": "Service Expansion", "desc": "Launched ducting, gas installation, well drilling, and electrical services divisions." },
-      "2020": { "title": "100+ Projects Milestone", "desc": "Completed over 100 projects across Indonesia, serving major hotel chains and restaurant groups." },
-      "2023": { "title": "Modern Facility", "desc": "Opened new manufacturing facility with advanced fabrication equipment and expanded capacity." },
-      "2026": { "title": "Leading Manufacturer", "desc": "Recognized as one of Indonesia's leading kitchen equipment manufacturers with nationwide coverage." }
+      "2014": { "title": "Inception & First Project", "desc": "Limars Teknik was founded in Jakarta and immediately commissioned to build its first Gold Mosaic Wood-Fired Pizza Oven at Zahra Al-Jazeerah Cianjur." },
+      "2015": { "title": "Middle Eastern Mandi Oven Mastery", "desc": "Entrusted by Al-Jazeerah Cikini & Central Pramuka restaurant groups to engineer heavy-duty custom Lamb Mandi & Arab Bread ovens." },
+      "2016": { "title": "Giant 180cm Dome Oven & Puncak Tannur", "desc": "Completed a giant 180cm diameter dome pizza oven for Al-Jazeerah Polonia Function Hall and a pit-style Tannur oven at Royal Al-Jazeerah Puncak." },
+      "2018": { "title": "Japanese Kamado & Nanamia Pizzeria", "desc": "Engineered a custom Japanese Kamado hearth for Dashi Chazuke Grand Indonesia, Istanbul Turkey Kemang oven, and Nanamia Pizzeria Jogja." },
+      "2021": { "title": "Enduring Restaurant Partnerships", "desc": "Continued partnership with wood-fired oven builds for Nanamia Pizzeria Yogyakarta Branch 2 (2021) and Branch 3 (2023)." },
+      "2025": { "title": "Digital Transformation & Portable Ovens", "desc": "Initiated the 2025 digital transformation era while developing affordable Portable Oven series for culinary SMEs and modern eateries." }
     },
     "coreValuesTitle": "Our Core Values",
     "coreValuesSubtitle": "The principles that guide everything we do.",

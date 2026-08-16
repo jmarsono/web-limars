@@ -169,25 +169,25 @@
     "heroBadge": "Tentang Kami",
     "heroTitle1": "Membangun Keunggulan Dapur",
     "heroTitle2": "Sejak 2014",
-    "heroSubtitle": "Kami adalah PT. Limars Teknik Indonesia — mitra tepercaya Anda dalam pembuatan peralatan dapur dan solusi teknik di seluruh Indonesia.",
+    "heroSubtitle": "Kami adalah PT. Limars Teknik Indonesia — spesialis builder oven tradisional dan penyedia infrastruktur dapur komersial terpercaya di seluruh Indonesia.",
     "visionTitle": "Visi Kami",
-    "visionDesc": "Menjadi produsen peralatan dapur paling tepercaya dan inovatif di Indonesia, menetapkan standar untuk kualitas, keamanan, dan keunggulan layanan dalam industri jasa makanan.",
+    "visionDesc": "Menjadi produsen dan builder spesialis oven tradisional & tungku refraktori nomor 1 di Indonesia, yang memadukan keahlian teknik termal presisi dengan standar infrastruktur dapur komersial berskala penuh.",
     "missionTitle": "Misi Kami",
     "missionList": {
-      "1": "Memproduksi peralatan dapur kelas dunia menggunakan bahan premium",
-      "2": "Menyediakan layanan teknik end-to-end untuk proyek komersial dan residensial",
-      "3": "Terus berinovasi untuk memenuhi permintaan industri yang terus berkembang",
-      "4": "Memberikan layanan luar biasa dan membangun hubungan klien yang langgeng"
+      "1": "Merancang dan membangun oven pizza wood-fired, oven mandi, tannur, dan kamado berkualitas tinggi dengan retensi panas presisi di atas 500°C",
+      "2": "Menyediakan solusi infrastruktur dapur komersial komprehensif (Fabrikasi Stainless Steel, Perpipaan Gas, Ducting, & MEP) yang aman dan tahan lama",
+      "3": "Mengembangkan inovasi lini oven portable ekonomis untuk mendukung kemajuan UMKM kuliner dan resto modern di Indonesia",
+      "4": "Memberikan pendampingan teknis, komisioning presisi, dan kemitraan jangka panjang bagi setiap bisnis kuliner"
     },
     "journeyTitle": "Perjalanan Kami",
-    "journeySubtitle": "Satu dekade pertumbuhan, inovasi, dan keunggulan dalam teknik dapur.",
+    "journeySubtitle": "Jejak karya real dan dedikasi rekayasa dapur komersial sejak 2014.",
     "timeline": {
-      "2014": { "title": "Perusahaan Didirikan", "desc": "PT. Limars Teknik Indonesia didirikan di Jakarta, dimulai dengan fabrikasi dapur baja tahan karat." },
-      "2016": { "title": "Perluasan Lini Produk", "desc": "Menambahkan pembuatan kompor tradisional, oven regional, dan oven komersial modern." },
-      "2018": { "title": "Ekspansi Layanan", "desc": "Meluncurkan divisi ducting, instalasi gas, pengeboran sumur, dan layanan kelistrikan." },
-      "2020": { "title": "Pencapaian 100+ Proyek", "desc": "Menyelesaikan lebih dari 100 proyek di seluruh Indonesia, melayani jaringan hotel besar dan grup restoran." },
-      "2023": { "title": "Fasilitas Modern", "desc": "Membuka fasilitas manufaktur baru dengan peralatan fabrikasi canggih dan kapasitas yang diperluas." },
-      "2026": { "title": "Produsen Terkemuka", "desc": "Diakui sebagai salah satu produsen peralatan dapur terkemuka di Indonesia dengan jangkauan nasional." }
+      "2014": { "title": "Awal Perjalanan & Proyek Pertama", "desc": "Limars Teknik didirikan di Jakarta dan langsung dipercaya membangun Oven Pizza Kayu Bakar Mozaik Emas Pertama di Zahra Al-Jazeerah Cianjur." },
+      "2015": { "title": "Spesialisasi Oven Mandi Timur Tengah", "desc": "Dipercaya grup restoran Al-Jazeerah Cikini & Central Pramuka untuk membuat Oven Mandi Domba & Oven Roti Arab kustom berkapasitas tinggi." },
+      "2016": { "title": "Oven Kubah Raksasa 180cm & Tannur Puncak", "desc": "Menyelesaikan Oven Pizza Kubah Raksasa 180cm di Al-Jazeerah Polonia serta proyek Tannur pit-style di Royal Al-Jazeerah Puncak Bogor." },
+      "2018": { "title": "Inovasi Kamado Jepang & Nanamia Pizzeria", "desc": "Membangun Tungku Kamado Tradisional Jepang di Dashi Chazuke Grand Indonesia, oven Istanbul Turkey Kemang, dan oven pizza Nanamia Pizzeria Jogja." },
+      "2021": { "title": "Kemitraan Berkelanjutan Resto Tier-1", "desc": "Kepercayaan berlanjut dengan pembuatan oven kayu bakar cabang ke-2 Nanamia Pizzeria (2021) dan cabang ke-3 (2023)." },
+      "2025": { "title": "Transformasi Digital & Lini Oven Portable", "desc": "Memulai era transformasi digital 2025 dan menyiapkan lini Oven Portable Ekonomis untuk mendukung UMKM Kuliner & Resto Modern." }
     },
     "coreValuesTitle": "Nilai Inti Kami",
     "coreValuesSubtitle": "Prinsip-prinsip yang memandu segala hal yang kami lakukan.",
