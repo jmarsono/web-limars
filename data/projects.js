@@ -393,6 +393,37 @@ export const projects = [
     ],
     featured: true,
   },
+  {
+    id: 14,
+    name: {
+      en: 'Nanamia Pizzeria Yogyakarta Branch 3 Pizza Oven (2023)',
+      id: 'Pembuatan Oven Pizza Nanamia Pizzeria Yogyakarta Cabang 3 (2023)'
+    },
+    slug: 'nanamia-pizzeria-yogyakarta-branch-3-pizza-oven',
+    category: {
+      en: 'Oven Installation',
+      id: 'Instalasi Oven'
+    },
+    location: { en: 'Yogyakarta', id: 'Yogyakarta' },
+    year: 2023,
+    description: {
+      en: 'Third wood-fired pizza oven build for Nanamia Pizzeria Yogyakarta at their new branch (2023). Handcrafted refractory firebrick dome oven with firewood storage cavity, custom brick installation, and gas piping on site.',
+      id: 'Pembangunan oven pizza kayu bakar ketiga untuk Nanamia Pizzeria Yogyakarta di cabang baru mereka (2023). Oven kubah bata tahan api buatan tangan dengan ruang penyimpanan kayu bakar, instalasi bata kustom, dan perpipaan gas di lokasi.'
+    },
+    scope: [
+      { en: 'Refractory firebrick dome construction', id: 'Konstruksi kubah bata tahan api' },
+      { en: 'Firewood storage cavity design', id: 'Desain ruang penyimpanan kayu bakar' },
+      { en: 'Custom brick arch installation', id: 'Instalasi lengkungan bata kustom' },
+      { en: 'Gas piping & venting setup', id: 'Perpipaan gas & ventilasi' }
+    ],
+    image: '/images/projects/nanamia-pizzeria-yogyakarta-branch-3/nanamia-pizzeria-branch3-1.webp',
+    images: [
+      '/images/projects/nanamia-pizzeria-yogyakarta-branch-3/nanamia-pizzeria-branch3-1.webp',
+      '/images/projects/nanamia-pizzeria-yogyakarta-branch-3/nanamia-pizzeria-branch3-2.webp',
+      '/images/projects/nanamia-pizzeria-yogyakarta-branch-3/nanamia-pizzeria-branch3-3.webp'
+    ],
+    featured: false,
+  },
 ];
 
 export const projectCategories = [

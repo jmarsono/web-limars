@@ -459,6 +459,23 @@ INSERT INTO projects (id, slug, name_en, name_id, category_en, category_id, loca
   2021,
   1
 );
+INSERT INTO projects (id, slug, name_en, name_id, category_en, category_id, location_en, location_id, description_en, description_id, image, images, scope, year_completed, featured) VALUES (
+  14,
+  'nanamia-pizzeria-yogyakarta-branch-3-pizza-oven',
+  'Nanamia Pizzeria Yogyakarta Branch 3 Pizza Oven (2023)',
+  'Pembuatan Oven Pizza Nanamia Pizzeria Yogyakarta Cabang 3 (2023)',
+  'Oven Installation',
+  'Instalasi Oven',
+  'Yogyakarta',
+  'Yogyakarta',
+  'Third wood-fired pizza oven build for Nanamia Pizzeria Yogyakarta at their new branch (2023). Handcrafted refractory firebrick dome oven with firewood storage cavity, custom brick installation, and gas piping on site.',
+  'Pembangunan oven pizza kayu bakar ketiga untuk Nanamia Pizzeria Yogyakarta di cabang baru mereka (2023). Oven kubah bata tahan api buatan tangan dengan ruang penyimpanan kayu bakar, instalasi bata kustom, dan perpipaan gas di lokasi.',
+  '/images/projects/nanamia-pizzeria-yogyakarta-branch-3/nanamia-pizzeria-branch3-1.webp',
+  '["/images/projects/nanamia-pizzeria-yogyakarta-branch-3/nanamia-pizzeria-branch3-1.webp","/images/projects/nanamia-pizzeria-yogyakarta-branch-3/nanamia-pizzeria-branch3-2.webp","/images/projects/nanamia-pizzeria-yogyakarta-branch-3/nanamia-pizzeria-branch3-3.webp"]',
+  '[{"en":"Refractory firebrick dome construction","id":"Konstruksi kubah bata tahan api"},{"en":"Firewood storage cavity design","id":"Desain ruang penyimpanan kayu bakar"},{"en":"Custom brick arch installation","id":"Instalasi lengkungan bata kustom"},{"en":"Gas piping & venting setup","id":"Perpipaan gas & ventilasi"}]',
+  2023,
+  0
+);
 
 -- SEED SERVICES
 INSERT INTO services (id, slug, title_en, title_id, subtitle_en, subtitle_id, short_description_en, short_description_id, description_en, description_id, image, icon, features, process) VALUES (
