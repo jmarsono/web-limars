@@ -97,13 +97,13 @@ export const projects = [
     location: { en: 'Yogyakarta', id: 'Yogyakarta' },
     year: 2018,
     description: {
-      en: 'Custom traditional Italian wood-fired dome pizza oven fabrication and installation for Nanamia Pizzeria Yogyakarta (2018). Built on a custom steel-frame table with refractory firebrick hearth, hand-laid dome masonry, gas heating system, and stainless steel chimney — a fully authentic Italian stone hearth oven.',
-      id: 'Fabrikasi dan instalasi oven pizza tradisional Itali khusus untuk Nanamia Pizzeria Yogyakarta (2018). Dibangun di atas rangka baja kustom dengan lantai tungku bata tahan api, kubah batu tangan, sistem pemanas gas, dan cerobong stainless steel — oven tungku batu Italia yang otentik.'
+      en: 'Custom traditional Italian wood-fired dome pizza oven fabrication and installation for Nanamia Pizzeria Yogyakarta (2018). Built on a custom steel-frame table with refractory firebrick hearth and hand-laid dome masonry. Fully wood-fired — no gas — as requested by the owner to achieve the authentic traditional Italian pizza flavor; completed with stainless steel chimney.',
+      id: 'Fabrikasi dan instalasi oven pizza tradisional Itali khusus untuk Nanamia Pizzeria Yogyakarta (2018). Dibangun di atas rangka baja kustom dengan lantai tungku bata tahan api dan kubah batu tangan. Sepenuhnya berbahan bakar kayu — tanpa gas — sesuai permintaan owner agar cita rasa pizza tradisional Italia benar-benar mirip; dilengkapi cerobong stainless steel.'
     },
     scope: [
       { en: 'Custom steel frame table construction', id: 'Konstruksi meja rangka baja kustom' },
       { en: 'Refractory firebrick hearth & dome masonry', id: 'Lantai tungku bata tahan api & masonry kubah' },
-      { en: 'Gas heating system setup', id: 'Pengaturan sistem pemanas gas' },
+      { en: 'Wood-fired combustion system', id: 'Sistem pembakaran kayu bakar' },
       { en: 'Stainless steel chimney installation', id: 'Instalasi cerobong stainless steel' }
     ],
     image: '/images/projects/nanamia-pizzeria-yogyakarta/nanamia-pizzeria-final-1.webp',
