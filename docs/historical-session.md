@@ -57,3 +57,35 @@ Skipping Steps 2 and 3 will NOT update the live site.
 - Review and rotate any necessary secrets (SMTP, Turnstile) via `wrangler secret put` using credentials from `hermes-config`.
 - Consider adding automated CI check (e.g., via GitHub Actions) that runs `npm run build:cf` on push to catch build errors early.
 - Align website content with parent `limarsteknik` project branding and service offerings.
+
+---
+
+## 2026-08-16 — Production Deployment (This Session)
+
+### Summary
+Successfully deployed the Limars Teknik website to Cloudflare Worker (production). The live site at `https://limarsteknik.com` and `https://www.limarsteknik.com` now serves traffic via the Worker `web` with OpenNext adapter.
+
+### Actions Performed
+1. **Auth**: Used `CLOUDFLARE_API_TOKEN` (Limars Teknik Indonesia account, ID `34b91431773326b2a4334cd178075c8c`)
+2. **Install**: `npm install` (687 packages, patches applied via patch-package)
+3. **Build**: `npm run build:cf` → OpenNext build completed successfully (`.open-next/worker.js`)
+4. **Deploy**: `npx wrangler deploy` → Worker version `fe6c4c11-6aea-4c9b-8581-53b61875dfea` deployed
+5. **DNS Verification**: OCR'd Cloudflare DNS dashboard screenshot — confirmed:
+   - `limarsteknik.com` Worker `web` (Proxied)
+   - `www.limarsteknik.com` CNAME → `limarsteknik.com` (Proxied)
+6. **End-to-end test**: `curl` returned HTTP 200 on both domains with full HTML response (Next.js app rendering correctly, i18n routing to `/en/`, SEO meta tags, structured data, Turnstile form, etc.)
+
+### Verification Results
+| URL | HTTP Status | Notes |
+|-----|-------------|-------|
+| `https://limarsteknik.com/` | 200 OK | Redirects to `/en/` |
+| `https://www.limarsteknik.com/` | 200 OK | 301 → `https://limarsteknik.com/en/` |
+
+### Artifacts Created
+- `/opt/hermes/projects/limars-teknik-website/docs/deployment-worker.md` — complete deployment guide
+
+### Pending / Follow-up
+- [ ] Verify Worker secrets (`TURNSTILE_SECRET_KEY`, `SMTP_*`, `CONTACT_EMAIL`) are set in Cloudflare Worker Dashboard
+- [ ] Test contact form submission (Turnstile + email delivery)
+- [ ] Enable Worker observability (logs, metrics, tracing alerts)
+- [ ] Document rollback procedure with previous version IDs
