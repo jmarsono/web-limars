@@ -8,7 +8,7 @@ import { NextIntlClientProvider } from 'next-intl';
 import { getMessages, setRequestLocale } from 'next-intl/server';
 import { routing } from '../../i18n/routing';
 import { notFound } from 'next/navigation';
-import { GoogleAnalytics } from '@next/third-parties/google';
+import Script from 'next/script';
 
 const inter = Inter({
   subsets: ['latin'],
@@ -84,6 +84,18 @@ export default async function RootLayout({ children, params }) {
         <link rel="preconnect" href="https://www.google.com" crossOrigin="anonymous" />
         <link rel="preconnect" href="https://www.gstatic.com" crossOrigin="anonymous" />
         <link rel="preconnect" href="https://www.googletagmanager.com" crossOrigin="anonymous" />
+        <Script
+          src="https://www.googletagmanager.com/gtag/js?id=G-Z7C140BFM6"
+          strategy="afterInteractive"
+        />
+        <Script id="ga4-init" strategy="afterInteractive">
+          {`
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+            gtag('config', 'G-Z7C140BFM6');
+          `}
+        </Script>
       </head>
       <body className={`${inter.variable} ${poppins.variable}`}>
         <NextIntlClientProvider messages={messages}>
@@ -94,7 +106,6 @@ export default async function RootLayout({ children, params }) {
           <WhatsAppButton />
         </NextIntlClientProvider>
       </body>
-      <GoogleAnalytics gaId={locale === 'id' ? 'G-FT58X7RM42' : 'G-MM43J372DE'} />
     </html>
   );
 }
