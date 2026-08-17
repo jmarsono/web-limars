@@ -376,6 +376,38 @@ export const projects = [
     ],
     featured: false,
   },
+  {
+    id: 15,
+    name: {
+      en: 'Kelapa Gading Traditional Oven Renovation (Pizza, Tandoor & BBQ)',
+      id: 'Renovasi Oven Tradisional Kelapa Gading (Pizza, Tandoor & BBQ)'
+    },
+    slug: 'renovasi-oven-kelapa-gading-2019',
+    category: {
+      en: 'Oven Renovation',
+      id: 'Renovasi Oven'
+    },
+    location: { en: 'Kelapa Gading, Jakarta', id: 'Kelapa Gading, Jakarta' },
+    year: 2019,
+    description: {
+      en: 'Full renovation and re-engineering of three traditional ovens for a restaurant in Kelapa Gading, Jakarta (2019): a traditional brick pizza oven, a clay tandoor oven station, and a traditional BBQ hearth oven. Work included structural brick repair, refractory re-pointing, new analog thermometer installation, blower/ventilation upgrades and full testing & commissioning of all three units.',
+      id: 'Renovasi menyeluruh dan rekayasa ulang tiga jenis oven tradisional untuk restoran di Kelapa Gading, Jakarta (2019): oven pizza kubah bata tradisional, stasiun oven tandoor tanah liat, dan oven BBQ tungku bata tradisional. Pekerjaan meliputi perbaikan struktur bata, pemasangan ulang nat refraktori, pemasangan termometer analog baru, peningkatan blower/ventilasi, serta pengujian dan commissioning ketiga unit.'
+    },
+    scope: [
+      { en: 'Traditional pizza oven structural repair', id: 'Perbaikan struktur oven pizza tradisional' },
+      { en: 'Clay tandoor oven restoration', id: 'Restorasi oven tandoor tanah liat' },
+      { en: 'BBQ hearth oven re-pointing & rebuild', id: 'Pemasangan ulang nat & pembangunan ulang oven BBQ' },
+      { en: 'Thermometer, blower & ventilation upgrade', id: 'Peningkatan termometer, blower & ventilasi' },
+      { en: 'Testing and commissioning', id: 'Pengujian dan commissioning' }
+    ],
+    image: '/images/projects/renovasi-oven-kelapa-gading-2019/kelapa-gading-pizza-oven-2019.webp',
+    images: [
+      '/images/projects/renovasi-oven-kelapa-gading-2019/kelapa-gading-pizza-oven-2019.webp',
+      '/images/projects/renovasi-oven-kelapa-gading-2019/kelapa-gading-tandoor-oven-2019.webp',
+      '/images/projects/renovasi-oven-kelapa-gading-2019/kelapa-gading-bbq-oven-2019.webp'
+    ],
+    featured: false,
+  },
 ];
 
 export const projectCategories = [

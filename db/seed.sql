@@ -422,6 +422,21 @@ INSERT INTO projects (id, slug, name_en, name_id, category_en, category_id, loca
   '["/images/projects/nanamia-pizzeria-yogyakarta-branch-3/nanamia-pizzeria-branch3-1.webp","/images/projects/nanamia-pizzeria-yogyakarta-branch-3/nanamia-pizzeria-branch3-2.webp","/images/projects/nanamia-pizzeria-yogyakarta-branch-3/nanamia-pizzeria-branch3-3.webp"]',
   '[{"en":"Refractory firebrick dome construction","id":"Konstruksi kubah bata tahan api"},{"en":"Firewood storage cavity design","id":"Desain ruang penyimpanan kayu bakar"},{"en":"Custom brick arch installation","id":"Instalasi lengkungan bata kustom"},{"en":"Gas piping & venting setup","id":"Perpipaan gas & ventilasi"}]',
   2023, 0);
+INSERT INTO projects (id, slug, name_en, name_id, category_en, category_id, location_en, location_id, description_en, description_id, image, images, scope, year_completed, featured) VALUES (
+  15,
+  'renovasi-oven-kelapa-gading-2019',
+  'Kelapa Gading Traditional Oven Renovation (Pizza, Tandoor & BBQ)',
+  'Renovasi Oven Tradisional Kelapa Gading (Pizza, Tandoor & BBQ)',
+  'Oven Renovation',
+  'Renovasi Oven',
+  'Kelapa Gading, Jakarta',
+  'Kelapa Gading, Jakarta',
+  'Full renovation and re-engineering of three traditional ovens for a restaurant in Kelapa Gading, Jakarta (2019): a traditional brick pizza oven, a clay tandoor oven station, and a traditional BBQ hearth oven. Work included structural brick repair, refractory re-pointing, new analog thermometer installation, blower/ventilation upgrades and full testing & commissioning of all three units.',
+  'Renovasi menyeluruh dan rekayasa ulang tiga jenis oven tradisional untuk restoran di Kelapa Gading, Jakarta (2019): oven pizza kubah bata tradisional, stasiun oven tandoor tanah liat, dan oven BBQ tungku bata tradisional. Pekerjaan meliputi perbaikan struktur bata, pemasangan ulang nat refraktori, pemasangan termometer analog baru, peningkatan blower/ventilasi, serta pengujian dan commissioning ketiga unit.',
+  '/images/projects/renovasi-oven-kelapa-gading-2019/kelapa-gading-pizza-oven-2019.webp',
+  '["/images/projects/renovasi-oven-kelapa-gading-2019/kelapa-gading-pizza-oven-2019.webp","/images/projects/renovasi-oven-kelapa-gading-2019/kelapa-gading-tandoor-oven-2019.webp","/images/projects/renovasi-oven-kelapa-gading-2019/kelapa-gading-bbq-oven-2019.webp"]',
+  '[{"en":"Traditional pizza oven structural repair","id":"Perbaikan struktur oven pizza tradisional"},{"en":"Clay tandoor oven restoration","id":"Restorasi oven tandoor tanah liat"},{"en":"BBQ hearth oven re-pointing & rebuild","id":"Pemasangan ulang nat & pembangunan ulang oven BBQ"},{"en":"Thermometer, blower & ventilation upgrade","id":"Peningkatan termometer, blower & ventilasi"},{"en":"Testing and commissioning","id":"Pengujian dan commissioning"}]',
+  2019, 0);
 
 -- SEED SERVICES
 INSERT INTO services (id, slug, title_en, title_id, subtitle_en, subtitle_id, short_description_en, short_description_id, description_en, description_id, image, icon, features, process) VALUES (
