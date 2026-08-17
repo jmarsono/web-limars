@@ -147,4 +147,41 @@ export const services = [
       { step: 5, title: { en: 'Certification & Handover', id: 'Sertifikasi & Serah Terima' }, description: { en: 'Issue safety certificate, leak detector training, and handover.', id: 'Penerbitan sertifikat keselamatan, pelatihan, dan serah terima.' } }
     ],
   },
+  {
+    id: 5,
+    slug: 'sppg-mbg-kitchen',
+    image: '/images/services/sppg-kitchen.webp',
+    title: {
+      en: 'MBG & SPPG Central Kitchen Engineering',
+      id: 'Solusi Dapur SPPG & MBG Standar Badan Gizi Nasional'
+    },
+    subtitle: {
+      en: 'Kitchen Engineering for SPPG & MBG',
+      id: 'Solusi Dapur SPPG & Makan Bergizi Gratis'
+    },
+    shortDescription: {
+      en: 'End-to-end engineering package for SPPG and MBG central kitchens around Jakarta: SS304 kitchen fabrication, certified gas piping, exhaust ventilation, grease traps, and preventive maintenance SLA.',
+      id: 'Paket rekayasa lengkap untuk dapur SPPG dan MBG di wilayah Jakarta: fabrikasi peralatan SS304, perpipaan gas bersertifikat, exhaust ventilation, grease trap, dan kontrak pemeliharaan berkala.'
+    },
+    description: {
+      en: 'PT Limars Teknik Indonesia provides a dedicated engineering and fabrication package for MBG and SPPG central kitchens. From stainless steel cooking equipment, certified gas piping, exhaust hoods, ducting, and grease traps to preventive maintenance SLA, we help operators pass BGN audits and run high-volume meal production safely.',
+      id: 'PT Limars Teknik Indonesia menyediakan paket rekayasa dan fabrikasi khusus untuk dapur SPPG dan MBG. Mulai dari peralatan SS304, perpipaan gas bersertifikat, exhaust hood, ducting, grease trap, hingga kontrak maintenance SLA untuk memastikan operasional dapur lolos audit BGN dan berproduksi secara aman.'
+    },
+    icon: 'sppg-mbg',
+    features: [
+      { en: 'BGN-aligned kitchen layout and fabrication', id: 'Layout dan fabrikasi sesuai standar BGN' },
+      { en: 'Food-grade SS304 equipment and surfaces', id: 'Peralatan dan permukaan food-grade SS304' },
+      { en: 'Certified gas piping, leak detection, and emergency shut-off', id: 'Pipa gas bersertifikat, deteksi kebocoran, dan katup darurat' },
+      { en: 'Exhaust ventilation and grease trap systems', id: 'Sistem exhaust dan grease trap' },
+      { en: 'Jakarta-area delivery, installation, and commissioning', id: 'Pengiriman, instalasi, dan komisioning di area Jakarta' },
+      { en: 'Preventive maintenance SLA for continuous kitchen operations', id: 'Kontrak maintenance SLA untuk operasional terus-menerus' }
+    ],
+    process: [
+      { step: 1, title: { en: 'Kitchen Audit', id: 'Audit Dapur' }, description: { en: 'Review BGN readiness, kitchen flow, and equipment gaps.', id: 'Tinjau kesiapan BGN, alur dapur, dan kebutuhan peralatan.' } },
+      { step: 2, title: { en: 'Layout & Engineering Design', id: 'Layout & Desain Teknis' }, description: { en: 'Create kitchen layout, MEP design, and compliance checklist.', id: 'Buat layout dapur, desain MEP, dan checklist kepatuhan.' } },
+      { step: 3, title: { en: 'Fabrication & Procurement', id: 'Fabrikasi & Pengadaan' }, description: { en: 'Fabricate SS304 equipment, piping, hoods, and ducting.', id: 'Fabrikasi peralatan SS304, pipa, hood, dan ducting.' } },
+      { step: 4, title: { en: 'Installation & Testing', id: 'Instalasi & Pengujian' }, description: { en: 'Install systems, gas test, airflow balancing, and safety verification.', id: 'Pasang sistem, uji gas, air balancing, dan verifikasi keselamatan.' } },
+      { step: 5, title: { en: 'Handover & SLA', id: 'Serah Terima & SLA' }, description: { en: 'Handover documentation, BGN-ready record, and maintenance SLA.', id: 'Serah terima dokumentasi, record siap BGN, dan SLA maintenance.' } }
+    ],
+  },
 ];
