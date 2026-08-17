@@ -20,10 +20,12 @@ export default async function ProductsPage({ params }) {
     { name: navT('products'), path: '/products/' }
   ];
 
+  const loadingText = locale === 'id' ? 'Memuat produk...' : 'Loading products...';
+
   return (
     <>
       <BreadcrumbJsonLd crumbs={crumbs} />
-      <Suspense fallback={<div className="container" style={{ padding: '80px 20px', textLight: 'center' }}>Loading products...</div>}>
+      <Suspense fallback={<div className="container" style={{ padding: '80px 20px', textAlign: 'center' }}>{loadingText}</div>}>
         <ProductsClient products={dbProducts} productCategories={productCategories} />
       </Suspense>
     </>

@@ -8,7 +8,13 @@ const nextConfig = {
   reactCompiler: true,
   images: {
     unoptimized: false,
-    remotePatterns: [],
+    formats: ['image/avif', 'image/webp'],
+    remotePatterns: [
+      {
+        protocol: 'https',
+        hostname: 'limarsteknik.com',
+      },
+    ],
   },
   trailingSlash: true,
 };
