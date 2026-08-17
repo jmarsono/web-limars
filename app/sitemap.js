@@ -1,6 +1,5 @@
 import { products } from '../data/products';
 import { services } from '../data/services';
-import { projects } from '../data/projects';
 import { blogPosts } from '../data/blogPosts';
 
 export const dynamic = 'force-static';
@@ -9,7 +8,7 @@ export default function sitemap() {
   const baseUrl = 'https://limarsteknik.com';
 
   const locales = ['id', 'en'];
-  const paths = ['', '/about', '/products', '/services', '/projects', '/blog', '/contact', '/faq'];
+  const paths = ['', '/about', '/products', '/services', '/projects', '/blog', '/contact', '/faq', '/privacy-policy'];
 
   // Static routes with alternates
   const routes = paths.flatMap((path) => 
