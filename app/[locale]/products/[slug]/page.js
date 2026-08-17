@@ -90,7 +90,7 @@ export default async function ProductDetailPage({ params }) {
     '@type': 'Product',
     name: name,
     description: desc,
-    image: product.image.startsWith('http') ? product.image : `https://www.limarsteknik.com${product.image}`,
+    image: product.image.startsWith('http') ? product.image : `https://limarsteknik.com${product.image}`,
     category: category,
     brand: {
       '@type': 'Brand',
