@@ -1,58 +1,61 @@
 'use client';
 
 import { useState } from 'react';
-import Image from 'next/image';
-import dynamic from 'next/dynamic';
+import styles from './ProjectDetail.module.css';
 
-const Lightbox = dynamic(() => import('yet-another-react-lightbox'), { ssr: false });
-import 'yet-another-react-lightbox/styles.css';
-
-export default function ProjectLightbox({ images = [], name = 'Project' }) {
-  const [open, setOpen] = useState(false);
-  const [index, setIndex] = useState(0);
+export default function ProjectLightbox({ images, name }) {
+  const [selectedImg, setSelectedImg] = useState(null);
 
   if (!images || images.length === 0) return null;
 
-  const slides = images.map((src) => ({
-    src: src.startsWith('http') ? src : `https://limarsteknik.com${src}`,
-  }));
-
   return (
-    <>
-      <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fill, minmax(280px, 1fr))', gap: '16px' }}>
-        {images.map((img, i) => (
-          <div
-            key={i}
-            onClick={() => {
-              setIndex(i);
-              setOpen(true);
-            }}
-            style={{
-              position: 'relative',
-              height: '240px',
-              borderRadius: '12px',
-              overflow: 'hidden',
-              cursor: 'zoom-in',
-              backgroundColor: '#f0f0f0',
-            }}
-          >
-            <Image
-              src={img.startsWith('http') ? img : `https://limarsteknik.com${img}`}
-              alt={`${name} - foto ${i + 1}`}
-              fill
-              sizes="(max-width: 768px) 100vw, 33vw"
-              style={{ objectFit: 'cover' }}
-            />
-          </div>
-        ))}
-      </div>
+    <section className={styles.gallerySection}>
+      <div className={styles.container}>
+        <div className={styles.sectionHeader}>
+          <span className={styles.sectionBadge}>Dokumentasi Visual</span>
+          <h2>Galeri Foto Proyek</h2>
+        </div>
+        <div className={styles.galleryGrid}>
+          {images.map((img, idx) => (
+            <div
+              key={idx}
+              className={styles.galleryCard}
+              onClick={() => setSelectedImg(img)}
+            >
+              <img
+                src={img}
+                alt={`${name} - Dokumentasi Foto ${idx + 1}`}
+                className={styles.galleryImg}
+                loading="lazy"
+              />
+              <div className={styles.galleryOverlay}>
+                <span className={styles.zoomIcon}>🔍 Lihat Foto</span>
+              </div>
+            </div>
+          ))}
+        </div>
 
-      <Lightbox
-        open={open}
-        close={() => setOpen(false)}
-        index={index}
-        slides={slides}
-      />
-    </>
+        {selectedImg && (
+          <div className={styles.lightboxModal} onClick={() => setSelectedImg(null)}>
+            <div className={styles.lightboxContent} onClick={(e) => e.stopPropagation()}>
+              <button
+                className={styles.lightboxClose}
+                onClick={() => setSelectedImg(null)}
+                aria-label="Tutup"
+              >
+                ✕
+              </button>
+              <div className={styles.lightboxImgContainer}>
+                <img
+                  src={selectedImg}
+                  alt={`${name} - Foto Perbesar`}
+                  style={{ width: '100%', height: '100%', objectFit: 'contain' }}
+                />
+              </div>
+            </div>
+          </div>
+        )}
+      </div>
+    </section>
   );
 }

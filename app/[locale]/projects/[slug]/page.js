@@ -1,17 +1,14 @@
-// app/[locale]/projects/[slug]/page.js
-import { getProjectBySlug } from '../../../../lib/db';
+import { getProjectBySlug, getProjects } from '../../../../lib/db';
 import { notFound } from 'next/navigation';
-import Image from 'next/image';
 import ProjectLightbox from './ProjectLightbox';
 import styles from './ProjectDetail.module.css';
 import { setRequestLocale } from 'next-intl/server';
-import { getProjects } from '../../../../lib/db';
 import WhatsAppIcon from '../../../../components/WhatsAppIcon';
 import UiIcon from '../../../../components/UiIcon';
 import BreadcrumbJsonLd from '../../../../components/BreadcrumbJsonLd';
 import { Link } from '../../../../i18n/routing';
 
-export const revalidate = 0; // Fresh data for D1 dynamic updates
+export const revalidate = 0;
 
 export async function generateStaticParams() {
   const projects = await getProjects();
@@ -26,15 +23,14 @@ export async function generateStaticParams() {
 export async function generateMetadata({ params }) {
   const { slug, locale } = await params;
   const project = await getProjectBySlug(slug);
-  if (!project) return { title: 'Project Not Found' };
+  if (!project) return { title: 'Proyek Tidak Ditemukan' };
 
-  const name = project.name[locale] || project.name || '';
-  const desc = project.description[locale] || project.description || '';
+  const name = typeof project.name === 'object' ? (project.name[locale] || project.name.id || project.name.en) : project.name;
+  const desc = typeof project.description === 'object' ? (project.description[locale] || project.description.id || project.description.en) : project.description;
 
   return {
     title: `${name} | PT. Limars Teknik Indonesia`,
     description: desc,
-    image: project.image,
   };
 }
 
@@ -48,204 +44,189 @@ export default async function ProjectDetailPage({ params }) {
   const getTranslations = (await import('next-intl/server')).getTranslations;
   const t = await getTranslations({ locale, namespace: 'Projects' });
 
-  // For related projects (same category, limit 3)
+  // Related projects
   const allProjects = await getProjects();
   const relatedProjects = allProjects
     .filter(p => {
-      const matchCat = (p.category?.en === project.category?.en || p.category === project.category);
-      return matchCat && p.id !== project.id;
+      const currentCat = typeof project.category === 'object' ? project.category.en : project.category;
+      const pCat = typeof p.category === 'object' ? p.category.en : p.category;
+      return pCat === currentCat && p.id !== project.id;
     })
     .slice(0, 3);
 
-  const name = project.name[locale] || project.name || '';
-  const desc = project.description[locale] || project.description || '';
-  const category = project.category[locale] || project.category || '';
-  const location = project.location[locale] || project.location || '';
+  const name = typeof project.name === 'object' ? (project.name[locale] || project.name.id || project.name.en || '') : project.name;
+  const desc = typeof project.description === 'object' ? (project.description[locale] || project.description.id || project.description.en || '') : project.description;
+  const category = typeof project.category === 'object' ? (project.category[locale] || project.category.id || project.category.en || '') : project.category;
+  const location = typeof project.location === 'object' ? (project.location[locale] || project.location.id || project.location.en || '') : project.location;
+  
   const year = project.year;
-  const image = project.image;
-  const images = project.images;
+  const mainImage = project.image;
+  const galleryImages = project.images && project.images.length > 0 ? project.images : (mainImage ? [mainImage] : []);
   const scope = project.scope;
   const videoUrl = project.video_url;
 
   return (
     <>
-      {/* JSON-LD for Project (CreativeWork) */}
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{
-          __html: JSON.stringify({
-            '@context': 'https://schema.org',
-            '@type': 'CreativeWork',
-            name: name,
-            description: desc,
-            image: image?.startsWith('http')
-              ? image
-              : `https://limarsteknik.com${image}`,
-            dateCreated: year ? String(year) : undefined,
-            creator: {
-              '@type': 'Organization',
-              name: 'PT. Limars Teknik Indonesia',
-            },
-            // Optional: locationCreated
-          }),
-        }}
-      />
       <BreadcrumbJsonLd
         crumbs={[
           { name: t('breadcrumbProjects'), path: '/projects/' },
           { name: name, path: `/projects/${slug}/` },
         ]}
       />
+
+      {/* HERO SECTION */}
       <section className={styles.hero}>
-        <div className={styles.heroOverlay}></div>
-        <div className={`container ${styles.heroContent}`}>
+        <div className={styles.container}>
+          <nav className={styles.breadcrumbNav}>
+            <Link href="/projects">{t('breadcrumbProjects')}</Link>
+            <span className={styles.breadcrumbSep}>/</span>
+            <span>{name}</span>
+          </nav>
+
           <div className={styles.heroGrid}>
-            <div className={styles.heroImage}>
-              {image && (
-                <Image
-                  src={image.startsWith('http') ? image : `https://limarsteknik.com${image}`}
-                  alt={`${name} - Proyek ${category.toLowerCase()}`}
-                  fill
-                  priority
-                  style={{ objectFit: 'cover' }}
-                />
-              )}
-            </div>
-            <div className={styles.heroInfo}>
-              <h1>{name}</h1>
+            <div>
+              <span className={styles.heroBadge}>
+                📌 {category}
+              </span>
+              <h1 className={styles.heroTitle}>{name}</h1>
               <div className={styles.heroMeta}>
-                <span>{category}</span>
-                <span> • </span>
-                <span>{location}</span>
+                <div className={styles.metaItem}>
+                  📍 <span>{location}</span>
+                </div>
                 {year && (
-                  <>
-                    <span> • </span>
-                    <span>{year}</span>
-                  </>
+                  <div className={styles.metaItem}>
+                    📅 <span>Tahun {year}</span>
+                  </div>
                 )}
+                <div className={styles.metaItem}>
+                  🏢 <span>PT Limars Teknik Indonesia</span>
+                </div>
               </div>
               <p className={styles.heroDesc}>{desc}</p>
+            </div>
+
+            <div className={styles.mainImageWrapper}>
+              {mainImage ? (
+                <img
+                  src={mainImage}
+                  alt={`${name} - Dokumentasi Utama`}
+                  className={styles.mainImg}
+                />
+              ) : (
+                <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'center', height: '240px', color: '#94a3b8' }}>
+                  Dokumentasi Foto Proyek
+                </div>
+              )}
             </div>
           </div>
         </div>
       </section>
 
-      {images && images.length > 1 && (
-        <ProjectLightbox images={images} name={name} />
+      {/* GALLERY LIGHTBOX */}
+      {galleryImages.length > 0 && (
+        <ProjectLightbox images={galleryImages} name={name} />
       )}
 
+      {/* SCOPE OF WORK */}
       {scope && scope.length > 0 && (
         <section className={styles.scope}>
-          <div className="container">
-            <h2>{t('scopeOfWork')}</h2>
-            <ul className={styles.scopeList}>
-              {scope.map((item, idx) => {
-                const text =
-                  typeof item === 'object'
-                    ? item[locale] || item.en || ''
-                    : item;
-                return (
-                  <li key={idx} className={styles.scopeItem}>
-                    <UiIcon name="check" size={14} className={styles.scopeIcon} />
-                    {text}
-                  </li>
-                );
-              })}
-            </ul>
+          <div className={styles.container}>
+            <div className={styles.scopeCard}>
+              <h2>
+                <UiIcon name="check" size={24} className={styles.scopeIcon} />
+                {t('scopeOfWork')}
+              </h2>
+              <div className={styles.scopeGrid}>
+                {scope.map((item, idx) => {
+                  const text = typeof item === 'object' ? (item[locale] || item.id || item.en || '') : item;
+                  return (
+                    <div key={idx} className={styles.scopeItem}>
+                      <UiIcon name="check" size={16} className={styles.scopeIcon} />
+                      <span>{text}</span>
+                    </div>
+                  );
+                })}
+              </div>
+            </div>
           </div>
         </section>
       )}
 
+      {/* VIDEO DOCUMENTATION */}
       {videoUrl && (
-        <section className={styles.video}>
-          <div className="container">
-            <h2>{t('videoDocumentation')}</h2>
-            <div style={{
-              position: 'relative',
-              width: '100%',
-              paddingBottom: '56.25%', // 16:9
-              height: 0,
-              overflow: 'hidden',
-              borderRadius: 8,
-            }}>
+        <section className={styles.videoSection}>
+          <div className={styles.container}>
+            <div className={styles.sectionHeader} style={{ color: '#ffffff' }}>
+              <span className={styles.sectionBadge} style={{ color: '#38bdf8' }}>Video Lapangan</span>
+              <h2 style={{ color: '#ffffff' }}>{t('videoDocumentation')}</h2>
+            </div>
+            <div className={styles.videoWrapper}>
               <iframe
-                src={`https://www.youtube.com/embed/${videoUrl.match(
-                  /(?:youtu\.be\/|v=|\/embed\/|\/watch\?v=)([\w-]{11})/
-                )?.[1]}`}
+                src={`https://www.youtube.com/embed/${
+                  videoUrl.match(/(?:youtu\.be\/|v=|\/embed\/|\/watch\?v=)([\w-]{11})/)?.[1]
+                }`}
                 title={`Video Dokumentasi ${name}`}
                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
                 referrerPolicy="strict-origin-when-cross-origin"
                 allowFullScreen
-                style={{
-                  position: 'absolute',
-                  top: 0,
-                  left: 0,
-                  width: '100%',
-                  height: '100%',
-                  border: 0,
-                }}
+                className={styles.videoIframe}
               />
             </div>
           </div>
         </section>
       )}
 
+      {/* RELATED PROJECTS */}
       {relatedProjects.length > 0 && (
-        <section className={styles.relatedProjects}>
-          <div className="container">
-            <h2>{t('relatedProjectsTitle')}</h2>
-            <div className={styles.relatedProjectsGrid}>
-              {relatedProjects.map((proj, idx) => (
-                <Link
-                  key={idx}
-                  href={`/projects/${proj.slug}`}
-                  className={styles.relatedProjectCard}
-                >
-                  <div className={styles.relatedProjectImage}>
+        <section className={styles.related}>
+          <div className={styles.container}>
+            <div className={styles.sectionHeader}>
+              <span className={styles.sectionBadge}>Portofolio Lainnya</span>
+              <h2>{t('relatedProjectsTitle')}</h2>
+            </div>
+            <div className={styles.relatedGrid}>
+              {relatedProjects.map((proj, idx) => {
+                const projName = typeof proj.name === 'object' ? (proj.name[locale] || proj.name.id || proj.name.en) : proj.name;
+                const projLoc = typeof proj.location === 'object' ? (proj.location[locale] || proj.location.id || proj.location.en) : proj.location;
+                return (
+                  <Link
+                    key={idx}
+                    href={`/projects/${proj.slug}`}
+                    className={styles.relatedCard}
+                  >
                     {proj.image && (
-                      <Image
-                        src={
-                          proj.image.startsWith('http')
-                            ? proj.image
-                            : `https://limarsteknik.com${proj.image}`
-                        }
-                        alt={
-                          proj.name[locale] ||
-                          proj.name?.en ||
-                          'Proyek Limars Teknik'
-                        }
-                        fill
-                        style={{ objectFit: 'cover' }}
+                      <img
+                        src={proj.image}
+                        alt={projName}
+                        className={styles.relatedImg}
                       />
                     )}
-                  </div>
-                  <div className={styles.relatedProjectInfo}>
-                    <h3>{proj.name[locale] || proj.name?.en || ''}</h3>
-                    <p className={styles.relatedProjectLocation}>
-                      {proj.location[locale] ||
-                        proj.location?.en ||
-                        ''}
-                      {proj.year && ` • ${proj.year}`}
-                    </p>
-                  </div>
-                </Link>
-              ))}
+                    <div className={styles.relatedInfo}>
+                      <h3>{projName}</h3>
+                      <p className={styles.relatedMeta}>
+                        📍 {projLoc} {proj.year && ` • ${proj.year}`}
+                      </p>
+                    </div>
+                  </Link>
+                );
+              })}
             </div>
           </div>
         </section>
       )}
 
+      {/* CTA SECTION */}
       <section className={styles.cta}>
-        <div className="container">
+        <div className={styles.container}>
           <h2>{t('ctaTitle')}</h2>
           <p>{t('ctaSubtitle')}</p>
           <div className={styles.ctaButtons}>
-            <Link href="/contact" className={`btn btn-primary`}>
+            <Link href="/contact" className={styles.btnPrimary}>
               {t('ctaContactBtn')}
             </Link>
             <a
               href="https://wa.me/6281212671289"
-              className={`btn btn-secondary`}
+              className={styles.btnWhatsapp}
               target="_blank"
               rel="noopener noreferrer"
             >
