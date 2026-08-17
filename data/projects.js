@@ -419,6 +419,8 @@ export const projects = [
       en: 'Regional Ovens',
       id: 'Oven Regional'
     },
+    location: { en: 'Depok, West Java', id: 'Depok, Jawa Barat' },
+    year: 2022,
     description: {
       en: 'Custom-built residential wood-fired traditional pizza oven (hybrid wood/gas) for home use in Depok, West Java (2022). Features refractory brick dome, analog thermometer, stainless steel chimney, and gas-assist burner for family pizza gatherings.',
       id: 'Custom-built residential wood-fired traditional pizza oven (hybrid wood/gas) for home use in Depok, West Java (2022). Features refractory brick dome, analog thermometer, stainless steel chimney, and gas-assist burner for family pizza gatherings.'
