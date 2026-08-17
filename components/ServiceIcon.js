@@ -1,4 +1,11 @@
 const iconPaths = {
+  'traditional-ovens': (
+    <>
+      <path d="M4 21h16M4 21V12a8 8 0 0 1 16 0v9" />
+      <path d="M9 21v-4a3 3 0 0 1 6 0v4" />
+      <path d="M12 11c1-1 1-2.5 0-3.5S10 6 12 4c2 2 3 3.5 3 4.5s-1 2.5-3 2.5z" />
+    </>
+  ),
   'kitchen-sets': (
     <>
       <path d="M7 3v7M4 3v4a3 3 0 0 0 6 0V3M7 10v11" />

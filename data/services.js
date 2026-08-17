@@ -1,187 +1,150 @@
 export const services = [
   {
     id: 1,
-    slug: 'kitchen-sets',
-    image: '/images/services/kitchen-set.webp',
+    slug: 'traditional-ovens',
+    image: '/images/products/brick-oven.webp',
     title: {
-      en: 'Restaurant Kitchen Set',
-      id: 'Jasa Kitchen Set Restoran Jakarta'
+      en: 'Traditional Oven Building & Construction Specialist',
+      id: 'Jasa Pembuatan Oven Tradisional (Pizza, Mandi, Tannur & Kamado)'
     },
     subtitle: {
-      en: 'Design & Installation',
-      id: 'Desain & Instalasi'
+      en: 'Precision Thermal Refractory (>500°C)',
+      id: 'Refraktori & Termal Presisi (>500°C)'
     },
     shortDescription: {
-      en: 'End-to-end kitchen set design and manufacturing using stainless steel and premium materials for restaurants, hotels, and catering businesses.',
-      id: 'Desain dan pembuatan kitchen set dari awal hingga akhir menggunakan baja tahan karat dan bahan premium untuk restoran, hotel, dan bisnis katering.'
+      en: 'Engineering, firebrick masonry, and refractory dome construction for wood-fired pizza ovens, mandi ovens, tannur, and kamado stoves.',
+      id: 'Perancangan, fabrikasi bata tahan api (firebrick), dan konstruksi kubah refraktori untuk oven pizza kayu bakar, oven mandi domba, oven tannur, dan tungku kamado.'
     },
     description: {
-      en: 'We provide comprehensive restaurant kitchen set solutions from initial consultation and design through to manufacturing and installation. Our team of experienced engineers and fabricators work with premium stainless steel materials to create durable, hygienic, and efficient kitchen workspaces tailored to your specific needs.',
-      id: 'Kami adalah penyedia jasa kitchen set restoran Jakarta terpercaya yang menyediakan solusi komprehensif mulai dari desain, fabrikasi, hingga instalasi. Sebagai spesialis jasa kitchen set restoran Jakarta, tim insinyur dan fabrikator kami yang berpengalaman memproduksi peralatan dapur stainless steel premium. Layanan jasa kitchen set restoran Jakarta kami dirancang untuk menciptakan ruang kerja dapur yang aman, higienis, dan efisien sesuai standar bisnis kuliner Anda.'
+      en: 'PT. Limars Teknik Indonesia is the leading traditional oven builder in Indonesia with field experience since 2014. We specialize in designing and building high-performance refractory ovens including Wood-Fired Pizza Ovens, Middle Eastern Mandi Ovens, Tannur/Tandoor pits, and Japanese Kamado stoves. Our engineering team combines high-heat refractory masonry, thermal insulation retention above 500°C, and custom aesthetics (gold mosaic, natural stone, or stainless steel finishing) to deliver authentic flavor and industrial-grade durability.',
+      id: 'PT. Limars Teknik Indonesia adalah penyedia spesialis pembuatan oven tradisional nomor 1 di Indonesia dengan pengalaman sejak 2014. Kami melayani perancangan dan konstruksi oven kayu bakar presisi tinggi, meliputi Oven Pizza Tradisional (Wood-Fired), Oven Mandi Domba khas Timur Tengah, Oven Tannur/Tandoor, serta Tungku Kamado Jepang. Setiap oven dirancang dengan bata tahan api (firebrick) berkualitas tinggi, isolasi termal ganda untuk retensi panas di atas 500°C, serta ornamen kustom (mozaik emas, batu alam, atau stainless steel) demi menghasilkan cita rasa kuliner yang otentik dan efisiensi bahan bakar maksimal.'
     },
-    icon: 'kitchen-sets',
+    icon: 'traditional-ovens',
     features: [
-      { en: 'Custom stainless steel fabrication', id: 'Fabrikasi baja tahan karat kustom' },
-      { en: 'Professional 3D kitchen design', id: 'Desain dapur 3D profesional' },
-      { en: 'Full project management', id: 'Manajemen proyek penuh' },
-      { en: 'Quality materials (SS 304/316)', id: 'Material berkualitas (SS 304/316)' },
-      { en: 'Post-installation support', id: 'Dukungan pasca instalasi' },
-      { en: 'Compliance with health & safety standards', id: 'Kepatuhan terhadap standar kesehatan & keselamatan' }
+      { en: 'Custom firebrick & refractory masonry construction', id: 'Konstruksi bata tahan api & masonry refraktori kustom' },
+      { en: 'High heat retention (>500°C) with fuel efficiency', id: 'Retensi panas tinggi (>500°C) & efisiensi bahan bakar' },
+      { en: 'Custom dome aesthetics (Gold Mosaic, Natural Stone, Stainless)', id: 'Desain kubah kustom (Mozaik Emas, Batu Alam, Stainless)' },
+      { en: 'Dual-fuel system options (Wood-Fired & Gas Burner)', id: 'Pilihan sistem dual-fuel (Kayu Bakar & Burner Gas)' },
+      { en: 'Heavy-duty stainless steel chimney & refractory doors', id: 'Cerobong stainless steel & pintu refraktori heavy-duty' },
+      { en: 'Thermal performance warranty & commissioning support', id: 'Garansi performa termal & pendampingan komisioning' }
     ],
     process: [
-      { step: 1, title: { en: 'Consultation', id: 'Konsultasi' }, description: { en: 'We meet with you to understand your kitchen needs, space, and budget.', id: 'Kami bertemu dengan Anda untuk memahami kebutuhan dapur, ruang, dan anggaran Anda.' } },
-      { step: 2, title: { en: 'Design', id: 'Desain' }, description: { en: 'Our team creates detailed 3D designs and floor plans for your approval.', id: 'Tim kami membuat desain 3D rinci dan denah lantai untuk persetujuan Anda.' } },
-      { step: 3, title: { en: 'Manufacturing', id: 'Produksi' }, description: { en: 'Precision fabrication in our workshop using premium stainless steel.', id: 'Fabrikasi presisi di bengkel kami menggunakan baja tahan karat premium.' } },
-      { step: 4, title: { en: 'Installation', id: 'Instalasi' }, description: { en: 'Professional on-site installation by our experienced team.', id: 'Instalasi on-site profesional oleh tim kami yang berpengalaman.' } },
-      { step: 5, title: { en: 'Handover', id: 'Serah Terima' }, description: { en: 'Final inspection, training, and project handover with warranty.', id: 'Inspeksi akhir, pelatihan, dan serah terima proyek dengan garansi.' } }
+      { step: 1, title: { en: 'Consultation & Concept', id: 'Konsultasi & Konsep' }, description: { en: 'Identify menu requirements, capacity, oven dimensions, and site layout.', id: 'Memahami kebutuhan menu, kapasitas, dimensi oven, dan tata letak lokasi.' } },
+      { step: 2, title: { en: 'Refractory Thermal Engineering', id: 'Rekayasa Termal Refraktori' }, description: { en: 'Design the hearth, dome curvature, insulation layers, and exhaust airflow.', id: 'Merancang kubah refraktori, lapisan isolasi termal, dan sirkulasi cerobong.' } },
+      { step: 3, title: { en: 'Masonry & Frame Construction', id: 'Konstruksi & Masonry' }, description: { en: 'Precision masonry using high-alumina firebricks and heat-resistant mortar.', id: 'Pemasangan bata tahan api presisi dengan semen mortar tahan panas tinggi.' } },
+      { step: 4, title: { en: 'Finishing & Aesthetic Detail', id: 'Finishing & Estetika' }, description: { en: 'Apply gold mosaic, natural stone, or stainless cladding based on client request.', id: 'Pelapisan mozaik emas, batu alam, atau stainless steel sesuai keinginan klien.' } },
+      { step: 5, title: { en: 'Curing & Commissioning', id: 'Pengeringan & Komisioning' }, description: { en: 'Controlled fire curing process, temperature testing, and baking trial.', id: 'Proses pengeringan terontrol, uji suhu >500°C, dan uji coba pemanggangan.' } }
     ],
   },
   {
     id: 2,
-    slug: 'ducting',
-    image: '/images/services/ducting.webp',
+    slug: 'kitchen-sets',
+    image: '/images/services/kitchen-set.webp',
     title: {
-      en: 'Ducting Systems',
-      id: 'Jasa Ducting Restoran Jakarta'
+      en: 'Commercial Stainless Steel Kitchen Set Fabrication',
+      id: 'Fabrikasi Kitchen Set & Peralatan Stainless Steel (SS304)'
     },
     subtitle: {
-      en: 'Smoke Exhaust & Air Circulation',
-      id: 'Pembuangan Asap & Sirkulasi Udara'
+      en: 'Custom SS304 Heavy-Duty Equipment',
+      id: 'Custom Stainless Steel SS304 Heavy-Duty'
     },
     shortDescription: {
-      en: 'Design and installation of smoke exhaust and air circulation ducting systems for commercial kitchens and industrial buildings.',
-      id: 'Desain dan instalasi sistem ducting pembuangan asap dan sirkulasi udara untuk dapur komersial dan bangunan industri.'
+      en: 'End-to-end commercial kitchen set design, SS304 stainless steel fabrication, and installation for restaurants, hotels, and catering businesses.',
+      id: 'Desain, fabrikasi stainless steel SS304 heavy-duty, dan instalasi kitchen set komersial dari awal hingga akhir untuk restoran, hotel, dan katering.'
     },
     description: {
-      en: 'Our ducting services cover the complete design and installation of smoke exhaust and air circulation systems. We ensure proper ventilation, compliance with building codes, and efficient air flow to maintain a comfortable and safe kitchen environment.',
-      id: 'Kami menawarkan jasa ducting restoran Jakarta komprehensif yang mencakup desain tata letak, fabrikasi, hingga instalasi sistem pembuangan asap dapur. Melalui jasa ducting restoran Jakarta kami, kami memastikan sirkulasi udara di dapur komersial Anda berjalan optimal sehingga asap masakan dan bau menyengat dapat terbuang dengan efektif. Percayakan kebutuhan ventilasi Anda kepada penyedia jasa ducting restoran Jakarta berpengalaman untuk kenyamanan staf dan pelanggan Anda.'
+      en: 'We provide comprehensive restaurant kitchen set solutions from initial consultation and design through to manufacturing and installation. Our team of experienced engineers and fabricators work with premium food-grade SS304 stainless steel to create durable, hygienic, and efficient kitchen workspaces tailored to your specific operational needs.',
+      id: 'Kami menyediakan solusi kitchen set dapur komersial komprehensif mulai dari konsultasi layout, desain 3D, fabrikasi in-house, hingga instalasi di lokasi. Menggunakan material stainless steel food-grade SS304 berkualitas tinggi, peralatan dapur kami tahan karat, mudah dibersihkan, dan dirancang heavy-duty untuk mendukung operasional dapur restoran, hotel, dan bisnis katering skala besar.'
     },
-    icon: 'ducting',
+    icon: 'kitchen-sets',
     features: [
-      { en: 'Kitchen exhaust systems', id: 'Sistem pembuangan udara dapur' },
-      { en: 'Fresh air intake installation', id: 'Instalasi asupan udara segar' },
-      { en: 'HVAC ducting integration', id: 'Integrasi ducting HVAC' },
-      { en: 'Grease trap systems', id: 'Sistem perangkap lemak (Grease trap)' },
-      { en: 'Fire damper installation', id: 'Instalasi peredam api (Fire damper)' },
-      { en: 'Regular maintenance programs', id: 'Program pemeliharaan rutin' }
+      { en: 'Food-grade SS304 stainless steel fabrication', id: 'Fabrikasi stainless steel food-grade SS304' },
+      { en: 'Professional 3D kitchen layout design', id: 'Desain layout dapur 3D profesional' },
+      { en: 'Custom worktables, sinks, & wall shelves', id: 'Meja kerja, sink, & rak dinding kustom' },
+      { en: 'Heavy-duty kwali range & burner stoves', id: 'Kompor kwali range & burner heavy-duty' },
+      { en: 'Post-installation maintenance support', id: 'Dukungan pemeliharaan pasca instalasi' },
+      { en: 'Full compliance with health & safety standards', id: 'Kepatuhan standar kesehatan & keselamatan kerja' }
     ],
     process: [
-      { step: 1, title: { en: 'Site Assessment', id: 'Penilaian Lokasi' }, description: { en: 'Evaluate the space and ventilation requirements.', id: 'Evaluasi ruang dan persyaratan ventilasi.' } },
-      { step: 2, title: { en: 'System Design', id: 'Desain Sistem' }, description: { en: 'Engineer the optimal ducting layout and specifications.', id: 'Merancang tata letak dan spesifikasi ducting yang optimal.' } },
-      { step: 3, title: { en: 'Fabrication', id: 'Fabrikasi' }, description: { en: 'Custom fabrication of duct components in our workshop.', id: 'Fabrikasi kustom komponen duct di bengkel kami.' } },
-      { step: 4, title: { en: 'Installation', id: 'Instalasi' }, description: { en: 'Professional installation with minimal disruption.', id: 'Instalasi profesional dengan gangguan minimal.' } },
-      { step: 5, title: { en: 'Testing', id: 'Pengujian' }, description: { en: 'Air flow testing and system commissioning.', id: 'Pengujian aliran udara dan komisioning sistem.' } }
+      { step: 1, title: { en: 'Consultation', id: 'Konsultasi' }, description: { en: 'We meet with you to understand your kitchen workflow, space, and budget.', id: 'Memahami alur kerja dapur, kapasitas produksi, dan anggaran Anda.' } },
+      { step: 2, title: { en: '3D Design', id: 'Desain 3D' }, description: { en: 'Our team creates detailed 3D designs and floor plans for your approval.', id: 'Membuat tata letak 3D dan denah alur kerja dapur untuk persetujuan.' } },
+      { step: 3, title: { en: 'Workshop Manufacturing', id: 'Produksi Workshop' }, description: { en: 'Precision SS304 fabrication in our workshop.', id: 'Fabrikasi presisi baja tahan karat SS304 di workshop kami.' } },
+      { step: 4, title: { en: 'On-site Installation', id: 'Instalasi Lokasi' }, description: { en: 'Professional on-site assembly and leveling by our experienced team.', id: 'Pemasangan dan penyelarasan di lokasi oleh teknisi berpengalaman.' } },
+      { step: 5, title: { en: 'Handover & Warranty', id: 'Serah Terima & Garansi' }, description: { en: 'Final inspection, operational training, and project handover with warranty.', id: 'Inspeksi akhir, pelatihan operasional, dan serah terima proyek bergaransi.' } }
     ],
   },
   {
     id: 3,
-    slug: 'gas-installation',
-    image: '/images/services/gas-installation.webp',
+    slug: 'ducting',
+    image: '/images/services/ducting.webp',
     title: {
-      en: 'Gas Installation',
-      id: 'Instalasi Gas Dapur Komersial Jakarta'
+      en: 'Exhaust Ducting & Oven Chimney Systems',
+      id: 'Instalasi Sistem Exhaust Ducting & Cerobong Asap Oven'
     },
     subtitle: {
-      en: 'Professional & Certified',
-      id: 'Profesional & Bersertifikat'
+      en: 'Kitchen Ventilation & Oven Chimneys',
+      id: 'Sirkulasi Udara Dapur & Cerobong Oven'
     },
     shortDescription: {
-      en: 'Professional gas piping installation for commercial kitchens and buildings, with full safety compliance and pressure testing.',
-      id: 'Instalasi perpipaan gas profesional untuk dapur komersial dan bangunan, dengan kepatuhan keselamatan penuh dan pengujian tekanan.'
+      en: 'Engineering and installation of smoke exhaust ducting, high-temp oven chimneys, fresh air supply, and commercial kitchen ventilation.',
+      id: 'Perancangan dan instalasi sirkulasi udara dapur komersial, exhaust hood stainless steel, fresh air supply, dan cerobong asap oven suhu tinggi.'
     },
     description: {
-      en: 'Our certified gas installation team provides safe and reliable gas piping solutions for restaurants, commercial kitchens, and buildings. We handle everything from LPG and natural gas systems to safety compliance and pressure testing, ensuring your gas infrastructure meets all regulatory requirements.',
-      id: 'Kami menyediakan layanan instalasi gas dapur komersial Jakarta yang aman, andal, dan bersertifikat resmi untuk restoran, hotel, dan katering. Tim teknisi kami yang berpengalaman menangani seluruh alur instalasi gas dapur komersial Jakarta mulai dari perpipaan gas LPG/LNG, pemasangan katup pengaman, hingga sistem deteksi kebocoran. Hubungi kami untuk mendapatkan layanan instalasi gas dapur komersial Jakarta dengan standar keselamatan industri tertinggi dan uji tekanan pipa yang lengkap.'
+      en: 'Our ducting engineering services cover complete design, custom fabrication, and installation of kitchen smoke exhaust and oven chimney systems. We perform precise CFM airflow calculations to ensure high-temperature smoke and grease vapors are safely expelled, maintaining a cool, comfortable, and fire-safe environment for your kitchen staff.',
+      id: 'Layanan spesialis ducting kami mencakup perancangan tata letak, kalkulasi airflow (CFM), hingga instalasi sirkulasi udara dapur dan cerobong asap oven kayu bakar. Kami memastikan asap pembakaran suhu tinggi, uap minyak, dan hawa panas terbuang dengan efektif, sehingga suhu ruangan tetap nyaman, aman dari risiko kebakaran uap lemak, dan mematuhi regulasi bangunan.'
     },
-    icon: 'gas-installation',
+    icon: 'ducting',
     features: [
-      { en: 'LPG & Natural Gas systems', id: 'Sistem LPG & Gas Alam' },
-      { en: 'Certified installation team', id: 'Tim instalasi bersertifikat' },
-      { en: 'Pressure testing & certification', id: 'Pengujian tekanan & sertifikasi' },
-      { en: 'Safety valve installation', id: 'Instalasi katup pengaman' },
-      { en: 'Gas leak detection systems', id: 'Sistem deteksi kebocoran gas' },
-      { en: 'Regulatory compliance', id: 'Kepatuhan terhadap peraturan' }
+      { en: 'High-temperature wood-fired oven chimneys', id: 'Cerobong asap khusus oven kayu bakar suhu tinggi' },
+      { en: 'Stainless steel exhaust hoods with oil filters', id: 'Exhaust hood stainless steel + perangkap uap minyak' },
+      { en: 'Fresh air supply & makeup air intake systems', id: 'Instalasi asupan udara segar (fresh air intake)' },
+      { en: 'Centrifugal & axial blower fan calculation', id: 'Kalkulasi blower fan sentrifugal & aksial presisi' },
+      { en: 'Fire damper & safety duct insulation', id: 'Instalasi fire damper & isolasi peredam panas ducting' },
+      { en: 'Duct cleaning & regular maintenance', id: 'Layanan pembersihan ducting & perawatan berkala' }
     ],
     process: [
-      { step: 1, title: { en: 'Survey', id: 'Survei' }, description: { en: 'Assess gas requirements and plan the piping layout.', id: 'Menilai persyaratan gas dan merencanakan tata letak perpipaan.' } },
-      { step: 2, title: { en: 'Permitting', id: 'Perizinan' }, description: { en: 'Handle all necessary permits and approvals.', id: 'Menangani semua izin dan persetujuan yang diperlukan.' } },
-      { step: 3, title: { en: 'Installation', id: 'Instalasi' }, description: { en: 'Install gas piping with certified materials and techniques.', id: 'Memasang perpipaan gas dengan material dan teknik bersertifikat.' } },
-      { step: 4, title: { en: 'Testing', id: 'Pengujian' }, description: { en: 'Comprehensive pressure testing and leak checks.', id: 'Pengujian tekanan komprehensif dan pemeriksaan kebocoran.' } },
-      { step: 5, title: { en: 'Certification', id: 'Sertifikasi' }, description: { en: 'Provide official certification and documentation.', id: 'Memberikan sertifikasi dan dokumentasi resmi.' } }
+      { step: 1, title: { en: 'Airflow Assessment', id: 'Penilaian Airflow' }, description: { en: 'Evaluate kitchen volume, equipment heat output, and static pressure.', id: 'Mengevaluasi volume dapur, panas peralatan, dan tekanan statis.' } },
+      { step: 2, title: { en: 'CFM Calculation & Layout', id: 'Kalkulasi & Layout' }, description: { en: 'Engineer duct sizing and select optimal centrifugal blowers.', id: 'Merancang ukuran ducting dan memilih spesifikasi blower yang pas.' } },
+      { step: 3, title: { en: 'Custom Fabrication', id: 'Fabrikasi Kustom' }, description: { en: 'Fabricate stainless hoods and galvanized duct runs in our workshop.', id: 'Fabrikasi exhaust hood stainless dan saluran duct di workshop.' } },
+      { step: 4, title: { en: 'Installation', id: 'Instalasi' }, description: { en: 'Mounting hoods, duct runs, and roof blowers safely.', id: 'Pemasangan hood, saluran ducting, dan blower atap secara aman.' } },
+      { step: 5, title: { en: 'Air Balancing & Testing', id: 'Uji Air Balancing' }, description: { en: 'Measure suction velocity, noise level, and system commissioning.', id: 'Pengujian daya hisap, tingkat kebisingan, dan komisioning sistem.' } }
     ],
   },
   {
     id: 4,
-    slug: 'well-drilling',
-    image: '/images/services/well-drilling.webp',
+    slug: 'gas-installation',
+    image: '/images/services/gas-installation.webp',
     title: {
-      en: 'Well Drilling',
-      id: 'Jasa Pengeboran Sumur Jakarta'
+      en: 'Commercial Gas Piping & Kitchen MEP Safety',
+      id: 'Instalasi Perpipaan Gas Komersial & Safety MEP Dapur'
     },
     subtitle: {
-      en: 'Clean Water Supply',
-      id: 'Pasokan Air Bersih'
+      en: 'Certified Gas Piping & Kitchen Safety',
+      id: 'Perpipaan Gas & Keamanan Dapur Bersertifikat'
     },
     shortDescription: {
-      en: 'Professional well drilling services for clean water supply, including site survey, drilling, pump installation, and water quality testing.',
-      id: 'Layanan pengeboran sumur profesional untuk pasokan air bersih, termasuk survei lokasi, pengeboran, instalasi pompa, dan pengujian kualitas air.'
+      en: 'Certified commercial gas piping installation, manifold setups, automatic leak detection, emergency shut-off valves, and pressure testing.',
+      id: 'Instalasi pipa gas LPG/PNG komersial bersertifikat, sistem manifold, sensor deteksi kebocoran otomatis, emergency valve, dan uji tekanan pipa.'
     },
     description: {
-      en: 'We offer professional well drilling services to ensure a reliable clean water supply for your property. Our experienced drilling team uses modern equipment to reach optimal water sources, and we handle everything from initial site surveys to pump installation and water quality testing.',
-      id: 'Kami menyediakan jasa pengeboran sumur Jakarta profesional untuk menjamin pasokan air bersih yang melimpah dan higienis bagi properti komersial maupun residensial Anda. Didukung peralatan bor modern dan tim ahli geologi, layanan jasa pengeboran sumur Jakarta kami mampu menjangkau sumber mata air berkualitas pada kedalaman optimal. Dapatkan solusi lengkap jasa pengeboran sumur Jakarta mulai dari survei lokasi, pengeboran casing, hingga instalasi pompa celup submersible bergaransi.'
+      en: 'Our certified gas piping engineers provide safe, reliable, and leak-proof gas infrastructure for commercial kitchens and traditional ovens. We handle everything from high-pressure LPG manifolds, seamless carbon steel gas lines, automatic leak detectors, and solenoid shut-off valves to rigorous pressure drop tests, ensuring maximum safety for your culinary operations.',
+      id: 'Tim insinyur instalasi gas kami menyediakan solusi perpipaan gas LPG/PNG yang aman, andal, dan anti-bocor untuk dapur restoran dan burner oven komersial. Kami menangani alur instalasi dari sistem manifold tabung gas, pipa seamless sch40 tahan tekanan, sensor deteksi kebocoran gas otomatis, hingga solenoid valve darurat dengan uji tekan (pressure test) resmi demi keselamatan bisnis Anda.'
     },
-    icon: 'well-drilling',
+    icon: 'gas-installation',
     features: [
-      { en: 'Professional site survey', id: 'Survei lokasi profesional' },
-      { en: 'Modern drilling equipment', id: 'Peralatan pengeboran modern' },
-      { en: 'Submersible pump installation', id: 'Instalasi pompa celup (submersible)' },
-      { en: 'Water quality testing', id: 'Pengujian kualitas air' },
-      { en: 'Piping & distribution setup', id: 'Pengaturan perpipaan & distribusi' },
-      { en: 'Maintenance support', id: 'Dukungan pemeliharaan' }
+      { en: 'LPG & Natural Gas manifold piping systems', id: 'Sistem perpipaan manifold gas LPG & Gas Alam' },
+      { en: 'Certified gas engineering & welding team', id: 'Tim teknisi & las gas bersertifikat resmi' },
+      { en: 'Strict hydraulic & pneumatic pressure testing', id: 'Pengujian tekanan pneumatik & uji kebocoran ketat' },
+      { en: 'Automatic gas leak detector & alarm systems', id: 'Sistem sensor deteksi kebocoran gas & alarm otomatis' },
+      { en: 'Solenoid emergency shut-off valve installation', id: 'Instalasi katup pemutus darurat (solenoid valve)' },
+      { en: 'Official safety compliance documentation', id: 'Dokumentasi & sertifikasi keselamatan kerja resmi' }
     ],
     process: [
-      { step: 1, title: { en: 'Site Survey', id: 'Survei Lokasi' }, description: { en: 'Geological assessment to identify the best drilling location.', id: 'Penilaian geologi untuk mengidentifikasi lokasi pengeboran terbaik.' } },
-      { step: 2, title: { en: 'Drilling', id: 'Pengeboran' }, description: { en: 'Professional drilling using modern equipment.', id: 'Pengeboran profesional menggunakan peralatan modern.' } },
-      { step: 3, title: { en: 'Casing', id: 'Casing' }, description: { en: 'Install well casing and screen for clean water extraction.', id: 'Memasang casing sumur dan saringan untuk ekstraksi air bersih.' } },
-      { step: 4, title: { en: 'Pump Setup', id: 'Pengaturan Pompa' }, description: { en: 'Install and configure submersible pump system.', id: 'Instalasi dan konfigurasi sistem pompa celup.' } },
-      { step: 5, title: { en: 'Testing', id: 'Pengujian' }, description: { en: 'Water quality and flow rate testing.', id: 'Pengujian kualitas air dan laju aliran.' } }
-    ],
-  },
-  {
-    id: 5,
-    slug: 'electrical',
-    image: '/images/services/electrical.webp',
-    title: {
-      en: 'Electrical Services',
-      id: 'Jasa Instalasi Listrik Restoran Jakarta'
-    },
-    subtitle: {
-      en: 'Installation & Maintenance',
-      id: 'Instalasi & Pemeliharaan'
-    },
-    shortDescription: {
-      en: 'Electrical installation and maintenance for restaurants, homes, and buildings, covering wiring, panel installation, and power distribution.',
-      id: 'Instalasi dan pemeliharaan listrik untuk restoran, rumah, dan bangunan, meliputi pekerjaan kabel, instalasi panel, dan distribusi daya.'
-    },
-    description: {
-      en: 'Our electrical services team provides comprehensive solutions for restaurants, homes, and commercial buildings. From wiring and panel installation to lighting and power distribution, we ensure safe, efficient, and code-compliant electrical systems for all your needs.',
-      id: 'Kami menyediakan jasa instalasi listrik restoran Jakarta secara komprehensif untuk menjamin sistem kelistrikan dapur komersial Anda beroperasi dengan aman dan efisien. Dari pemasangan panel bagi beban daya besar hingga pekerjaan kabel stop kontak peralatan masak, jasa instalasi listrik restoran Jakarta kami dikerjakan oleh teknisi ahli bersertifikat. Lindungi bisnis kuliner Anda dengan mempercayakan perancangan daya kepada penyedia jasa instalasi listrik restoran Jakarta yang mematuhi standar keselamatan kelistrikan nasional.'
-    },
-    icon: 'electrical',
-    features: [
-      { en: 'Wiring & rewiring', id: 'Instalasi kabel & pasang ulang kabel' },
-      { en: 'Electrical panel installation', id: 'Instalasi panel listrik' },
-      { en: 'Lighting systems', id: 'Sistem pencahayaan' },
-      { en: 'Power distribution', id: 'Distribusi daya' },
-      { en: 'Safety compliance', id: 'Kepatuhan keselamatan' },
-      { en: 'Emergency electrical repair', id: 'Perbaikan listrik darurat' }
-    ],
-    process: [
-      { step: 1, title: { en: 'Assessment', id: 'Penilaian' }, description: { en: 'Evaluate electrical needs and existing infrastructure.', id: 'Mengevaluasi kebutuhan kelistrikan dan infrastruktur yang ada.' } },
-      { step: 2, title: { en: 'Design', id: 'Desain' }, description: { en: 'Create electrical layout and load calculations.', id: 'Membuat tata letak kelistrikan dan perhitungan beban.' } },
-      { step: 3, title: { en: 'Installation', id: 'Instalasi' }, description: { en: 'Professional wiring and component installation.', id: 'Instalasi kabel dan komponen secara profesional.' } },
-      { step: 4, title: { en: 'Testing', id: 'Pengujian' }, description: { en: 'Comprehensive safety and load testing.', id: 'Pengujian keselamatan dan beban komprehensif.' } },
-      { step: 5, title: { en: 'Handover', id: 'Serah Terima' }, description: { en: 'Documentation, certification, and client training.', id: 'Dokumentasi, sertifikasi, dan pelatihan klien.' } }
+      { step: 1, title: { en: 'Gas Load Planning', id: 'Perencanaan Beban Gas' }, description: { en: 'Calculate total BTU requirement for all stoves and burners.', id: 'Menghitung total kebutuhan BTU kompor dan burner oven.' } },
+      { step: 2, title: { en: 'Piping Route Design', id: 'Desain Jalur Pipa' }, description: { en: 'Map out seamless piping path and safety valve placement.', id: 'Merancang rute pipa seamless dan posisi katup pengaman.' } },
+      { step: 3, title: { en: 'Piping & Manifold Assembly', id: 'Perakitan Pipa & Manifold' }, description: { en: 'Install heavy-duty gas lines, regulators, and manifold racks.', id: 'Memasang pipa gas SCH40, regulator, dan rak manifold.' } },
+      { step: 4, title: { en: 'Pressure Testing', id: 'Pengujian Tekanan' }, description: { en: 'Conduct high-pressure hold test to verify 100% leak-proof assembly.', id: 'Uji tahan tekanan tinggi untuk memastikan 100% bebas bocor.' } },
+      { step: 5, title: { en: 'Certification & Handover', id: 'Sertifikasi & Serah Terima' }, description: { en: 'Issue safety certificate, leak detector training, and handover.', id: 'Penerbitan sertifikat keselamatan, pelatihan, dan serah terima.' } }
     ],
   },
 ];
