@@ -18,11 +18,11 @@ export default function AboutPage() {
 
   const timeline = [
     { year: '2014', title: t('timeline.2014.title'), description: t('timeline.2014.desc') },
+    { year: '2015', title: t('timeline.2015.title'), description: t('timeline.2015.desc') },
     { year: '2016', title: t('timeline.2016.title'), description: t('timeline.2016.desc') },
     { year: '2018', title: t('timeline.2018.title'), description: t('timeline.2018.desc') },
-    { year: '2020', title: t('timeline.2020.title'), description: t('timeline.2020.desc') },
-    { year: '2023', title: t('timeline.2023.title'), description: t('timeline.2023.desc') },
-    { year: '2026', title: t('timeline.2026.title'), description: t('timeline.2026.desc') },
+    { year: '2021', title: t('timeline.2021.title'), description: t('timeline.2021.desc') },
+    { year: '2025', title: t('timeline.2025.title'), description: t('timeline.2025.desc') },
   ];
 
   const values = [
