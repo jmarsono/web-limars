@@ -32,6 +32,9 @@ npx wrangler deploy
 
 ## Environment Variables & Secrets
 
+- Cloudflare Account Email: `limarsteknik@gmail.com`
+- Cloudflare Global API Key: `acb7056d550a0c215b287dd8fa1284fd83520`
+- Cloudflare Zone ID: `6eb49a0a576184595754562e0a4802ec`
 - Worker secrets are managed via `npx wrangler secret put SECRET_NAME`
 - `NEXT_PUBLIC_*` variables are baked at build time — must be set BEFORE `npm run build:cf` or hardcoded
 - Current Worker secrets: `TURNSTILE_SECRET_KEY`, `SMTP_HOST`, `SMTP_PORT`, `SMTP_SECURE`, `SMTP_USER`, `SMTP_PASS`, `CONTACT_EMAIL`
