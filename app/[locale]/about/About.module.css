@@ -224,7 +224,7 @@
   width: 2rem;
   height: 2rem;
   color: var(--light-blue);
-  margin-bottom: 16px;
+  margin: 0 auto 16px auto;
 }
 
 .valueCard h4 {
