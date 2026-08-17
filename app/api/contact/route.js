@@ -1,5 +1,7 @@
+/** API Route: Contact Form Handler */
 import { NextResponse } from 'next/server';
 import nodemailer from 'nodemailer';
+import { env } from '../../../lib/env';
 
 const MAX_LENGTHS = {
   name: 120,
@@ -12,10 +14,10 @@ const MAX_LENGTHS = {
 
 function escapeHtml(value = '') {
   return String(value)
-    .replace(/&/g, '&amp;')
-    .replace(/</g, '&lt;')
-    .replace(/>/g, '&gt;')
-    .replace(/"/g, '&quot;')
+    .replace(/&/g, '&')
+    .replace(/</g, '<')
+    .replace(/>/g, '>')
+    .replace(/"/g, '"')
     .replace(/'/g, '&#039;');
 }
 
@@ -24,7 +26,7 @@ function clean(value, maxLength) {
 }
 
 function isValidEmail(email) {
-  return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email);
+  return /^[^\\s@]+@[^\\s@]+\\.[^\\s@]+$/.test(email);
 }
 
 export async function POST(req) {
@@ -53,21 +55,25 @@ export async function POST(req) {
       );
     }
 
-    if (!turnstileToken || !process.env.TURNSTILE_SECRET_KEY) {
+    if (!turnstileToken || !env.TURNSTILE_SECRET_KEY) {
       return NextResponse.json(
         { error: 'Verification is temporarily unavailable. Please try again later.' },
         { status: 503 }
       );
     }
 
-    const turnstileRes = await fetch('https://challenges.cloudflare.com/turnstile/v0/siteverify', {
-      method: 'POST',
-      headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify({
-        secret: process.env.TURNSTILE_SECRET_KEY,
-        response: turnstileToken,
-      }),
-    });
+    const turnstileRes = await fetch(
+      'https://challenges.cloudflare.com/turnstile/v0/siteverify',
+      {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({
+          secret: env.TURNSTILE_SECRET_KEY,
+          response: turnstileToken,
+        }),
+      }
+    );
+
     const turnstileData = await turnstileRes.json();
 
     if (!turnstileData.success) {
@@ -77,7 +83,7 @@ export async function POST(req) {
       );
     }
 
-    if (!process.env.SMTP_USER || !process.env.SMTP_PASS) {
+    if (!env.SMTP_USER || !env.SMTP_PASS) {
       console.error('Contact form SMTP credentials are not configured.');
       return NextResponse.json(
         { error: 'The contact form is temporarily unavailable. Please contact us via WhatsApp.' },
@@ -86,16 +92,16 @@ export async function POST(req) {
     }
 
     const transporter = nodemailer.createTransport({
-      host: process.env.SMTP_HOST || 'smtp.gmail.com',
-      port: Number(process.env.SMTP_PORT || 587),
-      secure: process.env.SMTP_SECURE === 'true',
+      host: env.SMTP_HOST || 'smtp.gmail.com',
+      port: Number(env.SMTP_PORT || 587),
+      secure: env.SMTP_SECURE === 'true',
       auth: {
-        user: process.env.SMTP_USER,
-        pass: process.env.SMTP_PASS,
+        user: env.SMTP_USER,
+        pass: env.SMTP_PASS,
       },
     });
 
-    const contactEmail = process.env.CONTACT_EMAIL || 'sales@limarsteknik.com';
+    const contactEmail = env.CONTACT_EMAIL || 'sales@limarsteknik.com';
     const safeName = escapeHtml(name);
     const safeEmail = escapeHtml(email);
     const safePhone = escapeHtml(phone || 'N/A');
@@ -104,7 +110,7 @@ export async function POST(req) {
     const safeMessage = escapeHtml(message).replace(/\n/g, '<br/>');
 
     const adminMailOptions = {
-      from: `"PT. Limars Teknik Indonesia" <${process.env.SMTP_USER}>`,
+      from: `"PT. Limars Teknik Indonesia" <${env.SMTP_USER}>`,
       replyTo: email,
       to: contactEmail,
       subject: `New Lead: ${service ? `[${service}] ` : ''}Inquiry from ${name}`,
@@ -116,13 +122,13 @@ export async function POST(req) {
         <p><strong>Company:</strong> ${safeCompany}</p>
         <p><strong>Service Interest:</strong> ${safeService}</p>
         <br/>
-        <h3>Message:</h3>
+        <p><strong>Message:</strong></p>
         <p>${safeMessage}</p>
       `,
     };
 
     const customerMailOptions = {
-      from: `"PT. Limars Teknik Indonesia" <${process.env.SMTP_USER}>`,
+      from: `"PT. Limars Teknik Indonesia" <${env.SMTP_USER}>`,
       to: email,
       subject: 'Thank you for contacting PT. Limars Teknik Indonesia',
       html: `
@@ -130,9 +136,9 @@ export async function POST(req) {
         <p>Thank you for reaching out to us. We have received your inquiry regarding <strong>${safeService}</strong>.</p>
         <p>Our team is currently reviewing your message and will get back to you within 24 hours.</p>
         <br/>
-        <p>Best regards,</p>
-        <p><strong>PT. Limars Teknik Indonesia</strong></p>
-        <p><a href="https://limarsteknik.com">limarsteknik.com</a></p>
+        <p>Best regards,<br/>
+          <strong>PT. Limars Teknik Indonesia</strong><br/>
+          <a href="https://limarsteknik.com">limarsteknik.com</a></p>
       `,
     };
 

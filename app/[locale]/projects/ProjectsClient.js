@@ -69,7 +69,7 @@ export default function ProjectsClient({ projects, projectCategories }) {
               const location = project.location[locale] || project.location || '';
               
               return (
-                <div key={project.id} className={styles.projectCard} onClick={() => handleOpenProject(project)}>
+                <Link href={`/projects/${project.slug}`} key={project.id} className={styles.projectCard}>
                   <div className={styles.projectImage}>
                     <div style={{ position: 'relative', width: '100%', aspectRatio: '4/3', backgroundColor: '#f0f0f0', overflow: 'hidden' }}>
                       {project.image && (
@@ -89,7 +89,7 @@ export default function ProjectsClient({ projects, projectCategories }) {
                       </p>
                     </div>
                   </div>
-                </div>
+                </Link>
               );
             })}
           </div>

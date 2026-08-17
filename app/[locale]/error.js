@@ -6,6 +6,7 @@ import { useEffect } from 'react';
 export default function Error({ error, reset }) {
   useEffect(() => {
     console.error('[limarsteknik] Client error:', error);
+    // Optional: send error to monitoring endpoint if configured
   }, [error]);
 
   return (
