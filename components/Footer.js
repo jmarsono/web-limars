@@ -14,11 +14,11 @@ const quickLinks = [
 ];
 
 const serviceLinks = [
+  { href: '/services/traditional-ovens', labelKey: 'Navigation.services_ovens' },
   { href: '/services/kitchen-sets', labelKey: 'Navigation.services_kitchen' },
+  { href: '/services/sppg-mbg', labelKey: 'Navigation.services_sppg' },
   { href: '/services/ducting', labelKey: 'Navigation.services_ducting' },
   { href: '/services/gas-installation', labelKey: 'Navigation.services_gas' },
-  { href: '/services/well-drilling', labelKey: 'Navigation.services_well' },
-  { href: '/services/electrical', labelKey: 'Navigation.services_electrical' },
 ];
 
 export default function Footer() {
