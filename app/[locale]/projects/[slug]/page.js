@@ -86,20 +86,24 @@ export default async function ProjectDetailPage({ params }) {
           <div className={styles.heroGrid}>
             <div>
               <span className={styles.heroBadge}>
-                📌 {category}
+                <svg viewBox="0 0 24 24" width="14" height="14" fill="currentColor" style={{ marginRight: 4 }}><path d="M10 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V8c0-1.1-.9-2-2-2h-8l-2-2z"/></svg>
+                {category}
               </span>
               <h1 className={styles.heroTitle}>{name}</h1>
               <div className={styles.heroMeta}>
                 <div className={styles.metaItem}>
-                  📍 <span>{location}</span>
+                  <svg viewBox="0 0 24 24" width="15" height="15" fill="currentColor"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5a2.5 2.5 0 1 1 0-5 2.5 2.5 0 0 1 0 5z"/></svg>
+                  <span>{location}</span>
                 </div>
                 {year && (
                   <div className={styles.metaItem}>
-                    📅 <span>Tahun {year}</span>
+                    <svg viewBox="0 0 24 24" width="15" height="15" fill="currentColor"><path d="M19 3h-1V1h-2v2H8V1H6v2H5a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V5a2 2 0 0 0-2-2zm0 16H5V8h14v11zM7 10h5v5H7z"/></svg>
+                    <span>{year}</span>
                   </div>
                 )}
                 <div className={styles.metaItem}>
-                  🏢 <span>PT Limars Teknik Indonesia</span>
+                  <svg viewBox="0 0 24 24" width="15" height="15" fill="currentColor"><path d="M12 7V3H2v18h20V7H12zM6 19H4v-2h2v2zm0-4H4v-2h2v2zm0-4H4V9h2v2zm0-4H4V5h2v2zm4 12H8v-2h2v2zm0-4H8v-2h2v2zm0-4H8V9h2v2zm0-4H8V5h2v2zm10 12h-8v-2h2v-2h-2v-2h2v-2h-2V9h8v10zm-2-8h-2v2h2v-2zm0 4h-2v2h2v-2z"/></svg>
+                  <span>PT Limars Teknik Indonesia</span>
                 </div>
               </div>
               <p className={styles.heroDesc}>{desc}</p>
@@ -204,7 +208,8 @@ export default async function ProjectDetailPage({ params }) {
                     <div className={styles.relatedInfo}>
                       <h3>{projName}</h3>
                       <p className={styles.relatedMeta}>
-                        📍 {projLoc} {proj.year && ` • ${proj.year}`}
+                        <svg viewBox="0 0 24 24" width="13" height="13" fill="currentColor" style={{ verticalAlign: '-2px', marginRight: 4 }}><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5a2.5 2.5 0 1 1 0-5 2.5 2.5 0 0 1 0 5z"/></svg>
+                        {projLoc} {proj.year && ` • ${proj.year}`}
                       </p>
                     </div>
                   </Link>
