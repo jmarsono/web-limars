@@ -437,6 +437,21 @@ INSERT INTO projects (id, slug, name_en, name_id, category_en, category_id, loca
   '["/images/projects/renovasi-oven-kelapa-gading-2019/kelapa-gading-pizza-oven-2019.webp","/images/projects/renovasi-oven-kelapa-gading-2019/kelapa-gading-tandoor-oven-2019.webp","/images/projects/renovasi-oven-kelapa-gading-2019/kelapa-gading-bbq-oven-2019.webp"]',
   '[{"en":"Traditional pizza oven structural repair","id":"Perbaikan struktur oven pizza tradisional"},{"en":"Clay tandoor oven restoration","id":"Restorasi oven tandoor tanah liat"},{"en":"BBQ hearth oven re-pointing & rebuild","id":"Pemasangan ulang nat & pembangunan ulang oven BBQ"},{"en":"Thermometer, blower & ventilation upgrade","id":"Peningkatan termometer, blower & ventilasi"},{"en":"Testing and commissioning","id":"Pengujian dan commissioning"}]',
   2019, 0);
+INSERT INTO projects (id, slug, name_en, name_id, category_en, category_id, location_en, location_id, description_en, description_id, image, images, scope, year_completed, featured) VALUES (
+  16,
+  'depok-residential-pizza-oven-2022',
+  'Depok Residential Traditional Pizza Oven 2022',
+  'Oven Pizza Tradisional Rumahan Depok 2022',
+  'Regional Ovens',
+  'Oven Regional',
+  'Depok, Jawa Barat',
+  'Depok, Jawa Barat',
+  'Custom-built residential wood-fired traditional pizza oven (hybrid wood/gas) for home use in Depok, West Java (2022). Features refractory brick dome, analog thermometer, stainless steel chimney, and gas-assist burner for family pizza gatherings.',
+  'Oven pizza tradisional kubah bata refraktori rumah untuk penggunaan pribadi di Depok, Jawa Barat (2022). Dilengkapi termometer analog, cerobong stainless steel, dan sistem bakar hybrid kayu/gas untuk kumpul keluarga.',
+  '/images/projects/depok-residential-pizza-oven-2022/depok-residential-pizza-oven-1.webp',
+  '["/images/projects/depok-residential-pizza-oven-2022/depok-residential-pizza-oven-1.webp","/images/projects/depok-residential-pizza-oven-2022/depok-residential-pizza-oven-2.webp"]',
+  '[{"en":"Refractory brick dome construction","id":"Konstruksi kubah bata tahan api"},{"en":"Hybrid wood/gas burner system","id":"Sistem bakar hybrid kayu/gas"},{"en":"Stainless steel chimney installation","id":"Instalasi cerobong stainless steel"},{"en":"Analog thermometer fitting","id":"Pemasangan termometer analog"},{"en":"Residential integration & testing","id":"Integrasi rumah & pengujian"}]',
+  2022, 0);
 
 -- SEED SERVICES
 INSERT INTO services (id, slug, title_en, title_id, subtitle_en, subtitle_id, short_description_en, short_description_id, description_en, description_id, image, icon, features, process) VALUES (

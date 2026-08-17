@@ -408,6 +408,38 @@ export const projects = [
     ],
     featured: false,
   },
+  {
+    id: 16,
+    name: {
+      en: 'Depok Residential Traditional Pizza Oven 2022',
+      id: 'Oven Pizza Tradisional Rumahan Depok 2022'
+    },
+    slug: 'depok-residential-pizza-oven-2022',
+    category: {
+      en: 'Regional Ovens',
+      id: 'Oven Regional'
+    },
+    description: {
+      en: 'Custom-built residential wood-fired traditional pizza oven (hybrid wood/gas) for home use in Depok, West Java (2022). Features refractory brick dome, analog thermometer, stainless steel chimney, and gas-assist burner for family pizza gatherings.',
+      id: 'Custom-built residential wood-fired traditional pizza oven (hybrid wood/gas) for home use in Depok, West Java (2022). Features refractory brick dome, analog thermometer, stainless steel chimney, and gas-assist burner for family pizza gatherings.'
+    },
+    shortDescription: {
+      en: 'Residential traditional pizza oven (Depok 2022)',
+      id: 'Oven pizza tradisional rumah Depok 2022'
+    },
+    specs: {
+      material: { en: 'Refractory Brick + Steel Frame', id: 'Bata Tahan Api + Rangka Baja' },
+      maxTemperature: '500°C+',
+      fuelType: { en: 'Wood / Gas / Hybrid', id: 'Kayu Bakar / Gas / Kombinasi' },
+      dimensions: { en: 'Custom / Project-Based', id: 'Sesuai Pesanan' }
+    },
+    image: '/images/projects/depok-residential-pizza-oven-2022/depok-residential-pizza-oven-1.webp',
+    images: [
+      '/images/projects/depok-residential-pizza-oven-2022/depok-residential-pizza-oven-1.webp',
+      '/images/projects/depok-residential-pizza-oven-2022/depok-residential-pizza-oven-2.webp'
+    ],
+    featured: false
+  },
 ];
 
 export const projectCategories = [
