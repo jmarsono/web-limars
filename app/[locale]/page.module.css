@@ -51,7 +51,7 @@
 
 .heroEyebrow,
 .sectionKicker {
-  color: var(--light-blue);
+  color: var(--light-blue-text);
   font: 600 0.72rem/1.2 var(--font-body);
   letter-spacing: 0.16em;
   text-transform: uppercase;
@@ -159,7 +159,7 @@
   flex-direction: column;
   gap: 3px;
   padding: 14px 16px;
-  color: var(--dark-blue);
+  color: #0A1C30;
   background: var(--light-blue);
   font-size: 0.62rem;
   letter-spacing: 0.16em;
@@ -219,7 +219,7 @@
 .briefLabel span {
   display: block;
   margin-bottom: 12px;
-  color: var(--light-blue);
+  color: #0A1C30;
   font: 700 2rem/1 var(--font-heading);
 }
 
@@ -301,6 +301,10 @@
   margin-bottom: 54px;
 }
 
+.whyHeader .sectionKicker {
+  color: #7DC3F0;
+}
+
 .sectionIntro p,
 .whyHeader > p,
 .testimonialHeader > p {
@@ -371,7 +375,7 @@
   right: 12px;
   padding: 6px 9px;
   border-radius: 999px;
-  color: var(--dark-blue);
+  color: #0A1C30;
   background: var(--light-blue);
   font: 600 0.62rem/1 var(--font-body);
   text-transform: uppercase;
@@ -448,7 +452,7 @@
 }
 
 .serviceIndex {
-  color: var(--light-blue);
+  color: #1D689F;
   font: 700 0.72rem/1 var(--font-body);
   letter-spacing: 0.12em;
 }
@@ -512,7 +516,7 @@
 .whyNumber {
   display: block;
   margin-bottom: 48px;
-  color: var(--light-blue);
+  color: #7DC3F0;
   font: 700 0.76rem/1 var(--font-body);
   letter-spacing: 0.12em;
 }
@@ -714,7 +718,7 @@
 }
 
 .testimonialTop {
-  color: var(--light-blue);
+  color: #1D689F;
   font-size: 0.72rem;
   font-weight: 700;
   letter-spacing: 0.12em;

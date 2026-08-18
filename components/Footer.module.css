@@ -172,7 +172,7 @@
 
 .footerBottom p {
   font-size: 0.85rem;
-  color: rgba(255, 255, 255, 0.4);
+  color: rgba(255, 255, 255, 0.68);
   margin: 0;
 }
 
@@ -183,7 +183,7 @@
 
 .footerBottomLink {
   font-size: 0.85rem;
-  color: rgba(255, 255, 255, 0.4);
+  color: rgba(255, 255, 255, 0.68);
   transition: color var(--transition-fast);
 }
 

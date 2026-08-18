@@ -57,7 +57,7 @@ export default function Footer() {
 
           {/* Quick Links */}
           <div className={styles.footerCol}>
-            <h4 className={styles.footerTitle}>{t('Footer.quickLinks')}</h4>
+            <h3 className={styles.footerTitle}>{t('Footer.quickLinks')}</h3>
             <ul className={styles.footerLinks}>
               {quickLinks.map((link, idx) => (
                 <li key={idx}>
@@ -69,7 +69,7 @@ export default function Footer() {
 
           {/* Services */}
           <div className={styles.footerCol}>
-            <h4 className={styles.footerTitle}>{t('Footer.services')}</h4>
+            <h3 className={styles.footerTitle}>{t('Footer.services')}</h3>
             <ul className={styles.footerLinks}>
               {serviceLinks.map((link, idx) => (
                 <li key={idx}>
@@ -80,7 +80,7 @@ export default function Footer() {
           </div>
 
           <div className={styles.footerCol}>
-            <h4 className={styles.footerTitle}>{t('Footer.contact')}</h4>
+            <h3 className={styles.footerTitle}>{t('Footer.contact')}</h3>
             <ul className={styles.contactList}>
               <li>
                 <span className={styles.contactIcon} aria-hidden="true">

@@ -7,6 +7,7 @@
   --dark-blue-rgb: 27, 58, 92;
   --light-blue: #5BA4D9;
   --light-blue-rgb: 91, 164, 217;
+  --light-blue-text: #1D689F;
   --gray: #546371;
   --gray-rgb: 84, 99, 113;
   --light-gray: #F0F3F6;
@@ -198,7 +199,7 @@ p { margin-bottom: 1rem; }
 
 .btn-primary {
   background: var(--light-blue);
-  color: var(--dark-blue);
+  color: #0A1C30;
 }
 
 .btn-primary:hover {

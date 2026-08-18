@@ -18,11 +18,14 @@ export default function LanguageSwitcher() {
     <button
       onClick={toggleLocale}
       className={styles.switcher}
-      aria-label={`Switch language to ${locale === 'en' ? 'Indonesian' : 'English'}`}
+      title={locale === 'en' ? 'Switch to Indonesian' : 'Switch to English'}
     >
       <span className={locale === 'en' ? styles.active : ''}>EN</span>
       <span className={styles.divider} aria-hidden="true">/</span>
       <span className={locale === 'id' ? styles.active : ''}>ID</span>
+      <span className="sr-only">
+        {locale === 'en' ? ', switch to Indonesian' : ', switch to English'}
+      </span>
     </button>
   );
 }

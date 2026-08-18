@@ -86,9 +86,9 @@ export default async function RootLayout({ children, params }) {
         <link rel="preconnect" href="https://www.googletagmanager.com" crossOrigin="anonymous" />
         <Script
           src="https://www.googletagmanager.com/gtag/js?id=G-Z7C140BFM6"
-          strategy="afterInteractive"
+          strategy="lazyOnload"
         />
-        <Script id="ga4-init" strategy="afterInteractive">
+        <Script id="ga4-init" strategy="lazyOnload">
           {`
             window.dataLayer = window.dataLayer || [];
             function gtag(){dataLayer.push(arguments);}
