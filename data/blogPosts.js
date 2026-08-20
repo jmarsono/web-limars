@@ -695,5 +695,337 @@ export const blogPosts = [
         <p>A well-maintained commercial pizza oven can last more than 10 years with consistent baking results. If you are evaluating a new unit or want a custom oven designed around your menu, browse our <a href="/en/products/pizza-oven/">Commercial Pizza Oven</a> page or contact our engineering team through our <a href="/en/contact/">Contact Us</a> page for a free site assessment.</p>
       `
     }
+  },
+  {
+    slug: 'deck-oven-vs-conveyor-oven',
+    date: '2026-08-20',
+    author: 'Tech Advisor',
+    category: 'Buying Guide',
+    image: '/images/products/pizza-oven.webp',
+    tags: ['deck oven', 'conveyor oven', 'pizzeria', 'komersial', 'pembanding'],
+    id: {
+      title: 'Deck Oven vs Conveyor Oven: Mana yang Tepat untuk Pizzeria Skala Menengah?',
+      excerpt: 'Pilih oven pizza komersial yang pas untuk pizzeria menengah. Bandingkan konsistensi bake, biaya investasi, kebutuhan skill koki, dan throughput deck oven vs conveyor oven.',
+      content: `
+        <p>Pemilik pizzeria skala menengah (50-150 seat, 2-4 koki) sering dihadapkan pada pilihan strategis: <strong>deck oven vs conveyor oven</strong>. Keduanya menghasilkan pizza dalam jumlah besar, tapi mekanisme kerja, biaya operasional, dan standar kualitas yang dihasilkan sangat berbeda. Memilih salah satu berarti Anda juga memilih profil operasional dapur untuk tahun depan.</p>
+
+        <h2>Prinsip Kerja: Manual vs Otomatis</h2>
+        <p><strong>Deck oven</strong> adalah sistem bake chamber berlapis-lapis di mana koki memegang kontrol penuh atas waktu bake, posisi pizza di stone hearth, dan rotasi adonan untuk memastikan kerak merata. <strong>Conveyor oven</strong> menggunakan sabuk berjalan yang menggerakkan pizza melewati terowongan udara panas pada kecepatan konstan tanpa intervensi manual.</p>
+
+        <h2>Tabel Perbandingan Deck Oven vs Conveyor Oven</h2>
+        <table class="comparison-table" style="width: 100%; border-collapse: collapse; margin-bottom: 30px;">
+          <thead>
+            <tr style="border-bottom: 2px solid var(--light-blue); background-color: rgba(91,164,217,0.05);">
+              <th style="padding: 12px; text-align: left; font-weight: 700;">Kriteria</th>
+              <th style="padding: 12px; text-align: left; font-weight: 700;">Deck Oven</th>
+              <th style="padding: 12px; text-align: left; font-weight: 700;">Conveyor Oven</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr style="border-bottom: 1px solid rgba(0,0,0,0.06);">
+              <td style="padding: 12px; font-weight: 600;">Konsistensi Bake</td>
+              <td style="padding: 12px;">Sangat baik jika koki berpengalaman, tapi tergantung skill manusia</td>
+              <td style="padding: 12px;">Sangat konsisten, hasil seragam tiap batch</td>
+            </tr>
+            <tr style="border-bottom: 1px solid rgba(0,0,0,0.06);">
+              <td style="padding: 12px; font-weight: 600;">Throughput per Jam</td>
+              <td style="padding: 12px;">30-60 pizza/jam (tergantung jumlah deck &amp; skill koki)</td>
+              <td style="padding: 12px;">80-200 pizza/jam (tergantung panjang belt &amp; suhu)</td>
+            </tr>
+            <tr style="border-bottom: 1px solid rgba(0,0,0,0.06);">
+              <td style="padding: 12px; font-weight: 600;">Biaya Investasi</td>
+              <td style="padding: 12px;">Rp 150 juta - Rp 400 juta</td>
+              <td style="padding: 12px;">Rp 250 juta - Rp 700 juta</td>
+            </tr>
+            <tr style="border-bottom: 1px solid rgba(0,0,0,0.06);">
+              <td style="padding: 12px; font-weight: 600;">Kebutuhan Skill Koki</td>
+              <td style="padding: 12px;">Tinggi - butuh pengaturan suhu &amp; rotasi manual</td>
+              <td style="padding: 12px;">Rendah - operasi plug-and-play</td>
+            </tr>
+            <tr style="border-bottom: 1px solid rgba(0,0,0,0.06);">
+              <td style="padding: 12px; font-weight: 600;">Luas Dapur</td>
+              <td style="padding: 12px;">Lebih compact per deck unit</td>
+              <td style="padding: 12px;">Butuh area conveyor panjang + clearance</td>
+            </tr>
+            <tr style="border-bottom: 1px solid rgba(0,0,0,0.06);">
+              <td style="padding: 12px; font-weight: 600;">Maintenance</td>
+              <td style="padding: 12px;">Batu hearth perlu di-brush &amp; kalibrasi suhu rutin</td>
+              <td style="padding: 12px;">Belt, roller, &amp; motor perlu cek bulanan</td>
+            </tr>
+            <tr style="border-bottom: 1px solid rgba(0,0,0,0.06);">
+              <td style="padding: 12px; font-weight: 600;">Profil Rasa</td>
+              <td style="padding: 12px;">Kerak renyah (charred leopard), flavor smoky</td>
+              <td style="padding: 12px;">Kerak lebih lunak, kurang smoky character</td>
+            </tr>
+          </tbody>
+        </table>
+
+        <h2>Kapan Pilih Deck Oven?</h2>
+        <p>Deck oven adalah pilihan tepat jika Anda menjual pizza artisan/Napolitan sebagai signature menu dan memiliki koki yang bisa mengontrol bake time dengan presisi. Keunggulan utama adalah <strong>kontrol penuh atas tekstur kerak dan char flavor</strong> yang sulit didapat dari conveyor. Untuk pizzeria skala menengah yang ingin differensiasi via kualitas bake, deck oven adalah weapon of choice.</p>
+
+        <h2>Kapan Pilih Conveyor Oven?</h2>
+        <p>Jika operasional Anda bergantung pada volume tinggi, jam sibuk 12:00-14:00 dan 18:00-21:00 dengan 2-3 orang kitchen staff, conveyor oven menghilangkan variasi koki. Hasil bake konsisten meminimalkan waste dan komplain pelanggan. Cocok untuk pizzeria fast-casual yang menjual pizza sebagai utility menu.</p>
+
+        <h2>Kesimpulan</h2>
+        <p>Tidak ada jawaban mutlak. Pilih deck oven jika brand Anda bermain di segmen artisan pizza dan Anda bisa menyewakan/menggaji koki berpengalaman. Pilih conveyor oven jika throughput dan konsistensi operasional lebih penting daripada kerak otentik. Ingin diskusi lebih lanjut sesuai layout dapur Anda? Pelajari ovens kami di halaman <a href="/id/products/pizza-oven/">Oven Pizza Komersial</a> atau konsultasi langsung via <a href="/id/contact/">Hubungi Kami</a>.</p>
+      `
+    },
+    en: {
+      title: 'Deck Oven vs Conveyor Oven: Which is Right for Medium-Scale Pizzerias?',
+      excerpt: 'Compare bake consistency, upfront cost, operator skill requirements, and throughput between deck ovens and conveyor ovens for mid-size pizzerias.',
+      content: `
+        <p>Medium-scale pizzeria owners (50-150 seats, 2-4 kitchen staff) often face a strategic decision: <strong>deck oven vs conveyor oven</strong>. Both produce large pizza volumes, but their working mechanisms, operating costs, and quality outputs differ significantly. Choosing one means choosing an operational profile for years.</p>
+
+        <h2>Working Principles: Manual vs Automatic</h2>
+        <p><strong>Deck ovens</strong> are multi-chamber bake systems where the pizzaiolo retains full control over bake time, stone-hearth positioning, and dough rotation to ensure even crust charring. <strong>Conveyor ovens</strong> use a moving belt that carries pizza through a constant-temperature tunnel without manual intervention.</p>
+
+        <h2>Deck Oven vs Conveyor Oven Comparison Table</h2>
+        <table class="comparison-table" style="width: 100%; border-collapse: collapse; margin-bottom: 30px;">
+          <thead>
+            <tr style="border-bottom: 2px solid var(--light-blue); background-color: rgba(91,164,217,0.05);">
+              <th style="padding: 12px; text-align: left; font-weight: 700;">Criteria</th>
+              <th style="padding: 12px; text-align: left; font-weight: 700;">Deck Oven</th>
+              <th style="padding: 12px; text-align: left; font-weight: 700;">Conveyor Oven</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr style="border-bottom: 1px solid rgba(0,0,0,0.06);">
+              <td style="padding: 12px; font-weight: 600;">Bake Consistency</td>
+              <td style="padding: 12px;">Excellent with experienced staff, human-dependent variance</td>
+              <td style="padding: 12px;">Highly consistent, uniform batch output</td>
+            </tr>
+            <tr style="border-bottom: 1px solid rgba(0,0,0,0.06);">
+              <td style="padding: 12px; font-weight: 600;">Hourly Throughput</td>
+              <td style="padding: 12px;">30-60 pizzas/hour (depends on deck count &amp; skill)</td>
+              <td style="padding: 12px;">80-200 pizzas/hour (depends on belt length &amp; temp)</td>
+            </tr>
+            <tr style="border-bottom: 1px solid rgba(0,0,0,0.06);">
+              <td style="padding: 12px; font-weight: 600;">Upfront Investment</td>
+              <td style="padding: 12px;">IDR 150M - IDR 400M</td>
+              <td style="padding: 12px;">IDR 250M - IDR 700M</td>
+            </tr>
+            <tr style="border-bottom: 1px solid rgba(0,0,0,0.06);">
+              <td style="padding: 12px; font-weight: 600;">Operator Skill Need</td>
+              <td style="padding: 12px;">High - manual temp &amp; rotation control</td>
+              <td style="padding: 12px;">Low - plug-and-play operation</td>
+            </tr>
+            <tr style="border-bottom: 1px solid rgba(0,0,0,0.06);">
+              <td style="padding: 12px; font-weight: 600;">Kitchen Footprint</td>
+              <td style="padding: 12px;">Compact per deck unit</td>
+              <td style="padding: 12px;">Requires belt length + clearance space</td>
+            </tr>
+            <tr style="border-bottom: 1px solid rgba(0,0,0,0.06);">
+              <td style="padding: 12px; font-weight: 600;">Maintenance</td>
+              <td style="padding: 12px;">Stone brushing &amp; temperature calibration</td>
+              <td style="padding: 12px;">Belt, roller, &amp; motor monthly checks</td>
+            </tr>
+            <tr style="border-bottom: 1px solid rgba(0,0,0,0.06);">
+              <td style="padding: 12px; font-weight: 600;">Flavor Profile</td>
+              <td style="padding: 12px;">Charred leopard crust, smoky flavor</td>
+              <td style="padding: 12px;">Softer crust, less smoky character</td>
+            </tr>
+          </tbody>
+        </table>
+
+        <h2>When to Choose a Deck Oven</h2>
+        <p>Choose a deck oven if artisan or Neapolitan pizza is your signature menu and you have skilled pizzaiolos who can control bake timing precisely. The main advantage is <strong>full control over crust char and flavor development</strong> that conveyor systems struggle to replicate. For a mid-scale pizzeria competing on bake quality, deck oven is the differentiator.</p>
+
+        <h2>When to Choose a Conveyor Oven</h2>
+        <p>If your operation depends on high-volume lunch and dinner rushes with minimal trained staff, a conveyor oven removes pizzaiolo variance. Consistent bake output minimizes waste and customer complaints. Ideal for fast-casual concepts where pizza is a utility menu item rather than the hero product.</p>
+
+        <h2>Conclusion</h2>
+        <p>There is no universal winner. Choose a deck oven if your brand competes on artisan quality and you can afford experienced bakers. Choose a conveyor oven if throughput and operational consistency matter more than charred crust authenticity. Browse our <a href="/en/products/pizza-oven/">Commercial Pizza Oven</a> page or contact us via <a href="/en/contact/">Contact Us</a> for a kitchen-specific recommendation.</p>
+      `
+    }
+  },
+  {
+    slug: 'checklist-safety-instalasi-gas-dapur-komersial',
+    date: '2026-08-20',
+    author: 'Safety Engineer',
+    category: 'Safety Guide',
+    image: '/images/services/gas-installation.webp',
+    tags: ['instalasi gas', 'safety', 'dapur komersial', 'sertifikasi', 'checklist'],
+    id: {
+      title: 'Checklist Safety Instalasi Gas Dapur Komersial untuk Owner Restoran Baru',
+      excerpt: 'Panduan praktis owner restoran baru untuk memastikan instalasi gas komersial aman dan sesuai regulasi Jakarta sebelum hari operasional pertama.',
+      content: `
+        <p>Buka restoran baru di Jakarta berarti melewati ratusan checklist administrasi dan teknis. Salah satu item yang tidak bisa digeser adalah <strong>instalasi gas dapur komersial</strong> — karena satu kesalahan instalasi bisa berujung pada kebocoran fatal, penolakan asuransi, atau pembatalan izin operasional. Berikut adalah checklist yang bisa Anda gunakan saat auditi kontraktor atau inspeksi mandiri sebelum soft opening.</p>
+
+        <h2>1. Pastikan Kontraktor Bersertifikat</h2>
+        <p>Instalasi gas komersial di Jakarta wajib dilakukan oleh teknisi atau perusahaan yang memiliki sertifikat kompetensi dari Badan Pengkajian dan Penerapan Teknologi (BPPT) atau Lembaga Sertifikasi Profesi (LSP) bidang gas. Mintalihatkan kopi sertifikat teknisi sebelum penandatanganan kontrak.</p>
+
+        <h2>2. Verifikasi Material Pipa Sesuai Standar</h2>
+        <ul>
+          <li><strong>Pipa utama:</strong> Black Steel Schedule 40 seamless atau pipa tembaga seamless tebal minimal Schedule 40.</li>
+          <li><strong>Fitting &amp; Valve:</strong> Ball valve, check valve, dan fittings harus rated untuk tekanan medium/high pressure gas.</li>
+          <li><strong>Dilarang pakai:</strong> Flexible hose PVC atau selang gas rumah tangga untuk jalur permanen.</li>
+        </ul>
+
+        <h2>3. Cek Safety Control Panel Terpasang</h2>
+        <p>Setiap dapur komersial di gedung bertingkat atau mall wajib memiliki otomatisasi keselamatan gas. Panel kontrol harus mencakup:</p>
+        <ul>
+          <li><strong>Solenoid Valve Emergency Cut-Off:</strong> Menutup aliran gas otomatis saat detektor mendeteksi kebocoran.</li>
+          <li><strong>Gas Leak Detector Sensor:</strong> Minimal 3 sensor di area berisiko tinggi (under hood, near fryer, near cylinder manifold).</li>
+          <li><strong>Audible &amp; Visual Alarm:</strong> Sirene dan lampu indikator harus terdengar dari area operasional dapur.</li>
+        </ul>
+
+        <h2>4. Pressure Test &amp; Dokumentasi Komisioning</h2>
+        <p>Setelah instalasi selesai, minta teknisi melakukan pressure test dengan udara (bukan gas) pada tekanan 1.5x working pressure selama minimal 30 menit. Hasil uji harus didokumentasikan dan ditandatangani teknisi. Dokumen ini penting untuk asuransi dan inspeksi Pemadam Kebakaran.</p>
+
+        <h2>5. Audit Jalur Pipa &amp; Labeling</h2>
+        <ul>
+          <li>Setiap cabang pipa harus dilengkapi ball valve independen per zona.</li>
+          <li>Labeling warna sesuai standar: kuning untuk gas, merah untuk fire line, biru untuk water.</li>
+          <li>Jalur pipa tidak boleh melewati area listrik panel atau ruang tidur.</li>
+        </ul>
+
+        <h2>Kesimpulan</h2>
+        <p>Safety gas bukanlah area untuk di-cut cost. Sebelum hari pertama operasi, pastikan seluruh checklist ini terpenuhi. Ingin audit profesional? Pelajari layanan <a href="/id/services/gas-installation/">Instalasi Gas Dapur Komersial Jakarta</a> kami atau hubungi tim ahli melalui <a href="/id/contact/">Hubungi Kami</a> untuk penawaran sertifikasi lengkap.</p>
+      `
+    },
+    en: {
+      title: 'Commercial Kitchen Gas Installation Safety Checklist for New Restaurant Owners',
+      excerpt: 'A practical checklist for new restaurant owners to ensure commercial gas installation is safe and compliant before opening day.',
+      content: `
+        <p>Opening a new restaurant in Jakarta means passing hundreds of administrative and technical checkpoints. One non-negotiable item is <strong>commercial kitchen gas installation</strong> — because a single installation error can lead to fatal leaks, insurance denial, or operational permit cancellation. Use this checklist when auditing contractors or performing a self-inspection before soft opening.</p>
+
+        <h2>1. Hire a Certified Contractor</h2>
+        <p>Commercial gas work in Jakarta must be performed by technicians or companies certified by BPPT or an LSP in the gas domain. Ask for certificate copies before contract signing.</p>
+
+        <h2>2. Verify Material Compliance</h2>
+        <ul>
+          <li><strong>Main piping:</strong> Seamless Black Steel Schedule 40 or thick seamless copper pipes (minimum Schedule 40).</li>
+          <li><strong>Fittings &amp; valves:</strong> Ball valves, check valves, and fittings must be rated for medium/high pressure gas service.</li>
+          <li><strong>Prohibited:</strong> PVC flexible hoses or household gas hoses for permanent runs.</li>
+        </ul>
+
+        <h2>3. Inspect Safety Control Panel Installation</h2>
+        <p>Every commercial kitchen in high-rise buildings or malls must have automated gas safety controls. The panel should include:</p>
+        <ul>
+          <li><strong>Emergency Solenoid Cut-Off Valve:</strong> Automatically shuts gas supply when leak detectors trigger.</li>
+          <li><strong>Gas Leak Detector Sensors:</strong> Minimum 3 sensors in high-risk zones (under hood, near fryers, near cylinder manifold).</li>
+          <li><strong>Audible &amp; Visual Alarm:</strong> Siren and indicator lights must be audible from the kitchen floor.</li>
+        </ul>
+
+        <h2>4. Pressure Test &amp; Commissioning Documentation</h2>
+        <p>After installation, request an air pressure test at 1.5x working pressure for at least 30 minutes. Results must be documented and signed by the technician — essential for insurance and fire department inspections.</p>
+
+        <h2>5. Pipe Routing &amp; Labeling Audit</h2>
+        <ul>
+          <li>Every branch line needs an independent ball valve per zone.</li>
+          <li>Color-coded labeling: yellow for gas, red for fire line, blue for water.</li>
+          <li>Piping routes must not pass through electrical panels or sleeping quarters.</li>
+        </ul>
+
+        <h2>Conclusion</h2>
+        <p>Gas safety is never an area to cut costs. Before day-one operations, ensure every item above is verified. For a professional audit, explore our <a href="/en/services/gas-installation/">Commercial Gas Installation</a> page or contact us via <a href="/en/contact/">Contact Us</a> for a full certified package.</p>
+      `
+    }
+  },
+  {
+    slug: 'kapan-butuh-ducting-esp',
+    date: '2026-08-20',
+    author: 'Ventilation Engineer',
+    category: 'Technical Guide',
+    image: '/images/services/ducting.webp',
+    tags: ['ducting', 'ESP', 'electrostatic precipitator', 'jakarta', 'mall', 'odor control'],
+    id: {
+      title: 'Kapan Butuh Ducting ESP (Electrostatic Precipitator) di Dapur Komersial Jakarta?',
+      excerpt: 'Paham kapan sistem ducting restoran di Jakarta wajib memakai ESP — aturan mall, apartemen, kawasan padat, dan biaya operasional tambahan yang perlu dihitung.',
+      content: `
+        <p>Ketika merancang ducting dapur komersial, banyak owner hanya mempertimbangkan CFM blower dan material duct. Namun di kota besar seperti Jakarta, ada satu komponen yang bisa menjadi syarat mutlak atau justru beban operasional yang tidak diharapkan: <strong>Electrostatic Precipitator (ESP)</strong>. Berikut adalah panduan kapan ESP benar-benar dibutuhkan dan kapan Anda bisa menghindarinya.</p>
+
+        <h2>Apa itu Electrostatic Precipitator (ESP)?</h2>
+        <p>ESP adalah unit filter elektrostatik yang menangkap partikel grease, asap, dan bau masakan dari udara exhaust sebelum dilepaskan ke atmosfer. Prinsip kerjanya mirip ionic air purifier skala industri: udara kotor melewati elektrode bertegangan tinggi, partikel bermuatan terperangkap di collector plate, lalu udara bersih keluar.</p>
+
+        <h2>Kawasan di Jakarta yang Wajib / Disarankan Pakai ESP</h2>
+        <table class="comparison-table" style="width: 100%; border-collapse: collapse; margin-bottom: 30px;">
+          <thead>
+            <tr style="border-bottom: 2px solid var(--light-blue); background-color: rgba(91,164,217,0.05);">
+              <th style="padding: 12px; text-align: left; font-weight: 700;">Tipe Lokasi</th>
+              <th style="padding: 12px; text-align: left; font-weight: 700;">Kewajiban ESP</th>
+              <th style="padding: 12px; text-align: left; font-weight: 700;">Alasan</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr style="border-bottom: 1px solid rgba(0,0,0,0.06);">
+              <td style="padding: 12px; font-weight: 600;">Mall / Food Court</td>
+              <td style="padding: 12px;">Sangat disarankan / sering diwajibkan</td>
+              <td style="padding: 12px;">Menghindari bau masakan menyebar ke area makan bersama</td>
+            </tr>
+            <tr style="border-bottom: 1px solid rgba(0,0,0,0.06);">
+              <td style="padding: 12px; font-weight: 600;">Apartemen / Office Tower</td>
+              <td style="padding: 12px;">Biasanya wajib</td>
+              <td style="padding: 12px;">Aturan building management tentang odor emission</td>
+            </tr>
+            <tr style="border-bottom: 1px solid rgba(0,0,0,0.06);">
+              <td style="padding: 12px; font-weight: 600;">Kawasan Padat (Kota Tua, Menteng, Kemang)</td>
+              <td style="padding: 12px;">Sering diminta Dinas Lingkungan Hidup</td>
+              <td style="padding: 12px;">Keluhan tetangga dan bau menyimpang ke jalan</td>
+            </tr>
+            <tr style="border-bottom: 1px solid rgba(0,0,0,0.06);">
+              <td style="padding: 12px; font-weight: 600;">Gudang / Kawasan Industri Terbuka</td>
+              <td style="padding: 12px;">Opsional</td>
+              <td style="padding: 12px;">Tingkat dispersi udara alami lebih tinggi</td>
+            </tr>
+          </tbody>
+        </table>
+
+        <h2>Biaya Tambahan &amp; Maintenance ESP</h2>
+        <p>ESP menambah biaya investasi awal sekitar <strong>Rp 15 juta - Rp 40 juta</strong> per unit (tergantung kapasitas CFM). Setahun sekali, collector plate harus dicuci dengan sabun khusus dan filter diganti. Jika budget operasional Anda sangat ketat, pastikan building management mengizinkan alternatif seperti carbon filter atau eksternal roof exhaust dengan jarak tertentu dari area sensitif.</p>
+
+        <h2>Kesimpulan</h2>
+        <p>ESP bukan jaminan mutlak, tapi menjadi solusi tepat untuk restoran di lokasi berdampak tinggi. Sebelum memutuskan, diskusikan dengan management gedung dan tim ducting kami. Pelajari lebih lanjut di halaman <a href="/id/services/ducting/">Jasa Ducting Restoran Jakarta</a> atau hubungi kami lewat <a href="/id/contact/">Hubungi Kami</a> untuk survey kelayakan teknis.</p>
+      `
+    },
+    en: {
+      title: 'When Do You Need an ESP Ducting System in Jakarta Commercial Kitchens?',
+      excerpt: 'Understand when Jakarta restaurants must install electrostatic precipitator (ESP) ducting — mall rules, apartments, and odor control regulations.',
+      content: `
+        <p>When designing commercial kitchen ventilation, many owners only consider blower CFM and duct material. But in dense cities like Jakarta, one component can become either a mandatory requirement or an unexpected operational burden: <strong>Electrostatic Precipitator (ESP)</strong>. Here is when ESP is truly necessary and when you can avoid it.</p>
+
+        <h2>What is an Electrostatic Precipitator (ESP)?</h2>
+        <p>An ESP is an electrostatic filter unit that captures grease particles, smoke, and cooking odors from exhaust air before discharge. Air passes through high-voltage electrodes; particles become charged and stick to collector plates, releasing clean air outdoors.</p>
+
+        <h2>Jakarta Locations That Require or Recommend ESP</h2>
+        <table class="comparison-table" style="width: 100%; border-collapse: collapse; margin-bottom: 30px;">
+          <thead>
+            <tr style="border-bottom: 2px solid var(--light-blue); background-color: rgba(91,164,217,0.05);">
+              <th style="padding: 12px; text-align: left; font-weight: 700;">Location Type</th>
+              <th style="padding: 12px; text-align: left; font-weight: 700;">ESP Requirement</th>
+              <th style="padding: 12px; text-align: left; font-weight: 700;">Reason</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr style="border-bottom: 1px solid rgba(0,0,0,0.06);">
+              <td style="padding: 12px; font-weight: 600;">Mall / Food Court</td>
+              <td style="padding: 12px;">Highly recommended / often required</td>
+              <td style="padding: 12px;">Prevent cooking odors from leaking into shared dining areas</td>
+            </tr>
+            <tr style="border-bottom: 1px solid rgba(0,0,0,0.06);">
+              <td style="padding: 12px; font-weight: 600;">Apartments / Office Towers</td>
+              <td style="padding: 12px;">Usually mandatory</td>
+              <td style="padding: 12px;">Building management odor-emission rules</td>
+            </tr>
+            <tr style="border-bottom: 1px solid rgba(0,0,0,0.06);">
+              <td style="padding: 12px; font-weight: 600;">Dense Urban Zones</td>
+              <td style="padding: 12px;">Often demanded by environmental services</td>
+              <td style="padding: 12px;">Neighbor odor complaints and street-level smell drift</td>
+            </tr>
+            <tr style="border-bottom: 1px solid rgba(0,0,0,0.06);">
+              <td style="padding: 12px; font-weight: 600;">Warehouse / Open Industrial Park</td>
+              <td style="padding: 12px;">Optional</td>
+              <td style="padding: 12px;">Higher natural air dispersion</td>
+            </tr>
+          </tbody>
+        </table>
+
+        <h2>ESP Cost &amp; Maintenance</h2>
+        <p>ESPs add roughly <strong>IDR 15M - IDR 40M</strong> in upfront cost per unit depending on CFM capacity. Collector plates need annual washing with industrial degreaser, and filters require periodic replacement. If your operating budget is extremely tight, confirm whether building management allows alternatives like carbon filters or rooftop exhaust with setback distances.</p>
+
+        <h2>Conclusion</h2>
+        <p>ESP is not a universal requirement, but it is the right solution for high-impact locations. Before deciding, discuss options with building management and our ventilation team. Read more at our <a href="/en/services/ducting/">Restaurant Ducting Service Jakarta</a> page or contact us via <a href="/en/contact/">Contact Us</a> for a technical feasibility survey.</p>
+      `
+    }
   }
 ];
