@@ -11,6 +11,7 @@ const Lightbox = dynamic(() => import('yet-another-react-lightbox'), { ssr: fals
 import 'yet-another-react-lightbox/styles.css';
 import WhatsAppIcon from '@/components/WhatsAppIcon';
 import UiIcon from '@/components/UiIcon';
+import { trackWhatsAppClick } from '@/lib/analytics';
 
 export default function ProjectsClient({ projects, projectCategories }) {
   const locale = useLocale();
@@ -109,7 +110,7 @@ export default function ProjectsClient({ projects, projectCategories }) {
           <p>{homeT('cta.subtitle')}</p>
           <div className={styles.ctaButtons}>
             <Link href="/contact" className="btn btn-primary">{homeT('cta.contactBtn')}</Link>
-            <a href="https://wa.me/6281212671289" className="btn btn-secondary" target="_blank" rel="noopener noreferrer">
+            <a href="https://wa.me/6281212671289" className="btn btn-secondary" target="_blank" rel="noopener noreferrer" onClick={() => trackWhatsAppClick({ label: 'projects_list_cta' })}>
               <WhatsAppIcon />
               {homeT('cta.whatsappBtn')}
             </a>

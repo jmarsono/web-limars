@@ -7,6 +7,7 @@ import { getMessages, setRequestLocale, getTranslations } from 'next-intl/server
 import { constructMetadata } from '../../../lib/seo';
 import BreadcrumbJsonLd from '../../../components/BreadcrumbJsonLd';
 import WhatsAppIcon from '../../../components/WhatsAppIcon';
+import TrackedWhatsAppLink from '../../../components/TrackedWhatsAppLink';
 import ServiceIcon from '../../../components/ServiceIcon';
 import UiIcon from '../../../components/UiIcon';
 
@@ -76,10 +77,10 @@ export default async function ServicesPage({ params }) {
           <p>{t('ctaSubtitle')}</p>
           <div className={styles.ctaButtons}>
             <Link href="/contact" className="btn btn-primary">{t('contactBtn')}</Link>
-            <a href="https://wa.me/6281212671289" className="btn btn-secondary" target="_blank" rel="noopener noreferrer">
+            <TrackedWhatsAppLink href="https://wa.me/6281212671289" className="btn btn-secondary" label="services_list_cta">
               <WhatsAppIcon />
               {t('whatsappBtn')}
-            </a>
+            </TrackedWhatsAppLink>
           </div>
         </div>
       </section>

@@ -10,6 +10,7 @@ import { getProducts, getProjects, getServices } from '../../lib/db';
 import { constructMetadata } from '../../lib/seo';
 import BreadcrumbJsonLd from '../../components/BreadcrumbJsonLd';
 import WhatsAppIcon from '../../components/WhatsAppIcon';
+import TrackedWhatsAppLink from '../../components/TrackedWhatsAppLink';
 import ServiceIcon from '../../components/ServiceIcon';
 import UiIcon from '../../components/UiIcon';
 
@@ -421,9 +422,9 @@ export default async function Home({ params }) {
             <p>{t('cta.subtitle')}</p>
             <div className={styles.ctaButtons}>
               <Link href="/contact" className="btn btn-primary">{t('cta.contactBtn')}</Link>
-              <a href="https://wa.me/6281212671289" className="btn btn-secondary" target="_blank" rel="noopener noreferrer">
+              <TrackedWhatsAppLink href="https://wa.me/6281212671289" className="btn btn-secondary" label="home_cta">
                 <WhatsAppIcon /> {t('cta.whatsappBtn')}
-              </a>
+              </TrackedWhatsAppLink>
             </div>
           </div>
         </div>

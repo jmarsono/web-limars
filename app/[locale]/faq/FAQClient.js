@@ -4,6 +4,7 @@ import { useState } from 'react';
 import { useLocale, useTranslations } from 'next-intl';
 import { Link } from '@/i18n/routing';
 import styles from './FAQ.module.css';
+import { trackWhatsAppClick } from '@/lib/analytics';
 
 export default function FAQClient({ faqData }) {
   const locale = useLocale();
@@ -85,7 +86,7 @@ export default function FAQClient({ faqData }) {
                 <Link href="/contact" className="btn btn-primary">
                   {navT('contact')}
                 </Link>
-                <a href="https://wa.me/6281212671289" className="btn btn-outline" target="_blank" rel="noopener noreferrer">
+                <a href="https://wa.me/6281212671289" className="btn btn-outline" target="_blank" rel="noopener noreferrer" onClick={() => trackWhatsAppClick({ label: 'faq_cta' })}>
                   {t('ctaBtn')}
                 </a>
               </div>

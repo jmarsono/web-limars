@@ -5,6 +5,7 @@ import { Link } from '@/i18n/routing';
 import BreadcrumbJsonLd from '@/components/BreadcrumbJsonLd';
 import styles from './page.module.css';
 import WhatsAppIcon from '@/components/WhatsAppIcon';
+import { trackWhatsAppClick } from '@/lib/analytics';
 
 export default function PrivacyPolicyPage() {
   const t = useTranslations('PrivacyPolicy');
@@ -58,7 +59,7 @@ export default function PrivacyPolicyPage() {
           <p>{homeT('cta.subtitle')}</p>
           <div className={styles.ctaButtons}>
             <Link href="/contact" className="btn btn-primary">{homeT('cta.contactBtn')}</Link>
-            <a href="https://wa.me/6281212671289" className="btn btn-secondary" target="_blank" rel="noopener noreferrer">
+            <a href="https://wa.me/6281212671289" className="btn btn-secondary" target="_blank" rel="noopener noreferrer" onClick={() => trackWhatsAppClick({ label: 'privacy_cta' })}>
               <WhatsAppIcon />
               {homeT('cta.whatsappBtn')}
             </a>

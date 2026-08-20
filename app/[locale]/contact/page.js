@@ -4,6 +4,7 @@ import { useState, useRef } from 'react';
 import { useTranslations } from 'next-intl';
 import TurnstileWidget from '@/components/TurnstileWidget';
 import BreadcrumbJsonLd from '@/components/BreadcrumbJsonLd';
+import { trackContactFormSubmit } from '@/lib/analytics';
 import styles from './Contact.module.css';
 
 export default function ContactPage() {
@@ -50,6 +51,7 @@ export default function ContactPage() {
 
       if (response.ok) {
         setStatus({ type: 'success', message: t('form.success') });
+        trackContactFormSubmit(formData);
         setFormData({ name: '', email: '', phone: '', company: '', service: '', message: '' });
         setTurnstileToken('');
       } else {

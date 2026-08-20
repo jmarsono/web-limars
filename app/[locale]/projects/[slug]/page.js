@@ -4,6 +4,7 @@ import ProjectLightbox from './ProjectLightbox';
 import styles from './ProjectDetail.module.css';
 import { setRequestLocale } from 'next-intl/server';
 import WhatsAppIcon from '../../../../components/WhatsAppIcon';
+import TrackedWhatsAppLink from '../../../../components/TrackedWhatsAppLink';
 import UiIcon from '../../../../components/UiIcon';
 import BreadcrumbJsonLd from '../../../../components/BreadcrumbJsonLd';
 import { Link } from '../../../../i18n/routing';
@@ -248,14 +249,13 @@ export default async function ProjectDetailPage({ params }) {
             <Link href="/contact" className={styles.btnPrimary}>
               {t('ctaContactBtn')}
             </Link>
-            <a
+            <TrackedWhatsAppLink
               href="https://wa.me/6281212671289"
               className={styles.btnWhatsapp}
-              target="_blank"
-              rel="noopener noreferrer"
+              label="project_detail_cta"
             >
               <WhatsAppIcon /> {t('ctaWhatsappBtn')}
-            </a>
+            </TrackedWhatsAppLink>
           </div>
         </div>
       </section>

@@ -4,6 +4,7 @@ import { services } from '../../../../data/services';
 import styles from './ServiceDetail.module.css';
 import { setRequestLocale } from 'next-intl/server';
 import WhatsAppIcon from '../../../../components/WhatsAppIcon';
+import TrackedWhatsAppLink from '../../../../components/TrackedWhatsAppLink';
 import ServiceIcon from '../../../../components/ServiceIcon';
 import UiIcon from '../../../../components/UiIcon';
 
@@ -154,10 +155,10 @@ export default async function ServiceDetailPage({ params }) {
           <p>{t('interestedSubtitle')}</p>
           <div className={styles.ctaButtons}>
             <Link href="/contact" className="btn btn-primary">{t('requestQuote')}</Link>
-            <a href="https://wa.me/6281212671289" className="btn btn-secondary" target="_blank" rel="noopener noreferrer">
+            <TrackedWhatsAppLink href="https://wa.me/6281212671289" className="btn btn-secondary" label="service_detail_cta">
               <WhatsAppIcon />
               {t('chatWhatsapp')}
-            </a>
+            </TrackedWhatsAppLink>
           </div>
         </div>
       </section>

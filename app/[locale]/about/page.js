@@ -6,6 +6,7 @@ import BreadcrumbJsonLd from '@/components/BreadcrumbJsonLd';
 import styles from './About.module.css';
 import WhatsAppIcon from '@/components/WhatsAppIcon';
 import UiIcon from '@/components/UiIcon';
+import { trackWhatsAppClick } from '@/lib/analytics';
 
 export default function AboutPage() {
   const t = useTranslations('About');
@@ -144,7 +145,7 @@ export default function AboutPage() {
           <p>{homeT('cta.subtitle')}</p>
           <div className={styles.ctaButtons}>
             <Link href="/contact" className="btn btn-primary">{homeT('cta.contactBtn')}</Link>
-            <a href="https://wa.me/6281212671289" className="btn btn-secondary" target="_blank" rel="noopener noreferrer">
+            <a href="https://wa.me/6281212671289" className="btn btn-secondary" target="_blank" rel="noopener noreferrer" onClick={() => trackWhatsAppClick({ label: 'about_cta' })}>
               <WhatsAppIcon />
               {homeT('cta.whatsappBtn')}
             </a>

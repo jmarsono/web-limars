@@ -6,6 +6,7 @@ import { Link } from '@/i18n/routing';
 import styles from './page.module.css';
 import { routing } from '@/i18n/routing';
 import WhatsAppIcon from '@/components/WhatsAppIcon';
+import TrackedWhatsAppLink from '@/components/TrackedWhatsAppLink';
 
 export function generateStaticParams() {
   return routing.locales.flatMap((locale) =>
@@ -134,10 +135,10 @@ export default async function BlogPostPage({ params }) {
           <p>{homeT.cta.subtitle}</p>
           <div className={styles.ctaButtons}>
             <Link href="/contact" className="btn btn-primary">{homeT.cta.contactBtn}</Link>
-            <a href="https://wa.me/6281212671289" className="btn btn-secondary" target="_blank" rel="noopener noreferrer">
+            <TrackedWhatsAppLink href="https://wa.me/6281212671289" className="btn btn-secondary" label="blog_detail_cta">
               <WhatsAppIcon />
               {homeT.cta.whatsappBtn}
-            </a>
+            </TrackedWhatsAppLink>
           </div>
         </div>
       </section>

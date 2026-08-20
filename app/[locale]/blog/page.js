@@ -4,6 +4,7 @@ import BlogCard from '@/components/BlogCard';
 import styles from './page.module.css';
 import { Link } from '@/i18n/routing';
 import WhatsAppIcon from '@/components/WhatsAppIcon';
+import TrackedWhatsAppLink from '@/components/TrackedWhatsAppLink';
 
 import { constructMetadata } from '../../../lib/seo';
 import BreadcrumbJsonLd from '../../../components/BreadcrumbJsonLd';
@@ -76,10 +77,10 @@ export default async function BlogPage({ params }) {
           <p>{homeT.cta.subtitle}</p>
           <div className={styles.ctaButtons}>
             <Link href="/contact" className="btn btn-primary">{homeT.cta.contactBtn}</Link>
-            <a href="https://wa.me/6281212671289" className="btn btn-secondary" target="_blank" rel="noopener noreferrer">
+            <TrackedWhatsAppLink href="https://wa.me/6281212671289" className="btn btn-secondary" label="blog_list_cta">
               <WhatsAppIcon />
               {homeT.cta.whatsappBtn}
-            </a>
+            </TrackedWhatsAppLink>
           </div>
         </div>
       </section>

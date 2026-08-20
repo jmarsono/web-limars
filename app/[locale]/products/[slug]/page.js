@@ -9,6 +9,7 @@ import styles from './ProductDetail.module.css';
 import { setRequestLocale } from 'next-intl/server';
 import { getProductBySlug, getProducts } from '../../../../lib/db';
 import WhatsAppIcon from '../../../../components/WhatsAppIcon';
+import TrackedWhatsAppLink from '../../../../components/TrackedWhatsAppLink';
 
 export const revalidate = 0; // Fresh data for D1 dynamic updates
 
@@ -187,10 +188,10 @@ export default async function ProductDetailPage({ params }) {
 
               <div className={styles.actions}>
                 <Link href="/contact" className="btn btn-primary">{t('requestQuote')}</Link>
-                <a href="https://wa.me/6281212671289" className="btn btn-outline" target="_blank" rel="noopener noreferrer">
+                <TrackedWhatsAppLink href="https://wa.me/6281212671289" className="btn btn-outline" label="product_detail_cta">
                   <WhatsAppIcon />
                   {t('askWhatsapp')}
-                </a>
+                </TrackedWhatsAppLink>
               </div>
             </div>
           </div>
