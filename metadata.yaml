@@ -4,14 +4,14 @@ category: "web-development"
 status: "active"
 owner: "Bang Julian"
 created_date: "2026-08-16"
-last_updated: "2026-08-16"
+last_updated: "2026-08-20"
 parent_project: "limarsteknik"
 website: "https://www.limarsteknik.com"
 description: "Website perusahaan PT Limars Teknik Indonesia — Next.js 16 App Router, OpenNext for Cloudflare Worker, i18n (EN/ID), Cloudflare D1 DB, R2 Bucket."
 
 repository:
-  old_origin: "git@github.com:734250no/web-limars.git"
   origin: "git@github-jmarsono:jmarsono/project-limars-teknik-website.git"
+  github_public: "git@github-jmarsono:jmarsono/web-limars.git"
   github_url: "https://github.com/jmarsono/project-limars-teknik-website"
 
 tech_stack:
@@ -29,7 +29,6 @@ deployment_steps:
   - "git push origin main"
   - "npm run build:cf"
   - "npx wrangler deploy"
-  note: "MANDATORY 3 steps — git push alone does NOT update production"
 
 worker_secrets:
   - TURNSTILE_SECRET_KEY

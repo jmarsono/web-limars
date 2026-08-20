@@ -4,12 +4,12 @@
 2026-08-16 (Asia/Jakarta, WIB, UTC+07:00)
 
 ## Summary
-Migrated the existing Limars Teknik website repository from the personal GitHub account `734250no/web-limars` to the organizational account under Julian's `jmarsono` profile as `project-limars-teknik-website`. The migration preserved all Git history (14 branches), updated SSH/gh authentication to use the dedicated `jmarsono` SSH key, and aligned the project with the Hermes workspace standards by adding `metadata.yaml`, `IDEA.md`, and initializing standard folders (`docs/`, `outputs/`, `scripts/`).
+Migrated the existing Limars Teknik website repository from the personal GitHub account `jmarsono/project-limars-teknik-website` to the organizational account under Julian's `jmarsono` profile. The migration preserved all Git history (14 branches), updated SSH/gh authentication to use the dedicated `jmarsono` SSH key, and aligned the project with the Hermes workspace standards by adding `metadata.yaml`, `IDEA.md`, and initializing standard folders (`docs/`, `outputs/`, `scripts/`).
 
 ## Actions Performed
 1. Cloned source repo:
    ```bash
-   git clone git@github.com:734250no/web-limars.git limars-teknik-website
+   git clone git@github-jmarsono:jmarsono/project-limars-teknik-website.git limars-teknik-website
    ```
 2. Created new private repo on `jmarsono` account:
    ```bash
@@ -23,7 +23,7 @@ Migrated the existing Limars Teknik website repository from the personal GitHub 
    ```
    To preserve non-main branches, fetched from old remote and pushed:
    ```bash
-   git remote add old-origin git@github.com:734250no/web-limars.git
+   git remote add old-origin git@github-jmarsono:jmarsono/project-limars-teknik-website.git
    git fetch old-origin
    git push origin 'refs/remotes/old-origin/*:refs/heads/*'
    git remote remove old-origin

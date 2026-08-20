@@ -74,7 +74,6 @@ Website resmi PT Limars Teknik Indonesia yang tidak hanya menampilkan portofolio
 | i18n content drift | Workflow review konten EN/ID berpasangan; lint `next-intl` keys |
 
 ## Catatan Penting
-- Repo lama: `734250no/web-limars` (arsip, tidak dihapus)
-- Repo baru: `jmarsono/project-limars-teknik-website` (active development)
-- Semua branch automation blog dari repo lama sudah dipindahkan (14 branch total)
+- Repo utama: `jmarsono/project-limars-teknik-website` (private)
+- Repo public Cloudflare Pages: `jmarsono/web-limars` (public)
 - `CLAUDE.md` di root project berisi deployment rules — **wajib dibaca** sebelum deploy
