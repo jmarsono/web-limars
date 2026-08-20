@@ -35,75 +35,75 @@
     "breadcrumbBlog": "Blog"
   },
   "Home": {
-    "heroBadge": "Traditional Oven Builder & Restaurant Kitchen Infrastructure Specialist in Indonesia",
-    "heroSubtitle": "Indonesia's premier specialist in artisan traditional ovens (Wood-Fired Pizza, Mandi, Tannur & Kamado) and full-scale commercial kitchen infrastructure engineering since 2014.",
-    "exploreProducts": "Explore Our Solutions",
-    "getQuote": "Schedule Engineering Consultation",
+    "heroBadge": "Traditional Oven Builder & Commercial Kitchen Contractor in Indonesia",
+    "heroSubtitle": "Building artisan traditional ovens (Wood-Fired Pizza, Mandi, Tannur & Kamado) and commercial restaurant kitchens since 2014.",
+    "exploreProducts": "View Our Products",
+    "getQuote": "Consult Your Kitchen Project",
     "stats": {
       "years": "Years Experience",
       "projects": "Projects Completed",
-      "clients": "Clients Served",
-      "team": "Engineers & Partners"
+      "clients": "Restaurants & Clients",
+      "team": "Expert Technicians"
     },
     "companyBrief": {
-      "tag": "Engineering Excellence",
-      "title": "Precision-Engineered Kitchen Infrastructure Since 2014",
-      "desc1": "PT. Limars Teknik Indonesia is a full-service commercial kitchen engineering firm specializing in precision stainless steel fabrication, certified gas piping systems, and integrated MEP solutions. With over a decade of field-proven expertise, we engineer kitchen infrastructure built for operational durability and safety compliance.",
-      "desc2": "Every project is backed by in-house fabrication capabilities, rigorous pressure testing protocols, and a dedicated engineering team — ensuring your kitchen systems perform reliably under the most demanding conditions.",
-      "cta": "Discover Our Engineering Capabilities",
-      "imgCaption": "Our Manufacturing Facility"
+      "tag": "About Limars Teknik",
+      "title": "Restaurant Kitchen Fabrication & Installation Since 2014",
+      "desc1": "PT. Limars Teknik Indonesia builds traditional ovens (Wood-Fired Pizza, Mandi, Tannur, Kamado), SS304 stainless steel equipment, certified gas piping, and kitchen exhaust ducting systems.",
+      "desc2": "We handle every project directly from 3D layout design and workshop fabrication to final installation, with strict pressure testing and safety protocols.",
+      "cta": "Explore Our Services",
+      "imgCaption": "Our Workshop Facility"
     },
     "products": {
-      "title": "Our Products",
-      "subtitle": "Discover our wide range of commercial kitchen equipment, from traditional cooking solutions to modern technology.",
+      "title": "Kitchen Equipment",
+      "subtitle": "Commercial stoves, stainless steel tables, and custom traditional ovens.",
       "viewDetails": "View Details →",
       "viewAll": "View All Products"
     },
     "services": {
-      "title": "Integrated Engineering Solutions",
-      "subtitle": "End-to-end technical solutions engineered for safety compliance, operational durability, and peak performance — from certified gas piping and ducting systems to precision-fabricated kitchen infrastructure.",
+      "title": "Kitchen Contracting Services",
+      "subtitle": "Certified gas piping, exhaust ducting, and SS304 stainless steel fabrication.",
       "learnMore": "Learn More →"
     },
     "why": {
-      "title": "Engineering Excellence",
-      "subtitle": "Precision-driven processes, safety-first protocols, and a vertically integrated engineering approach that sets us apart.",
+      "title": "Why Choose Limars Teknik",
+      "subtitle": "Direct execution without subcontractors, food-grade materials, and rigorous safety checks.",
       "items": {
-        "fabrication_title": "In-House Precision Fabrication",
-        "fabrication_desc": "Our dedicated fabrication facility utilizes CNC-grade processes and premium SS 304/316L stainless steel to manufacture equipment with tight tolerances and consistent quality control.",
-        "compliance_title": "Compliance & Safety Standards",
-        "compliance_desc": "Every installation undergoes rigorous HSE protocols, certified gas pressure testing, and ducting integrity assessments — ensuring full regulatory compliance before handover.",
-        "engineering_title": "Expert Engineering Team",
-        "engineering_desc": "Our projects are led by qualified technical engineers, not general contractors. From load calculations to system commissioning, every phase is engineered to specification.",
-        "mfg_title": "Vertically Integrated Operations",
-        "mfg_desc": "Design, fabrication, installation, and commissioning — all executed in-house. This vertical integration eliminates coordination gaps and ensures accountability at every stage.",
-        "custom_title": "Tailored Technical Solutions",
-        "custom_desc": "We don't sell off-the-shelf. Every system is custom-engineered to your site conditions, operational flow, and specific compliance requirements.",
-        "support_title": "Lifecycle Support & Maintenance",
-        "support_desc": "Our commitment extends beyond installation — scheduled maintenance programs, rapid-response repairs, and system performance audits keep your kitchen running at peak efficiency."
+        "fabrication_title": "In-House Workshop Fabrication",
+        "fabrication_desc": "All SS304 stainless steel equipment is fabricated directly in our workshop with clean welds tailored to your kitchen layout.",
+        "compliance_title": "Pressure Testing & Safety First",
+        "compliance_desc": "Gas lines and ducting undergo strict pressure and leak tests before handover.",
+        "engineering_title": "Experienced Technical Team",
+        "engineering_desc": "Handled directly by technicians experienced in thermal refractory construction and commercial kitchen setups.",
+        "mfg_title": "Direct Execution, No Subcontractors",
+        "mfg_desc": "From shop drawings to workshop fabrication and on-site assembly, one team manages the entire build to keep quality and timelines on track.",
+        "custom_title": "Customized to Your Site",
+        "custom_desc": "Stove dimensions, worktables, and exhaust hoods are custom-fitted to your space and production needs.",
+        "support_title": "Warranty & Maintenance Support",
+        "support_desc": "Scheduled maintenance and rapid repair support to keep your restaurant operating smoothly."
       }
     },
     "projects": {
       "title": "Featured Projects",
-      "subtitle": "See some of our completed projects across Indonesia.",
+      "subtitle": "Documentation of oven builds and kitchen installations across Indonesia.",
       "viewAll": "View All Projects"
     },
     "clients": {
-      "title": "Trusted by Leading Brands Across Indonesia"
+      "title": "Trusted by Restaurants Across Indonesia"
     },
     "testimonials": {
-      "title": "Trusted by Industry Leaders",
-      "subtitle": "Hear from commercial operators who trust Limars Teknik for mission-critical kitchen infrastructure.",
+      "title": "Client Reviews",
+      "subtitle": "What restaurant owners and kitchen managers say about our work.",
       "quotes": {
-        "1": "Limars Teknik engineered and delivered our complete kitchen infrastructure on schedule, meeting all safety compliance requirements. Their technical team was meticulous from initial survey through final commissioning.",
-        "2": "We selected Limars for their proven engineering capability in commercial kitchen systems. The custom wok ranges, gas piping, and ducting have been operating flawlessly under heavy daily load.",
-        "3": "The precision fabrication quality of Limars equipment is exceptional — built for industrial durability. Their lifecycle support program ensures our systems maintain peak performance year after year."
+        "1": "Limars Teknik finished our kitchen installation on schedule. The gas line pressure checks were carried out thoroughly before handover.",
+        "2": "Our custom wok ranges, gas piping, and exhaust ducting have held up really well under heavy daily restaurant workloads.",
+        "3": "The stainless steel welding and finish are solid. Their team is quick to respond whenever we need routine maintenance."
       }
     },
     "cta": {
-      "title": "Ready to Engineer Your Next Kitchen Project?",
-      "subtitle": "Schedule a no-obligation engineering consultation. Our technical team will assess your requirements, site conditions, and compliance needs.",
-      "contactBtn": "Schedule Engineering Consultation",
-      "whatsappBtn": "Request Site Survey via WhatsApp"
+      "title": "Planning Your Restaurant Kitchen?",
+      "subtitle": "Contact our team to discuss dimensions, layout, and cost estimates for your project.",
+      "contactBtn": "Consult Kitchen Build",
+      "whatsappBtn": "Chat on WhatsApp"
     }
   },
   "Products": {
@@ -176,47 +176,47 @@
   },
   "About": {
     "heroBadge": "About Us",
-    "heroTitle1": "Building Kitchen Excellence",
+    "heroTitle1": "Commercial Kitchen Specialist",
     "heroTitle2": "Since 2014",
-    "heroSubtitle": "We are PT. Limars Teknik Indonesia — Indonesia's trusted artisan oven builder and commercial kitchen infrastructure specialist.",
+    "heroSubtitle": "PT. Limars Teknik Indonesia builds custom traditional ovens and commercial kitchen systems for restaurants across Indonesia.",
     "visionTitle": "Our Vision",
-    "visionDesc": "To be Indonesia's #1 specialist builder and manufacturer of traditional artisan ovens and refractory thermal engineering, setting the benchmark for commercial kitchen infrastructure excellence.",
+    "visionDesc": "To be a trusted traditional oven builder and kitchen contractor recognized for reliable build quality, safety, and durability.",
     "missionTitle": "Our Mission",
     "missionList": {
-      "1": "Engineer and construct high-performance wood-fired pizza ovens, Mandi ovens, Tannurs, and Kamados with precise heat retention above 500°C",
-      "2": "Deliver comprehensive commercial kitchen infrastructure solutions (Stainless Steel Fabrication, Gas Piping, Ducting, & MEP) that ensure operational safety and durability",
-      "3": "Innovate accessible portable pizza oven lines to empower culinary SMEs and modern portable restaurants across Indonesia",
-      "4": "Provide dedicated technical support, precision commissioning, and long-term partnerships for every commercial food service operator"
+      "1": "Build high-temperature traditional ovens (Wood-Fired Pizza, Mandi, Tannur, Kamado) that withstand heat over 500°C.",
+      "2": "Provide complete restaurant kitchen contracting, from certified gas piping and exhaust ducting to SS304 stainless steel fabrication.",
+      "3": "Develop fuel-efficient wood-fired ovens and commercial stoves to support food businesses.",
+      "4": "Deliver hands-on technical support and ongoing maintenance to keep kitchen operations running reliably."
     },
     "journeyTitle": "Our Journey",
-    "journeySubtitle": "A decade of proven project milestones and dedicated kitchen engineering since 2014.",
+    "journeySubtitle": "Milestones and completed kitchen projects since 2014.",
     "timeline": {
-      "2014": { "title": "Inception & First Project", "desc": "Limars Teknik was founded in Jakarta and immediately commissioned to build its first Gold Mosaic Wood-Fired Pizza Oven at Zahra Al-Jazeerah Cianjur." },
-      "2015": { "title": "Middle Eastern Mandi Oven Mastery", "desc": "Entrusted by Al-Jazeerah Cikini & Central Pramuka restaurant groups to engineer heavy-duty custom Lamb Mandi & Arab Bread ovens." },
-      "2016": { "title": "Giant 180cm Dome Oven & Puncak Tannur", "desc": "Completed a giant 180cm diameter dome pizza oven for Al-Jazeerah Polonia Function Hall and a pit-style Tannur oven at Royal Al-Jazeerah Puncak." },
-      "2018": { "title": "Japanese Kamado & Nanamia Pizzeria", "desc": "Engineered a custom Japanese Kamado hearth for Dashi Chazuke Grand Indonesia, Istanbul Turkey Kemang oven, and Nanamia Pizzeria Jogja." },
-      "2021": { "title": "Enduring Restaurant Partnerships", "desc": "Continued partnership with wood-fired oven builds for Nanamia Pizzeria Yogyakarta Branch 2 (2021) and Branch 3 (2023)." },
-      "2025": { "title": "Digital Transformation & Portable Ovens", "desc": "Initiated the 2025 digital transformation era while developing affordable Portable Oven series for culinary SMEs and modern eateries." }
+      "2014": { "title": "Inception & First Build", "desc": "Limars Teknik was founded in Jakarta and built its first Gold Mosaic Wood-Fired Pizza Oven at Zahra Al-Jazeerah Cianjur." },
+      "2015": { "title": "Middle Eastern Mandi Ovens", "desc": "Commissioned by Al-Jazeerah Cikini & Central Pramuka restaurant groups to build custom Lamb Mandi & Arab Bread ovens." },
+      "2016": { "title": "180cm Dome Oven & Puncak Tannur", "desc": "Built a 180cm diameter dome pizza oven at Al-Jazeerah Polonia and a pit-style Tannur oven at Royal Al-Jazeerah Puncak." },
+      "2018": { "title": "Japanese Kamado & Nanamia Pizzeria", "desc": "Built a Japanese Kamado hearth at Dashi Chazuke Grand Indonesia, an oven at Istanbul Turkey Kemang, and a pizza oven for Nanamia Pizzeria Jogja." },
+      "2021": { "title": "Ongoing Restaurant Partnerships", "desc": "Continued builds with wood-fired pizza ovens for Nanamia Pizzeria Branch 2 (2021) and Branch 3 (2023)." },
+      "2025": { "title": "Portable Oven Line Development", "desc": "Developing fuel-efficient portable oven lines for modern eateries and food vendors." }
     },
-    "coreValuesTitle": "Our Core Values",
-    "coreValuesSubtitle": "The principles that guide everything we do.",
+    "coreValuesTitle": "Our Work Principles",
+    "coreValuesSubtitle": "The standards we maintain in every build.",
     "values": {
-      "quality": { "title": "Quality", "desc": "We use only premium materials and maintain strict quality control throughout our manufacturing process." },
-      "reliability": { "title": "Reliability", "desc": "We deliver on our promises — on time, within budget, and to specification." },
-      "innovation": { "title": "Innovation", "desc": "We continuously improve our products and processes to meet evolving industry needs." },
-      "safety": { "title": "Safety", "desc": "Safety is non-negotiable. All our products and installations meet the highest safety standards." },
-      "customerFocus": { "title": "Customer Focus", "desc": "Every project starts with understanding our client's unique needs and delivering tailored solutions." },
-      "sustainability": { "title": "Sustainability", "desc": "We are committed to environmentally responsible manufacturing and energy-efficient solutions." }
+      "quality": { "title": "Material Quality", "desc": "We use food-grade SS304 stainless steel and high-grade firebricks." },
+      "reliability": { "title": "On-Time Delivery", "desc": "Projects delivered to agreed schedules and technical specifications." },
+      "innovation": { "title": "Efficient Design", "desc": "Continuously refining thermal insulation for better fuel efficiency." },
+      "safety": { "title": "Safety First", "desc": "Gas lines and exhaust systems undergo rigorous leak and pressure testing." },
+      "customerFocus": { "title": "Built to Fit", "desc": "Equipment sizing and layouts tailored to your kitchen space." },
+      "sustainability": { "title": "Energy Efficiency", "desc": "Engineered thermal retention to minimize gas and wood consumption." }
     },
-    "teamTitle": "Our Leadership",
-    "teamSubtitle": "Meet the experienced professionals behind Limars Teknik.",
+    "teamTitle": "Management Team",
+    "teamSubtitle": "The people managing operations at Limars Teknik.",
     "team": {
-      "founderRole": "Founder",
-      "founderDesc": "The vision and leadership behind the growth of Limars Teknik since its inception.",
-      "marketingRole": "Head of Marketing and Administration",
-      "marketingDesc": "Managing marketing strategies and administrative operational efficiency.",
-      "technologyRole": "Head of Technology",
-      "technologyDesc": "Leading technical innovation and development of modern kitchen equipment solutions."
+      "founderRole": "Founder & Managing Director",
+      "founderDesc": "Leading operations and technical direction at Limars Teknik since 2014.",
+      "marketingRole": "Marketing & Administration",
+      "marketingDesc": "Managing client inquiries, quotations, and project scheduling.",
+      "technologyRole": "Lead Engineer & Workshop Head",
+      "technologyDesc": "Directing workshop fabrication and on-site assembly."
     }
   },
   "Contact": {
