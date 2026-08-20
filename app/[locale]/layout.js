@@ -41,8 +41,8 @@ export async function generateMetadata({ params }) {
     ...baseMetadata,
     metadataBase: new URL('https://limarsteknik.com'),
     title: {
-      default: t.title,
-      template: `%s | PT. Limars Teknik Indonesia`
+      default: baseMetadata.title,
+      template: `%s`,
     },
     keywords: t.keywords,
     robots: {

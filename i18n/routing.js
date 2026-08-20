@@ -2,8 +2,8 @@ import { defineRouting } from 'next-intl/routing';
 import { createNavigation } from 'next-intl/navigation';
 
 export const routing = defineRouting({
-  locales: ['en', 'id'],
-  defaultLocale: 'en',
+  locales: ['id', 'en'],
+  defaultLocale: 'id',
 });
 
 // Lightweight wrappers around Next.js' navigation APIs
