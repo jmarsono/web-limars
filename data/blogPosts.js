@@ -603,5 +603,97 @@ export const blogPosts = [
         <p>Sizing the exhaust fan incorrectly leads to smoke filling the customer dining area. Leave your ventilation calculations to our engineers who understand duct layout static pressure calculations. Read about our services at the <a href="/en/services/ducting/">Restaurant Ducting Service Jakarta</a> page, or contact us for a free site assessment at our <a href="/en/contact/">Contact Us</a> page.</p>
       `
     }
+  },
+  {
+    slug: 'tips-merawat-oven-pizza-komersial',
+    date: '2026-08-20',
+    author: 'Tech Advisor',
+    category: 'Maintenance',
+    image: '/images/products/pizza-oven.webp',
+    tags: ['oven pizza', 'perawatan oven', 'maintenance komersial', 'pizzeria'],
+    id: {
+      title: 'Tips Merawat Oven Pizza Komersial agar Performa Matang Konsisten',
+      excerpt: 'Pemilik pizzeria dan restoran perlu tahu cara merawat oven pizza komersial agar suhu stabil, kerak tetap sempurna, dan downtime berkurang drastis.',
+      content: `
+        <p>Oven pizza komersial adalah aset paling berharga di dapur pizzeria atau restoran yang menjual pizza sebagai menu utama. Berbeda dari oven rumahan, oven komersial beroperasi berkelanjutan pada suhu ekstrem sehingga membutuhkan rutinitas perawatan yang berbeda. Tanpa pemeliharaan yang tepat, performa panas bisa turun drastis, kerapian konsumsi gas/listrik melonjak, dan paling parah: pizza keluar dengan tekstur tidak konsisten. Berikut adalah panduan praktis <strong>cara merawat oven pizza komersial</strong> agar tetap stabil dari hari ke hari.</p>
+
+        <h2>1. Lakukan Pembersihan Harian Setiap Siklus Operasional</h2>
+        <p>Meskipun terlihat sederhana, kebersihan harian adalah faktor penentu utama umur pakai oven pizza. Kotoran menumpuk membuat variasi suhu tidak merata dan menghambat sirkulasi panas di dalam ruang pemanggang.</p>
+        <ul>
+          <li><strong>Bersihkan Sisa Adonan dan Keju:</strong> Gunakan spatula stainless steel dan sikat batu tahan api untuk mengikis sisa adonan, keju yang meleburnya, atau topping yang Gosong di batu bakar (stone hearth).</li>
+          <li><strong>Buang Abu dan Kain Bekas:</strong> Oven berbahan bakar kayu atau gas memproduksi abu tipis di lantai ruang bakar. Sekumlah abu yang menumpuk bisa memblokir aliran udara panas.</li>
+          <li><strong>Jangan Gunakan Air Berlebih:</strong> Banyak orang salah menyiram oven dengan air untuk membersihkan. Hal ini dapat memecahkan batu tahan api jika terjadi kontak dengan air dingin saat oven masih panas.</li>
+        </ul>
+
+        <h2>2. Jaga Ketahanan Insulasi dan Pintu Oven</h2>
+        <p>Oven pizza komersial modern dilapisi insulasi fiberglass tebal untuk mempertahankan suhu dan menghemat energi. Jika pintu oven menjadi longgar atau karet sealing pintu mulai rusak, kalor akan bocor dan memaksa sistem pemanas bekerja lebih keras.</p>
+        <ul>
+          <li><strong>Periksa Karet Sealing Pintu:</strong> Ganti bagian karet yang retak atau kaku agar tidak ada celah panas di sekitar bingkai pintu.</li>
+          <li><strong>Hindari Menutup Pintu dengan Kekerasan Berlebihan:</strong> Beberapa oven deck modern dilengkapi pegangan pengaman. Jangan memaksa pintu agar cepat tertutup karena bisa mematahkan engsel besi cor.</li>
+        </ul>
+
+        <h2>3. Rutin Kalibrasi Termostat dan Sensor Suhu</h2>
+        <p>Keberhasilan pizza Neapolitan bergantung pada suhu baking 450°C hingga 500°C. Jika termostat meleset beberapa puluh derajat, hasil pizza bisa gagal matang sempurna dalam 60-90 detik yang seharusnya.</p>
+        <ul>
+          <li><strong>Gunakan Termometer Infrared terpisah:</strong> Bandingkan pembacaan termometer oven dengan pembacaan panel kontrol. Jika selisih lebih dari 15°C, segera lakukan kalibrasi.</li>
+          <li><strong>Cek Konektor Sensor:</strong> Pastikan kabel sensor suhu tidak terkelupas dari soket PCB panel kontrol.</li>
+        </ul>
+
+        <h2>4. Perawatan Komponen Gas dan Listrik</h2>
+        <p>Selain bagian dalam, komponen pembakar, regulator tekanan, dan kabel kelistrikan juga perlu diperhatikan.</p>
+        <ul>
+          <li><strong>Bersihkan nozzle pembakar dari jelaga:</strong> Gunakan kawat bor ukuran kecil untuk membersihkan lubang pembakar dari kotoran yang menyumbat aliran gas.</li>
+          <li><strong>Cek tekanan gas setiap bulan:</strong> Tekanan yang tidak stabil menyebabkan Flame out saat puncak operasi dan membahayakan keselamatan dapur.</li>
+        </ul>
+
+        <h2>5. Jangan Lewatkan Pemeliharaan Profesional 3-6 Bulan Sekali</h2>
+        <p>Di samping perawatan harian, servis rutin oleh teknisi bersertifikat tetap diperlukan. Tim profesional akan melakukan pressure test, pemeriksaan kabel kelistrikan, dan mengganti komponen yang sudah aus sebelum menyebabkan kerusakan besar.</p>
+
+        <h2>Kesimpulan</h2>
+        <p>Oven pizza komersial yang dirawat dengan baik bisa bertahan lebih dari 10 tahun dengan performa konsisten. Jika Anda sedang mencari unit baru atau butuh konsultasi desain oven kustom untuk restoran, pelajari lebih lanjut di halaman <a href="/id/products/pizza-oven/">Oven Pizza Komersial</a> atau hubungi tim ahli kami melalui <a href="/id/contact/">Hubungi Kami</a> untuk survey lokasi dan penawaran terbaik.</p>
+      `
+    },
+    en: {
+      title: 'Tips for Maintaining a Commercial Pizza Oven for Consistent Results',
+      excerpt: 'Pizzeria and restaurant owners need practical maintenance steps to keep oven temperature stable, crusts perfect, and downtime minimal.',
+      content: `
+        <p>A commercial pizza oven is one of the most valuable assets in any pizzeria or pizza-focused restaurant. Unlike residential ovens, commercial units run at extreme temperatures for long hours, which means they need a different maintenance routine. Without proper care, heat performance can drop, gas or electricity consumption can spike, and pizza quality can become inconsistent. Here is a practical guide on <strong>how to maintain a commercial pizza oven</strong> so it performs consistently day after day.</p>
+
+        <h2>1. Daily Cleaning After Every Service</h2>
+        <p>Daily hygiene is the single biggest factor in oven longevity. Dough, cheese, and burnt toppings can create hot spots and uneven baking across the stone hearth.</p>
+        <ul>
+          <li><strong>Clean Dough and Cheese Residue:</strong> Use a stainless steel spatula and a stiff stone brush to scrape off stuck-on food without damaging the refractory surface.</li>
+          <li><strong>Remove Ash and Debris:</strong> Wood-fired and gas-fired ovens accumulate fine ash on the hearth floor. Excess ash blocks heat transfer and causes uneven crust color.</li>
+          <li><strong>Avoid Excessive Water:</strong> Do not hose down a hot oven with cold water. Rapid temperature changes can crack refractory bricks and shorten oven life.</li>
+        </ul>
+
+        <h2>2. Maintain Insulation and Door Seals</h2>
+        <p>Modern pizza ovens rely on thick insulation to maintain core temperature and reduce fuel costs. A worn door gasket can leak significant heat and increase baking time.</p>
+        <ul>
+          <li><strong>Inspect Door Seals:</strong> Replace cracked or hardened gaskets to ensure the door closes tightly.</li>
+          <li><strong>Close Gently:</strong> Forcing the door shut can misalign hinges and damage cast iron frames over time.</li>
+        </ul>
+
+        <h2>3. Calibrate Thermostats and Temperature Sensors Regularly</h2>
+        <p>Consistent heat is everything in pizza baking. An oven drifting more than 15°C from its setpoint will ruin crust texture and bake timing.</p>
+        <ul>
+          <li><strong>Use an Infrared Thermometer:</strong> Cross-check the oven's digital display against an independent handheld infrared thermometer.</li>
+          <li><strong>Check Sensor Wiring:</strong> Ensure temperature probes are firmly seated in their sockets and free from grease buildup.</li>
+        </ul>
+
+        <h2>4. Maintain Gas and Electrical Components</h2>
+        <p>Burners, pressure regulators, and electrical connections also need scheduled care.</p>
+        <ul>
+          <li><strong>Clean Burner Nozzles:</strong> Clogged orifices reduce flame size and cause uneven heating across the hearth.</li>
+          <li><strong>Monitor Gas Pressure Monthly:</strong> Pressure drops during peak hours can cause flameouts and production delays.</li>
+        </ul>
+
+        <h2>5. Schedule Professional Servicing Every 3-6 Months</h2>
+        <p>Alongside daily care, professional servicing remains essential. Certified technicians perform leak testing, electrical safety checks, and preventative part replacement before failures happen.</p>
+
+        <h2>Conclusion</h2>
+        <p>A well-maintained commercial pizza oven can last more than 10 years with consistent baking results. If you are evaluating a new unit or want a custom oven designed around your menu, browse our <a href="/en/products/pizza-oven/">Commercial Pizza Oven</a> page or contact our engineering team through our <a href="/en/contact/">Contact Us</a> page for a free site assessment.</p>
+      `
+    }
   }
 ];
