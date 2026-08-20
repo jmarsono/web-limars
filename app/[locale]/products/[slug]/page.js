@@ -139,7 +139,7 @@ export default async function ProductDetailPage({ params }) {
             <div className={styles.imageSection}>
               <ProductLightbox
                 src={product.image}
-                alt={`${name} - Peralatan Dapur Komersial PT Limars Teknik Indonesia`}
+                alt={`${name} - Limars Teknik commercial kitchen equipment`}
                 priority={true}
               />
             </div>

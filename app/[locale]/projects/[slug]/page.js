@@ -65,8 +65,27 @@ export default async function ProjectDetailPage({ params }) {
   const scope = project.scope;
   const videoUrl = project.video_url;
 
+  const jsonLd = {
+    '@context': 'https://schema.org',
+    '@type': 'CreativeWork',
+    additionalType: 'CaseStudy',
+    name: name,
+    description: desc,
+    image: mainImage && !mainImage.startsWith('http') ? `https://limarsteknik.com${mainImage}` : mainImage,
+    locationCreated: location,
+    dateCreated: year ? String(year) : undefined,
+    author: {
+      '@type': 'Organization',
+      name: 'PT. Limars Teknik Indonesia'
+    }
+  };
+
   return (
     <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+      />
       <BreadcrumbJsonLd
         crumbs={[
           { name: t('breadcrumbProjects'), path: '/projects/' },

@@ -84,18 +84,22 @@ export default async function RootLayout({ children, params }) {
         <link rel="preconnect" href="https://www.google.com" crossOrigin="anonymous" />
         <link rel="preconnect" href="https://www.gstatic.com" crossOrigin="anonymous" />
         <link rel="preconnect" href="https://www.googletagmanager.com" crossOrigin="anonymous" />
-        <Script
-          src="https://www.googletagmanager.com/gtag/js?id=G-Z7C140BFM6"
-          strategy="lazyOnload"
-        />
-        <Script id="ga4-init" strategy="lazyOnload">
-          {`
+        {process.env.NEXT_PUBLIC_GTM_ID && (
+          <>
+            <Script
+              src={`https://www.googletagmanager.com/gtag/js?id=${process.env.NEXT_PUBLIC_GTM_ID}`}
+              strategy="lazyOnload"
+            />
+            <Script id="ga4-init" strategy="lazyOnload">
+              {`
             window.dataLayer = window.dataLayer || [];
             function gtag(){dataLayer.push(arguments);}
             gtag('js', new Date());
-            gtag('config', 'G-Z7C140BFM6');
+            gtag('config', '${process.env.NEXT_PUBLIC_GTM_ID}');
           `}
-        </Script>
+            </Script>
+          </>
+        )}
       </head>
       <body className={`${inter.variable} ${poppins.variable}`}>
         <NextIntlClientProvider messages={messages}>

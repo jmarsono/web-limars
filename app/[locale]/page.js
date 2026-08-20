@@ -161,7 +161,7 @@ export default async function Home({ params }) {
               <div className={styles.heroImageMain}>
                 <Image
                   src="/images/facility.webp"
-                  alt="Fasilitas produksi dan fabrikasi stainless steel Limars Teknik"
+                  alt="Limars Teknik stainless steel production facility"
                   fill
                   priority
                   sizes="(max-width: 768px) 100vw, 55vw"
@@ -213,7 +213,7 @@ export default async function Home({ params }) {
             <div className={styles.briefImage}>
               <Image
                 src="/images/facility.webp"
-                alt="Fasilitas produksi PT Limars Teknik Indonesia"
+                alt="Limars Teknik manufacturing facility"
                 fill
                 sizes="(max-width: 768px) 100vw, 33vw"
                 style={{ objectFit: 'cover' }}
@@ -250,7 +250,7 @@ export default async function Home({ params }) {
                     {imageUrl && (
                       <Image
                         src={imageUrl}
-                        alt={`${name} - Peralatan dapur komersial Limars Teknik`}
+                        alt={`${name} - Limars Teknik commercial kitchen equipment`}
                         fill
                         sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 25vw"
                         style={{ objectFit: 'cover' }}
