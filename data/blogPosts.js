@@ -1027,5 +1027,317 @@ export const blogPosts = [
         <p>ESP is not a universal requirement, but it is the right solution for high-impact locations. Before deciding, discuss options with building management and our ventilation team. Read more at our <a href="/en/services/ducting/">Restaurant Ducting Service Jakarta</a> page or contact us via <a href="/en/contact/">Contact Us</a> for a technical feasibility survey.</p>
       `
     }
+  },
+  {
+    slug: 'biaya-operasional-oven-kayu-gas-listrik',
+    date: '2026-08-20',
+    author: 'Cost Analyst',
+    category: 'Buying Guide',
+    image: '/images/products/pizza-oven.webp',
+    tags: ['biaya operasional', 'oven kayu', 'oven gas', 'oven listrik', 'ROI'],
+    id: {
+      title: 'Biaya Operasional Oven Kayu vs Gas vs Listrik per Bulan: Mana Paling Hemat?',
+      excerpt: 'Bandingkan estimasi biaya bahan bakar bulanan, efisiensi, dan profil rasa dari oven kayu, gas, dan listrik untuk membantu keputusan investasi dapur Anda.',
+      content: `
+        <p>Selain harga beli unit, biaya operasional bulanan adalah faktor yang sering diabaikan pemilik restoran saat memilih oven. Padahal, pilihan sumber energi — <strong>kayu, gas, atau listrik</strong> — bisa memengaruhi margin bisnis Anda secara signifikan dalam jangka panjang. Berikut adalah perbandingan biaya operasional realistis berdasarkan penggunaan oven pizza komersial skala menengah (operasi 10 jam/hari, 26 hari/bulan).</p>
+
+        <h2>Tabel Estimasi Biaya Operasional Bulanan</h2>
+        <table class="comparison-table" style="width: 100%; border-collapse: collapse; margin-bottom: 30px;">
+          <thead>
+            <tr style="border-bottom: 2px solid var(--light-blue); background-color: rgba(91,164,217,0.05);">
+              <th style="padding: 12px; text-align: left; font-weight: 700;">Sumber Energi</th>
+              <th style="padding: 12px; text-align: left; font-weight: 700;">Estimasi Biaya/Bulan</th>
+              <th style="padding: 12px; text-align: left; font-weight: 700;">Kelebihan</th>
+              <th style="padding: 12px; text-align: left; font-weight: 700;">Kekurangan</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr style="border-bottom: 1px solid rgba(0,0,0,0.06);">
+              <td style="padding: 12px; font-weight: 600;">Kayu Bakar</td>
+              <td style="padding: 12px;">Rp 4.500.000 - Rp 8.000.000</td>
+              <td style="padding: 12px;">Aroma smoky otentik, marketing value tinggi</td>
+              <td style="padding: 12px;">Harga fluktuatif, butuh ruang penyimpanan, lebih sulit kontrol suhu</td>
+            </tr>
+            <tr style="border-bottom: 1px solid rgba(0,0,0,0.06);">
+              <td style="padding: 12px; font-weight: 600;">Gas LPG</td>
+              <td style="padding: 12px;">Rp 3.000.000 - Rp 5.500.000</td>
+              <td style="padding: 12px;">Kontrol suhu presisi, heat-up cepat, harga stabil</td>
+              <td style="padding: 12px;">Butuh instalasi pipa gas bersertifikat</td>
+            </tr>
+            <tr style="border-bottom: 1px solid rgba(0,0,0,0.06);">
+              <td style="padding: 12px; font-weight: 600;">Listrik</td>
+              <td style="padding: 12px;">Rp 5.500.000 - Rp 9.500.000</td>
+              <td style="padding: 12px;">Tidak butuh ducting kompleks, suhu presisi digital</td>
+              <td style="padding: 12px;">Tarif listrik industri lebih mahal, butuh daya listrik besar (>10.000 VA)</td>
+            </tr>
+          </tbody>
+        </table>
+
+        <h2>Faktor yang Memengaruhi Biaya Nyata</h2>
+        <ul>
+          <li><strong>Volume produksi harian:</strong> Semakin sering oven idle-panas (preheating berulang), semakin boros konsumsi energi apa pun sumbernya.</li>
+          <li><strong>Insulasi oven:</strong> Oven dengan insulasi buruk membuang panas keluar dan menaikkan konsumsi hingga 30% lebih tinggi dari estimasi normal.</li>
+          <li><strong>Harga energi lokal:</strong> Tarif listrik industri (golongan B2/B3) dan harga LPG non-subsidi bervariasi tergantung wilayah dan kontrak PLN Anda.</li>
+        </ul>
+
+        <h2>ROI: Kapan Investasi Terbayar?</h2>
+        <p>Oven gas umumnya memberikan payback period tercepat karena biaya operasional rendah dan harga unit lebih terjangkau dibanding oven listrik industri. Oven kayu cocok untuk brand premium yang bisa menaikkan harga jual pizza karena nilai autentikasi rasa. Oven listrik ideal untuk lokasi tanpa akses gas atau larangan ducting terbuka (misal di dalam mall tanpa jalur cerobong).</p>
+
+        <h2>Kesimpulan</h2>
+        <p>Tidak ada sumber energi yang "paling murah" secara mutlak — semua tergantung volume operasional dan positioning bisnis Anda. Jika ingin kalkulasi spesifik sesuai skala dapur Anda, konsultasikan dengan tim kami di halaman <a href="/id/products/pizza-oven/">Oven Pizza Komersial</a> atau hubungi <a href="/id/contact/">Hubungi Kami</a> untuk simulasi biaya operasional custom.</p>
+      `
+    },
+    en: {
+      title: 'Wood vs Gas vs Electric Oven: Monthly Operating Cost Comparison',
+      excerpt: 'Compare estimated monthly fuel costs, efficiency, and flavor profiles of wood, gas, and electric pizza ovens to guide your kitchen investment decision.',
+      content: `
+        <p>Beyond upfront unit price, monthly operating cost is a factor restaurant owners often overlook when selecting an oven. Yet your energy source choice — <strong>wood, gas, or electric</strong> — can significantly impact business margins long-term. Here is a realistic operating cost comparison based on a medium-scale commercial pizza oven (10 hours/day, 26 days/month operation).</p>
+
+        <h2>Monthly Operating Cost Estimate Table</h2>
+        <table class="comparison-table" style="width: 100%; border-collapse: collapse; margin-bottom: 30px;">
+          <thead>
+            <tr style="border-bottom: 2px solid var(--light-blue); background-color: rgba(91,164,217,0.05);">
+              <th style="padding: 12px; text-align: left; font-weight: 700;">Energy Source</th>
+              <th style="padding: 12px; text-align: left; font-weight: 700;">Est. Monthly Cost</th>
+              <th style="padding: 12px; text-align: left; font-weight: 700;">Advantages</th>
+              <th style="padding: 12px; text-align: left; font-weight: 700;">Disadvantages</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr style="border-bottom: 1px solid rgba(0,0,0,0.06);">
+              <td style="padding: 12px; font-weight: 600;">Firewood</td>
+              <td style="padding: 12px;">IDR 4.5M - 8M</td>
+              <td style="padding: 12px;">Authentic smoky flavor, strong marketing value</td>
+              <td style="padding: 12px;">Volatile pricing, needs storage space, harder temp control</td>
+            </tr>
+            <tr style="border-bottom: 1px solid rgba(0,0,0,0.06);">
+              <td style="padding: 12px; font-weight: 600;">LPG Gas</td>
+              <td style="padding: 12px;">IDR 3M - 5.5M</td>
+              <td style="padding: 12px;">Precise temp control, fast heat-up, stable pricing</td>
+              <td style="padding: 12px;">Requires certified gas piping installation</td>
+            </tr>
+            <tr style="border-bottom: 1px solid rgba(0,0,0,0.06);">
+              <td style="padding: 12px; font-weight: 600;">Electric</td>
+              <td style="padding: 12px;">IDR 5.5M - 9.5M</td>
+              <td style="padding: 12px;">No complex ducting needed, precise digital control</td>
+              <td style="padding: 12px;">Industrial electricity rates are pricier, needs large power capacity (10,000+ VA)</td>
+            </tr>
+          </tbody>
+        </table>
+
+        <h2>Factors That Affect Real Costs</h2>
+        <ul>
+          <li><strong>Daily production volume:</strong> Frequent idle-to-hot cycles waste energy regardless of source.</li>
+          <li><strong>Oven insulation quality:</strong> Poor insulation wastes heat and can increase consumption by up to 30% above baseline estimates.</li>
+          <li><strong>Local energy pricing:</strong> Industrial electricity tariffs and non-subsidized LPG prices vary by region and PLN contract tier.</li>
+        </ul>
+
+        <h2>ROI: When Does the Investment Pay Off?</h2>
+        <p>Gas ovens generally offer the fastest payback period due to lower operating costs and more affordable unit prices compared to industrial electric ovens. Wood-fired ovens suit premium brands that can charge a price premium for authentic flavor. Electric ovens are ideal for locations without gas access or ducting restrictions (e.g. inside malls without chimney routes).</p>
+
+        <h2>Conclusion</h2>
+        <p>There is no universally "cheapest" energy source — it all depends on your production volume and business positioning. For a custom cost simulation based on your kitchen scale, consult our team at the <a href="/en/products/pizza-oven/">Commercial Pizza Oven</a> page or contact us via <a href="/en/contact/">Contact Us</a>.</p>
+      `
+    }
+  },
+  {
+    slug: 'cara-memilih-exhaust-hood-blower-capacity',
+    date: '2026-08-20',
+    author: 'Ventilation Engineer',
+    category: 'Technical Guide',
+    image: '/images/products/exhaust-hood.webp',
+    tags: ['exhaust hood', 'blower', 'CFM', 'ducting', 'wok range'],
+    id: {
+      title: 'Cara Memilih Exhaust Hood dan Blower Capacity yang Tepat untuk Dapur Anda',
+      excerpt: 'Pelajari cara menghitung CFM blower yang sesuai dengan output panas kompor wok range atau kwali range agar dapur bebas asap dan efisien energi.',
+      content: `
+        <p>Kesalahan paling umum dalam desain ventilasi dapur komersial adalah memasang exhaust hood dan blower tanpa perhitungan yang sesuai dengan output panas kompor. Blower under-capacity membuat asap tetap mengepul; blower over-capacity memboroskan energi dan biaya listrik. Berikut adalah panduan praktis <strong>cara memilih exhaust hood dan blower capacity</strong> yang tepat.</p>
+
+        <h2>1. Pahami Konsep CFM (Cubic Feet per Minute)</h2>
+        <p>CFM adalah satuan volume udara yang dipindahkan blower per menit. Semakin tinggi output panas peralatan masak Anda (terutama <a href="/id/products/wok-range/">wok range stainless Jakarta</a> bertekanan tinggi), semakin besar CFM yang dibutuhkan untuk menarik asap dan uap panas keluar secara efektif.</p>
+
+        <h2>2. Rumus Dasar Perhitungan CFM Berdasarkan Panjang Hood</h2>
+        <p>Standar industri umum menggunakan perhitungan CFM = panjang hood (dalam feet) x faktor CFM per foot linear, dengan variasi tergantung jenis peralatan di bawahnya:</p>
+        <ul>
+          <li><strong>Peralatan ringan (oven, steamer):</strong> 100-150 CFM per linear foot</li>
+          <li><strong>Peralatan sedang (griddle, deep fryer):</strong> 150-200 CFM per linear foot</li>
+          <li><strong>Peralatan bertekanan tinggi (wok range, kwali range):</strong> 200-300 CFM per linear foot</li>
+        </ul>
+        <p>Sebagai contoh, hood sepanjang 8 feet di atas wok range bertekanan tinggi membutuhkan blower dengan kapasitas sekitar 1.600-2.400 CFM.</p>
+
+        <h2>3. Sesuaikan dengan Make-Up Air (MUA)</h2>
+        <p>Blower exhaust yang kuat tanpa suplai udara masuk (make-up air) yang seimbang akan menciptakan tekanan negatif di dapur, membuat pintu sulit dibuka dan pilot flame kompor bisa padam. Idealnya, sistem MUA menyuplai 80-90% dari volume udara yang dihisap keluar oleh exhaust fan.</p>
+
+        <h2>4. Pertimbangkan Static Pressure Ducting</h2>
+        <p>Panjang jalur ducting, jumlah belokan (elbow), dan diameter pipa memengaruhi static pressure yang harus diatasi blower. Ducting dengan banyak belokan tajam membutuhkan blower dengan static pressure rating lebih tinggi meski CFM nominal sama.</p>
+
+        <h2>5. Konsultasi Profesional untuk Menghindari Kesalahan Perhitungan</h2>
+        <p>Perhitungan CFM yang salah adalah investasi yang gagal — blower terlalu kecil membuat dapur penuh asap dan komplain pelanggan, sedangkan blower terlalu besar memboroskan listrik dan menambah beban akustik (noise). Tim teknis kami dapat melakukan survey lapangan untuk menghitung kebutuhan CFM aktual berdasarkan layout dan jenis peralatan masak Anda.</p>
+
+        <h2>Kesimpulan</h2>
+        <p>Exhaust hood dan blower yang tepat adalah investasi kenyamanan operasional jangka panjang. Pelajari lebih lanjut mengenai sistem ventilasi kami di halaman <a href="/id/services/ducting/">Jasa Ducting Restoran Jakarta</a> atau hubungi tim ahli kami melalui <a href="/id/contact/">Hubungi Kami</a> untuk kalkulasi CFM gratis sesuai dapur Anda.</p>
+      `
+    },
+    en: {
+      title: 'How to Choose the Right Exhaust Hood and Blower Capacity for Your Kitchen',
+      excerpt: 'Learn how to calculate the correct blower CFM matched to your wok range or kwali range heat output for a smoke-free, energy-efficient kitchen.',
+      content: `
+        <p>The most common mistake in commercial kitchen ventilation design is installing exhaust hoods and blowers without matching them to actual cooking equipment heat output. An undersized blower leaves smoke lingering; an oversized blower wastes energy and electricity costs. Here is a practical guide on <strong>how to choose the right exhaust hood and blower capacity</strong> for your kitchen.</p>
+
+        <h2>1. Understand CFM (Cubic Feet per Minute)</h2>
+        <p>CFM is the unit measuring air volume moved by a blower per minute. The higher your equipment's heat output (especially high-pressure <a href="/en/products/wok-range/">wok range stainless Jakarta</a> units), the more CFM you need to effectively pull smoke and hot vapor outside.</p>
+
+        <h2>2. Basic CFM Calculation Formula Based on Hood Length</h2>
+        <p>Industry standard practice calculates CFM = hood length (in feet) x a CFM-per-linear-foot factor, varying by the equipment underneath:</p>
+        <ul>
+          <li><strong>Light-duty equipment (ovens, steamers):</strong> 100-150 CFM per linear foot</li>
+          <li><strong>Medium-duty equipment (griddles, deep fryers):</strong> 150-200 CFM per linear foot</li>
+          <li><strong>High-pressure equipment (wok range, kwali range):</strong> 200-300 CFM per linear foot</li>
+        </ul>
+        <p>For example, an 8-foot hood over a high-pressure wok range needs a blower rated around 1,600-2,400 CFM.</p>
+
+        <h2>3. Balance with Make-Up Air (MUA)</h2>
+        <p>A powerful exhaust blower without balanced fresh air intake creates negative pressure in the kitchen, making doors hard to open and potentially blowing out burner pilot flames. Ideally, an MUA system supplies 80-90% of the exhausted air volume.</p>
+
+        <h2>4. Account for Static Pressure in Duct Design</h2>
+        <p>Duct run length, number of elbows, and pipe diameter all affect the static pressure a blower must overcome. Ducting with sharp bends requires a higher static-pressure-rated blower even at the same nominal CFM.</p>
+
+        <h2>5. Get Professional Consultation to Avoid Calculation Errors</h2>
+        <p>Wrong CFM calculations are a failed investment — undersized blowers fill your kitchen with smoke and drive customer complaints, while oversized blowers waste electricity and increase noise levels. Our technical team can perform an on-site survey to calculate actual CFM requirements based on your layout and cooking equipment.</p>
+
+        <h2>Conclusion</h2>
+        <p>The right exhaust hood and blower combination is a long-term investment in operational comfort. Learn more about our ventilation systems at the <a href="/en/services/ducting/">Restaurant Ducting Service Jakarta</a> page or contact our engineering team via <a href="/en/contact/">Contact Us</a> for a free CFM calculation tailored to your kitchen.</p>
+      `
+    }
+  },
+  {
+    slug: 'ss304-vs-ss201-kitchen-set',
+    date: '2026-08-20',
+    author: 'Materials Engineer',
+    category: 'Equipment Guide',
+    image: '/images/services/kitchen-set.webp',
+    tags: ['SS304', 'SS201', 'stainless steel', 'kitchen set', 'food grade'],
+    id: {
+      title: 'SS304 vs SS201 untuk Kitchen Set: Mana yang Lebih Tahan dan Aman untuk Makanan?',
+      excerpt: 'Pahami perbedaan komposisi, ketahanan karat, dan food-grade safety antara stainless steel SS304 dan SS201 sebelum membeli kitchen set restoran Anda.',
+      content: `
+        <p>Saat berbelanja kitchen set atau meja kerja stainless steel untuk restoran, Anda akan sering menemukan dua kode material: <strong>SS304 dan SS201</strong>. Sekilas terlihat sama karena keduanya berwarna silver mengkilap, namun komposisi kimia dan performa jangka panjang keduanya sangat berbeda — dan perbedaan ini berdampak langsung pada keamanan pangan serta biaya penggantian di masa depan.</p>
+
+        <h2>Perbedaan Komposisi Kimia</h2>
+        <p>SS304 mengandung sekitar 18% kromium dan 8% nikel (dikenal sebagai "18/8 stainless"), memberikan ketahanan korosi yang superior. SS201 menggantikan sebagian nikel dengan mangan dan nitrogen untuk menekan biaya produksi, sehingga ketahanan korosinya jauh di bawah SS304, terutama terhadap paparan garam, asam, dan kelembaban tinggi yang umum di dapur restoran.</p>
+
+        <h2>Tabel Perbandingan SS304 vs SS201</h2>
+        <table class="comparison-table" style="width: 100%; border-collapse: collapse; margin-bottom: 30px;">
+          <thead>
+            <tr style="border-bottom: 2px solid var(--light-blue); background-color: rgba(91,164,217,0.05);">
+              <th style="padding: 12px; text-align: left; font-weight: 700;">Kriteria</th>
+              <th style="padding: 12px; text-align: left; font-weight: 700;">SS304</th>
+              <th style="padding: 12px; text-align: left; font-weight: 700;">SS201</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr style="border-bottom: 1px solid rgba(0,0,0,0.06);">
+              <td style="padding: 12px; font-weight: 600;">Kandungan Nikel</td>
+              <td style="padding: 12px;">Sekitar 8%</td>
+              <td style="padding: 12px;">Sekitar 1-1.5% (diganti mangan)</td>
+            </tr>
+            <tr style="border-bottom: 1px solid rgba(0,0,0,0.06);">
+              <td style="padding: 12px; font-weight: 600;">Ketahanan Korosi</td>
+              <td style="padding: 12px;">Sangat Tinggi, tahan asam &amp; garam</td>
+              <td style="padding: 12px;">Rendah - Sedang, rentan berkarat di area lembap</td>
+            </tr>
+            <tr style="border-bottom: 1px solid rgba(0,0,0,0.06);">
+              <td style="padding: 12px; font-weight: 600;">Food-Grade Safety</td>
+              <td style="padding: 12px;">Direkomendasikan untuk kontak langsung dengan makanan</td>
+              <td style="padding: 12px;">Berisiko melepas ion logam saat kontak asam berulang</td>
+            </tr>
+            <tr style="border-bottom: 1px solid rgba(0,0,0,0.06);">
+              <td style="padding: 12px; font-weight: 600;">Harga Material</td>
+              <td style="padding: 12px;">Lebih mahal (15-30% di atas SS201)</td>
+              <td style="padding: 12px;">Lebih murah</td>
+            </tr>
+            <tr style="border-bottom: 1px solid rgba(0,0,0,0.06);">
+              <td style="padding: 12px; font-weight: 600;">Umur Pakai</td>
+              <td style="padding: 12px;">10-20+ tahun dengan perawatan standar</td>
+              <td style="padding: 12px;">3-7 tahun sebelum muncul karat/pitting</td>
+            </tr>
+          </tbody>
+        </table>
+
+        <h2>Mengapa SS201 Berbahaya untuk Dapur Komersial?</h2>
+        <p>Banyak supplier furnitur dapur murah menggunakan SS201 dan melabelinya sebagai "stainless steel" tanpa menjelaskan gradenya. Dalam kondisi kontak dengan bahan asam (cuka, jeruk nipis, tomat) secara berulang dan lingkungan lembap dapur komersial, SS201 dapat melepaskan ion logam ke makanan dan mempercepat korosi struktural, terutama di sambungan las.</p>
+
+        <h2>Cara Mengidentifikasi SS304 Asli</h2>
+        <ul>
+          <li><strong>Uji Magnet:</strong> SS304 austenitic bersifat non-magnetic atau sangat lemah magnetnya. Jika magnet menempel sangat kuat, kemungkinan itu SS201 atau bahkan besi biasa berlapis chrome.</li>
+          <li><strong>Minta Sertifikat Material Mill:</strong> Supplier terpercaya seharusnya bisa menunjukkan mill certificate yang menyatakan grade material sesuai standar ASTM/JIS.</li>
+          <li><strong>Perhatikan Harga:</strong> Jika harga jauh di bawah pasar untuk klaim "SS304", kemungkinan besar itu SS201 yang di-mislabel.</li>
+        </ul>
+
+        <h2>Kesimpulan</h2>
+        <p>Untuk investasi kitchen set jangka panjang, terutama di area kontak langsung dengan makanan (meja preparasi, sink, worktable), SS304 adalah pilihan yang jauh lebih aman dan ekonomis secara total cost of ownership meski harga awal lebih tinggi. Limars Teknik hanya menggunakan material SS304 food-grade bersertifikat untuk seluruh fabrikasi kitchen set kami. Pelajari lebih lanjut di halaman <a href="/id/services/kitchen-sets/">Jasa Kitchen Set Restoran Jakarta</a> atau hubungi kami melalui <a href="/id/contact/">Hubungi Kami</a> untuk konsultasi material gratis.</p>
+      `
+    },
+    en: {
+      title: 'SS304 vs SS201 for Kitchen Sets: Which is More Durable and Food-Safe?',
+      excerpt: 'Understand the composition, corrosion resistance, and food-grade safety differences between SS304 and SS201 stainless steel before buying your restaurant kitchen set.',
+      content: `
+        <p>When shopping for a stainless steel kitchen set or worktable for your restaurant, you will often encounter two material codes: <strong>SS304 and SS201</strong>. At a glance both look identical with their shiny silver finish, but their chemical composition and long-term performance differ significantly — and that difference directly affects food safety and future replacement costs.</p>
+
+        <h2>Chemical Composition Differences</h2>
+        <p>SS304 contains approximately 18% chromium and 8% nickel (known as "18/8 stainless"), providing superior corrosion resistance. SS201 substitutes much of the nickel with manganese and nitrogen to reduce production costs, resulting in significantly lower corrosion resistance — especially against salt, acid, and the high humidity common in commercial kitchens.</p>
+
+        <h2>SS304 vs SS201 Comparison Table</h2>
+        <table class="comparison-table" style="width: 100%; border-collapse: collapse; margin-bottom: 30px;">
+          <thead>
+            <tr style="border-bottom: 2px solid var(--light-blue); background-color: rgba(91,164,217,0.05);">
+              <th style="padding: 12px; text-align: left; font-weight: 700;">Criteria</th>
+              <th style="padding: 12px; text-align: left; font-weight: 700;">SS304</th>
+              <th style="padding: 12px; text-align: left; font-weight: 700;">SS201</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr style="border-bottom: 1px solid rgba(0,0,0,0.06);">
+              <td style="padding: 12px; font-weight: 600;">Nickel Content</td>
+              <td style="padding: 12px;">Approximately 8%</td>
+              <td style="padding: 12px;">Approximately 1-1.5% (replaced by manganese)</td>
+            </tr>
+            <tr style="border-bottom: 1px solid rgba(0,0,0,0.06);">
+              <td style="padding: 12px; font-weight: 600;">Corrosion Resistance</td>
+              <td style="padding: 12px;">Very High, resistant to acid &amp; salt</td>
+              <td style="padding: 12px;">Low - Moderate, prone to rust in humid areas</td>
+            </tr>
+            <tr style="border-bottom: 1px solid rgba(0,0,0,0.06);">
+              <td style="padding: 12px; font-weight: 600;">Food-Grade Safety</td>
+              <td style="padding: 12px;">Recommended for direct food contact</td>
+              <td style="padding: 12px;">Risk of metal ion leaching under repeated acid contact</td>
+            </tr>
+            <tr style="border-bottom: 1px solid rgba(0,0,0,0.06);">
+              <td style="padding: 12px; font-weight: 600;">Material Cost</td>
+              <td style="padding: 12px;">More expensive (15-30% above SS201)</td>
+              <td style="padding: 12px;">Cheaper</td>
+            </tr>
+            <tr style="border-bottom: 1px solid rgba(0,0,0,0.06);">
+              <td style="padding: 12px; font-weight: 600;">Service Life</td>
+              <td style="padding: 12px;">10-20+ years with standard maintenance</td>
+              <td style="padding: 12px;">3-7 years before rust/pitting appears</td>
+            </tr>
+          </tbody>
+        </table>
+
+        <h2>Why is SS201 Risky for Commercial Kitchens?</h2>
+        <p>Many budget kitchen furniture suppliers use SS201 and label it simply as "stainless steel" without disclosing the grade. Under repeated contact with acidic ingredients (vinegar, lime, tomato) and the humid environment of a commercial kitchen, SS201 can leach metal ions into food and accelerate structural corrosion, particularly at weld joints.</p>
+
+        <h2>How to Identify Genuine SS304</h2>
+        <ul>
+          <li><strong>Magnet Test:</strong> Austenitic SS304 is non-magnetic or very weakly magnetic. If a magnet sticks strongly, it may be SS201 or even chrome-plated mild steel.</li>
+          <li><strong>Request a Mill Certificate:</strong> Trusted suppliers should be able to provide a mill certificate confirming the material grade per ASTM/JIS standards.</li>
+          <li><strong>Watch the Price:</strong> If a price is far below market rate for a claimed "SS304" product, it is likely mislabeled SS201.</li>
+        </ul>
+
+        <h2>Conclusion</h2>
+        <p>For long-term kitchen set investment, especially in direct food-contact areas (prep tables, sinks, worktables), SS304 is the far safer and more economical choice on a total-cost-of-ownership basis despite the higher upfront price. Limars Teknik uses only certified food-grade SS304 material for all our kitchen set fabrication. Learn more at our <a href="/en/services/kitchen-sets/">Restaurant Kitchen Set</a> page or contact us via <a href="/en/contact/">Contact Us</a> for a free material consultation.</p>
+      `
+    }
   }
 ];
