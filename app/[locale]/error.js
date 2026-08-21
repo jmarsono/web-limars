@@ -2,6 +2,7 @@
 'use client';
 
 import { useEffect } from 'react';
+import Link from 'next/link';
 
 export default function Error({ error, reset }) {
   useEffect(() => {
@@ -29,7 +30,7 @@ export default function Error({ error, reset }) {
           Maaf, terjadi kesalahan tak terduga. Silakan coba lagi atau kembali ke beranda.
         </p>
         <div style={{ display: 'flex', gap: 12, justifyContent: 'center', flexWrap: 'wrap' }}>
-          <a href="/" style={{
+          <Link href="/" style={{
             padding: '12px 24px',
             borderRadius: 8,
             border: '1px solid #1a1a1a',
@@ -41,7 +42,7 @@ export default function Error({ error, reset }) {
             cursor: 'pointer',
           }}>
             Kembali ke Beranda
-          </a>
+          </Link>
           <button
             onClick={() => reset()}
             style={{

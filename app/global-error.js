@@ -3,6 +3,8 @@
 // Cannot use next-intl here (no locale context available).
 'use client';
 
+import Link from 'next/link';
+
 export default function GlobalError({ error, reset }) {
   return (
     <html lang="id">
@@ -27,7 +29,7 @@ export default function GlobalError({ error, reset }) {
               Silakan coba lagi atau hubungi kami melalui WhatsApp.
             </p>
             <div style={{ display: 'flex', gap: 12, justifyContent: 'center', flexWrap: 'wrap' }}>
-              <a href="/" style={{
+              <Link href="/" style={{
                 padding: '12px 24px',
                 borderRadius: 8,
                 border: '1px solid #1a1a1a',
@@ -38,7 +40,7 @@ export default function GlobalError({ error, reset }) {
                 textDecoration: 'none',
               }}>
                 Kembali ke Beranda
-              </a>
+              </Link>
               <a
                 href="https://wa.me/6281212671289"
                 target="_blank"
