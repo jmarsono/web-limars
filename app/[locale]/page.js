@@ -100,15 +100,66 @@ export default async function Home({ params }) {
 
   const leadProject = featuredProjects[0] || activeProjects[0];
 
+  // Build hasOfferCatalog from active services so JSON-LD stays in sync with real content
+  const offerCatalog = {
+    '@type': 'OfferCatalog',
+    name: locale === 'id' ? 'Layanan Limars Teknik' : 'Limars Teknik Services',
+    itemListElement: activeServices.map((svc, idx) => ({
+      '@type': 'Offer',
+      position: idx + 1,
+      itemOffered: {
+        '@type': 'Service',
+        name: localize(svc.title, locale),
+        description: localize(svc.shortDescription, locale),
+        url: `https://limarsteknik.com/${locale}/services/${svc.slug}/`,
+        provider: { '@type': 'Organization', name: 'PT. Limars Teknik Indonesia' },
+      },
+    })),
+  };
+
+  // Signature project images for the image[] property — helps Knowledge Graph associate
+  // the brand with the actual work rather than just the logo.
+  const signatureImages = [
+    'https://limarsteknik.com/logo.png',
+    ...activeProjects
+      .filter((p) => p.featured && p.image)
+      .slice(0, 5)
+      .map((p) => (p.image.startsWith('http') ? p.image : `https://limarsteknik.com${p.image}`)),
+  ];
+
   const jsonLd = {
     '@context': 'https://schema.org',
     '@type': ['Organization', 'LocalBusiness'],
+    '@id': 'https://limarsteknik.com/#organization',
     name: 'PT. Limars Teknik Indonesia',
+    alternateName: ['Limars Teknik', 'CV Limars Teknik'],
     url: 'https://limarsteknik.com',
-    logo: 'https://limarsteknik.com/logo.png',
+    logo: {
+      '@type': 'ImageObject',
+      url: 'https://limarsteknik.com/logo.png',
+      width: 512,
+      height: 512,
+    },
+    image: signatureImages,
     description: t('heroSubtitle'),
+    slogan: t('heroBadge'),
+    foundingDate: '2014',
     priceRange: '$$',
     openingHours: 'Mo-Fr 08:00-17:00, Sa 08:00-14:00',
+    openingHoursSpecification: [
+      {
+        '@type': 'OpeningHoursSpecification',
+        dayOfWeek: ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday'],
+        opens: '08:00',
+        closes: '17:00',
+      },
+      {
+        '@type': 'OpeningHoursSpecification',
+        dayOfWeek: 'Saturday',
+        opens: '08:00',
+        closes: '14:00',
+      },
+    ],
     address: {
       '@type': 'PostalAddress',
       streetAddress: 'Jl. Raden Saleh II/6 No. 70C',
@@ -117,17 +168,53 @@ export default async function Home({ params }) {
       postalCode: '10430',
       addressCountry: 'ID',
     },
-    contactPoint: {
-      '@type': 'ContactPoint',
-      telephone: '+6281212671289',
-      contactType: 'customer service',
-      email: 'info@limarsteknik.com',
-      availableLanguage: ['Indonesian', 'English'],
+    geo: {
+      '@type': 'GeoCoordinates',
+      latitude: -6.19158,
+      longitude: 106.843908,
     },
+    hasMap: 'https://www.google.com/maps/place/LIMARS+TEKNIK+-+JASA+PEMBUATAN+TUNGKU+ROTI+ARAB+DAN+PIZZA+TRADISIONAL/@-6.19158,106.843908,17z',
+    contactPoint: [
+      {
+        '@type': 'ContactPoint',
+        telephone: '+6281212671289',
+        contactType: 'customer service',
+        email: 'info@limarsteknik.com',
+        availableLanguage: ['Indonesian', 'English'],
+        areaServed: 'ID',
+      },
+      {
+        '@type': 'ContactPoint',
+        telephone: '+6281212671289',
+        contactType: 'sales',
+        email: 'sales@limarsteknik.com',
+        availableLanguage: ['Indonesian', 'English'],
+        areaServed: 'ID',
+      },
+    ],
+    areaServed: {
+      '@type': 'Country',
+      name: 'Indonesia',
+    },
+    knowsAbout: [
+      'Traditional Oven Construction',
+      'Wood-Fired Pizza Oven',
+      'Mandi Oven',
+      'Tannur Oven',
+      'Tandoor Oven',
+      'Kamado Stove',
+      'Commercial Kitchen Fabrication',
+      'SS304 Stainless Steel Kitchen Set',
+      'Gas Piping Installation',
+      'Kitchen Exhaust Ducting',
+      'Restaurant Kitchen Engineering',
+    ],
+    hasOfferCatalog: offerCatalog,
     sameAs: [
       'https://www.facebook.com/cv.limarsteknik/',
       'https://x.com/limarstek',
       'https://www.youtube.com/@limarsteknik',
+      'https://www.google.com/maps/place/LIMARS+TEKNIK+-+JASA+PEMBUATAN+TUNGKU+ROTI+ARAB+DAN+PIZZA+TRADISIONAL/@-6.19158,106.843908,17z',
     ],
   };
 
