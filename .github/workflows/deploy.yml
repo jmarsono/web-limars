@@ -1,0 +1,65 @@
+name: Deploy to Cloudflare Workers
+
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+    inputs:
+      sync_secrets:
+        description: 'Also push admin credentials from GitHub secrets to Worker secrets'
+        required: false
+        default: 'false'
+        type: choice
+        options: ['false', 'true']
+
+jobs:
+  deploy:
+    name: Build & Deploy Worker
+    runs-on: ubuntu-latest
+    concurrency:
+      group: cloudflare-deploy
+      cancel-in-progress: false
+    env:
+      CLOUDFLARE_ACCOUNT_ID: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
+      CLOUDFLARE_API_TOKEN: ${{ secrets.CLOUDFLARE_API_TOKEN }}
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+
+      - name: Install dependencies
+        run: npm ci
+
+      # Optional: sync admin credentials from GitHub Secrets to Cloudflare Worker Secrets.
+      # Only runs when the workflow is manually dispatched with sync_secrets=true, or
+      # automatically the first time a required GH secret is available but the Worker
+      # secret needs (re)setting. Safe to run repeatedly — wrangler overwrites the value.
+      - name: Sync Worker Secrets
+        if: github.event_name == 'workflow_dispatch' && github.event.inputs.sync_secrets == 'true'
+        run: |
+          set -e
+          echo "Syncing admin credentials to Worker secrets..."
+          echo -n "${{ secrets.ADMIN_USERNAME }}" | npx wrangler secret put ADMIN_USERNAME
+          echo -n "${{ secrets.ADMIN_PASSWORD }}" | npx wrangler secret put ADMIN_PASSWORD
+          echo -n "${{ secrets.ADMIN_SESSION_SECRET }}" | npx wrangler secret put ADMIN_SESSION_SECRET
+          echo "✓ Admin secrets synced"
+
+      - name: Build with OpenNext
+        run: npm run build:cf
+        env:
+          NEXT_PUBLIC_TURNSTILE_SITE_KEY: ${{ secrets.NEXT_PUBLIC_TURNSTILE_SITE_KEY }}
+          NEXT_PUBLIC_GTM_ID: ${{ secrets.NEXT_PUBLIC_GTM_ID }}
+          NEXT_PUBLIC_GOOGLE_SITE_VERIFICATION: ${{ secrets.NEXT_PUBLIC_GOOGLE_SITE_VERIFICATION }}
+
+      - name: Deploy Worker
+        run: npx wrangler deploy
+
+      - name: Deploy summary
+        run: |
+          echo "### 🚀 Deployed to Cloudflare Workers" >> $GITHUB_STEP_SUMMARY
+          echo "- Worker: \`web\`" >> $GITHUB_STEP_SUMMARY
+          echo "- Domain: https://limarsteknik.com" >> $GITHUB_STEP_SUMMARY
+          echo "- Commit: \`${{ github.sha }}\`" >> $GITHUB_STEP_SUMMARY

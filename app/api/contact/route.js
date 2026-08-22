@@ -2,6 +2,7 @@
 import { NextResponse } from 'next/server';
 import nodemailer from 'nodemailer';
 import { env } from '../../../lib/env';
+import { rateLimit, getClientIp } from '../../../lib/rateLimit';
 
 const MAX_LENGTHS = {
   name: 120,
@@ -26,11 +27,25 @@ function clean(value, maxLength) {
 }
 
 function isValidEmail(email) {
-  return /^[^\\s@]+@[^\\s@]+\\.[^\\s@]+$/.test(email);
+  return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email);
 }
 
 export async function POST(req) {
   try {
+    // Rate limit: max 5 submissions per IP per 10 minutes
+    const ip = getClientIp(req);
+    const { allowed, resetAt } = rateLimit(`contact:${ip}`, {
+      limit: 5,
+      windowMs: 10 * 60_000,
+    });
+    if (!allowed) {
+      const retryAfterSec = Math.max(1, Math.ceil((resetAt - Date.now()) / 1000));
+      return NextResponse.json(
+        { error: 'Too many requests. Please try again later.' },
+        { status: 429, headers: { 'Retry-After': String(retryAfterSec) } }
+      );
+    }
+
     const payload = await req.json();
 
     const name = clean(payload.name, MAX_LENGTHS.name);

@@ -1,4 +1,23 @@
 {
+  "A11y": {
+    "skipToContent": "Lewati ke konten utama",
+    "closeMenu": "Tutup menu",
+    "openMenu": "Buka menu"
+  },
+  "Error": {
+    "title": "Terjadi Kesalahan",
+    "description": "Maaf, terjadi kesalahan tak terduga. Silakan coba lagi atau kembali ke beranda.",
+    "backHome": "Kembali ke Beranda",
+    "tryAgain": "Coba Lagi",
+    "systemTitle": "Sistem Error",
+    "systemDescription": "Terjadi kesalahan pada sistem. Tim teknis kami telah diberitahu. Silakan coba lagi atau hubungi kami melalui WhatsApp.",
+    "contactWhatsApp": "WhatsApp Kami",
+    "notFoundTitle": "Halaman Tidak Ditemukan",
+    "notFoundDescription": "Maaf, halaman yang Anda cari tidak ada atau telah dipindahkan.",
+    "captchaError": "Harap verifikasi bahwa Anda bukan robot.",
+    "genericError": "Terjadi kesalahan. Silakan coba lagi.",
+    "unexpectedError": "Terjadi kesalahan tak terduga. Silakan coba lagi nanti."
+  },
   "Navigation": {
     "home": "Beranda",
     "about": "Tentang Kami",
@@ -172,7 +191,11 @@
       "Electrical": "Kelistrikan"
     },
     "emptyState": "Tidak ada proyek yang ditemukan dalam kategori ini.",
-    "scopeOfWork": "Lingkup Pekerjaan"
+    "scopeOfWork": "Lingkup Pekerjaan",
+    "photoDocumentation": "Dokumentasi Foto Proyek",
+    "fieldVideo": "Video Lapangan",
+    "otherPortfolio": "Portofolio Lainnya",
+    "mainDocumentation": "Dokumentasi Utama"
   },
   "About": {
     "heroBadge": "Tentang Kami",

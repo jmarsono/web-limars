@@ -8,6 +8,7 @@ import { getMessages, setRequestLocale, getTranslations } from 'next-intl/server
 import { getProducts, getProjects, getServices } from '../../lib/db';
 
 import { constructMetadata } from '../../lib/seo';
+import { localize } from '../../lib/localize';
 import BreadcrumbJsonLd from '../../components/BreadcrumbJsonLd';
 import WhatsAppIcon from '../../components/WhatsAppIcon';
 import TrackedWhatsAppLink from '../../components/TrackedWhatsAppLink';
@@ -173,7 +174,7 @@ export default async function Home({ params }) {
                 {leadProject?.image && (
                   <Image
                     src={typeof leadProject.image === 'object' ? leadProject.image.url : leadProject.image}
-                    alt={typeof leadProject.name === 'object' ? leadProject.name[locale] : leadProject.name}
+                    alt={localize(leadProject.name, locale)}
                     fill
                     sizes="180px"
                     style={{ objectFit: 'cover' }}
@@ -240,9 +241,9 @@ export default async function Home({ params }) {
 
           <div className={styles.productGrid}>
             {featuredProducts.map((product, index) => {
-              const name = typeof product.name === 'object' ? product.name[locale] : product.name;
-              const shortDesc = typeof product.shortDescription === 'object' ? product.shortDescription[locale] : product.shortDescription;
-              const category = typeof product.category === 'object' ? product.category[locale] : product.category;
+              const name = localize(product.name, locale);
+              const shortDesc = localize(product.shortDescription, locale);
+              const category = localize(product.category, locale);
               const imageUrl = product.image && typeof product.image === 'object' ? product.image.url : product.image;
 
               return (
@@ -284,8 +285,8 @@ export default async function Home({ params }) {
 
           <div className={styles.serviceGrid}>
             {activeServices.slice(0, 5).map((service, index) => {
-              const title = typeof service.title === 'object' ? service.title[locale] : service.title;
-              const shortDesc = typeof service.shortDescription === 'object' ? service.shortDescription[locale] : service.shortDescription;
+              const title = localize(service.title, locale);
+              const shortDesc = localize(service.shortDescription, locale);
 
               return (
                 <Link href={`/services/${service.slug}`} key={service.id} className={styles.serviceCard}>
@@ -337,9 +338,9 @@ export default async function Home({ params }) {
 
           <div className={styles.projectGrid}>
             {featuredProjects.map((project, index) => {
-              const name = typeof project.name === 'object' ? project.name[locale] : project.name;
-              const category = typeof project.category === 'object' ? project.category[locale] : project.category;
-              const location = typeof project.location === 'object' ? project.location[locale] : project.location;
+              const name = localize(project.name, locale);
+              const category = localize(project.category, locale);
+              const location = localize(project.location, locale);
               const imageUrl = project.image && typeof project.image === 'object' ? project.image.url : project.image;
 
               return (

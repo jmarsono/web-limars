@@ -10,6 +10,7 @@ import styles from './Contact.module.css';
 export default function ContactPage() {
   const t = useTranslations('Contact');
   const navT = useTranslations('Navigation');
+  const errorT = useTranslations('Error');
   const crumbs = [
     { name: navT('contact'), path: '/contact/' }
   ];
@@ -34,7 +35,7 @@ export default function ContactPage() {
     setStatus({ type: 'loading', message: t('form.sending') });
 
     if (!turnstileToken) {
-      setStatus({ type: 'error', message: 'Please verify that you are not a robot.' });
+      setStatus({ type: 'error', message: errorT('captchaError') });
       return;
     }
 
@@ -55,10 +56,10 @@ export default function ContactPage() {
         setFormData({ name: '', email: '', phone: '', company: '', service: '', message: '' });
         setTurnstileToken('');
       } else {
-        setStatus({ type: 'error', message: data.error || 'Something went wrong. Please try again.' });
+        setStatus({ type: 'error', message: data.error || errorT('genericError') });
       }
     } catch (error) {
-      setStatus({ type: 'error', message: 'An unexpected error occurred. Please try again later.' });
+      setStatus({ type: 'error', message: errorT('unexpectedError') });
     }
   };
 
@@ -256,10 +257,12 @@ export default function ContactPage() {
                 )}
 
                 <div className={styles.formGroup} style={{ marginBottom: '1.5rem' }}>
-                  <TurnstileWidget
-                    siteKey={process.env.NEXT_PUBLIC_TURNSTILE_SITE_KEY || '0x4AAAAAADm6k8s_lcNBTYTv'}
-                    onSuccess={(token) => setTurnstileToken(token)}
-                  />
+                  {process.env.NEXT_PUBLIC_TURNSTILE_SITE_KEY && (
+                    <TurnstileWidget
+                      siteKey={process.env.NEXT_PUBLIC_TURNSTILE_SITE_KEY}
+                      onSuccess={(token) => setTurnstileToken(token)}
+                    />
+                  )}
                 </div>
 
                 <button

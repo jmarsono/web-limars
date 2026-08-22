@@ -1,12 +1,15 @@
 import { Link, routing } from '../../../../i18n/routing';
 import { notFound } from 'next/navigation';
+import Image from 'next/image';
+import { getTranslations, setRequestLocale } from 'next-intl/server';
 import { services } from '../../../../data/services';
 import styles from './ServiceDetail.module.css';
-import { setRequestLocale } from 'next-intl/server';
 import WhatsAppIcon from '../../../../components/WhatsAppIcon';
 import TrackedWhatsAppLink from '../../../../components/TrackedWhatsAppLink';
 import ServiceIcon from '../../../../components/ServiceIcon';
 import UiIcon from '../../../../components/UiIcon';
+import BreadcrumbJsonLd from '../../../../components/BreadcrumbJsonLd';
+import { constructMetadata } from '../../../../lib/seo';
 
 export async function generateStaticParams() {
   return routing.locales.flatMap((locale) =>
@@ -16,9 +19,6 @@ export async function generateStaticParams() {
     }))
   );
 }
-
-import { constructMetadata } from '../../../../lib/seo';
-import BreadcrumbJsonLd from '../../../../components/BreadcrumbJsonLd';
 
 export async function generateMetadata({ params }) {
   const { slug, locale } = await params;
@@ -44,7 +44,6 @@ export default async function ServiceDetailPage({ params }) {
   if (!service) notFound();
 
   // Load translations for static UI elements
-  const getTranslations = (await import('next-intl/server')).getTranslations;
   const t = await getTranslations({ locale, namespace: 'Services' });
 
   const jsonLd = {
@@ -118,10 +117,12 @@ export default async function ServiceDetailPage({ params }) {
             </div>
             <div className={styles.descImage}>
               <div style={{ position: 'relative', width: '100%', height: '400px', backgroundColor: '#f0f0f0', borderRadius: '15px', overflow: 'hidden' }}>
-                <img 
-                  src={service.image} 
+                <Image
+                  src={service.image}
                   alt={`${service.title[locale]} - PT Limars Teknik Indonesia`}
-                  style={{ width: '100%', height: '100%', objectFit: 'cover' }}
+                  fill
+                  sizes="(max-width: 768px) 100vw, 50vw"
+                  style={{ objectFit: 'cover' }}
                 />
               </div>
             </div>

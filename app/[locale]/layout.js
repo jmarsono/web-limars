@@ -3,7 +3,7 @@ import '../globals.css';
 import Navbar from '../../components/Navbar';
 import Footer from '../../components/Footer';
 import WhatsAppButton from '../../components/WhatsAppButton';
-import ImageProtectionListener from '../../components/ImageProtectionListener';
+import SkipToContent from '../../components/SkipToContent';
 import { NextIntlClientProvider } from 'next-intl';
 import { getMessages, setRequestLocale } from 'next-intl/server';
 import { routing } from '../../i18n/routing';
@@ -56,9 +56,11 @@ export async function generateMetadata({ params }) {
         'max-snippet': -1,
       },
     },
-    verification: {
-      google: 'verify-google-id', // User should replace this with actual ID if they have one
-    },
+    ...(process.env.NEXT_PUBLIC_GOOGLE_SITE_VERIFICATION && {
+      verification: {
+        google: process.env.NEXT_PUBLIC_GOOGLE_SITE_VERIFICATION,
+      },
+    }),
   };
 }
 
@@ -103,9 +105,9 @@ export default async function RootLayout({ children, params }) {
       </head>
       <body className={`${inter.variable} ${poppins.variable}`}>
         <NextIntlClientProvider messages={messages}>
-          <ImageProtectionListener />
+          <SkipToContent />
           <Navbar />
-          <main>{children}</main>
+          <main id="main-content">{children}</main>
           <Footer />
           <WhatsAppButton />
         </NextIntlClientProvider>

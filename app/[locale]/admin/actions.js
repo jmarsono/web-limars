@@ -1,12 +1,27 @@
 // app/[locale]/admin/actions.js
 'use server';
 
-import { cookies } from 'next/headers';
+import { cookies, headers } from 'next/headers';
 import { getDB } from '../../../lib/db';
 import { revalidatePath } from 'next/cache';
+import { rateLimit } from '../../../lib/rateLimit';
 
 const SESSION_COOKIE = 'admin_session';
-const SESSION_SECRET = process.env.ADMIN_SESSION_SECRET || 'limars-secret-key-987654321';
+const SESSION_SECRET = process.env.ADMIN_SESSION_SECRET;
+if (!SESSION_SECRET) {
+  console.error('[admin] ADMIN_SESSION_SECRET environment variable is not set. Admin authentication will be disabled.');
+}
+
+// Constant-time string comparison to prevent timing attacks on credential checks
+function safeCompare(a, b) {
+  if (typeof a !== 'string' || typeof b !== 'string') return false;
+  if (a.length !== b.length) return false;
+  let diff = 0;
+  for (let i = 0; i < a.length; i++) {
+    diff |= a.charCodeAt(i) ^ b.charCodeAt(i);
+  }
+  return diff === 0;
+}
 
 // Helper to sign session cookies using Web Crypto API
 async function signSession(username, expiresAt) {
@@ -68,10 +83,31 @@ export async function getAuthenticatedUser() {
 
 // LOGIN ACTION
 export async function loginAction(username, password) {
-  const expectedUser = process.env.ADMIN_USERNAME || 'admin';
-  const expectedPass = process.env.ADMIN_PASSWORD || 'admin123';
+  const expectedUser = process.env.ADMIN_USERNAME;
+  const expectedPass = process.env.ADMIN_PASSWORD;
 
-  if (username === expectedUser && password === expectedPass) {
+  // Refuse login if credentials are not configured via environment variables
+  if (!expectedUser || !expectedPass || !SESSION_SECRET) {
+    console.error('[admin] Login failed: ADMIN_USERNAME, ADMIN_PASSWORD, or ADMIN_SESSION_SECRET is not configured.');
+    return { success: false, error: 'Admin login is not configured. Please set environment variables.' };
+  }
+
+  // Rate limit: max 5 login attempts per IP per 5 minutes
+  const hdrs = await headers();
+  const ip =
+    hdrs.get('cf-connecting-ip') ||
+    hdrs.get('x-real-ip') ||
+    hdrs.get('x-forwarded-for')?.split(',')[0]?.trim() ||
+    'unknown';
+  const { allowed } = rateLimit(`admin-login:${ip}`, {
+    limit: 5,
+    windowMs: 5 * 60_000,
+  });
+  if (!allowed) {
+    return { success: false, error: 'Too many login attempts. Please try again in a few minutes.' };
+  }
+
+  if (safeCompare(username, expectedUser) && safeCompare(password, expectedPass)) {
     const expiresAt = Date.now() + 24 * 60 * 60 * 1000; // 1 day
     const token = await signSession(username, expiresAt);
     

@@ -2,11 +2,11 @@ import Image from 'next/image';
 import { notFound } from 'next/navigation';
 import { blogPosts } from '@/data/blogPosts';
 import { getMessages, setRequestLocale } from 'next-intl/server';
-import { Link } from '@/i18n/routing';
+import { Link, routing } from '@/i18n/routing';
+import CtaBanner from '@/components/CtaBanner';
+import BreadcrumbJsonLd from '@/components/BreadcrumbJsonLd';
+import { constructMetadata } from '@/lib/seo';
 import styles from './page.module.css';
-import { routing } from '@/i18n/routing';
-import WhatsAppIcon from '@/components/WhatsAppIcon';
-import TrackedWhatsAppLink from '@/components/TrackedWhatsAppLink';
 
 export function generateStaticParams() {
   return routing.locales.flatMap((locale) =>
@@ -16,9 +16,6 @@ export function generateStaticParams() {
     }))
   );
 }
-
-import { constructMetadata } from '@/lib/seo';
-import BreadcrumbJsonLd from '@/components/BreadcrumbJsonLd';
 
 export async function generateMetadata({ params }) {
   const { slug, locale } = await params;
@@ -51,7 +48,6 @@ export default async function BlogPostPage({ params }) {
 
   const messages = await getMessages({ locale });
   const blogT = messages.Blog;
-  const homeT = messages.Home;
   const postData = post[locale];
 
   // Structured Data (JSON-LD)
@@ -71,7 +67,7 @@ export default async function BlogPostPage({ params }) {
       name: 'PT. Limars Teknik Indonesia',
       logo: {
         '@type': 'ImageObject',
-        url: 'https://limarsteknik.com/logo.png', // Corrected domain
+        url: 'https://limarsteknik.com/logo.png',
       },
     },
   };
@@ -114,8 +110,8 @@ export default async function BlogPostPage({ params }) {
         </div>
 
         <div className={styles.content}>
-          <div 
-            dangerouslySetInnerHTML={{ __html: postData.content }} 
+          <div
+            dangerouslySetInnerHTML={{ __html: postData.content }}
             className={styles.articleBody}
           />
         </div>
@@ -123,25 +119,11 @@ export default async function BlogPostPage({ params }) {
         <footer className={styles.footer}>
           <div className={styles.share}>
             <span>{blogT.share}</span>
-            {/* Share buttons would go here */}
           </div>
         </footer>
       </article>
 
-      {/* CTA */}
-      <section className={styles.ctaSection}>
-        <div className={`container ${styles.ctaContent}`}>
-          <h2>{homeT.cta.title}</h2>
-          <p>{homeT.cta.subtitle}</p>
-          <div className={styles.ctaButtons}>
-            <Link href="/contact" className="btn btn-primary">{homeT.cta.contactBtn}</Link>
-            <TrackedWhatsAppLink href="https://wa.me/6281212671289" className="btn btn-secondary" label="blog_detail_cta">
-              <WhatsAppIcon />
-              {homeT.cta.whatsappBtn}
-            </TrackedWhatsAppLink>
-          </div>
-        </div>
-      </section>
+      <CtaBanner analyticsLabel="blog_detail_cta" />
     </main>
   );
 }

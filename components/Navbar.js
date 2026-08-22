@@ -9,6 +9,7 @@ import LanguageSwitcher from './LanguageSwitcher';
 
 export default function Navbar() {
   const t = useTranslations('Navigation');
+  const a11yT = useTranslations('A11y');
 
   const navLinks = [
     { href: '/', label: t('home') },
@@ -34,6 +35,16 @@ export default function Navbar() {
   useEffect(() => {
     document.body.style.overflow = mobileOpen ? 'hidden' : '';
     return () => { document.body.style.overflow = ''; };
+  }, [mobileOpen]);
+
+  // Close mobile menu with Escape key
+  useEffect(() => {
+    if (!mobileOpen) return;
+    const handleKey = (e) => {
+      if (e.key === 'Escape') setMobileOpen(false);
+    };
+    document.addEventListener('keydown', handleKey);
+    return () => document.removeEventListener('keydown', handleKey);
   }, [mobileOpen]);
 
   const toggleDropdown = (idx) => {
@@ -76,7 +87,7 @@ export default function Navbar() {
           </div>
         </Link>
 
-        <div className={`${styles.navLinks} ${mobileOpen ? styles.open : ''}`}>
+        <div id="primary-navigation" className={`${styles.navLinks} ${mobileOpen ? styles.open : ''}`}>
           {navLinks.map((link, idx) => (
             <div
               key={idx}
@@ -135,7 +146,9 @@ export default function Navbar() {
         <button
           className={`${styles.hamburger} ${mobileOpen ? styles.hamburgerOpen : ''}`}
           onClick={() => setMobileOpen(!mobileOpen)}
-          aria-label="Toggle menu"
+          aria-label={mobileOpen ? a11yT('closeMenu') : a11yT('openMenu')}
+          aria-expanded={mobileOpen}
+          aria-controls="primary-navigation"
         >
           <span></span>
           <span></span>
