@@ -26,9 +26,13 @@ jobs:
         run: pip install -r scripts/requirements.txt
 
       - name: Run GSC monitor
+        shell: bash
         env:
           GCP_SERVICE_ACCOUNT_KEY_B64: ${{ secrets.GCP_SERVICE_ACCOUNT_KEY_B64 }}
           GSC_PROPERTY: ${{ vars.GSC_PROPERTY || 'sc-domain:limarsteknik.com' }}
           GSC_SITEMAP_URL: https://limarsteknik.com/sitemap.xml
+        # pipefail so a Python crash surfaces as a failed step instead of being
+        # masked by tee's exit code
         run: |
+          set -o pipefail
           python scripts/gsc-monitor.py | tee "$GITHUB_STEP_SUMMARY"
