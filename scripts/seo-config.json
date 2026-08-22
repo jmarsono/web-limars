@@ -1,0 +1,61 @@
+{
+  "_readme": "Editable SEO config for gsc-monitor.py. Keys with underscore prefix are notes and ignored by the script. Priority keywords are grouped by tier so the weekly report can show winnable-first, then progressively harder targets.",
+
+  "priority_keywords": {
+    "_tier_1_brand": "High-win, low-effort. Should already rank top 3 for brand searches. If not, something is broken.",
+    "tier_1_brand": [
+      "limars teknik",
+      "pt limars teknik",
+      "limars teknik jakarta",
+      "cv limars teknik"
+    ],
+
+    "_tier_2_signature": "Signature niche (traditional oven builder). Low search volume but high intent — customer already knows what they want. Target: top 10 in 3-6 months.",
+    "tier_2_signature": [
+      "oven pizza tradisional jakarta",
+      "oven mandi domba",
+      "oven tannur",
+      "oven tandoor jakarta",
+      "tungku pizza kayu bakar",
+      "jasa pembuat oven kayu bakar",
+      "pembuat oven pizza tradisional",
+      "pembuat tungku roti arab",
+      "oven kamado jepang"
+    ],
+
+    "_tier_3_service": "Kitchen contractor services — mid-competition, target: top 20 in 6-12 months.",
+    "tier_3_service": [
+      "kontraktor dapur restoran jakarta",
+      "instalasi gas restoran jakarta",
+      "jasa ducting exhaust dapur",
+      "fabrikasi kitchen set stainless steel",
+      "kitchen set ss304 restoran",
+      "dapur restoran komersial",
+      "fabrikasi dapur sppg",
+      "kitchen set mbg"
+    ],
+
+    "_tier_4_generic": "High-volume generic keywords. Long game (12+ months). Track for trend but don't obsess over position.",
+    "tier_4_generic": [
+      "commercial oven indonesia",
+      "commercial kitchen equipment indonesia",
+      "wood fired pizza oven indonesia",
+      "oven pizza",
+      "kitchen set restoran",
+      "kompor restoran"
+    ]
+  },
+
+  "competitors_to_watch": {
+    "_note": "Fill this in by searching for your top keywords manually (incognito) and noting which brands appear on page 1-2. Update quarterly.",
+    "_examples_kitchen_contractors_indonesia": [
+      "solarindustri.com",
+      "fomac.co.id",
+      "getra.co.id"
+    ],
+    "_examples_traditional_oven_builders": [
+      "Add specific competitor sites here after manual Google search"
+    ],
+    "domains": []
+  }
+}

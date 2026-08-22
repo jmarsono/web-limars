@@ -8,6 +8,11 @@ Runs against the Search Console API and produces a Markdown report covering:
   (last downloaded, URLs submitted vs indexed, errors, warnings)
 - **URL Indexing Status** — inspects key pages (homepage, about, services, etc.)
   and shows verdict (PASS/PARTIAL/FAIL), coverage state, and last crawl time
+- **Priority Keywords Tracker** — position + impressions + clicks for each
+  keyword listed in [`seo-config.json`](./seo-config.json), grouped by tier
+  (brand, signature niche, service, generic). See
+  [`docs/seo-strategy.md`](../docs/seo-strategy.md) for the rationale behind
+  each tier and target ranking timelines.
 - **Search Analytics** — top 15 queries and top 10 pages over the last 7 and 28
   days (impressions, clicks, CTR, average position)
 

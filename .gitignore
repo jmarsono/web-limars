@@ -55,3 +55,5 @@ next-env.d.ts
 # project image originals backup
 /public/images/projects/.originals/
 
+__pycache__/
+scripts/__pycache__/

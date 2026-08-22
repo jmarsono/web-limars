@@ -204,15 +204,102 @@ def search_analytics(webmasters, days: int):
         print(f"❌ Pages fetch failed: {err}")
 
 
+def load_seo_config():
+    """Load priority keywords + competitor list from scripts/seo-config.json."""
+    config_path = Path(__file__).parent / "seo-config.json"
+    if not config_path.exists():
+        return None
+    try:
+        return json.loads(config_path.read_text(encoding="utf-8"))
+    except (json.JSONDecodeError, OSError):
+        return None
+
+
+def priority_keywords_report(webmasters, config, days=28):
+    """Query GSC Search Analytics for each priority keyword tier and report
+    position + impressions + clicks. Highlights keywords with zero impressions
+    (not showing at all) so those can be addressed with content/backlinks."""
+    if not config or "priority_keywords" not in config:
+        return
+
+    end = date.today() - timedelta(days=2)
+    start = end - timedelta(days=days - 1)
+
+    print_header(f"Priority Keywords — Last {days} Days ({start} → {end})")
+
+    tiers = config["priority_keywords"]
+    for tier_key, keywords in tiers.items():
+        if tier_key.startswith("_") or not isinstance(keywords, list):
+            continue
+
+        # Tier label: "tier_1_brand" → "Tier 1 — Brand"
+        parts = tier_key.split("_", 2)
+        label = f"Tier {parts[1]} — {parts[2].title()}" if len(parts) >= 3 else tier_key
+
+        print(f"\n### {label}\n")
+        print("| Keyword | Impressions | Clicks | Position |")
+        print("|---|---:|---:|---:|")
+
+        for keyword in keywords:
+            try:
+                resp = (
+                    webmasters.searchanalytics()
+                    .query(
+                        siteUrl=SITE_URL,
+                        body={
+                            "startDate": start.isoformat(),
+                            "endDate": end.isoformat(),
+                            "dimensions": ["query"],
+                            "dimensionFilterGroups": [
+                                {
+                                    "filters": [
+                                        {
+                                            "dimension": "query",
+                                            "operator": "equals",
+                                            "expression": keyword,
+                                        }
+                                    ]
+                                }
+                            ],
+                            "rowLimit": 1,
+                        },
+                    )
+                    .execute()
+                )
+                rows = resp.get("rows", [])
+                if rows:
+                    r = rows[0]
+                    imp = r.get("impressions", 0)
+                    clk = r.get("clicks", 0)
+                    pos = r.get("position", 0)
+                    # Highlight strong positions with a badge
+                    pos_str = f"{pos:.1f}"
+                    if pos <= 3:
+                        pos_str = f"🥇 {pos:.1f}"
+                    elif pos <= 10:
+                        pos_str = f"✅ {pos:.1f}"
+                    elif pos <= 30:
+                        pos_str = f"🟡 {pos:.1f}"
+                    else:
+                        pos_str = f"⚪ {pos:.1f}"
+                    print(f"| {keyword} | {imp:,} | {clk:,} | {pos_str} |")
+                else:
+                    print(f"| {keyword} | 0 | 0 | — not ranking |")
+            except HttpError:
+                print(f"| {keyword} | ? | ? | ⚠️ query error |")
+
+
 def main():
     creds = load_credentials()
     webmasters = build("searchconsole", "v1", credentials=creds, cache_discovery=False)
+    seo_config = load_seo_config()
 
     print(f"# GSC Monitor — {date.today().isoformat()}\n")
     print(f"Property: `{SITE_URL}`")
 
     submit_sitemap(webmasters)
     inspect_urls(webmasters)
+    priority_keywords_report(webmasters, seo_config, days=28)
     search_analytics(webmasters, days=7)
     search_analytics(webmasters, days=28)
 
