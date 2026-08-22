@@ -10,6 +10,8 @@ jobs:
   lint-build:
     name: Lint & Build
     runs-on: ubuntu-latest
+    environment:
+      name: Auto Deploy To Cloudflare
     steps:
       - uses: actions/checkout@v4
 

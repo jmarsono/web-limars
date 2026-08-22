@@ -16,6 +16,9 @@ jobs:
   deploy:
     name: Build & Deploy Worker
     runs-on: ubuntu-latest
+    environment:
+      name: Auto Deploy To Cloudflare
+      url: https://limarsteknik.com
     concurrency:
       group: cloudflare-deploy
       cancel-in-progress: false
