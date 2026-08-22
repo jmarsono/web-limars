@@ -1,11 +1,31 @@
 import createMiddleware from 'next-intl/middleware';
 import { routing } from './i18n/routing';
 import { NextResponse } from 'next/server';
+import { resolveLegacyUrl } from './lib/legacyRedirects';
 
 const intlMiddleware = createMiddleware(routing);
 
 export default function middleware(request) {
   const { pathname } = request.nextUrl;
+
+  // Legacy WordPress URL handling: 301 redirect known slugs to their Next.js
+  // counterparts, 410 Gone for pure WordPress artifacts (feeds, tag archives,
+  // wp-admin probes). Runs before intl middleware so old URLs are handled by
+  // their permanent target rather than treated as unknown locales.
+  const legacy = resolveLegacyUrl(pathname);
+  if (legacy?.type === 'redirect') {
+    const redirectUrl = new URL(legacy.target, request.url);
+    // Preserve query string when redirecting
+    redirectUrl.search = request.nextUrl.search;
+    const response = NextResponse.redirect(redirectUrl, 301);
+    addSecurityHeaders(response);
+    return response;
+  }
+  if (legacy?.type === 'gone') {
+    const response = new NextResponse(null, { status: 410 });
+    addSecurityHeaders(response);
+    return response;
+  }
 
   // Custom 301 Permanent Redirect for root `/`
   if (pathname === '/' || pathname === '') {
