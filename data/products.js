@@ -145,8 +145,8 @@ export const products = [
   {
     id: 5,
     name: {
-      en: 'Tandoor Oven',
-      id: 'Oven Tandoor Harga Jakarta'
+      en: 'Tannur / Tandoor Oven',
+      id: 'Oven Tannur / Tandoor Custom'
     },
     slug: 'tandoor-oven',
     category: {
@@ -154,12 +154,12 @@ export const products = [
       id: 'Oven Regional'
     },
     description: {
-      en: 'Traditional tandoor oven for Indian and Middle Eastern cuisine. Clay-lined interior for authentic naan bread and tandoori dishes.',
-      id: 'Cari oven tandoor harga Jakarta yang bersahabat namun memiliki kualitas pengerjaan premium? Kami memproduksi oven tandoor tradisional terbaik untuk masakan India, roti naan, dan hidangan tandoori otentik. Dengan oven tandoor harga Jakarta yang terjangkau, unit kami dilapisi tanah liat khusus di bagian dalam untuk retensi panas optimal dan rasa masakan yang khas. Dapatkan penawaran oven tandoor harga Jakarta terbaik langsung dari produsen spesialis peralatan dapur komersial.'
+      en: 'Traditional tannur (also known as tandoor) built for authentic Middle Eastern and Indian cuisine. The clay-lined interior retains high heat evenly, producing the smoky char and blistered crust that defines authentic naan bread, tandoori dishes, and Middle Eastern breads like khubz and lavash. Each unit is custom-fabricated in our Jakarta workshop to match your kitchen dimensions and preferred fuel (gas or charcoal).',
+      id: 'Oven tannur (dikenal juga sebagai tandoor) tradisional yang dibangun khusus untuk masakan Timur Tengah dan India otentik. Bagian dalam berlapis tanah liat khusus menahan panas tinggi secara merata, menghasilkan aroma asap dan kulit renyah yang menjadi ciri khas roti naan, hidangan tandoori, serta roti Arab seperti khubz dan lavash. Setiap unit difabrikasi custom di workshop Jakarta kami sesuai dimensi dapur dan preferensi bahan bakar Anda (gas atau arang).'
     },
     shortDescription: {
-      en: 'Clay-lined tandoor for authentic Indian cuisine.',
-      id: 'Tandoor berlapis tanah liat untuk masakan India otentik.'
+      en: 'Custom-built tannur / tandoor for Middle Eastern & Indian cuisine.',
+      id: 'Oven tannur (tandoor) custom untuk masakan Timur Tengah & India.'
     },
     specs: {
       material: { en: 'Stainless Steel + Clay Lining', id: 'Baja Tahan Karat + Lapisan Tanah Liat' },
