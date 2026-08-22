@@ -1,5 +1,6 @@
 import { products } from '../data/products';
 import { services } from '../data/services';
+import { projects } from '../data/projects';
 import { blogPosts } from '../data/blogPosts';
 
 export const dynamic = 'force-static';
@@ -43,6 +44,16 @@ export default function sitemap() {
     }))
   );
 
+  // Dynamic Project routes (portfolio detail pages)
+  const projectRoutes = projects.flatMap((project) =>
+    locales.map((locale) => ({
+      url: `${baseUrl}/${locale}/projects/${project.slug}/`,
+      lastModified: now,
+      changeFrequency: 'monthly',
+      priority: 0.7,
+    }))
+  );
+
   // Dynamic Blog routes - use actual post date
   const blogRoutes = blogPosts.flatMap((post) =>
     locales.map((locale) => ({
@@ -53,5 +64,5 @@ export default function sitemap() {
     }))
   );
 
-  return [...routes, ...productRoutes, ...serviceRoutes, ...blogRoutes];
+  return [...routes, ...productRoutes, ...serviceRoutes, ...projectRoutes, ...blogRoutes];
 }

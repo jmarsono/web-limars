@@ -12,6 +12,7 @@ import 'yet-another-react-lightbox/styles.css';
 import WhatsAppIcon from '@/components/WhatsAppIcon';
 import UiIcon from '@/components/UiIcon';
 import { trackWhatsAppClick } from '@/lib/analytics';
+import { localize } from '@/lib/localize';
 
 export default function ProjectsClient({ projects, projectCategories }) {
   const locale = useLocale();
@@ -168,7 +169,7 @@ export default function ProjectsClient({ projects, projectCategories }) {
                   <h3>{t('scopeOfWork')}</h3>
                   <ul>
                     {selectedProject.scope.map((s, i) => (
-                      <li key={i}><UiIcon name="check" size={15} /> {typeof s === 'object' ? s[locale] || s.en : s}</li>
+                      <li key={i}><UiIcon name="check" size={15} /> {localize(s, locale)}</li>
                     ))}
                   </ul>
                 </div>

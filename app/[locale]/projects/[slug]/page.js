@@ -1,5 +1,6 @@
 import { getProjectBySlug, getProjects } from '../../../../lib/db';
 import { notFound } from 'next/navigation';
+import Image from 'next/image';
 import ProjectLightbox from './ProjectLightbox';
 import styles from './ProjectDetail.module.css';
 import { setRequestLocale } from 'next-intl/server';
@@ -7,6 +8,8 @@ import WhatsAppIcon from '../../../../components/WhatsAppIcon';
 import TrackedWhatsAppLink from '../../../../components/TrackedWhatsAppLink';
 import UiIcon from '../../../../components/UiIcon';
 import BreadcrumbJsonLd from '../../../../components/BreadcrumbJsonLd';
+import { constructMetadata } from '../../../../lib/seo';
+import { localize } from '../../../../lib/localize';
 import { Link } from '../../../../i18n/routing';
 
 export const revalidate = 0;
@@ -26,13 +29,16 @@ export async function generateMetadata({ params }) {
   const project = await getProjectBySlug(slug);
   if (!project) return { title: 'Proyek Tidak Ditemukan' };
 
-  const name = typeof project.name === 'object' ? (project.name[locale] || project.name.id || project.name.en) : project.name;
-  const desc = typeof project.description === 'object' ? (project.description[locale] || project.description.id || project.description.en) : project.description;
+  const name = localize(project.name, locale);
+  const desc = localize(project.description, locale);
 
-  return {
+  return constructMetadata({
     title: `${name} | PT. Limars Teknik Indonesia`,
     description: desc,
-  };
+    path: `/projects/${slug}/`,
+    locale,
+    image: project.image,
+  });
 }
 
 export default async function ProjectDetailPage({ params }) {
@@ -42,24 +48,24 @@ export default async function ProjectDetailPage({ params }) {
   const project = await getProjectBySlug(slug);
   if (!project) notFound();
 
-  const getTranslations = (await import('next-intl/server')).getTranslations;
+  const { getTranslations } = await import('next-intl/server');
   const t = await getTranslations({ locale, namespace: 'Projects' });
 
   // Related projects
   const allProjects = await getProjects();
   const relatedProjects = allProjects
     .filter(p => {
-      const currentCat = typeof project.category === 'object' ? project.category.en : project.category;
-      const pCat = typeof p.category === 'object' ? p.category.en : p.category;
+      const currentCat = localize(project.category, 'en');
+      const pCat = localize(p.category, 'en');
       return pCat === currentCat && p.id !== project.id;
     })
     .slice(0, 3);
 
-  const name = typeof project.name === 'object' ? (project.name[locale] || project.name.id || project.name.en || '') : project.name;
-  const desc = typeof project.description === 'object' ? (project.description[locale] || project.description.id || project.description.en || '') : project.description;
-  const category = typeof project.category === 'object' ? (project.category[locale] || project.category.id || project.category.en || '') : project.category;
-  const location = typeof project.location === 'object' ? (project.location[locale] || project.location.id || project.location.en || '') : project.location;
-  
+  const name = localize(project.name, locale);
+  const desc = localize(project.description, locale);
+  const category = localize(project.category, locale);
+  const location = localize(project.location, locale);
+
   const year = project.year;
   const mainImage = project.image;
   const galleryImages = project.images && project.images.length > 0 ? project.images : (mainImage ? [mainImage] : []);
@@ -131,14 +137,18 @@ export default async function ProjectDetailPage({ params }) {
 
             <div className={styles.mainImageWrapper}>
               {mainImage ? (
-                <img
+                <Image
                   src={mainImage}
-                  alt={`${name} - Dokumentasi Utama`}
+                  alt={`${name} - ${t('mainDocumentation')}`}
+                  fill
+                  sizes="(max-width: 768px) 100vw, 50vw"
+                  style={{ objectFit: 'cover' }}
                   className={styles.mainImg}
+                  priority
                 />
               ) : (
                 <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'center', height: '240px', color: '#94a3b8' }}>
-                  Dokumentasi Foto Proyek
+                  {t('photoDocumentation')}
                 </div>
               )}
             </div>
@@ -162,7 +172,7 @@ export default async function ProjectDetailPage({ params }) {
               </h2>
               <div className={styles.scopeGrid}>
                 {scope.map((item, idx) => {
-                  const text = typeof item === 'object' ? (item[locale] || item.id || item.en || '') : item;
+                  const text = localize(item, locale);
                   return (
                     <div key={idx} className={styles.scopeItem}>
                       <UiIcon name="check" size={16} className={styles.scopeIcon} />
@@ -181,7 +191,7 @@ export default async function ProjectDetailPage({ params }) {
         <section className={styles.videoSection}>
           <div className={styles.container}>
             <div className={styles.sectionHeader} style={{ color: '#ffffff' }}>
-              <span className={styles.sectionBadge} style={{ color: '#38bdf8' }}>Video Lapangan</span>
+              <span className={styles.sectionBadge} style={{ color: '#38bdf8' }}>{t('fieldVideo')}</span>
               <h2 style={{ color: '#ffffff' }}>{t('videoDocumentation')}</h2>
             </div>
             <div className={styles.videoWrapper}>
@@ -189,7 +199,7 @@ export default async function ProjectDetailPage({ params }) {
                 src={`https://www.youtube.com/embed/${
                   videoUrl.match(/(?:youtu\.be\/|v=|\/embed\/|\/watch\?v=)([\w-]{11})/)?.[1]
                 }`}
-                title={`Video Dokumentasi ${name}`}
+                title={`${t('videoDocumentation')} - ${name}`}
                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
                 referrerPolicy="strict-origin-when-cross-origin"
                 allowFullScreen
@@ -205,13 +215,13 @@ export default async function ProjectDetailPage({ params }) {
         <section className={styles.related}>
           <div className={styles.container}>
             <div className={styles.sectionHeader}>
-              <span className={styles.sectionBadge}>Portofolio Lainnya</span>
+              <span className={styles.sectionBadge}>{t('otherPortfolio')}</span>
               <h2>{t('relatedProjectsTitle')}</h2>
             </div>
             <div className={styles.relatedGrid}>
               {relatedProjects.map((proj, idx) => {
-                const projName = typeof proj.name === 'object' ? (proj.name[locale] || proj.name.id || proj.name.en) : proj.name;
-                const projLoc = typeof proj.location === 'object' ? (proj.location[locale] || proj.location.id || proj.location.en) : proj.location;
+                const projName = localize(proj.name, locale);
+                const projLoc = localize(proj.location, locale);
                 return (
                   <Link
                     key={idx}
@@ -219,11 +229,16 @@ export default async function ProjectDetailPage({ params }) {
                     className={styles.relatedCard}
                   >
                     {proj.image && (
-                      <img
-                        src={proj.image}
-                        alt={projName}
-                        className={styles.relatedImg}
-                      />
+                      <div style={{ position: 'relative', width: '100%', aspectRatio: '16/10' }}>
+                        <Image
+                          src={proj.image}
+                          alt={projName}
+                          fill
+                          sizes="(max-width: 768px) 100vw, 33vw"
+                          style={{ objectFit: 'cover' }}
+                          className={styles.relatedImg}
+                        />
+                      </div>
                     )}
                     <div className={styles.relatedInfo}>
                       <h3>{projName}</h3>

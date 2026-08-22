@@ -2,12 +2,14 @@
 'use client';
 
 import { useEffect } from 'react';
-import Link from 'next/link';
+import { Link } from '../../i18n/routing';
+import { useTranslations } from 'next-intl';
 
 export default function Error({ error, reset }) {
+  const t = useTranslations('Error');
+
   useEffect(() => {
     console.error('[limarsteknik] Client error:', error);
-    // Optional: send error to monitoring endpoint if configured
   }, [error]);
 
   return (
@@ -24,10 +26,10 @@ export default function Error({ error, reset }) {
     }}>
       <div style={{ maxWidth: 480 }}>
         <h1 style={{ fontSize: '2rem', fontWeight: 700, color: '#1a1a1a', marginBottom: 8 }}>
-          Terjadi Kesalahan
+          {t('title')}
         </h1>
         <p style={{ fontSize: '1.05rem', color: '#555', marginBottom: 32, lineHeight: 1.6 }}>
-          Maaf, terjadi kesalahan tak terduga. Silakan coba lagi atau kembali ke beranda.
+          {t('description')}
         </p>
         <div style={{ display: 'flex', gap: 12, justifyContent: 'center', flexWrap: 'wrap' }}>
           <Link href="/" style={{
@@ -41,7 +43,7 @@ export default function Error({ error, reset }) {
             textDecoration: 'none',
             cursor: 'pointer',
           }}>
-            Kembali ke Beranda
+            {t('backHome')}
           </Link>
           <button
             onClick={() => reset()}
@@ -56,7 +58,7 @@ export default function Error({ error, reset }) {
               cursor: 'pointer',
             }}
           >
-            Coba Lagi
+            {t('tryAgain')}
           </button>
         </div>
       </div>

@@ -1,13 +1,10 @@
 import { getMessages, setRequestLocale } from 'next-intl/server';
 import { blogPosts } from '@/data/blogPosts';
 import BlogCard from '@/components/BlogCard';
+import CtaBanner from '@/components/CtaBanner';
+import BreadcrumbJsonLd from '@/components/BreadcrumbJsonLd';
+import { constructMetadata } from '@/lib/seo';
 import styles from './page.module.css';
-import { Link } from '@/i18n/routing';
-import WhatsAppIcon from '@/components/WhatsAppIcon';
-import TrackedWhatsAppLink from '@/components/TrackedWhatsAppLink';
-
-import { constructMetadata } from '../../../lib/seo';
-import BreadcrumbJsonLd from '../../../components/BreadcrumbJsonLd';
 
 export async function generateMetadata({ params }) {
   const { locale } = await params;
@@ -27,12 +24,10 @@ export default async function BlogPage({ params }) {
   setRequestLocale(locale);
   const messages = await getMessages({ locale });
   const blogT = messages.Blog;
-  const homeT = messages.Home;
+  const navT = messages.Navigation;
 
-  // In a real app, you might filter or sort posts here
   const posts = blogPosts;
 
-  const navT = messages.Navigation;
   const crumbs = [
     { name: navT.blog || 'Blog', path: '/blog/' }
   ];
@@ -70,20 +65,7 @@ export default async function BlogPage({ params }) {
         </div>
       </section>
 
-      {/* CTA */}
-      <section className={styles.ctaSection}>
-        <div className={`container ${styles.ctaContent}`}>
-          <h2>{homeT.cta.title}</h2>
-          <p>{homeT.cta.subtitle}</p>
-          <div className={styles.ctaButtons}>
-            <Link href="/contact" className="btn btn-primary">{homeT.cta.contactBtn}</Link>
-            <TrackedWhatsAppLink href="https://wa.me/6281212671289" className="btn btn-secondary" label="blog_list_cta">
-              <WhatsAppIcon />
-              {homeT.cta.whatsappBtn}
-            </TrackedWhatsAppLink>
-          </div>
-        </div>
-      </section>
+      <CtaBanner analyticsLabel="blog_list_cta" />
     </main>
   );
 }

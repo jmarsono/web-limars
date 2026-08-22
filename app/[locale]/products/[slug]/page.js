@@ -6,12 +6,16 @@ import { services as staticServices } from '../../../../data/services';
 import Image from 'next/image';
 import ProductLightbox from './ProductLightbox';
 import styles from './ProductDetail.module.css';
-import { setRequestLocale } from 'next-intl/server';
+import { getTranslations, setRequestLocale } from 'next-intl/server';
 import { getProductBySlug, getProducts } from '../../../../lib/db';
 import WhatsAppIcon from '../../../../components/WhatsAppIcon';
 import TrackedWhatsAppLink from '../../../../components/TrackedWhatsAppLink';
+import BreadcrumbJsonLd from '../../../../components/BreadcrumbJsonLd';
+import { constructMetadata } from '../../../../lib/seo';
+import { localize } from '../../../../lib/localize';
 
-export const revalidate = 0; // Fresh data for D1 dynamic updates
+// ISR: revalidate hourly instead of forcing fresh D1 query on every request
+export const revalidate = 3600;
 
 export async function generateStaticParams() {
   return routing.locales.flatMap((locale) =>
@@ -22,16 +26,13 @@ export async function generateStaticParams() {
   );
 }
 
-import { constructMetadata } from '../../../../lib/seo';
-import BreadcrumbJsonLd from '../../../../components/BreadcrumbJsonLd';
-
 export async function generateMetadata({ params }) {
   const { slug, locale } = await params;
   const product = await getProductBySlug(slug);
   if (!product) return { title: 'Product Not Found' };
-  
-  const name = product.name[locale] || product.name || '';
-  const desc = product.shortDescription[locale] || product.shortDescription || '';
+
+  const name = localize(product.name, locale);
+  const desc = localize(product.shortDescription, locale);
 
   return constructMetadata({
     title: `${name} | PT. Limars Teknik Indonesia`,
@@ -45,11 +46,10 @@ export async function generateMetadata({ params }) {
 export default async function ProductDetailPage({ params }) {
   const { slug, locale } = await params;
   setRequestLocale(locale);
-  
+
   const product = await getProductBySlug(slug);
   if (!product) notFound();
-  
-  const getTranslations = (await import('next-intl/server')).getTranslations;
+
   const t = await getTranslations({ locale, namespace: 'Products' });
 
   // Load products list for related recommendations
@@ -62,9 +62,9 @@ export default async function ProductDetailPage({ params }) {
     })
     .slice(0, 3);
 
-  const name = product.name[locale] || product.name || '';
-  const desc = product.description[locale] || product.description || '';
-  const category = product.category[locale] || product.category || '';
+  const name = localize(product.name, locale);
+  const desc = localize(product.description, locale);
+  const category = localize(product.category, locale);
 
   // Get related service slug and key
   let relatedServiceSlug = '';
@@ -84,7 +84,7 @@ export default async function ProductDetailPage({ params }) {
   }
 
   const relService = staticServices.find(s => s.slug === relatedServiceSlug);
-  const serviceTitle = relService ? (relService.title[locale] || relService.title) : '';
+  const serviceTitle = relService ? localize(relService.title, locale) : '';
 
   const jsonLd = {
     '@context': 'https://schema.org',
@@ -171,7 +171,7 @@ export default async function ProductDetailPage({ params }) {
                   <table className={styles.specTable}>
                     <tbody>
                       {Object.entries(product.specs).map(([key, value]) => {
-                        const valDisplay = typeof value === 'object' ? value[locale] || value.en : value;
+                        const valDisplay = localize(value, locale);
                         return (
                           <tr key={key}>
                             <td className={styles.specLabel}>
@@ -205,16 +205,17 @@ export default async function ProductDetailPage({ params }) {
             <h2>{t('relatedProducts')}</h2>
             <div className={styles.relatedGrid}>
               {relatedProducts.map((p) => {
-                const rName = p.name[locale] || p.name || '';
+                const rName = localize(p.name, locale);
                 return (
                   <Link href={`/products/${p.slug}`} key={p.id} className={styles.relatedCard}>
                     <div className={styles.relatedImage}>
                       <div style={{ position: 'relative', width: '100%', height: '150px', backgroundColor: '#f0f0f0', borderRadius: '10px 10px 0 0', overflow: 'hidden' }}>
                         {p.image && (
-                          <Image 
-                            src={p.image} 
-                            alt={rName} 
+                          <Image
+                            src={p.image}
+                            alt={rName}
                             fill
+                            sizes="(max-width: 768px) 100vw, 33vw"
                             style={{ objectFit: 'cover' }}
                           />
                         )}

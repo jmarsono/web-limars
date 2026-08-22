@@ -3,15 +3,13 @@
 import { useTranslations } from 'next-intl';
 import { Link } from '@/i18n/routing';
 import BreadcrumbJsonLd from '@/components/BreadcrumbJsonLd';
+import CtaBanner from '@/components/CtaBanner';
 import styles from './About.module.css';
-import WhatsAppIcon from '@/components/WhatsAppIcon';
 import UiIcon from '@/components/UiIcon';
-import { trackWhatsAppClick } from '@/lib/analytics';
 
 export default function AboutPage() {
   const t = useTranslations('About');
   const navT = useTranslations('Navigation');
-  const homeT = useTranslations('Home');
 
   const crumbs = [
     { name: navT('about'), path: '/about/' }
@@ -138,20 +136,7 @@ export default function AboutPage() {
         </div>
       </section>
 
-      {/* CTA */}
-      <section className={styles.ctaSection}>
-        <div className={`container ${styles.ctaContent}`}>
-          <h2>{homeT('cta.title')}</h2>
-          <p>{homeT('cta.subtitle')}</p>
-          <div className={styles.ctaButtons}>
-            <Link href="/contact" className="btn btn-primary">{homeT('cta.contactBtn')}</Link>
-            <a href="https://wa.me/6281212671289" className="btn btn-secondary" target="_blank" rel="noopener noreferrer" onClick={() => trackWhatsAppClick({ label: 'about_cta' })}>
-              <WhatsAppIcon />
-              {homeT('cta.whatsappBtn')}
-            </a>
-          </div>
-        </div>
-      </section>
+      <CtaBanner analyticsLabel="about_cta" />
     </>
   );
 }

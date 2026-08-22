@@ -41,10 +41,32 @@ npx wrangler deploy
 - `NEXT_PUBLIC_*` variables are baked at build time — must be set BEFORE `npm run build:cf` or hardcoded
 - Current Worker secrets: `TURNSTILE_SECRET_KEY`, `SMTP_HOST`, `SMTP_PORT`, `SMTP_SECURE`, `SMTP_USER`, `SMTP_PASS`, `CONTACT_EMAIL`
 
+### ⚠️ REQUIRED Worker Secrets (Admin Panel)
+
+The admin panel refuses to log anyone in unless ALL three secrets below are set.
+There are NO fallback default credentials — this is by design.
+
+- `ADMIN_USERNAME` — admin login username
+- `ADMIN_PASSWORD` — admin login password (choose a strong one)
+- `ADMIN_SESSION_SECRET` — HMAC secret for signing session cookies (32+ random bytes)
+
+Set them via:
+```bash
+npx wrangler secret put ADMIN_USERNAME
+npx wrangler secret put ADMIN_PASSWORD
+npx wrangler secret put ADMIN_SESSION_SECRET
+```
+
+### Optional Build-Time Variables (set BEFORE `npm run build:cf`)
+
+- `NEXT_PUBLIC_TURNSTILE_SITE_KEY` — Cloudflare Turnstile site key (required for contact form CAPTCHA)
+- `NEXT_PUBLIC_GTM_ID` — Google Tag Manager / GA4 ID
+- `NEXT_PUBLIC_GOOGLE_SITE_VERIFICATION` — Google Search Console verification token (omit if unused)
+
 ## Tech Stack
 
 - **Framework**: Next.js 16 (App Router) with `next-intl` (EN/ID locales)
 - **Adapter**: OpenNext for Cloudflare (`@opennextjs/cloudflare`)
 - **Worker name**: `web` (defined in `wrangler.toml`)
 - **Bindings**: D1 Database (`limars-db`), R2 Bucket (`limars-media`)
-- **CAPTCHA**: Cloudflare Turnstile (site key hardcoded in `contact/page.js`)
+- **CAPTCHA**: Cloudflare Turnstile (site key from `NEXT_PUBLIC_TURNSTILE_SITE_KEY` env var, baked at build time)
