@@ -22,7 +22,18 @@ export default function middleware(request) {
     return response;
   }
   if (legacy?.type === 'gone') {
-    const response = new NextResponse(null, { status: 410 });
+    // Explicit text body so OpenNext / CF Workers doesn't fall through to the
+    // 404 handler when it sees an empty response body from middleware.
+    const response = new NextResponse(
+      'Gone. This page no longer exists on limarsteknik.com.',
+      {
+        status: 410,
+        headers: {
+          'Content-Type': 'text/plain; charset=utf-8',
+          'Cache-Control': 'public, max-age=86400',
+        },
+      }
+    );
     addSecurityHeaders(response);
     return response;
   }
