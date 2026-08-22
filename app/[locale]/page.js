@@ -36,12 +36,12 @@ export async function generateMetadata({ params }) {
 }
 
 const whyChooseUs = [
-  { icon: '01', key: 'fabrication' },
-  { icon: '02', key: 'compliance' },
-  { icon: '03', key: 'engineering' },
-  { icon: '04', key: 'mfg' },
-  { icon: '05', key: 'custom' },
-  { icon: '06', key: 'support' },
+  { key: 'fabrication' },
+  { key: 'compliance' },
+  { key: 'engineering' },
+  { key: 'mfg' },
+  { key: 'custom' },
+  { key: 'support' },
 ];
 
 const testimonials = [
@@ -290,7 +290,6 @@ export default async function Home({ params }) {
         <div className="container">
           <div className={styles.briefGrid}>
             <div className={styles.briefLabel}>
-              <span>01</span>
               <p>{t('companyBrief.tag')}</p>
             </div>
             <div className={styles.briefContent}>
@@ -307,7 +306,7 @@ export default async function Home({ params }) {
                 sizes="(max-width: 768px) 100vw, 33vw"
                 style={{ objectFit: 'cover' }}
               />
-              <span>FABRICATION / 01</span>
+              <span>{t('companyBrief.imgCaption')}</span>
             </div>
           </div>
         </div>
@@ -317,7 +316,6 @@ export default async function Home({ params }) {
         <div className="container">
           <div className={styles.sectionIntro}>
             <div>
-              <span className={styles.sectionKicker}>02 / PRODUCTS</span>
               <h2>{t('products.title')}</h2>
             </div>
             <div>
@@ -364,7 +362,6 @@ export default async function Home({ params }) {
         <div className="container">
           <div className={styles.sectionIntro}>
             <div>
-              <span className={styles.sectionKicker}>03 / CAPABILITIES</span>
               <h2>{t('services.title')}</h2>
             </div>
             <p>{t('services.subtitle')}</p>
@@ -377,7 +374,6 @@ export default async function Home({ params }) {
 
               return (
                 <Link href={`/services/${service.slug}`} key={service.id} className={styles.serviceCard}>
-                  <span className={styles.serviceIndex}>0{index + 1}</span>
                   <ServiceIcon slug={service.slug} className={styles.serviceIcon} />
                   <h3>{title}</h3>
                   <p>{shortDesc}</p>
@@ -393,7 +389,6 @@ export default async function Home({ params }) {
         <div className="container">
           <div className={styles.whyHeader}>
             <div>
-              <span className={styles.sectionKicker}>04 / METHOD</span>
               <h2>{t('why.title')}</h2>
             </div>
             <p>{t('why.subtitle')}</p>
@@ -401,7 +396,6 @@ export default async function Home({ params }) {
           <div className={styles.whyGrid}>
             {whyChooseUs.map((item) => (
               <div key={item.key} className={styles.whyCard}>
-                <span className={styles.whyNumber}>{item.icon}</span>
                 <h3>{t(`why.items.${item.key}_title`)}</h3>
                 <p>{t(`why.items.${item.key}_desc`)}</p>
               </div>
@@ -414,7 +408,6 @@ export default async function Home({ params }) {
         <div className="container">
           <div className={styles.sectionIntro}>
             <div>
-              <span className={styles.sectionKicker}>05 / SELECTED WORK</span>
               <h2>{t('projects.title')}</h2>
             </div>
             <div>
@@ -479,7 +472,6 @@ export default async function Home({ params }) {
         <div className="container">
           <div className={styles.testimonialHeader}>
             <div>
-              <span className={styles.sectionKicker}>06 / FIELD NOTES</span>
               <h2>{t('testimonials.title')}</h2>
             </div>
             <p>{t('testimonials.subtitle')}</p>
@@ -489,7 +481,6 @@ export default async function Home({ params }) {
               <figure key={item.key} className={styles.testimonialCard}>
                 <div className={styles.testimonialTop}>
                   <span className={styles.testimonialStars}>{Array.from({ length: 5 }, (_, starIndex) => <UiIcon key={starIndex} name="star" size={14} />)}</span>
-                  <span>0{item.key}</span>
                 </div>
                 <blockquote>“{t(`testimonials.quotes.${item.key}`)}”</blockquote>
                 <figcaption>
@@ -505,7 +496,6 @@ export default async function Home({ params }) {
       <section className={styles.ctaBanner}>
         <div className="container">
           <div className={styles.ctaContent}>
-            <span className={styles.sectionKicker}>07 / START A PROJECT</span>
             <h2>{t('cta.title')}</h2>
             <p>{t('cta.subtitle')}</p>
             <div className={styles.ctaButtons}>
