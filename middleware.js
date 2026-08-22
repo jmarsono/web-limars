@@ -76,7 +76,9 @@ function addSecurityHeaders(response) {
       "img-src 'self' data: blob: https:",
       "font-src 'self'",
       "connect-src 'self' https://www.google-analytics.com https://challenges.cloudflare.com",
-      "frame-src https://www.youtube.com https://www.youtube-nocookie.com https://maps.google.com https://challenges.cloudflare.com",
+      // Google Maps embed at maps.google.com/maps?output=embed redirects internally
+      // to www.google.com/maps/embed, so both hosts need to be in frame-src.
+      "frame-src https://www.youtube.com https://www.youtube-nocookie.com https://maps.google.com https://www.google.com https://challenges.cloudflare.com",
       "object-src 'none'",
       "base-uri 'self'",
     ].join('; ')
