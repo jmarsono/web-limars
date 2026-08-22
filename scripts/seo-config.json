@@ -10,9 +10,12 @@
       "cv limars teknik"
     ],
 
-    "_tier_2_signature": "Signature niche (traditional oven builder). Low search volume but high intent — customer already knows what they want. Target: top 10 in 3-6 months.",
+    "_tier_2_signature": "Signature niche (traditional oven builder). Low search volume but high intent — customer already knows what they want. Target: top 10 in 3-6 months. Keywords marked '_vs_aurora' are the specific short-term battleground vs auroraovens.com (Bali-based pizza-oven prefab specialist).",
     "tier_2_signature": [
       "oven pizza tradisional jakarta",
+      "oven pizza tradisional custom",
+      "oven pizza jakarta",
+      "oven pizza kubah",
       "oven mandi domba",
       "oven tannur",
       "oven tandoor jakarta",
@@ -20,7 +23,9 @@
       "jasa pembuat oven kayu bakar",
       "pembuat oven pizza tradisional",
       "pembuat tungku roti arab",
-      "oven kamado jepang"
+      "oven kamado jepang",
+      "custom pizza oven indonesia",
+      "wood fired pizza oven jakarta"
     ],
 
     "_tier_3_service": "Kitchen contractor services — mid-competition, target: top 20 in 6-12 months.",
@@ -47,15 +52,50 @@
   },
 
   "competitors_to_watch": {
-    "_note": "Fill this in by searching for your top keywords manually (incognito) and noting which brands appear on page 1-2. Update quarterly.",
+    "_note": "Update quarterly. Head-to-head compare via manual search in incognito for the priority keywords.",
+
+    "_primary_short_term_target": "auroraovens.com — Bali-based Italian-heritage pizza-oven prefab specialist. Weakness: pizza-only (no mandi/tannur/kamado), Bali-based (no Jakarta geo advantage), prefab-only (no custom sizes). Target: beat them in Jakarta-local pizza oven queries AND dominate the niche categories they don't compete in.",
+    "_aurora_ovens_intel": {
+      "site": "https://auroraovens.com",
+      "based_in": "Denpasar, Bali",
+      "product_line": ["Aurora Model 70", "Aurora Model 90", "Aurora Model 120"],
+      "business_model": "Prefabricated plug-and-play pizza ovens (delivered assembled)",
+      "positioning": "Italian technique made in Indonesia",
+      "unique_offer": "Free test drive at Bali showroom — customer bakes their own pizza",
+      "social_channels": [
+        "https://www.instagram.com/auroraovens/",
+        "https://www.youtube.com/watch?v=ICCld91hjlM"
+      ],
+      "contact_phone": "+62 811 3887 1871",
+      "keywords_they_dominate": [
+        "aurora ovens",
+        "aurora pizza oven",
+        "pizza oven bali"
+      ],
+      "keywords_they_DO_NOT_compete": [
+        "oven mandi domba",
+        "oven tannur",
+        "oven kamado jepang",
+        "pembuat tungku roti arab",
+        "kontraktor dapur restoran jakarta",
+        "kitchen set ss304",
+        "fabrikasi dapur restoran"
+      ],
+      "keywords_they_are_WEAK_at": [
+        "oven pizza tradisional custom (they only prefab)",
+        "oven pizza jakarta (geo — they're Bali)",
+        "oven pizza kubah 180cm (they max at 120cm)",
+        "oven pizza mozaik emas (they don't offer specialty finishes)"
+      ]
+    },
+
     "_examples_kitchen_contractors_indonesia": [
       "solarindustri.com",
       "fomac.co.id",
       "getra.co.id"
     ],
-    "_examples_traditional_oven_builders": [
-      "Add specific competitor sites here after manual Google search"
-    ],
-    "domains": []
+    "domains": [
+      "auroraovens.com"
+    ]
   }
 }

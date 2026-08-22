@@ -137,16 +137,70 @@ Ranked by likely impact & feasibility:
 6. **Trade associations** — APJI (Asosiasi Pengusaha Jasaboga Indonesia),
    PHRI — membership often includes backlink from member listing
 
-## Content Roadmap (Next 3 Months)
+## Short-Term Target: Beat Aurora Ovens
 
-Recommended posting cadence: **1 blog post / month minimum** to sustain
-freshness signal.
+Aurora Ovens (`auroraovens.com`) — Bali-based Italian-heritage pizza-oven
+specialist. Prefab-only, pizza-oven only. Our specific short-term battle.
 
-- Month 1: "Cara Merawat Oven Pizza Tradisional Agar Awet 10+ Tahun"
+### Aurora's strengths (avoid direct fight)
+- Established "Aurora" brand for prefab pizza ovens
+- Active Instagram + YouTube content
+- Free showroom test-drive UX
+- Italian heritage positioning
+
+### Aurora's weaknesses (attack these)
+- **Pizza only.** Zero presence in mandi / tannur / tandoor / kamado / kitchen
+  contractor markets. Limars covers all of them.
+- **Bali-based.** Any "Jakarta" geo query is Limars' home turf.
+- **Prefab only.** Fixed sizes (Model 70/90/120). Zero custom capability.
+  Limars is 100% custom.
+- **No visible restaurant portfolio.** Limars has Al-Jazeerah, Nanamia,
+  Dashi Chazuke — signature clients Aurora doesn't publicly claim.
+- **Thin service pages.** Aurora site is product catalog. Limars can win on
+  editorial depth (blog + case studies).
+
+### 3-month battle plan
+
+**Month 1 — Own the categories Aurora doesn't compete in.**
+Zero-competition wins to build early ranking momentum. Publish:
+- "Panduan Memilih Oven Mandi Domba untuk Restoran Timur Tengah" (targets
+  `oven mandi domba`, `pembuat oven mandi jakarta`)
+- "Kamado Custom vs Import: Analisis untuk Restoran Jepang" (targets
+  `oven kamado jepang`, `kamado custom indonesia`)
+Update GBP services list to include: oven mandi, tannur, kamado explicitly.
+
+**Month 2 — Attack pizza-oven queries from the angles Aurora can't defend.**
+Head-to-head but on our terms. Publish:
+- "Custom vs Prefab Pizza Oven: Panduan Memilih untuk Restoran Anda"
+  (target `oven pizza tradisional custom`, `custom pizza oven indonesia` —
+  direct positioning against prefab like Aurora, reference Nanamia +
+  Al-Jazeerah case studies as proof of custom capability)
+Optimize existing product pages with keywords: `oven pizza jakarta`,
+`oven pizza tradisional custom`.
+
+**Month 3 — Content authority in pizza oven vertical.**
+Longer play, attacking Aurora's home turf but with content depth. Publish:
+- "Studi Kasus: Membangun Oven Pizza Kubah 180cm untuk Al-Jazeerah Polonia"
+  (long-form case study, targets `oven pizza kubah`, `oven pizza besar`,
+  positions Limars as capable of scale Aurora can't match at Model 120)
+Create a dedicated `/id/portfolio/pizza-oven/` page with 10+ pizza oven
+projects, rich schema.org CreativeWork markup per project.
+
+### Success signal (weekly report)
+- Month 1: Tier 2 mandi/tannur/kamado keywords start showing impressions
+- Month 2: `oven pizza jakarta` position <30, appearing alongside Aurora
+- Month 3: Case study article ranks top 10 for `oven pizza kubah`
+
+## Broader Content Roadmap
+
+After winning the Aurora battle (or in parallel, depending on capacity),
+sustain **1 blog post / month minimum** for freshness signal.
+
+- "Cara Merawat Oven Pizza Tradisional Agar Awet 10+ Tahun"
   (targets Tier 2 keywords, appeals to existing pizza restaurant owners)
-- Month 2: "SS304 vs SS201 untuk Kitchen Set Restoran: Mana yang Worth It?"
+- "SS304 vs SS201 untuk Kitchen Set Restoran: Mana yang Worth It?"
   (targets Tier 3, educational, ranks for material-comparison queries)
-- Month 3: "Studi Kasus: Membangun Dapur SPPG Berkapasitas 500 Porsi/Hari"
+- "Studi Kasus: Membangun Dapur SPPG Berkapasitas 500 Porsi/Hari"
   (rides trending govt program, timely, natural PR angle)
 
 ## Measurement
