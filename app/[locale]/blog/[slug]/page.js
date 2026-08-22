@@ -5,6 +5,7 @@ import { getMessages, setRequestLocale } from 'next-intl/server';
 import { Link, routing } from '@/i18n/routing';
 import CtaBanner from '@/components/CtaBanner';
 import BreadcrumbJsonLd from '@/components/BreadcrumbJsonLd';
+import ShareButtons from '@/components/ShareButtons';
 import { constructMetadata } from '@/lib/seo';
 import styles from './page.module.css';
 
@@ -119,6 +120,10 @@ export default async function BlogPostPage({ params }) {
         <footer className={styles.footer}>
           <div className={styles.share}>
             <span>{blogT.share}</span>
+            <ShareButtons
+              url={`https://limarsteknik.com/${locale}/blog/${slug}/`}
+              title={postData.title}
+            />
           </div>
         </footer>
       </article>
