@@ -35,13 +35,17 @@ export async function generateMetadata({ params }) {
   };
 }
 
+// Each card gets an icon that reflects the actual claim: workshop building
+// for in-house fabrication, shield for pressure/safety testing, target for
+// engineering precision, package for direct delivery (no subcontractor),
+// location for site-fit customization, handshake for warranty/support.
 const whyChooseUs = [
-  { key: 'fabrication' },
-  { key: 'compliance' },
-  { key: 'engineering' },
-  { key: 'mfg' },
-  { key: 'custom' },
-  { key: 'support' },
+  { key: 'fabrication', icon: 'building' },
+  { key: 'compliance', icon: 'shield' },
+  { key: 'engineering', icon: 'target' },
+  { key: 'mfg', icon: 'package' },
+  { key: 'custom', icon: 'location' },
+  { key: 'support', icon: 'handshake' },
 ];
 
 const testimonials = [
@@ -396,6 +400,7 @@ export default async function Home({ params }) {
           <div className={styles.whyGrid}>
             {whyChooseUs.map((item) => (
               <div key={item.key} className={styles.whyCard}>
+                <UiIcon name={item.icon} size={28} className={styles.whyIcon} />
                 <h3>{t(`why.items.${item.key}_title`)}</h3>
                 <p>{t(`why.items.${item.key}_desc`)}</p>
               </div>
